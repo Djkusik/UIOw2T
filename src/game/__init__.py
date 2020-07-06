@@ -15,8 +15,8 @@ class Game:
 
     def add_player(self, nick: str) -> UUID:
         id = next((player.id for player in self.players if player.nick == nick), None)
-        if id is None:
-            player = Player(nick)
-            self.players.append(player)
-            return player.id
-        return id
+        if id:
+            return id
+        player = Player(nick)
+        self.players.append(player)
+        return player.id
