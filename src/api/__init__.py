@@ -1,7 +1,7 @@
 import logging
 from aiohttp import web
 
-from src.game import WaitingRoom
+from game import WaitingRoom
 from .routes import setup_routes
 from .config import config
 

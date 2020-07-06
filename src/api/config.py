@@ -1,7 +1,7 @@
 import aiohttp_cors
 from aiohttp import web
 
-from src.game import WaitingRoom
+from game import WaitingRoom
 
 
 async def config(app: web.Application, waiting_room: WaitingRoom):
