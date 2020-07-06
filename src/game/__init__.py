@@ -14,9 +14,9 @@ class Game:
             await asyncio.sleep(2)
 
     def add_player(self, nick: str) -> UUID:
-        id = next((player.id for player in self.players if player.nick == nick), None)
-        if id:
-            return id
-        player = Player(nick)
-        self.players.append(player)
-        return player.id
+        exist_player: Player = next((p for p in self.players if p.nick == nick), None)
+        if exist_player:
+            return exist_player.id
+        new_player = Player(nick)
+        self.players.append(new_player)
+        return new_player.id
