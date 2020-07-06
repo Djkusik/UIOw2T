@@ -1,3 +1,4 @@
+import logging
 from aiohttp import web
 
 from src.game import Game
@@ -7,6 +8,7 @@ from .config import config
 
 async def api_server(game: Game) -> web.AppRunner:
     app = web.Application()
+    logging.basicConfig(level=logging.DEBUG)
     setup_routes(app)
     await config(app, game)
 

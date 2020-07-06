@@ -1,3 +1,4 @@
+import logging
 from aiohttp import web
 from uuid import UUID
 
@@ -11,4 +12,5 @@ async def add_player(request):
         raise web.HTTPBadRequest(text="No nick")
     game = get_game(request)
     id: UUID = game.add_player(nick)
+    logging.info("Create player with id %s" % id)
     return web.json_response(dict(id=str(id)))
