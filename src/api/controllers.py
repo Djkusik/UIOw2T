@@ -2,7 +2,7 @@ import logging
 from aiohttp import web
 from uuid import UUID
 
-from .config import get_game
+from .config import get_waiting_room
 
 
 async def add_player(request):
@@ -10,7 +10,7 @@ async def add_player(request):
     nick = data.get("nick")
     if not nick:
         raise web.HTTPBadRequest(text="No nick")
-    game = get_game(request)
-    id: UUID = game.add_player(nick)
+    waiting_room = get_waiting_room(request)
+    id: UUID = waiting_room.add_player(nick)
     logging.info("Create player with id %s" % id)
     return web.json_response(dict(id=str(id)))
