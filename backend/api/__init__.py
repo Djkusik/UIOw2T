@@ -13,7 +13,7 @@ async def api_server(game_app: GameApp) -> web.AppRunner:
     sio.attach(app)
 
     logging.basicConfig(level=logging.DEBUG)
-    setup_routes(app)
+    setup_routes(app, sio, game_app)
     await config(app, game_app)
 
     runner = web.AppRunner(app)

@@ -9,6 +9,25 @@ from aiohttp import web
 from .config import get_game_app
 
 
+async def on_socket_connected(sid, environ, sio, game_app):
+    logging.info(f"Got new connection from peer with SID: {sid}")
+    pass
+
+
+async def on_socket_login(sid, data, sio, game_app):
+    print(data)
+    if 'login' not in data:
+        await sio.emit("error", data={"message": "no login specified"}, room=sid)
+        return
+    await sio.emit("reply", data={"message": "login ok"}, room=sid)
+
+
+async def on_socket_disconnected(sid, sio, game_app):
+    logging.info(f"Disconnected from peer with SID: {sid}")
+    # TODO: handle disconnected
+    pass
+
+
 async def add_player(request):
     data = await request.post()
     nick = data.get("nick")
