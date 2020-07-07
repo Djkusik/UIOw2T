@@ -1,0 +1,4522 @@
+[
+    {
+        "question": "Najbardziej prymitywnym systemem liczbowym jest:",
+        "answers": [
+            {
+                "answer": "dwójkowy system liczbowy",
+                "is_correct": false
+            },
+            {
+                "answer": "jedynkowy system liczbowy",
+                "is_correct": true
+            },
+            {
+                "answer": "szesnastkowy system liczbowy",
+                "is_correct": false
+            }
+        ]
+    },
+    {
+        "question": "Wartość 5/16 ma postać w systemie binarnym:",
+        "answers": [
+            {
+                "answer": "0.0101",
+                "is_correct": true
+            },
+            {
+                "answer": "0.1011",
+                "is_correct": false
+            },
+            {
+                "answer": "0.1010",
+                "is_correct": false
+            }
+        ]
+    },
+    {
+        "question": "Wartość 1/10 ma postać w systemie binarnym:",
+        "answers": [
+            {
+                "answer": "0.1010    ",
+                "is_correct": false
+            },
+            {
+                "answer": "0.0(0011)",
+                "is_correct": true
+            },
+            {
+                "answer": "0.(1010)",
+                "is_correct": false
+            },
+            {
+                "answer": "0.0(1010)",
+                "is_correct": false
+            }
+        ]
+    },
+    {
+        "question": "Ile informacji zawiera 8 znakowe słowo którego każdy znak jest jedną z liter a, b. Prawdopodobieństwo pojawienia się (na każdej pozycji) samogłoski jest dwukrotnie większe od prawdopodobieństwa pojawienia się spółgłoski.",
+        "answers": [
+            {
+                "answer": "więcej niż 8 bitów",
+                "is_correct": false
+            },
+            {
+                "answer": "mniej niż 8 bitów (dokładnie 7.34637)",
+                "is_correct": true
+            },
+            {
+                "answer": "dokładnie 8 bitów",
+                "is_correct": false
+            }
+        ]
+    },
+    {
+        "question": "Algorytm to : ",
+        "answers": [
+            {
+                "answer": "uporządkowany zbiór operacji",
+                "is_correct": true
+            },
+            {
+                "answer": "specyfikacja ciągu elementarnych operacji, które przekształcają dane wejściowe na wynik",
+                "is_correct": true
+            },
+            {
+                "answer": "---",
+                "is_correct": false
+            }
+        ]
+    },
+    {
+        "question": "Język formalny jest:",
+        "answers": [
+            {
+                "answer": "sposobem zapisu algorytmów opartym na blokach operacyjnych",
+                "is_correct": false
+            },
+            {
+                "answer": "sposobem zapisu algorytmów opartym na pseudokodzie",
+                "is_correct": true
+            }
+        ]
+    },
+    {
+        "question": "Syntaktyka języka programowania opisuje",
+        "answers": [
+            {
+                "answer": "Znaczenie instrukcji w języku",
+                "is_correct": false
+            },
+            {
+                "answer": "Formalnie poprawne programy",
+                "is_correct": true
+            },
+            {
+                "answer": "Budowę instrukcji w języku",
+                "is_correct": false
+            }
+        ]
+    },
+    {
+        "question": "Semantyka języka programowania opisuje:",
+        "answers": [
+            {
+                "answer": "Znaczenie instrukcji w języku",
+                "is_correct": true
+            },
+            {
+                "answer": "Formalnie poprawne programy",
+                "is_correct": false
+            },
+            {
+                "answer": "Budowę instrukcji w języku",
+                "is_correct": false
+            }
+        ]
+    },
+    {
+        "question": "Nawiasy <> w notacji EBNF oznaczają:",
+        "answers": [
+            {
+                "answer": "opcjonalne wystąpienie elementu",
+                "is_correct": false
+            },
+            {
+                "answer": "symbol terminalny",
+                "is_correct": false
+            },
+            {
+                "answer": "symbol nieterminalny",
+                "is_correct": true
+            },
+            {
+                "answer": "wielokrotne występowanie elementu",
+                "is_correct": false
+            }
+        ]
+    },
+    {
+        "question": "Semantyka denotacyjna to:",
+        "answers": [
+            {
+                "answer": "opis w postaci funkcji przekształcającej dane wejściowe w dane wyjściowe",
+                "is_correct": true
+            },
+            {
+                "answer": "opis budowy poprawnych semantycznie programów",
+                "is_correct": false
+            },
+            {
+                "answer": "stan maszyny przed i po wykonaniu instrukcji",
+                "is_correct": false
+            }
+        ]
+    },
+    {
+        "question": "Kodem ASCII możemy zakodować :",
+        "answers": [
+            {
+                "answer": "dowolny znak z zakresu 0-128",
+                "is_correct": false
+            },
+            {
+                "answer": "dowolny znak z zakresu 0-255",
+                "is_correct": false
+            },
+            {
+                "answer": "dowolny znak z zakresu 32-255",
+                "is_correct": false
+            },
+            {
+                "answer": "dowolny znak z zakresu 0-127",
+                "is_correct": true
+            }
+        ]
+    },
+    {
+        "question": "Kodowanie znaków metodą UTF-8 cechuje:",
+        "answers": [
+            {
+                "answer": "pozwala zakodować dowolne znaki UNICODE",
+                "is_correct": true
+            },
+            {
+                "answer": "zmienna długość kodu",
+                "is_correct": true
+            },
+            {
+                "answer": "pozwala zakodować dowolne znaki ASCII za pomocą 1 bajta",
+                "is_correct": true
+            },
+            {
+                "answer": "pozwala zakodować dowolne znaki ASCII za pomocą 8 bajtów",
+                "is_correct": false
+            },
+            {
+                "answer": "pozwala zakodować dowolne znaki UNICODE za pomocą nie więcej niż 6 bajtów",
+                "is_correct": true
+            }
+        ]
+    },
+    {
+        "question": "Od czego zależy dokładność liczb zmiennopozycyjnych w komputerze?",
+        "answers": [
+            {
+                "answer": "Od długości cechy",
+                "is_correct": false
+            },
+            {
+                "answer": "Od długości mantysy",
+                "is_correct": true
+            },
+            {
+                "answer": "Od długości mantysy i cechy",
+                "is_correct": false
+            }
+        ]
+    },
+    {
+        "question": "Cechami kodu uzupełnień do dwóch są:",
+        "answers": [
+            {
+                "answer": "Podwójna reprezentacja 0",
+                "is_correct": false
+            },
+            {
+                "answer": "Pojedyncza reprezentacja 0",
+                "is_correct": true
+            },
+            {
+                "answer": "Symetryczny zakres liczb",
+                "is_correct": false
+            },
+            {
+                "answer": "Asymetryczny zakres liczb",
+                "is_correct": true
+            }
+        ]
+    },
+    {
+        "question": "Dana jest następująca reprezentacja liczb zmiennopozycyjnych: Mantysa zajmuje 20 bitów, wykładnik zajmuje 8 bitów. Wykładnik i mantysa zapisywane są w kodzie U2. Przecinek leży na lewo od mantysy. Z dokładnością do ilu cyfr dziesiętnych można pamiętać liczby w tej reprezentacji?",
+        "answers": [
+            {
+                "answer": "około 10",
+                "is_correct": false
+            },
+            {
+                "answer": "około 6",
+                "is_correct": true
+            },
+            {
+                "answer": "około 3",
+                "is_correct": false
+            },
+            {
+                "answer": "14",
+                "is_correct": false
+            },
+            {
+                "answer": "8",
+                "is_correct": false
+            }
+        ]
+    },
+    {
+        "question": "Dana jest następująca reprezentacja liczb zmiennopozycyjnych: Mantysa zajmuje 22 bity w tym bit znaku, cecha zajmuje 10 bitów w tym bit znaku. Cecha i mantysa zapisywane są w kodzie U2. Przecinek leży na lewo od mantysy (mantysa jest ułamkiem [1/2...1)). Jaka jest największa możliwa liczba w tym systemie?",
+        "answers": [
+            {
+                "answer": "10^10",
+                "is_correct": false
+            },
+            {
+                "answer": "(1 - 2^(-21)) * 2 ^ (2 ^ 9 - 1)",
+                "is_correct": true
+            }
+        ]
+    },
+    {
+        "question": "Jaka jest minimalna liczba bitów aby reprezentować liczby zmiennopozycyjne z zakresu -106 ... 106 z dokładnością do 2 miejsc znaczących.",
+        "answers": [
+            {
+                "answer": "8 bitów",
+                "is_correct": false
+            },
+            {
+                "answer": "12 bitów",
+                "is_correct": true
+            },
+            {
+                "answer": "4 bity",
+                "is_correct": false
+            },
+            {
+                "answer": "14 bitów",
+                "is_correct": false
+            }
+        ]
+    },
+    {
+        "question": "Liczba 10010 reprezentowana w systemie U2 ma wartość:",
+        "answers": [
+            {
+                "answer": "2",
+                "is_correct": false
+            },
+            {
+                "answer": "-14",
+                "is_correct": true
+            },
+            {
+                "answer": "14",
+                "is_correct": false
+            },
+            {
+                "answer": "6",
+                "is_correct": false
+            }
+        ]
+    },
+    {
+        "question": "W standardzie IEEE 754 liczby zmiennopozycyjne podwójnej precyzji:",
+        "answers": [
+            {
+                "answer": "mantysa zawiera 52 bity łącznie z bitem znaku",
+                "is_correct": false
+            },
+            {
+                "answer": "mantysa zawiera 53 bity łącznie z bitem znaku",
+                "is_correct": true
+            },
+            {
+                "answer": "wykładnik zawiera 11 bitów",
+                "is_correct": true
+            },
+            {
+                "answer": "wykładnik zawiera 12 bitów",
+                "is_correct": false
+            }
+        ]
+    },
+    {
+        "question": "Bramki wykonują operacje na:",
+        "answers": [
+            {
+                "answer": "słowach",
+                "is_correct": false
+            },
+            {
+                "answer": "wartościach logicznych",
+                "is_correct": true
+            }
+        ]
+    },
+    {
+        "question": "Bramka NAND wykonuje:",
+        "answers": [
+            {
+                "answer": "najpierw operacje iloczynu logicznego - potem negację",
+                "is_correct": true
+            },
+            {
+                "answer": "najpierw operacje negacji - potem iloczynu logicznego",
+                "is_correct": false
+            },
+            {
+                "answer": "operację różnicy symetrycznej",
+                "is_correct": false
+            }
+        ]
+    },
+    {
+        "question": "Zbiór przerzutników służących do przechowywania informacji cyfrowej to:",
+        "answers": [
+            {
+                "answer": "procesor",
+                "is_correct": false
+            },
+            {
+                "answer": "bardziej rejestr lub pamięć (zgadywane)",
+                "is_correct": true
+            }
+        ]
+    },
+    {
+        "question": "Do czego służy stos systemowy?",
+        "answers": [
+            {
+                "answer": "Dla przechowywania wszystkich zmiennych w programie",
+                "is_correct": false
+            },
+            {
+                "answer": "Dla przechowywania zmiennych alokowanych procedurą new(p)",
+                "is_correct": false
+            },
+            {
+                "answer": "Dla przechowywania zmiennych lokalnych procedur i funkcji",
+                "is_correct": true
+            }
+        ]
+    },
+    {
+        "question": "Liczby stałopozycyjne w komputerze są reprezentowane w kodzie uzupełnień do 2. Dla jakich wartości funkcja abs(x) będzie obliczona prawidłowo?",
+        "answers": [
+            {
+                "answer": "Tylko dla liczb ujemnych",
+                "is_correct": false
+            },
+            {
+                "answer": "Tylko dla liczb nieujemnych",
+                "is_correct": false
+            },
+            {
+                "answer": "Dla wszystkich liczb typu integer",
+                "is_correct": false
+            },
+            {
+                "answer": "Wszystkich poza najmniejszą liczbą w reprezentacji",
+                "is_correct": true
+            }
+        ]
+    },
+    {
+        "question": "Zmienna typu wskaźnik zajmuje 4 bajty. Ile pamięci można zaadresować takim wskaźnikiem?",
+        "answers": [
+            {
+                "answer": "64 kilobajty",
+                "is_correct": false
+            },
+            {
+                "answer": "4 gigabajty",
+                "is_correct": true
+            },
+            {
+                "answer": "2 megabajty",
+                "is_correct": false
+            },
+            {
+                "answer": "6 gigabajtów",
+                "is_correct": false
+            },
+            {
+                "answer": "8 kilobajtów",
+                "is_correct": false
+            }
+        ]
+    },
+    {
+        "question": "W języku Pascal dany jest nagłówek procedury: test (var a : integer); Które z poniższych wywołań są poprawne? (Zmienna k jest typu integer)",
+        "answers": [
+            {
+                "answer": "test (k);",
+                "is_correct": true
+            },
+            {
+                "answer": "test (k+12);",
+                "is_correct": false
+            },
+            {
+                "answer": "test (12);",
+                "is_correct": false
+            }
+        ]
+    },
+    {
+        "question": "W języku Pascal zmienna typu integer zajmuje 2 bajty, wskaźnik zajmuje 4 bajty. Ile pamięci zajmuje następująca zmienna x : array[1..100] of integer;",
+        "answers": [
+            {
+                "answer": "4 bajty",
+                "is_correct": false
+            },
+            {
+                "answer": "200 bajtów",
+                "is_correct": true
+            },
+            {
+                "answer": "204 bajty",
+                "is_correct": false
+            },
+            {
+                "answer": "400 bajtów",
+                "is_correct": false
+            },
+            {
+                "answer": "404 bajty",
+                "is_correct": false
+            }
+        ]
+    },
+    {
+        "question": "Jaki paradygmat programowania jest realizowany w języku C",
+        "answers": [
+            {
+                "answer": "Aplikatywny",
+                "is_correct": false
+            },
+            {
+                "answer": "Imperatywny",
+                "is_correct": true
+            },
+            {
+                "answer": "Deklaratywny",
+                "is_correct": false
+            },
+            {
+                "answer": "Żaden z wymienionych",
+                "is_correct": false
+            },
+            {
+                "answer": "Strukturalny",
+                "is_correct": true
+            }
+        ]
+    },
+    {
+        "question": "Jeżeli w programie następuje odwołanie poza obszar tablicy",
+        "answers": [
+            {
+                "answer": "zawsze sygnalizowany jest błąd wykonania",
+                "is_correct": false
+            },
+            {
+                "answer": "nie jest sygnalizowany błąd jeżeli pamięc jest zaalokowana",
+                "is_correct": true
+            }
+        ]
+    },
+    {
+        "question": "Których nawiasów trzeba użyć w Odwrotnej Notacji Polskiej do zmiany kolejności wykonywania działań?",
+        "answers": [
+            {
+                "answer": "{ }",
+                "is_correct": false
+            },
+            {
+                "answer": "o kolejności wykonywania działań nie decydują nawiasy",
+                "is_correct": true
+            },
+            {
+                "answer": "( ) ",
+                "is_correct": false
+            },
+            {
+                "answer": "[ ] ",
+                "is_correct": false
+            }
+        ]
+    },
+    {
+        "question": "Translacja analizuje symbole:",
+        "answers": [
+            {
+                "answer": "od lewej do prawej strony",
+                "is_correct": true
+            },
+            {
+                "answer": "---",
+                "is_correct": false
+            }
+        ]
+    },
+    {
+        "question": "Jaki wynik da następujące wyrażenie zapisane w ONP : 2 3 4 5 + * + :",
+        "answers": [
+            {
+                "answer": "25",
+                "is_correct": false
+            },
+            {
+                "answer": "29",
+                "is_correct": true
+            }
+        ]
+    },
+    {
+        "question": "Co oznacza, że algorytm sortowania tablicy posiada złożoność O(n^2).",
+        "answers": [
+            {
+                "answer": "wykonywana liczba porównań wynosi n^2",
+                "is_correct": false
+            },
+            {
+                "answer": "wykonywana liczba porównań jest rzędu n^2",
+                "is_correct": true
+            },
+            {
+                "answer": "wykonywana liczba przestawień elementów tablicy w algorytmie wynosi n^2",
+                "is_correct": false
+            },
+            {
+                "answer": "dwukrotne zwiększenie rozmiaru tablicy spowoduje czterokrotne zwiększenie czasu sortowania",
+                "is_correct": true
+            }
+        ]
+    },
+    {
+        "question": "Jeżeli elementy w tablicy są posortowane możliwe jest wyszukiwanie:",
+        "answers": [
+            {
+                "answer": "sekwencyjne",
+                "is_correct": true
+            },
+            {
+                "answer": "binarne",
+                "is_correct": true
+            },
+            {
+                "answer": "interpolacyjne",
+                "is_correct": true
+            },
+            {
+                "answer": "żadne z wymienionych",
+                "is_correct": false
+            }
+        ]
+    },
+    {
+        "question": "Przy rozmieszczaniu algorytmicznym kolizja może wystąpić gdy:",
+        "answers": [
+            {
+                "answer": "klucze w dwóch rozmieszczanych rekordach są identyczne",
+                "is_correct": true
+            },
+            {
+                "answer": "klucze w dwóch rozmieszczanych rekordach są różne",
+                "is_correct": true
+            },
+            {
+                "answer": "znumeryzowane klucze dwóch rekordów są różne",
+                "is_correct": true
+            },
+            {
+                "answer": "znumeryzowane klucze dwóch rekordów są identyczne",
+                "is_correct": true
+            }
+        ]
+    },
+    {
+        "question": "Najszybsza metoda sortowania oparta o porównywanie kluczy posiada złożoność:",
+        "answers": [
+            {
+                "answer": "liniową",
+                "is_correct": false
+            },
+            {
+                "answer": "liniowo-logarytmiczną",
+                "is_correct": true
+            },
+            {
+                "answer": "stałą",
+                "is_correct": false
+            },
+            {
+                "answer": "kwadratową",
+                "is_correct": false
+            }
+        ]
+    },
+    {
+        "question": "Ekstensywna metoda sortowania:",
+        "answers": [
+            {
+                "answer": "to taka, w której czas sortowania wzrasta wraz ze wzrostem tablicy",
+                "is_correct": false
+            },
+            {
+                "answer": "to taka, która wymaga dodatkowej pamięci porównywalnej z rozmiarem sortowanej struktury",
+                "is_correct": true
+            },
+            {
+                "answer": "to taka, która wymaga dodatkowej pamięci porównywalnej z rozmiarem pojedynczego rekordu",
+                "is_correct": false
+            },
+            {
+                "answer": "to każda szybka metoda sortowania",
+                "is_correct": false
+            }
+        ]
+    },
+    {
+        "question": "Stabilną metodą sortowania jest:",
+        "answers": [
+            {
+                "answer": "bąbelkowe",
+                "is_correct": true
+            },
+            {
+                "answer": "grzebieniowe",
+                "is_correct": false
+            },
+            {
+                "answer": "kubełkowe",
+                "is_correct": true
+            },
+            {
+                "answer": "pozycyjne",
+                "is_correct": true
+            },
+            {
+                "answer": "przez kopcowanie",
+                "is_correct": false
+            },
+            {
+                "answer": "przez scalanie",
+                "is_correct": true
+            },
+            {
+                "answer": "przez wstawianie",
+                "is_correct": true
+            },
+            {
+                "answer": "przez wybieranie",
+                "is_correct": false
+            },
+            {
+                "answer": "przez zliczanie",
+                "is_correct": true
+            },
+            {
+                "answer": "szybkie",
+                "is_correct": false
+            }
+        ]
+    },
+    {
+        "question": "Które metody sortowania mają złożoność O(NlogN)",
+        "answers": [
+            {
+                "answer": "bąbelkowe",
+                "is_correct": false
+            },
+            {
+                "answer": "grzebieniowe",
+                "is_correct": true
+            },
+            {
+                "answer": "kubełkowe",
+                "is_correct": false
+            },
+            {
+                "answer": "pozycyjne",
+                "is_correct": false
+            },
+            {
+                "answer": "przez kopcowanie",
+                "is_correct": true
+            },
+            {
+                "answer": "przez scalanie",
+                "is_correct": true
+            },
+            {
+                "answer": "przez wstawianie",
+                "is_correct": false
+            },
+            {
+                "answer": "przez wybieranie",
+                "is_correct": false
+            },
+            {
+                "answer": "przez zliczanie",
+                "is_correct": false
+            },
+            {
+                "answer": "szybkie",
+                "is_correct": true
+            }
+        ]
+    },
+    {
+        "question": "Które metody sortowania mają złożoność O(N)",
+        "answers": [
+            {
+                "answer": "bąbelkowe",
+                "is_correct": false
+            },
+            {
+                "answer": "grzebieniowe",
+                "is_correct": false
+            },
+            {
+                "answer": "kubełkowe",
+                "is_correct": true
+            },
+            {
+                "answer": "pozycyjne",
+                "is_correct": true
+            },
+            {
+                "answer": "przez kopcowanie",
+                "is_correct": false
+            },
+            {
+                "answer": "przez scalanie",
+                "is_correct": false
+            },
+            {
+                "answer": "przez wstawianie",
+                "is_correct": false
+            },
+            {
+                "answer": "przez wybieranie",
+                "is_correct": false
+            },
+            {
+                "answer": "przez zliczanie",
+                "is_correct": true
+            },
+            {
+                "answer": "szybkie",
+                "is_correct": false
+            }
+        ]
+    },
+    {
+        "question": "Które metody sortowania maja złożoność O(N^2)",
+        "answers": [
+            {
+                "answer": "bąbelkowe",
+                "is_correct": true
+            },
+            {
+                "answer": "grzebieniowe",
+                "is_correct": false
+            },
+            {
+                "answer": "kubełkowe",
+                "is_correct": false
+            },
+            {
+                "answer": "pozycyjne",
+                "is_correct": false
+            },
+            {
+                "answer": "przez kopcowanie",
+                "is_correct": false
+            },
+            {
+                "answer": "przez scalanie",
+                "is_correct": false
+            },
+            {
+                "answer": "przez wstawianie",
+                "is_correct": true
+            },
+            {
+                "answer": "przez wybieranie",
+                "is_correct": true
+            },
+            {
+                "answer": "przez zliczanie",
+                "is_correct": false
+            },
+            {
+                "answer": "szybkie",
+                "is_correct": false
+            }
+        ]
+    },
+    {
+        "question": "Drzewo BST jest drzewem AVL gdy:",
+        "answers": [
+            {
+                "answer": "dla każdego wierzchołka rozmiary jego poddrzew różnią się co najwyżej o 1",
+                "is_correct": false
+            },
+            {
+                "answer": "dla każdego wierzchołka wysokości jego poddrzew różnią się co najwyżej o 1",
+                "is_correct": true
+            },
+            {
+                "answer": "dla każdego wierzchołka wysokości jego poddrzew różnią się dokładnie o 1",
+                "is_correct": false
+            },
+            {
+                "answer": "dla każdego wierzchołka rozmiary jego poddrzew różnią się dokładnie o 1",
+                "is_correct": false
+            }
+        ]
+    },
+    {
+        "question": "Drzewo binarne pełne o N poziomach posiada:",
+        "answers": [
+            {
+                "answer": "N węzłów",
+                "is_correct": false
+            },
+            {
+                "answer": "2*N węzłów",
+                "is_correct": false
+            },
+            {
+                "answer": "2^N węzłów",
+                "is_correct": false
+            },
+            {
+                "answer": "(2^N)-1 węzłów",
+                "is_correct": true
+            }
+        ]
+    },
+    {
+        "question": "Jeżeli w drzewie binarnym nie występuje wskazanie na ojca to:",
+        "answers": [
+            {
+                "answer": "przeglądanie drzewa jest niemożliwe",
+                "is_correct": false
+            },
+            {
+                "answer": "---",
+                "is_correct": true
+            }
+        ]
+    },
+    {
+        "question": "Złożoność wyszukiwania w drzewie AVL jest",
+        "answers": [
+            {
+                "answer": "liniowa ze względu na liczbę poziomów",
+                "is_correct": true
+            },
+            {
+                "answer": "kwadratowa ze względu na liczbą poziomów",
+                "is_correct": false
+            },
+            {
+                "answer": "liniowa ze względu na liczbą węzłów",
+                "is_correct": false
+            },
+            {
+                "answer": "logarytmiczna ze względu na liczbę węzłów",
+                "is_correct": true
+            }
+        ]
+    },
+    {
+        "question": "Drzewo rozpinające graf zawiera:",
+        "answers": [
+            {
+                "answer": "niektóre wierzchołki grafu",
+                "is_correct": false
+            },
+            {
+                "answer": "wszystkie wierzchołki grafu",
+                "is_correct": true
+            },
+            {
+                "answer": "żadne z wymienionych",
+                "is_correct": false
+            }
+        ]
+    },
+    {
+        "question": "Ile cykli Hamiltona posiada graf pełny o N wierzchołkach?",
+        "answers": [
+            {
+                "answer": "N",
+                "is_correct": false
+            },
+            {
+                "answer": "1",
+                "is_correct": false
+            },
+            {
+                "answer": "0",
+                "is_correct": false
+            },
+            {
+                "answer": "N^2",
+                "is_correct": false
+            },
+            {
+                "answer": "N!",
+                "is_correct": false
+            },
+            {
+                "answer": "(N-1)!/2 (dopisane, na podstawie egzaminu 2014/2015)",
+                "is_correct": true
+            }
+        ]
+    },
+    {
+        "question": "Dana jest następująca reprezentacja liczb zmiennopozycyjnych: Mantysa zajmuje 16 bitów, wykładnik zajmuje 8 bitów; Wykładnik i mantysa zapisywane są w kodzie U2; Przecinek leży na lewo od mantysy; Z dokładnością do ilu cyfr dziesiętnych można pamiętać liczby w tej reprezentacji?",
+        "answers": [
+            {
+                "answer": "7-8",
+                "is_correct": false
+            },
+            {
+                "answer": "15-16",
+                "is_correct": false
+            },
+            {
+                "answer": "4-5",
+                "is_correct": true
+            },
+            {
+                "answer": "2-3",
+                "is_correct": false
+            }
+        ]
+    },
+    {
+        "question": "W języku Pascal zmienna typu integer zajmuje 2 bajty, wskaźnik zajmuje 4 bajty. Ile pamięci zajmuje następująca zmienna x : ^ array[1..100] of integer;",
+        "answers": [
+            {
+                "answer": "404 bajty",
+                "is_correct": false
+            },
+            {
+                "answer": "400 bajtów",
+                "is_correct": false
+            },
+            {
+                "answer": "204 bajty",
+                "is_correct": false
+            },
+            {
+                "answer": "200 bajtów",
+                "is_correct": false
+            },
+            {
+                "answer": "4 bajty",
+                "is_correct": true
+            }
+        ]
+    },
+    {
+        "question": "Wielowątkowość i wielordzeniowość procesora",
+        "answers": [
+            {
+                "answer": "Są charakterystyczne tylko dla procesorów AMD",
+                "is_correct": false
+            },
+            {
+                "answer": "Zostały rozwinięte niezależnie przez producentów",
+                "is_correct": true
+            },
+            {
+                "answer": "Są synonimami",
+                "is_correct": false
+            },
+            {
+                "answer": "Zostały rozwinięte specjalnie dla technologii Centrino",
+                "is_correct": false
+            }
+        ]
+    },
+    {
+        "question": "Model pamięci współdzielonej",
+        "answers": [
+            {
+                "answer": "Jest typowy dla maszyn SIMD",
+                "is_correct": true
+            },
+            {
+                "answer": "Występuje tylko w odniesieniu do klastrów komputerów",
+                "is_correct": false
+            },
+            {
+                "answer": "Jest typowy dla maszyn SMP",
+                "is_correct": true
+            },
+            {
+                "answer": "Może być wykorzystany w maszynach typu MIMD",
+                "is_correct": true
+            }
+        ]
+    },
+    {
+        "question": "Do maszyn typu MIMD należą",
+        "answers": [
+            {
+                "answer": "ccNUMA",
+                "is_correct": true
+            },
+            {
+                "answer": "Maszyny wykorzystujące model obliczeniowy z wymianą komunikatów",
+                "is_correct": true
+            },
+            {
+                "answer": "maszyny SMP",
+                "is_correct": true
+            },
+            {
+                "answer": "Najczęściej rozwiązania wykorzystujące specjalizowane procesory",
+                "is_correct": false
+            }
+        ]
+    },
+    {
+        "question": "Magistrala systemowa",
+        "answers": [
+            {
+                "answer": "Jest rozwiązaniem najbardziej zaawansowanym technologicznie",
+                "is_correct": false
+            },
+            {
+                "answer": "Charakteryzuje się wysoką przepustowością w porównaniu z innymi rozwiązaniami warstwy komunikacyjnej",
+                "is_correct": false
+            },
+            {
+                "answer": "Umożliwia łatwą rozbudowę systemu",
+                "is_correct": true
+            },
+            {
+                "answer": "Jest typowa dla maszyn SMP",
+                "is_correct": true
+            }
+        ]
+    },
+    {
+        "question": "Najwydajniejszym rozwiązaniem warstwy komunikacyjnej w maszynach o wielu procesorach jest",
+        "answers": [
+            {
+                "answer": "Myrinet",
+                "is_correct": false
+            },
+            {
+                "answer": "Przełącznica krzyżowa",
+                "is_correct": true
+            },
+            {
+                "answer": "Magistrala systemowa",
+                "is_correct": false
+            },
+            {
+                "answer": "Sieć przełączająca (switching network)",
+                "is_correct": false
+            }
+        ]
+    },
+    {
+        "question": "Model obliczeń równoległych z wymianą komunikatów",
+        "answers": [
+            {
+                "answer": "Stosowany jest najczęściej w maszynach o pamięci współdzielonej",
+                "is_correct": false
+            },
+            {
+                "answer": "W obliczeniach jest zazwyczaj bardziej efektywny od modelu pamięci współdzielonej",
+                "is_correct": true
+            },
+            {
+                "answer": "Charakterystyczny dla architektur klastrowych",
+                "is_correct": true
+            },
+            {
+                "answer": "Charakteryzuje się łatwością programowania",
+                "is_correct": false
+            }
+        ]
+    },
+    {
+        "question": "Architektury klastrowe",
+        "answers": [
+            {
+                "answer": "Charakteryzują się wysoką dostępnością i istnieniem zasobów zastępczych",
+                "is_correct": true
+            },
+            {
+                "answer": "Współdzielą wyłącznie zasoby dyskowe",
+                "is_correct": false
+            },
+            {
+                "answer": "Występuje w nich współdzielenie zasobów",
+                "is_correct": true
+            },
+            {
+                "answer": "Są przeznaczone wyłącznie do obliczeń naukowo-technicznych",
+                "is_correct": false
+            }
+        ]
+    },
+    {
+        "question": "Instrukcja procesora 8086 wywołująca podprogram, to:",
+        "answers": [
+            {
+                "answer": "PPROG",
+                "is_correct": false
+            },
+            {
+                "answer": "CALL",
+                "is_correct": true
+            },
+            {
+                "answer": "LOOP",
+                "is_correct": false
+            },
+            {
+                "answer": "JMP",
+                "is_correct": false
+            }
+        ]
+    },
+    {
+        "question": "Instrukcja procesora 8086 realizująca pętle, to:",
+        "answers": [
+            {
+                "answer": "PETLA",
+                "is_correct": false
+            },
+            {
+                "answer": "LOOP",
+                "is_correct": true
+            },
+            {
+                "answer": "DJNZ",
+                "is_correct": false
+            },
+            {
+                "answer": "LOOPZ",
+                "is_correct": true
+            }
+        ]
+    },
+    {
+        "question": "Instrukcja asemblera 8086 wpisująca zawartość akumulatora AL bezpośrednio do komórki pamięci o adresie logicznym 120 w segmencie wskazywanym przez DS to:",
+        "answers": [
+            {
+                "answer": "mov ds:[120],al",
+                "is_correct": true
+            },
+            {
+                "answer": "mov byte ptr ds:[120],al",
+                "is_correct": true
+            },
+            {
+                "answer": "mov byte ptr 120:[ds],al",
+                "is_correct": false
+            },
+            {
+                "answer": "mov al, ds:[120]",
+                "is_correct": false
+            }
+        ]
+    },
+    {
+        "question": "Instrukcja asemblera 8086 pobierająca do rejestru AX słowo znajdujące się w pamięci o adresie logicznym 211 w segmencie ES to:",
+        "answers": [
+            {
+                "answer": "mov es:[211],ax",
+                "is_correct": false
+            },
+            {
+                "answer": "mov ax,byte ptr es:[211]",
+                "is_correct": false
+            },
+            {
+                "answer": "mov ax,es:[211]",
+                "is_correct": true
+            },
+            {
+                "answer": "mov es:[ax],211",
+                "is_correct": false
+            }
+        ]
+    },
+    {
+        "question": "Poprawna instrukcja asemblera 8086 wpisująca zawartość rejestru AH do komórki pamięci o adresie 0AH w segmencie wskazywanym przez ES to:",
+        "answers": [
+            {
+                "answer": "mov byte ptr es:[0ah],ah",
+                "is_correct": true
+            },
+            {
+                "answer": "mov word ptr es:[0ah],ah",
+                "is_correct": false
+            },
+            {
+                "answer": "mov es:[0ah],ah",
+                "is_correct": true
+            },
+            {
+                "answer": "mov es:[ah],0ah",
+                "is_correct": false
+            }
+        ]
+    },
+    {
+        "question": "Instrukcja języka asemblera 8086: mov al, byte ptr es:[bx]",
+        "answers": [
+            {
+                "answer": "do akumulatora wpisuje zawartość komórki pamięci",
+                "is_correct": true
+            },
+            {
+                "answer": "wpisuje zawartość rejestru AL do pamięci w segmencie wskazywanym przez ES",
+                "is_correct": false
+            },
+            {
+                "answer": "zmienia zawartość komórki pamięci w segmencie wskazywanym przez ES",
+                "is_correct": false
+            },
+            {
+                "answer": "może zmodyfikować zawartość rejestru AX",
+                "is_correct": true
+            }
+        ]
+    },
+    {
+        "question": "Instrukcja języka asemblera 8086: mov word ptr ds:[bx],ax",
+        "answers": [
+            {
+                "answer": "Zmienia zawartość rejestru AH",
+                "is_correct": false
+            },
+            {
+                "answer": "Zmienia zawartość rejestru BX",
+                "is_correct": false
+            },
+            {
+                "answer": "Zmienia zawartość komórki pamięci",
+                "is_correct": true
+            },
+            {
+                "answer": "Zmienia zawartość rejestru DS",
+                "is_correct": false
+            }
+        ]
+    },
+    {
+        "question": "Instrukcja asemblera 8086 zapisująca zawartość rejestru DX na stosie to:",
+        "answers": [
+            {
+                "answer": "push dx",
+                "is_correct": true
+            },
+            {
+                "answer": "mov dx,stos",
+                "is_correct": false
+            },
+            {
+                "answer": "mov dx,ss:[sp+2]",
+                "is_correct": false
+            },
+            {
+                "answer": "mov stos,dx",
+                "is_correct": false
+            }
+        ]
+    },
+    {
+        "question": "Instrukcja asemblera 8086 pobierająca do rejestru CX wartość z wierzchołka stosu.",
+        "answers": [
+            {
+                "answer": "mov stos,cx",
+                "is_correct": false
+            },
+            {
+                "answer": "pop cx",
+                "is_correct": true
+            },
+            {
+                "answer": "mov cx,ss:[sp]",
+                "is_correct": true
+            },
+            {
+                "answer": "mov cx,stos",
+                "is_correct": false
+            }
+        ]
+    },
+    {
+        "question": "Które z poniższych rejestrów procesora 8086 są rejestrami indeksowymi?",
+        "answers": [
+            {
+                "answer": "BP",
+                "is_correct": false
+            },
+            {
+                "answer": "DI",
+                "is_correct": true
+            },
+            {
+                "answer": "SI",
+                "is_correct": true
+            },
+            {
+                "answer": "IP",
+                "is_correct": false
+            }
+        ]
+    },
+    {
+        "question": "Który z rejestrów roboczych procesora 8086 ulegnie zmianie po wykonaniu następującej instrukcji asemblera 8086: loop PETLA",
+        "answers": [
+            {
+                "answer": "DX",
+                "is_correct": false
+            },
+            {
+                "answer": "BX",
+                "is_correct": false
+            },
+            {
+                "answer": "CX",
+                "is_correct": true
+            },
+            {
+                "answer": "AX",
+                "is_correct": false
+            }
+        ]
+    },
+    {
+        "question": "Które rejestry procesora 8086 mogą ulec zmianie po wykonaniu następującej instrukcji asemblera: jmp short PROGRAM1",
+        "answers": [
+            {
+                "answer": "IP, CS",
+                "is_correct": false
+            },
+            {
+                "answer": "IP",
+                "is_correct": true
+            },
+            {
+                "answer": "SP, SS",
+                "is_correct": false
+            },
+            {
+                "answer": "SP",
+                "is_correct": false
+            }
+        ]
+    },
+    {
+        "question": "Które rejestry procesora 8086 mogą ulec zmianie po wykonaniu następującej instrukcji asemblera: mul BX",
+        "answers": [
+            {
+                "answer": "BX",
+                "is_correct": false
+            },
+            {
+                "answer": "Rejestr Znaczników",
+                "is_correct": true
+            },
+            {
+                "answer": "DX",
+                "is_correct": true
+            },
+            {
+                "answer": "AX",
+                "is_correct": true
+            }
+        ]
+    },
+    {
+        "question": "Instrukcja procesora 8086, dodająca zawartość rejestru CX do akumulatora to:",
+        "answers": [
+            {
+                "answer": "add ax,cx",
+                "is_correct": true
+            },
+            {
+                "answer": "add ac,acc",
+                "is_correct": false
+            },
+            {
+                "answer": "add cx,ax",
+                "is_correct": false
+            },
+            {
+                "answer": "add acc,cx",
+                "is_correct": false
+            }
+        ]
+    },
+    {
+        "question": "Które z poniższych rejestrów procesora 8086 są rejestrami segmentowymi?",
+        "answers": [
+            {
+                "answer": "CL",
+                "is_correct": false
+            },
+            {
+                "answer": "CS",
+                "is_correct": true
+            },
+            {
+                "answer": "SS",
+                "is_correct": true
+            },
+            {
+                "answer": "CX",
+                "is_correct": false
+            }
+        ]
+    },
+    {
+        "question": "Która z poniższych instrukcji procesora 8086 może zmienić zawartość rejestru znaczników?",
+        "answers": [
+            {
+                "answer": "popf",
+                "is_correct": true
+            },
+            {
+                "answer": "mov ax,si",
+                "is_correct": false
+            },
+            {
+                "answer": "add cx,dx",
+                "is_correct": true
+            },
+            {
+                "answer": "pushf",
+                "is_correct": false
+            }
+        ]
+    },
+    {
+        "question": "Która z poniższych instrukcji procesora 8086 jest niepoprawna?",
+        "answers": [
+            {
+                "answer": "mov ax,bp",
+                "is_correct": false
+            },
+            {
+                "answer": "popf",
+                "is_correct": false
+            },
+            {
+                "answer": "mov ds,0a000h",
+                "is_correct": true
+            },
+            {
+                "answer": "mov cx,al",
+                "is_correct": true
+            }
+        ]
+    },
+    {
+        "question": "Która z poniższych instrukcji procesora 8086 jest niepoprawna?",
+        "answers": [
+            {
+                "answer": "popl",
+                "is_correct": true
+            },
+            {
+                "answer": "mov al, 0110h",
+                "is_correct": true
+            },
+            {
+                "answer": "push si",
+                "is_correct": false
+            },
+            {
+                "answer": "push dh",
+                "is_correct": true
+            }
+        ]
+    },
+    {
+        "question": "Dyrektywa asemblera 8086, rezerwująca 100 bajtów pamięci to:",
+        "answers": [
+            {
+                "answer": "db 100h dup(?)",
+                "is_correct": false
+            },
+            {
+                "answer": "db 100 dup('h')",
+                "is_correct": true
+            },
+            {
+                "answer": "db 100 dup(0)",
+                "is_correct": true
+            },
+            {
+                "answer": "db 100 dup(?)",
+                "is_correct": true
+            }
+        ]
+    },
+    {
+        "question": "Który z poniższych zapisów jest poprawną dyrektywą języka asemblera 8086, ustawiającą wskaźnik adresów na wartość 100h?",
+        "answers": [
+            {
+                "answer": "address 100h",
+                "is_correct": false
+            },
+            {
+                "answer": "org 100h",
+                "is_correct": true
+            },
+            {
+                "answer": "set 100h",
+                "is_correct": false
+            },
+            {
+                "answer": "push 100h",
+                "is_correct": false
+            }
+        ]
+    },
+    {
+        "question": "Które wyrażenie SQL zwraca wszystkie wiersze tabeli \"Osoby\" posortowane malejąco według atrybutu \"Imie\"?",
+        "answers": [
+            {
+                "answer": "SELECT * FROM Osoby SORT BY ' Imie ' DESC",
+                "is_correct": false
+            },
+            {
+                "answer": "SELECT * FROM Osoby ORDER BY Imie DESC",
+                "is_correct": true
+            },
+            {
+                "answer": "SELECT * FROM Osoby SORT 'Imie' DESC",
+                "is_correct": false
+            },
+            {
+                "answer": "SELECT * FROM Osoby ORDER Imie DESC",
+                "is_correct": false
+            }
+        ]
+    },
+    {
+        "question": "Jak możesz zmienić wartość \"Kowalski\" na \"Nowak\" w atrybucie \"Nazwisko\" w tabeli \"Osoby\"?",
+        "answers": [
+            {
+                "answer": "MODIFY Osoby SET Nazwisko =' Nowak ' WHERE Nazwisko =' Kowalski'",
+                "is_correct": false
+            },
+            {
+                "answer": "MODIFY Osoby SET Nazwisko =' Kowalski ' INTO Nazwisko =' Nowak'",
+                "is_correct": false
+            },
+            {
+                "answer": "UPDATE Osoby SET Nazwisko ='Kowalski' INTO Nazwisko ='Nowak'",
+                "is_correct": false
+            },
+            {
+                "answer": "UPDATE Osoby SET Nazwisko =' Nowak ' WHERE Nazwisko =' Kowalski'",
+                "is_correct": true
+            }
+        ]
+    },
+    {
+        "question": "Jak można przy pomocy SQL uzyskać informację o liczbie wierszy w tabeli \"Osoby\"?",
+        "answers": [
+            {
+                "answer": "SELECT COUNT(*) FROM Osoby",
+                "is_correct": true
+            },
+            {
+                "answer": "SELECT COUNT() FROM Osoby",
+                "is_correct": false
+            },
+            {
+                "answer": "SELECT COLUMNS() FROM Osoby",
+                "is_correct": false
+            },
+            {
+                "answer": "SELECT COLUMNS(*) FROM Osoby",
+                "is_correct": false
+            }
+        ]
+    },
+    {
+        "question": "Jak można przy pomocy SQL wybrać wszystkie wiersze z tabeli \"Osoby\", w których wartość atrybutu \"Imie\" zaczyna się od \"a\"?",
+        "answers": [
+            {
+                "answer": "SELECT * FROM Osoby WHERE Imie LIKE '%a'",
+                "is_correct": false
+            },
+            {
+                "answer": "SELECT * FROM Osoby WHERE Imie ='%a%'",
+                "is_correct": false
+            },
+            {
+                "answer": "SELECT * FROM Osoby WHERE Imie LIKE 'a%'",
+                "is_correct": true
+            },
+            {
+                "answer": "SELECT * FROM Osoby WHERE Imie ='a'",
+                "is_correct": false
+            }
+        ]
+    },
+    {
+        "question": "Którą z poniższych cech musi posiadać \"klucz właściwy\":",
+        "answers": [
+            {
+                "answer": "jego wartość jednoznacznie wyznacza wiersz w danej tabeli",
+                "is_correct": true
+            },
+            {
+                "answer": "jest automatycznie generowany przez System Zarządzania Bazą Danych",
+                "is_correct": false
+            },
+            {
+                "answer": "jego wartość składa się tylko z jednego atrybutu",
+                "is_correct": false
+            },
+            {
+                "answer": "nie może być pomniejszony o żaden atrybut",
+                "is_correct": true
+            }
+        ]
+    },
+    {
+        "question": "Algebra relacji jest podstawą dla:",
+        "answers": [
+            {
+                "answer": "realizacji przez relacyjny SZBD operacji języka manipulacji danymi",
+                "is_correct": true
+            },
+            {
+                "answer": "budowy diagramów ERD",
+                "is_correct": false
+            },
+            {
+                "answer": "budowy diagramów DFD",
+                "is_correct": false
+            },
+            {
+                "answer": "algorytmicznych języków relacyjnych baz danych",
+                "is_correct": true
+            }
+        ]
+    },
+    {
+        "question": "Które z poniższych cech posiadają tzw. widoki (view) :",
+        "answers": [
+            {
+                "answer": "mogą realizować politykę ograniczania dostępu do danych",
+                "is_correct": true
+            },
+            {
+                "answer": "ułatwiają konstrukcję zapytań SQL do bazy danych",
+                "is_correct": true
+            },
+            {
+                "answer": "zabezpieczają dane przed ich utratą w trakcie realizacji złożonych transakcji",
+                "is_correct": false
+            }
+        ]
+    },
+    {
+        "question": "Z jakim problemem trzeba się uporać przy odwzorowaniu w schemacie relacyjnej bazy danych relacji typu n:m (wiele do wiele) :",
+        "answers": [
+            {
+                "answer": "zdefiniować podwójne indeksowanie plików odpowiadających każdej z tabel",
+                "is_correct": false
+            },
+            {
+                "answer": "trzeba zaprojektować dodatkową tabelę",
+                "is_correct": true
+            },
+            {
+                "answer": "dobrać odpowiedni klucz obcy w drugiej z tabel",
+                "is_correct": false
+            },
+            {
+                "answer": "trzeba użyć dodatkowo widok (view)",
+                "is_correct": false
+            }
+        ]
+    },
+    {
+        "question": "Które z poniższych stwierdzeń są prawdziwe jeśli dotyczą systemów baz danych realizowanych w architekturze klient serwer:",
+        "answers": [
+            {
+                "answer": "mocno obciążają sieć w stosunku do systemów scentralizowanych",
+                "is_correct": false
+            },
+            {
+                "answer": "pozwalają klientom pracować w różnych systemach operacyjnych",
+                "is_correct": true
+            },
+            {
+                "answer": "uniezależniają sposób realizacji aplikacji od serwera",
+                "is_correct": true
+            },
+            {
+                "answer": "wymagają co najmniej dwóch komputerów",
+                "is_correct": false
+            }
+        ]
+    },
+    {
+        "question": "Systemy OLTP i OLAP różnią się przede wszystkim:",
+        "answers": [
+            {
+                "answer": "czasem reakcji na zapytanie",
+                "is_correct": true
+            },
+            {
+                "answer": "stopniem szczegółowości przechowywanych danych",
+                "is_correct": true
+            },
+            {
+                "answer": "zakresem realizowanych funkcji użytkowych",
+                "is_correct": true
+            }
+        ]
+    },
+    {
+        "question": "Rolą hurtowni danych jest:",
+        "answers": [
+            {
+                "answer": "przygotowanie danych do szybkiej analizy",
+                "is_correct": true
+            },
+            {
+                "answer": "kontrola poprawności danych realizowana podczas wykonywania transakcji",
+                "is_correct": false
+            },
+            {
+                "answer": "minimalizacja plików fizycznych przez ujednolicenie sposobu przechowywania danych",
+                "is_correct": false
+            },
+            {
+                "answer": "przechowywanie danych w sposób scentralizowany",
+                "is_correct": true
+            }
+        ]
+    },
+    {
+        "question": "Modele danych w postaci gwiazdy i płatka śniegu:",
+        "answers": [
+            {
+                "answer": "ich implementacja przyspiesza analizę danych",
+                "is_correct": true
+            },
+            {
+                "answer": "pozwalają oddać sens złożonej struktury danych",
+                "is_correct": true
+            },
+            {
+                "answer": "zapewniają brak redundancji danych",
+                "is_correct": false
+            },
+            {
+                "answer": "pomagają utrzymać spójność danych",
+                "is_correct": false
+            }
+        ]
+    },
+    {
+        "question": "Które z podanych rodzajów wymagań nie są określane podczas przygotowywania definicji wymagań systemowych ?",
+        "answers": [
+            {
+                "answer": "abstrakcyjne wymagania funkcjonalne",
+                "is_correct": false
+            },
+            {
+                "answer": "cechy lub zachowania, których system nie powinien przejawiać",
+                "is_correct": false
+            },
+            {
+                "answer": "szczegółowe wymagania funkcjonalne",
+                "is_correct": true
+            },
+            {
+                "answer": "właściwości systemu",
+                "is_correct": false
+            }
+        ]
+    },
+    {
+        "question": "Które z wymienionych czynności występują dla wszystkich procesów tworzenia oprogramowania",
+        "answers": [
+            {
+                "answer": "budowa i ulepszanie prototypów",
+                "is_correct": false
+            },
+            {
+                "answer": "walidacja oprogramowania",
+                "is_correct": true
+            },
+            {
+                "answer": "specyfikowanie oprogramowania",
+                "is_correct": true
+            },
+            {
+                "answer": "zarządzanie konfiguracjami",
+                "is_correct": false
+            }
+        ]
+    },
+    {
+        "question": "Zapis wymagania powinien bezwzględnie zawierać:",
+        "answers": [
+            {
+                "answer": "informację o kolejności wprowadzenia danego wymagania w stosunku do innych wymagań",
+                "is_correct": false
+            },
+            {
+                "answer": "informację o uzależnieniu danego wymagania od innych wymagań lub powiązaniu z nimi",
+                "is_correct": true
+            },
+            {
+                "answer": "informację o pochodzeniu danego wymagania i jego uzasadnienie",
+                "is_correct": true
+            },
+            {
+                "answer": "informację o uzależnieniu projektu od wymagania tj. powiązaniu danego wymagania ze składnikami systemu, które je implementują",
+                "is_correct": true
+            }
+        ]
+    },
+    {
+        "question": "Zaznacz, które stwierdzenia odnoszące się do studium realizowalności (wykonalności) są prawdziwe:",
+        "answers": [
+            {
+                "answer": "Studium realizowalności musi udzielać odpowiedzi na pytania, \"czy system przyczyni się do realizacji ogólnych celów przedsiębiorstwa\" i \"czy może być zintegrowany z innymi, już będącymi w użyciu ?\"",
+                "is_correct": true
+            },
+            {
+                "answer": "Studium realizowalności musi zawierać wskazanie technologii, jakie będą zastosowane podczas realizacji projektu",
+                "is_correct": false
+            },
+            {
+                "answer": "Studium realizowalności ma na celu zaplanowanie końcowego budżetu przedsięwzięcia projektowego",
+                "is_correct": false
+            },
+            {
+                "answer": "Po wykonaniu studium realizowalności zawsze następuje faza określania i analizowania wymagań",
+                "is_correct": false
+            }
+        ]
+    },
+    {
+        "question": "Zaznacz, które z poniższych stwierdzeń są prawdziwe:",
+        "answers": [
+            {
+                "answer": "W każdym przyroście musi być realizowana funkcjonalność w obrębie jednego podsystemu w taki sposób, aby możliwa była integracja nowego przyrostu z wcześniej wytworzoną częścią systemu",
+                "is_correct": false
+            },
+            {
+                "answer": "Tworzenie przyrostowe systemu polega na podzieleniu procesu budowy systemu na pewną liczbę etapów, z których każdy prowadzi do realizacji kolejnej części funkcjonalności całego systemu wedle tego samego modelu procesu tworzenia oprogramowania",
+                "is_correct": false
+            },
+            {
+                "answer": "Kolejność realizacji i integracji przyrostów zostaje ustalona na początku projektu, przy określaniu ważności poszczególnych usług, które system ma oferować",
+                "is_correct": true
+            },
+            {
+                "answer": "W trakcie realizacji danego przyrostu wymagania w odniesieniu do przypisanej do niego funkcjonalności systemu są zamrożone, ale prowadzi się analizę wymagań dla pozostałych przyrostów",
+                "is_correct": true
+            }
+        ]
+    },
+    {
+        "question": "Ewolucyjne tworzenie oprogramowania w wariancie projektowania eksploracyjnego (badawczego) ...",
+        "answers": [
+            {
+                "answer": "...jest realizacją przedsięwzięcia w kolejności od najsłabiej do najlepiej rozpoznanych części systemu;",
+                "is_correct": false
+            },
+            {
+                "answer": "...polega na systematycznym ulepszaniu utworzonej na początku wersji systemu, przez stopniowe dodawanie cech proponowanych przez klienta, aż do uzyskania zadowalającej go wersji systemu;",
+                "is_correct": true
+            },
+            {
+                "answer": "...charakteryzuje się opartym o systematyczną współpracę z klientem, przyrostowym wypracowywaniem specyfikacji produktu",
+                "is_correct": true
+            },
+            {
+                "answer": "...bywa nazywane metodą przyrostową;",
+                "is_correct": false
+            }
+        ]
+    },
+    {
+        "question": "Prototypowanie z porzuceniem jest wariantem ewolucyjnego tworzenia oprogramowania, w którym:",
+        "answers": [
+            {
+                "answer": "...ze względu na dwukrotną realizację systemu - jako prototypu i systemu finalnego - wydłużony jest znacznie czas realizacji i powiększony koszt przedsięwzięcia, przez co metoda ta jest stosowana głównie wtedy, gdy przez oddanie prototypu zamiast finalnej wersji systemu można oddalić groźbę katastrofalnego opóźnienia i całkowitego załamania projektu",
+                "is_correct": false
+            },
+            {
+                "answer": "...tworzony jest fragment systemu zwany prototypem, odpowiadający ograniczonej części wymagań, celem eksperymentalnego rozeznania wymagań klienta i ustalenia lub walidacji ich specyfikacji oraz zbadania możliwości ich spełnienia;",
+                "is_correct": true
+            },
+            {
+                "answer": "...nie powstaje prawie żadna dokumentacja projektowa i stąd używana niekiedy nazwa \"metoda studencka\";",
+                "is_correct": false
+            },
+            {
+                "answer": "...nie przywiązuje się wagi do jakości oprogramowania wytworzonego prototypu ani nawet jego zdolności do funkcjonowania, o ile nie przeszkadza to w wykorzystaniu go do realizacji jego głównego celu;",
+                "is_correct": true
+            }
+        ]
+    },
+    {
+        "question": "Do modeli iteracyjnych tworzenia oprogramowania zaliczamy:",
+        "answers": [
+            {
+                "answer": "metodę przyrostową",
+                "is_correct": true
+            },
+            {
+                "answer": "model spiralny tworzenia oprogramowania",
+                "is_correct": true
+            },
+            {
+                "answer": "ewolucyjne tworzenie oprogramowania",
+                "is_correct": false
+            },
+            {
+                "answer": "programowanie ekstremalne",
+                "is_correct": true
+            }
+        ]
+    },
+    {
+        "question": "Inspekcja (przegląd) wymagań jest...",
+        "answers": [
+            {
+                "answer": "...nazywana formalną bądź nieformalną, zależnie do tego czy zespół twórców systemu wyjaśnia znaczenie każdego wymagania czy tylko prowadzi luźną rozmowę z przedstawicielami klienta",
+                "is_correct": true
+            },
+            {
+                "answer": "...metodą walidacji wymagań",
+                "is_correct": true
+            },
+            {
+                "answer": "...procesem \"ręcznym\" polegającym na grupowym czytaniu dokumentacji wymagań",
+                "is_correct": true
+            },
+            {
+                "answer": "...niepodobna do inspekcji programów (kodu)",
+                "is_correct": false
+            }
+        ]
+    },
+    {
+        "question": "Skrajny wariant ewolucyjnego tworzenia oprogramowania zwany “metodą studencką”, charakteryzujący się prawie całkowitym brakiem dokumentacji i selektywnym testowaniem (przy optymistycznych założeniach co do poprawności danych wejściowych)",
+        "answers": [
+            {
+                "answer": "nadaje się do realizacji oprogramowania \"jednorazowego użytku\"",
+                "is_correct": true
+            },
+            {
+                "answer": "może być wykorzystywany do tworzenia bardzo rzadko używanych komponentów wielkich systemów",
+                "is_correct": false
+            },
+            {
+                "answer": "może być używany do przygotowywania wersji demonstracyjnych i treningowych",
+                "is_correct": true
+            },
+            {
+                "answer": "nie może być stosowany jako metoda tworzenia prototypów przeznaczonych do porzucenia",
+                "is_correct": false
+            }
+        ]
+    },
+    {
+        "question": "Systemy odziedziczone...",
+        "answers": [
+            {
+                "answer": "...to systemy starsze niż kilka- kilkanaście lat, których działanie pozostaje krytycznym czynnikiem z punktu widzenia funkcjonowania instytucji, ale technologia nie odpowiada aktualnym potrzebom",
+                "is_correct": true
+            },
+            {
+                "answer": "...mają oprogramowanie i sprzęt niezmieniony od czasów ich zainstalowania, ale ich przeróbka i unowocześnienie nie jest możliwe z braku kompatybilnego sprzętu, odpowiednich kompilatorów języków oprogramowania, bibliotek i odpowiednich specjalistów",
+                "is_correct": false
+            },
+            {
+                "answer": "...można tylko całkowicie wycofać i/albo zastąpić nowymi systemami",
+                "is_correct": false
+            },
+            {
+                "answer": "...obejmują oprogramowanie, sprzęt na którym może ono działać, dane użytkowe przez nie udostępniane i gromadzone, procedury biznesowe, prowadzone z użyciem oprogramowania",
+                "is_correct": true
+            }
+        ]
+    },
+    {
+        "question": "Dana w C, C++, czy Javie umieszczana jest w spójnym obszarze pamięci operacyjnej.",
+        "answers": [
+            {
+                "answer": "Tylko dane typów predefiniowanych",
+                "is_correct": false
+            },
+            {
+                "answer": "Tylko dane skalarne",
+                "is_correct": false
+            },
+            {
+                "answer": "Tylko dane złożone",
+                "is_correct": false
+            },
+            {
+                "answer": "I dane skalarne, i dane złożone",
+                "is_correct": true
+            }
+        ]
+    },
+    {
+        "question": "W językach imperatywnych (również obiektowych) przy wyborze reprezentacji dla danych rzeczywistych (zmiennoprzecinkowych) pojawiają się problemy:",
+        "answers": [
+            {
+                "answer": "wystąpienia nadmiaru",
+                "is_correct": true
+            },
+            {
+                "answer": "wystąpienia niedomiaru",
+                "is_correct": true
+            },
+            {
+                "answer": "dokładności",
+                "is_correct": true
+            }
+        ]
+    },
+    {
+        "question": "Wskazania (pointers) w C, C++ używane są do reprezentowania (wskazywania):",
+        "answers": [
+            {
+                "answer": "Obszarów pamięci operacyjnej",
+                "is_correct": true
+            },
+            {
+                "answer": "Zmiennych złożonych",
+                "is_correct": true
+            },
+            {
+                "answer": "Zmiennych skalarnych",
+                "is_correct": true
+            },
+            {
+                "answer": "Funkcji i metod",
+                "is_correct": true
+            }
+        ]
+    },
+    {
+        "question": "Dokładność reprezentacji zmiennoprzecinkowej jest określona przez:",
+        "answers": [
+            {
+                "answer": "liczbę bitów mantysy",
+                "is_correct": true
+            },
+            {
+                "answer": "liczbę bitów mantysy i wykładnika",
+                "is_correct": false
+            },
+            {
+                "answer": "zakres wykładnika",
+                "is_correct": false
+            },
+            {
+                "answer": "liczbę bitów mantysy i zakres wykładnika",
+                "is_correct": false
+            }
+        ]
+    },
+    {
+        "question": "Wybierz poprawną odpowiedź:",
+        "answers": [
+            {
+                "answer": "uwarunkowanie to cecha wynikająca tylko z dokładności operacji zmiennoprzecinkowych",
+                "is_correct": false
+            },
+            {
+                "answer": "wskaźniki uwarunkowania określają poprawność numeryczną",
+                "is_correct": false
+            },
+            {
+                "answer": "uwarunkowanie i stabilność numeryczna są cechami zadania",
+                "is_correct": false
+            },
+            {
+                "answer": "algorytmy numerycznie poprawne dają rozwiązanie będące nieco zaburzonym dokładnym rozwiązaniem zadania o nieco zaburzonych danych",
+                "is_correct": true
+            }
+        ]
+    },
+    {
+        "question": "Efekt Rungego w interpolacji wielomianowej to:",
+        "answers": [
+            {
+                "answer": "wynik wyboru złej funkcji interpolującej",
+                "is_correct": false
+            },
+            {
+                "answer": "wynik braku jednoznaczności rozwiązania zadania interpolacji",
+                "is_correct": false
+            },
+            {
+                "answer": "konsekwencja arytmetyki zmiennoprzecinkowej",
+                "is_correct": false
+            },
+            {
+                "answer": "wynik błędu metody",
+                "is_correct": true
+            }
+        ]
+    },
+    {
+        "question": "Funkcje sklejane stopnia m na przedziale [a,b]",
+        "answers": [
+            {
+                "answer": "są używane tylko do interpolacji przedziałowej",
+                "is_correct": false
+            },
+            {
+                "answer": "są ciągłe wraz z (m-1) pochodnymi na [a,b]",
+                "is_correct": true
+            },
+            {
+                "answer": "nie są przydatne do interpolowania funkcji periodycznych",
+                "is_correct": false
+            },
+            {
+                "answer": "są jednoznacznie określone przez podanie warunków brzegowych",
+                "is_correct": false
+            }
+        ]
+    },
+    {
+        "question": "Wybierz poprawną odpowiedź:",
+        "answers": [
+            {
+                "answer": "interpolacja z węzłami będącymi zerami wielomianu Czebyszewa odpowiedniego stopnia eliminuje efekt Rungego",
+                "is_correct": true
+            },
+            {
+                "answer": "przybliżenia Pade to technika aproksymacji średniokwadratowej",
+                "is_correct": false
+            },
+            {
+                "answer": "funkcje sklejane nie mogą być wykorzystane do aproksymacji średniokwadratowej ze względu na postać minimalizowanej normy",
+                "is_correct": false
+            },
+            {
+                "answer": "aproksymacja średniokwadratowa polega na minimalizacji normy Czebyszewa",
+                "is_correct": false
+            }
+        ]
+    },
+    {
+        "question": "Kwadratury Gaussa stosowane są:",
+        "answers": [
+            {
+                "answer": "ze względu na łatwiejszy wybór węzłów całkowania",
+                "is_correct": false
+            },
+            {
+                "answer": "dlatego, że kwadratury Newtona-Cotesa nie dają możliwości usuwania całkowalnych osobliwości",
+                "is_correct": false
+            },
+            {
+                "answer": "ze względu na mniejszą złożoność obliczeniową niż kwadratur Newtona-Cotesa",
+                "is_correct": false
+            },
+            {
+                "answer": "ponieważ umożliwają uzyskanie prawie dwa razy większego stopnia dokładności niż kwadratury Newtona-Cotesa dla tej samej liczby węzłów",
+                "is_correct": true
+            }
+        ]
+    },
+    {
+        "question": "Metoda Newtona-Raphsona rozwiązywania równań nieliniowych:",
+        "answers": [
+            {
+                "answer": "wykorzystuje niejawnie przyspieszenie Aitkena",
+                "is_correct": false
+            },
+            {
+                "answer": "jest przykładem metody iteracyjnej o stałym punkcie",
+                "is_correct": true
+            },
+            {
+                "answer": "jest przykładem metody interpolacyjnej",
+                "is_correct": false
+            },
+            {
+                "answer": "ma rząd zbieżności równy 1",
+                "is_correct": false
+            },
+            {
+                "answer": "ma rząd zbieżności równy 2",
+                "is_correct": true
+            },
+            {
+                "answer": "jest szybciej zbieżna niż metoda siecznych",
+                "is_correct": true
+            },
+            {
+                "answer": "jest szybciej zbieżna niż metoda bisekcji",
+                "is_correct": true
+            },
+            {
+                "answer": "nie może być uogólniona dla układów równań nieliniowych",
+                "is_correct": false
+            },
+            {
+                "answer": "wymaga znajomości pochodnej funkcji",
+                "is_correct": true
+            }
+        ]
+    },
+    {
+        "question": "Metoda eliminacji Gaussa rozwiązywania układów równań liniowych:",
+        "answers": [
+            {
+                "answer": "polega na doprowadzeniu macierzy do postaci diagonalnej",
+                "is_correct": false
+            },
+            {
+                "answer": "wymaga wyszukiwania elementu wiodącego i polega na przekształceniu macierzy do postaci trójkątnej górnej",
+                "is_correct": true
+            },
+            {
+                "answer": "ma złożoność O(n^3), gdzie n - liczba równań",
+                "is_correct": true
+            },
+            {
+                "answer": "jest przykładem metody iteracyjnej niestacjonarnej",
+                "is_correct": false
+            },
+            {
+                "answer": "ma złożoność O(n^2), gdzie n - liczba równań",
+                "is_correct": false
+            }
+        ]
+    },
+    {
+        "question": "Metody dekompozycji LU:",
+        "answers": [
+            {
+                "answer": "należą do rodziny metod iteracyjnych niestacjonarnych",
+                "is_correct": false
+            },
+            {
+                "answer": "nie wymagają wyszukiwania elementu wiodącego",
+                "is_correct": false
+            },
+            {
+                "answer": "są przydatne tylko do rozwiązywania układów równań z macierzą symetryczną dodatnio określoną",
+                "is_correct": false
+            },
+            {
+                "answer": "mają znacznie lepsze własności numeryczne niż metoda eliminacji Gaussa",
+                "is_correct": true
+            }
+        ]
+    },
+    {
+        "question": "Wybierz właściwe uporządkowanie metod iteracyjnego rozwiązywania układów równań liniowych wg narastającej ich jakości:",
+        "answers": [
+            {
+                "answer": "Jacobiego, Czebyszewa, nadrelaksacji, Gaussa-Seidela",
+                "is_correct": false
+            },
+            {
+                "answer": "SOR, Gaussa-Seidela, Czebyszewa, Jacobiego",
+                "is_correct": false
+            },
+            {
+                "answer": "Jacobiego, nadrelaksacji, Czebyszewa, SR",
+                "is_correct": false
+            },
+            {
+                "answer": "Jacobiego, SR, SOR, Czebyszewa",
+                "is_correct": true
+            }
+        ]
+    },
+    {
+        "question": "Metody blokowe rozwiązywania układów równań nieliniowych",
+        "answers": [
+            {
+                "answer": "nie wymagają wyznaczania elementu wiodącego",
+                "is_correct": false
+            },
+            {
+                "answer": "są jedynymi metodami dostępnymi na architekturach równoległych",
+                "is_correct": false
+            },
+            {
+                "answer": "redukują złożoność obliczeniową metodą \"dziel i rządź\"",
+                "is_correct": true
+            },
+            {
+                "answer": "zawsze automatycznie konwertują macierz do postaci trójkątnej dolnej, co upraszcza dalsze operacje",
+                "is_correct": false
+            }
+        ]
+    },
+    {
+        "question": "Wybierz właściwe uporządkowanie metod całkowania Monte Carlo wg narastającej ich jakości:",
+        "answers": [
+            {
+                "answer": "podstawowa, warstwowa, średniej ważonej, orzeł-reszka",
+                "is_correct": false
+            },
+            {
+                "answer": "podstawowa, orzeł-reszka, warstwowa, średniej ważonej",
+                "is_correct": false
+            },
+            {
+                "answer": "podstawowa, średniej ważonej, orzeł-reszka, warstwowa",
+                "is_correct": false
+            },
+            {
+                "answer": "orzeł-reszka, podstawowa, warstwowa, średniej ważonej",
+                "is_correct": true
+            }
+        ]
+    },
+    {
+        "question": "Wybierz poprawne zdanie opisujące metody minimalizacji:",
+        "answers": [
+            {
+                "answer": "metoda sprzężonych kierunków jest przykładem ogólnej metody poszukiwania minimum globalnego",
+                "is_correct": false
+            },
+            {
+                "answer": "wzór Davidona-Fletchera-Powella jest podstawą metody zmiennej metryki",
+                "is_correct": true
+            },
+            {
+                "answer": "metoda największego spadku jest przykładem metody poszukiwania minimum globalnego",
+                "is_correct": false
+            },
+            {
+                "answer": "metoda simpleksów należy do metod gradientowych",
+                "is_correct": false
+            }
+        ]
+    },
+    {
+        "question": "Metoda symulowanego wyżarzania:",
+        "answers": [
+            {
+                "answer": "to rodzina heurystycznych technik optymalizacji opartych na analogii z fizyką statystyczną układów losowych",
+                "is_correct": true
+            },
+            {
+                "answer": "to jedna z technik optymalizacji kombinatorycznej wykorzystująca metodę Newtona",
+                "is_correct": false
+            },
+            {
+                "answer": "to specjalne sformułowanie problemu komiwojażera",
+                "is_correct": false
+            }
+        ]
+    },
+    {
+        "question": "Szybka transformata Fouriera",
+        "answers": [
+            {
+                "answer": "jest możliwa tylko wtedy, gdy liczba punktów jest całkowitą potęgą 2",
+                "is_correct": false
+            },
+            {
+                "answer": "ma złożoność obliczeniową O(n), gdzie n - liczba węzłów",
+                "is_correct": false
+            },
+            {
+                "answer": "jest realizacją wzoru całkowego Fouriera na architekturach równoległych",
+                "is_correct": false
+            },
+            {
+                "answer": "polega na zamianie pojedynczej transformaty Fouriera na sumę transformat Fouriera",
+                "is_correct": true
+            }
+        ]
+    },
+    {
+        "question": "Podejście wariacyjne do rozwiązywania równań różniczkowych:",
+        "answers": [
+            {
+                "answer": "nie nadaje się do obliczeń numerycznych",
+                "is_correct": false
+            },
+            {
+                "answer": "polega na tym, że szukamy funkcji minimalizującej odpowiedni funkcjonał",
+                "is_correct": true
+            },
+            {
+                "answer": "polega na wprowadzeniu specjalnej siatki całkowania",
+                "is_correct": false
+            },
+            {
+                "answer": "uzmiennieniu położeń części punktów siatki",
+                "is_correct": false
+            }
+        ]
+    },
+    {
+        "question": "Wymagania stawiane schematom rozwiązywania numerycznego zagadnienia początkowego to:",
+        "answers": [
+            {
+                "answer": "jawne uwzględnienie warunków brzegowych",
+                "is_correct": false
+            },
+            {
+                "answer": "wprowadzenie siatki przestrzennej zgodnej z siatką czasowa",
+                "is_correct": false
+            },
+            {
+                "answer": "zgodność aproksymacji różnicowej, dokładność, stabilność, efektywność czasowa i pamięciowa",
+                "is_correct": true
+            },
+            {
+                "answer": "algorytm powinien mieć względnie małe wskaźniki uwarunkowania",
+                "is_correct": false
+            }
+        ]
+    },
+    {
+        "question": "Metoda Cranka-Nicolsona to",
+        "answers": [
+            {
+                "answer": "technika poszukiwania minimum lokalnego z uwzglednieniem drugich pochodnych",
+                "is_correct": false
+            },
+            {
+                "answer": "numeryczny sposób rozwiązywania równań różniczkowych parabolicznych",
+                "is_correct": true
+            },
+            {
+                "answer": "technika wyszukiwania miejsc zerowych wielomianów",
+                "is_correct": false
+            },
+            {
+                "answer": "numeryczny sposób rozwiązywania równań różniczkowych eliptycznych",
+                "is_correct": false
+            }
+        ]
+    },
+    {
+        "question": "Rola metod komputerowych w trójkącie \"teoria eksperyment symulacja\"to:",
+        "answers": [
+            {
+                "answer": "opracowywanie nowych praw o charakterze podstawowym dla danej dziedziny",
+                "is_correct": false
+            },
+            {
+                "answer": "realizacja symulacji w oparciu o prawa podstawowe, sugerowanie nowych eksperymentów, sugerowanie teorii",
+                "is_correct": true
+            },
+            {
+                "answer": "zastępowanie kosztownych eksperymentów i weryfikowanie teorii",
+                "is_correct": false
+            },
+            {
+                "answer": "realizacja symulacji w oparciu o prawa podstawowe, sugerowanie nowych eksperymentow, sterowanie eksperymentami, sugerowanie teorii",
+                "is_correct": false
+            }
+        ]
+    },
+    {
+        "question": "Jakie aspekty powinien uwzględniać pełny model systemu w podejściu strukturalnym do analizy i projektowania:",
+        "answers": [
+            {
+                "answer": "aspekt funkcjonalny, aspekt danych i ich powiązań",
+                "is_correct": false
+            },
+            {
+                "answer": "aspekty: funkcjonalny i dynamiki systemu",
+                "is_correct": false
+            },
+            {
+                "answer": "aspekt danych i ich powiązań, aspekt dynamiki systemu",
+                "is_correct": false
+            },
+            {
+                "answer": "aspekt funkcjonalny, aspekt danych i ich powiązań, oraz dynamiki systemu",
+                "is_correct": true
+            }
+        ]
+    },
+    {
+        "question": "Aspekt funkcjonalny systemu informatycznego modelowany jest w podejściu strukturalnym przy pomocy:",
+        "answers": [
+            {
+                "answer": "Data Flow Diagrams",
+                "is_correct": true
+            },
+            {
+                "answer": "Entity Relationship Diagrams",
+                "is_correct": false
+            },
+            {
+                "answer": "State Transition Diagrams",
+                "is_correct": false
+            },
+            {
+                "answer": "Structure Charts",
+                "is_correct": false
+            }
+        ]
+    },
+    {
+        "question": "Które z wymienionych podziałów wymagań niefunkcjonalnych są wyczerpujące i rozłączne",
+        "answers": [
+            {
+                "answer": "produktowe, organizacyjne, prawne",
+                "is_correct": false
+            },
+            {
+                "answer": "produktowe, prawne, parametryczne",
+                "is_correct": false
+            },
+            {
+                "answer": "produktowe, zewnętrzne, strategiczne",
+                "is_correct": false
+            },
+            {
+                "answer": "produktowe, organizacyjne, zewnętrzne",
+                "is_correct": true
+            }
+        ]
+    },
+    {
+        "question": "Wymienić elementy modelu środowiskowego w strukturalnym podejściu do analizy i projektowania systemów informatycznych:",
+        "answers": [
+            {
+                "answer": "ERD, DFD, STD",
+                "is_correct": false
+            },
+            {
+                "answer": "diagram kontekstowy, słownik danych, specyfikacja funkcji",
+                "is_correct": false
+            },
+            {
+                "answer": "opis celu systemu, wymagania funkcjonalne, wymagania niefunkcjonalne",
+                "is_correct": false
+            },
+            {
+                "answer": "opis celu systemu, lista zdarzeń, diagram kontekstowy",
+                "is_correct": true
+            }
+        ]
+    },
+    {
+        "question": "Jaki zestaw diagramów jest używany - w metodyce strukturalnej analizy i projektowania systemów informatycznych - do pokazania wszystkich aspektów modelowanego systemu:",
+        "answers": [
+            {
+                "answer": "DFD, ERD i STC",
+                "is_correct": false
+            },
+            {
+                "answer": "DFD i ERD",
+                "is_correct": false
+            },
+            {
+                "answer": "DFD, ERD i STD (lub ELH)",
+                "is_correct": true
+            },
+            {
+                "answer": "DFD i STD",
+                "is_correct": false
+            }
+        ]
+    },
+    {
+        "question": "Które obiekty graficzne są używane do tworzenia diagramu kontekstowego w metodyce strukturalnej analizy i projektowania systemów informatycznych:",
+        "answers": [
+            {
+                "answer": "Proces, przepływ danych (data flow), magazyn danych (data store)",
+                "is_correct": false
+            },
+            {
+                "answer": "Proces, obiekt zewnętrzny (external entity), magazyn danych (data store)",
+                "is_correct": false
+            },
+            {
+                "answer": "Przepływ danych (data flow), obiekt zewnętrzny (external entity), magazyn danych (data store)",
+                "is_correct": false
+            },
+            {
+                "answer": "Proces, przepływ danych (data flow), obiekt zewnętrzny (external entity)",
+                "is_correct": true
+            }
+        ]
+    },
+    {
+        "question": "Wybrać nazwy wszystkich obiektów graficznych używanych do konstruowania DFD (Data Flow Diagrams) - diagramów przepływu danych w metodyce strukturalnej:",
+        "answers": [
+            {
+                "answer": "proces (process)",
+                "is_correct": true
+            },
+            {
+                "answer": "obiekt zewnętrzny (external entity)",
+                "is_correct": true
+            },
+            {
+                "answer": "magazyn danych (data store)",
+                "is_correct": true
+            },
+            {
+                "answer": "przepływ danych (data flow)",
+                "is_correct": true
+            }
+        ]
+    },
+    {
+        "question": "Wskazać ten element dokumentacji projektowej, który zawiera zapis w postaci pseudokodu (metodyka strukturalna analizy i projektowania systemów inf.):",
+        "answers": [
+            {
+                "answer": "opis wymagań niefunkcjonalnych",
+                "is_correct": false
+            },
+            {
+                "answer": "opis wymagań funkcjonalnych",
+                "is_correct": false
+            },
+            {
+                "answer": "specyfikacja funkcji",
+                "is_correct": true
+            },
+            {
+                "answer": "opis celu przedsięwzięcia projektowego",
+                "is_correct": false
+            }
+        ]
+    },
+    {
+        "question": "Który element DFD w metodyce strukturalnej stanowi podstawę konstruowania ERD (Entity Relationship Diagram) - diagramu związków encji:",
+        "answers": [
+            {
+                "answer": "przepływ danych (data flow)",
+                "is_correct": false
+            },
+            {
+                "answer": "diagram kontekstowy (context diagram)",
+                "is_correct": false
+            },
+            {
+                "answer": "obiekt zewnętrzny (external entity)",
+                "is_correct": false
+            },
+            {
+                "answer": "magazyn danych (data store)",
+                "is_correct": true
+            }
+        ]
+    },
+    {
+        "question": "Zaletami prowadzenia transmisji w trybie pełnego dupleksu w standardzie Ethernet są:",
+        "answers": [
+            {
+                "answer": "możliwość wykorzystania urządzeń hub",
+                "is_correct": false
+            },
+            {
+                "answer": "całkowita likwidacja kolizji w segmencie sieci",
+                "is_correct": true
+            },
+            {
+                "answer": "możliwość dwukrotnego zwiększenia sumarycznej przepustowości transmisji",
+                "is_correct": true
+            },
+            {
+                "answer": "brak ograniczenia długości medium transmisyjnego w segmencie warstwy fizycznej wynikającego z wymogów protokołu CSMA/CD",
+                "is_correct": true
+            }
+        ]
+    },
+    {
+        "question": "Model odniesienia OSI/ISO:",
+        "answers": [
+            {
+                "answer": "jest modelem czterowarstwowym",
+                "is_correct": false
+            },
+            {
+                "answer": "definiuje standardy w ramach każdej warstwy (np. protokół IP w warstwie sieciowej)",
+                "is_correct": false
+            },
+            {
+                "answer": "określa zadania poszczególnych warstw",
+                "is_correct": true
+            },
+            {
+                "answer": "pozwala na niezależny rozwój sprzętu i oprogramowania w ramach poszczególnych warstw",
+                "is_correct": true
+            }
+        ]
+    },
+    {
+        "question": "Osiągnięcie przepustowości 1Gb/s na kablu UTP kategorii 5e (tym samym, który jest używany w transmisji 100Mb/s) w standardzie Ethernet jest:",
+        "answers": [
+            {
+                "answer": "możliwe dzięki wykorzystaniu do transmisji wszystkich czterech par",
+                "is_correct": true
+            },
+            {
+                "answer": "możliwe dzięki wykorzystaniu bardziej założonego kodowania",
+                "is_correct": true
+            },
+            {
+                "answer": "nie jest możliwe - wymaga kabla o lepszych parametrach",
+                "is_correct": false
+            },
+            {
+                "answer": "nie jest możliwe - taką przepustowość można osiągnąć tylko używając światłowodu",
+                "is_correct": false
+            }
+        ]
+    },
+    {
+        "question": "Kodowanie sygnałów w transmisji w sieciach komputerowych:",
+        "answers": [
+            {
+                "answer": "wpływa na uzyskiwaną przepustowość",
+                "is_correct": true
+            },
+            {
+                "answer": "jest zależne od wykorzystywanego medium",
+                "is_correct": true
+            },
+            {
+                "answer": "jest przedmiotem zainteresowania warstwy sieciowej modelu OSI/ISO",
+                "is_correct": false
+            },
+            {
+                "answer": "może pozwalać na osiągnięcie samosynchronizacji nadajnika i odbiornika",
+                "is_correct": true
+            }
+        ]
+    },
+    {
+        "question": "Istnienie ograniczenia maksymalnej odległości między komunikującymi się hostami wynika z:",
+        "answers": [
+            {
+                "answer": "w ramach jednego segmentu sieci: wymogów protokołu warstwy łącza danych",
+                "is_correct": true
+            },
+            {
+                "answer": "w ramach jednego segmentu sieci: parametrów medium fizycznego",
+                "is_correct": true
+            },
+            {
+                "answer": "w ramach jednego segmentu sieci: wymogów protokołu warstwy sieciowej",
+                "is_correct": false
+            },
+            {
+                "answer": "w ramach kilku segmentów sieci rozdzielonych przełącznicami: wymogów protokołu warstwy sieciowej",
+                "is_correct": false
+            }
+        ]
+    },
+    {
+        "question": "Które z wymienionych funkcji realizuje warstwa łącza danych modelu OSI/ISO?",
+        "answers": [
+            {
+                "answer": "dostarczenie adresacji fizycznej",
+                "is_correct": true
+            },
+            {
+                "answer": "umożliwienie definiowania adresacji logicznej",
+                "is_correct": false
+            },
+            {
+                "answer": "detekcja kolizji w medium transmisyjnym",
+                "is_correct": true
+            },
+            {
+                "answer": "definicja strategii dostępu do łącza",
+                "is_correct": true
+            }
+        ]
+    },
+    {
+        "question": "Wirtualne sieci lokalne:     ",
+        "answers": [
+            {
+                "answer": "można definiować w oparciu o adresy fizyczne",
+                "is_correct": true
+            },
+            {
+                "answer": "mogą być rozpięte na wielu urządzeniach warstwy drugiej modelu OSI/ISO",
+                "is_correct": true
+            },
+            {
+                "answer": "stanowią mechanizm alternatywny dla budowy drzewa rozpinającego",
+                "is_correct": false
+            },
+            {
+                "answer": "stanowią podstawowy mechanizm zapobiegania przeciążeniom mostka",
+                "is_correct": false
+            }
+        ]
+    },
+    {
+        "question": "Algorytm budowy drzewa rozpinającego (STA):",
+        "answers": [
+            {
+                "answer": "jest stosowany w przypadku mostków uczących się",
+                "is_correct": true
+            },
+            {
+                "answer": "służy zapobieżeniu występowania zapętleń transmisji ramek",
+                "is_correct": true
+            },
+            {
+                "answer": "jest jednym ze sposobów elekcji głównego routera w sieci",
+                "is_correct": false
+            },
+            {
+                "answer": "służy zrównoważeniu obciążenia pomiędzy łączami o takich samych przepustowościach",
+                "is_correct": false
+            }
+        ]
+    },
+    {
+        "question": "Które warstwy modelu OSI/ISO są różne dla sieci WAN i LAN?",
+        "answers": [
+            {
+                "answer": "fizyczna i łącza danych",
+                "is_correct": true
+            },
+            {
+                "answer": "fizyczna i sieci",
+                "is_correct": false
+            },
+            {
+                "answer": "łącza danych i sieci",
+                "is_correct": false
+            },
+            {
+                "answer": "fizyczna, łącza danych i sieci",
+                "is_correct": false
+            }
+        ]
+    },
+    {
+        "question": "Opisz, do czego jest wykorzystywany protokół ARP:",
+        "answers": [
+            {
+                "answer": "uzyskania adresu IP",
+                "is_correct": false
+            },
+            {
+                "answer": "uzyskania adresu MAC urządzenia spoza naszej sieci lokalnej",
+                "is_correct": false
+            },
+            {
+                "answer": "określenie odwzorowania między adresami warstwy 3 i 2 modelu OSI/ISO",
+                "is_correct": true
+            },
+            {
+                "answer": "wyznaczania ścieżki pakietu ",
+                "is_correct": false
+            }
+        ]
+    },
+    {
+        "question": "Jeżeli dwie stacje znajdujące się w innych sieciach IP połączone są ze sobą dokładnie jednym routerem i chce komunikować się ze sobą to:",
+        "answers": [
+            {
+                "answer": "obydwie stacje muszą posiadać jednakową maskę",
+                "is_correct": false
+            },
+            {
+                "answer": "musi być uruchomiony mechanizm proxy-arp na routerze",
+                "is_correct": false
+            },
+            {
+                "answer": "na ruterze konieczne jest dodanie pozycji routingu statycznego",
+                "is_correct": false
+            },
+            {
+                "answer": "wymagane jest ustawienie na każdej stacji adresu IP",
+                "is_correct": true
+            }
+        ]
+    },
+    {
+        "question": "Protokół IP w wersji 4 posiada następujące cechy",
+        "answers": [
+            {
+                "answer": "pozwala na fragmentację pakietów w węzłach pośrednich i u nadawcy",
+                "is_correct": true
+            },
+            {
+                "answer": "zawiera mechanizmy potwierdzania doręczenia pakietów",
+                "is_correct": false
+            },
+            {
+                "answer": "umożliwia kontrolę nagłówka pakietu za pomocą sumy kontrolnej",
+                "is_correct": true
+            },
+            {
+                "answer": "jest protokołem połączeniowym",
+                "is_correct": false
+            }
+        ]
+    },
+    {
+        "question": "W jakich przypadkach jest stosowany protokół ICMP.",
+        "answers": [
+            {
+                "answer": "transmisji danych wysokopiorytetowych",
+                "is_correct": false
+            },
+            {
+                "answer": "uzyskiwania informacji o konfiguracji sieci",
+                "is_correct": true
+            },
+            {
+                "answer": "sygnalizacji sytuacji awaryjnych",
+                "is_correct": true
+            },
+            {
+                "answer": "wyszukiwania odbiorców ruchu multicastowego",
+                "is_correct": false
+            }
+        ]
+    },
+    {
+        "question": "Jaki mechanizm uniemożliwia nieskończone krążenie ramek IP w sieci w przypadku wystąpienia pętli.",
+        "answers": [
+            {
+                "answer": "mechanizm split-horizon",
+                "is_correct": false
+            },
+            {
+                "answer": "mechanizm trigger-update",
+                "is_correct": false
+            },
+            {
+                "answer": "pole TTL",
+                "is_correct": true
+            },
+            {
+                "answer": "NAT",
+                "is_correct": false
+            }
+        ]
+    },
+    {
+        "question": "Parametr \"niezawodność łącza\" wchodzi w skład metryki protokołu routingu:",
+        "answers": [
+            {
+                "answer": "EIGRP",
+                "is_correct": true
+            },
+            {
+                "answer": "RIPv2",
+                "is_correct": false
+            },
+            {
+                "answer": "IGRP",
+                "is_correct": true
+            },
+            {
+                "answer": "OSPF",
+                "is_correct": false
+            }
+        ]
+    },
+    {
+        "question": "Protokół TCP:",
+        "answers": [
+            {
+                "answer": "może grupować dane otrzymane do wysłania w celu zoptymalizowania wykorzystania połączeń sieciowych",
+                "is_correct": true
+            },
+            {
+                "answer": "wymaga osobnego potwierdzenia każdego otrzymanego segmentu",
+                "is_correct": false
+            },
+            {
+                "answer": "używa algorytmu Nagle'a w celu zapewnienia kontroli przepływu danych",
+                "is_correct": false
+            },
+            {
+                "answer": "zezwala na wspólne potwierdzenie wielu przesłanych segmentów",
+                "is_correct": true
+            }
+        ]
+    },
+    {
+        "question": "Protokół UDP:",
+        "answers": [
+            {
+                "answer": "wprowadza mechanizmy fragmentacji dla danych użytkownika przekraczających maksymalny rozmiar datagramu UDP",
+                "is_correct": false
+            },
+            {
+                "answer": "pozwala na grupowanie danych otrzymanych do wysłania w celu zoptymalizowania wykorzystania połączeń sieciowych",
+                "is_correct": false
+            },
+            {
+                "answer": "stosuje porty jako adresy warstwy transportowej",
+                "is_correct": true
+            },
+            {
+                "answer": "nie zabezpiecza przed duplikacją i zmianą kolejności datagramów",
+                "is_correct": true
+            }
+        ]
+    },
+    {
+        "question": "Zaznacz prawdziwe stwierdzenia na temat stronicowania",
+        "answers": [
+            {
+                "answer": "Stronicowanie rozwiązuje problem zewnętrznej fragmentacji pamięci",
+                "is_correct": true
+            },
+            {
+                "answer": "Tablica stron jest stosowana do translacji adresu logicznego na adres fizyczny",
+                "is_correct": true
+            },
+            {
+                "answer": "Podczas stronicowania przyjmuje się, że pamięć fizyczna jest podzielona na strony, a pamięć logiczna na ramki, i że rozmiary stron i ramek są jednakowe",
+                "is_correct": false
+            },
+            {
+                "answer": "Stronicowanie rozwiązuje problem wewnętrznej fragmentacji pamięci",
+                "is_correct": false
+            },
+            {
+                "answer": "Podczas stronicowania przyjmuje się, że pamięć fizyczna jest podzielona na ramki, a pamięć logiczna na strony, i że rozmiary stron i ramek są jednakowe",
+                "is_correct": true
+            }
+        ]
+    },
+    {
+        "question": "Zaznacz prawdziwe stwierdzenia na temat segmentacji:",
+        "answers": [
+            {
+                "answer": "Segmentacja ułatwia nadanie częściom procesu odpowiednich atrybutów ochrony: dopuszczalny odczyt, dopuszczalny zapis, dopuszczalne wykonanie",
+                "is_correct": true
+            },
+            {
+                "answer": "Zastosowanie segmentacji wyklucza użycie stronicowania",
+                "is_correct": false
+            },
+            {
+                "answer": "Mogą istnieć następujące przykładowe rodzaje segmentów: kodu, danych, stosu",
+                "is_correct": true
+            },
+            {
+                "answer": "Elementy tablicy segmentów zawierają adresy/numery ramek, w których znajdują się segmenty oraz rozmiary poszczególnych segmentów",
+                "is_correct": false
+            }
+        ]
+    },
+    {
+        "question": "Zaznacz prawdziwe stwierdzenia na temat algorytmów wywłaszczania stron:",
+        "answers": [
+            {
+                "answer": "Zaletą algorytmu zastępowania stron FIFO jest to, że nie zachodzi w nim efekt zwany anomalią Beledy'ego",
+                "is_correct": false
+            },
+            {
+                "answer": "W algorytmie zastępowania stron LRU zastępowana jest strona, która najdłużej nie była używana",
+                "is_correct": true
+            },
+            {
+                "answer": "W algorytmie zastępowania stron zwanym algorytmem drugiej szansy algorytm wykorzystuje bit odniesienia, który określa, czy w pewnym przedziale czasu nastąpiło odwołanie do strony",
+                "is_correct": true
+            },
+            {
+                "answer": "Zasadą działania algorytmu optymalnego zastępowania stron jest to, że zastąpiona zostaje strona, która najdłużej nie będzie używana",
+                "is_correct": true
+            }
+        ]
+    },
+    {
+        "question": "Zaznacz prawdziwe stwierdzenia na temat pamięci wirtualnej:",
+        "answers": [
+            {
+                "answer": "Stronicowanie na żądanie jest jednym ze sposobów realizacji pamięci wirtualnej",
+                "is_correct": true
+            },
+            {
+                "answer": "Przydział ramek oparty na globalnym algorytmie zastępowania może ograniczyć szamotanie (w porównaniu do algorytmu lokalnego zastępowania), gdyż szamocący się proces nie doprowadza do szamotania innych procesów",
+                "is_correct": false
+            },
+            {
+                "answer": "Procedura leniwej wymiany (ang. lazy swapper) polega na tym, że nie wykonuje się wymiany stron w pamięci, jeśli nie zachodzi taka potrzeba",
+                "is_correct": true
+            },
+            {
+                "answer": "Pamięć wirtualna umożliwia wykonywanie procesów, które nie są w całości przechowywane w pamięci operacyjnej",
+                "is_correct": true
+            }
+        ]
+    },
+    {
+        "question": "Zaznacz prawdziwe zdania na temat semaforów:",
+        "answers": [
+            {
+                "answer": "Zaletą aktywnego czekania w trybie użytkownika jest brak konieczności kosztownego przejścia do trybu uprzywilejowanego (systemowego)",
+                "is_correct": true
+            },
+            {
+                "answer": "Semafor może być użyty do synchronizacji dostępu do sekcji krytycznej",
+                "is_correct": true
+            },
+            {
+                "answer": "Aktywne czekanie oznacza ciągłe testowanie wartości wyrażenia do momentu, gdy przyjmie ono wartość dla której czekanie może być zakończone",
+                "is_correct": true
+            },
+            {
+                "answer": "Semafor nie nadaje się do zdeterminowania kolejności wykonywanych operacji w grupie współbieżnych procesów",
+                "is_correct": false
+            }
+        ]
+    },
+    {
+        "question": "Podstawę klasyfikacji aplikacji jako aplikacji rozproszonej stanowi wykonywanie się jej:",
+        "answers": [
+            {
+                "answer": "w dwu lub więcej komputerach",
+                "is_correct": true
+            },
+            {
+                "answer": "wykonywanie się aplikacji współbieżnie",
+                "is_correct": false
+            },
+            {
+                "answer": "w dwu lub więcej procesach",
+                "is_correct": false
+            },
+            {
+                "answer": "w dwu lub więcej procesorach",
+                "is_correct": true
+            }
+        ]
+    },
+    {
+        "question": "Brak możliwości w ustaleniu dokładnego globalnego czasu w systemach rozproszonych wynika z:",
+        "answers": [
+            {
+                "answer": "rozsynchronizowania zegarów komputerów w systemie",
+                "is_correct": false
+            },
+            {
+                "answer": "komunikacji sieciowej",
+                "is_correct": false
+            },
+            {
+                "answer": "braku protokołu synchronizacji zegarów",
+                "is_correct": false
+            },
+            {
+                "answer": "własności fizycznych systemu, takich jak rozdzielność miejsca i skończona szybkość propagacji sygnału",
+                "is_correct": true
+            }
+        ]
+    },
+    {
+        "question": "Podczas korzystania z interfejsu gniazd BSD programista musi borykać się z następującymi problemami:",
+        "answers": [
+            {
+                "answer": "brakiem zgodności typów danych pomiędzy różnymi platformami sprzętowymi i programowymi",
+                "is_correct": true
+            },
+            {
+                "answer": "kolejnością ułożenia bajtów pamięci (LittleEndian, BigEndian)",
+                "is_correct": true
+            },
+            {
+                "answer": "ręczną serializacją danych",
+                "is_correct": true
+            },
+            {
+                "answer": "translacją adresu DNS na adres IP",
+                "is_correct": false
+            }
+        ]
+    },
+    {
+        "question": "Za pomocą interfejsu gniazd BSD możliwa jest komunikacja:",
+        "answers": [
+            {
+                "answer": "punkt-punkt z wykorzystaniem protokołów TCP i UDP",
+                "is_correct": true
+            },
+            {
+                "answer": "rozgłoszeniowa z wykorzystaniem protokołów IP i UDP",
+                "is_correct": true
+            },
+            {
+                "answer": "multicastowa z wykorzystaniem protokołów TCP i UDP",
+                "is_correct": false
+            },
+            {
+                "answer": "punkt-punkt z wykorzystaniem protokołu HTTP",
+                "is_correct": false
+            }
+        ]
+    },
+    {
+        "question": "Procedura idempotentna:",
+        "answers": [
+            {
+                "answer": "jest ściśle związana z architekturą CORBA",
+                "is_correct": false
+            },
+            {
+                "answer": "to taka, która zapisuje stan obiektu",
+                "is_correct": false
+            },
+            {
+                "answer": "to np. procedura usunięcia pliku",
+                "is_correct": false
+            },
+            {
+                "answer": "to taka, która wywołana wielokrotnie daje ten sam efekt",
+                "is_correct": true
+            }
+        ]
+    },
+    {
+        "question": "Z technologią RPC związane są pojęcia:",
+        "answers": [
+            {
+                "answer": "DSI (Dynamic Skeleton Interface)",
+                "is_correct": false
+            },
+            {
+                "answer": "Port Mapper",
+                "is_correct": true
+            },
+            {
+                "answer": "XDR (External Data Representation)",
+                "is_correct": true
+            },
+            {
+                "answer": "BOA (Basic Object Adapter)",
+                "is_correct": false
+            }
+        ]
+    },
+    {
+        "question": "Aby przesłać obiekt Java z wykorzystaniem RMI, musi on:",
+        "answers": [
+            {
+                "answer": "być zarejestrowany w serwisie RMI Activation",
+                "is_correct": false
+            },
+            {
+                "answer": "implementować określony interfejs w przypadku przesyłania przez referencję",
+                "is_correct": true
+            },
+            {
+                "answer": "być zarejestrowany w serwisie nazw",
+                "is_correct": false
+            },
+            {
+                "answer": "posiadać możliwość serializacji stanu w przypadku przesyłania przez wartość",
+                "is_correct": true
+            }
+        ]
+    },
+    {
+        "question": "Usługa rmiregistry pozwala na:",
+        "answers": [
+            {
+                "answer": "ponowne zarejestrowanie (re-bind) obiektu o tej samej nazwie",
+                "is_correct": true
+            },
+            {
+                "answer": "jest jedynym sposobem na uzyskanie referencji do obiektu zdalnego serwera przez klienta",
+                "is_correct": false
+            },
+            {
+                "answer": "rejestrowanie obiektów przy użyciu struktury hierarchicznej nazw",
+                "is_correct": false
+            },
+            {
+                "answer": "rejestrowanie oraz wyszukiwanie serwerów opartych na technologi RMI",
+                "is_correct": true
+            }
+        ]
+    },
+    {
+        "question": "Które z poniższych twierdzeń są prawdziwe:",
+        "answers": [
+            {
+                "answer": "można napisać klienta w C++, który będzie się komunikował z obiektem CORBA którego serwant jest napisany w Javie",
+                "is_correct": true
+            },
+            {
+                "answer": "IIOP jest kontenerem w którym wykonują się obiekty CORBA",
+                "is_correct": false
+            },
+            {
+                "answer": "GIOP jest protokołem (specyfikacją protokołu)",
+                "is_correct": true
+            },
+            {
+                "answer": "architektura CORBA jest zależna od języka w którym implementujemy programy wykorzystujące tą architekturę",
+                "is_correct": false
+            }
+        ]
+    },
+    {
+        "question": "Protokół IIOP jest zdefiniowany dla protokołu transportowego:",
+        "answers": [
+            {
+                "answer": "IMAP",
+                "is_correct": false
+            },
+            {
+                "answer": "TCP",
+                "is_correct": true
+            },
+            {
+                "answer": "SNMP",
+                "is_correct": false
+            },
+            {
+                "answer": "UDP",
+                "is_correct": false
+            }
+        ]
+    },
+    {
+        "question": "W CORBIE za pomocą stuba można wywoływać metody:",
+        "answers": [
+            {
+                "answer": "udostępniane poprzez skeleton",
+                "is_correct": true
+            },
+            {
+                "answer": "udostępniane przy pomocy DSI (Dynamic Skeleton Interface)",
+                "is_correct": true
+            },
+            {
+                "answer": "udostępniane przy pomocy portmappera",
+                "is_correct": false
+            },
+            {
+                "answer": "udostępniane przy pomocy DII (Dynamic Invocation Interface)",
+                "is_correct": false
+            }
+        ]
+    },
+    {
+        "question": "CORBA jest:",
+        "answers": [
+            {
+                "answer": "relacyjną bazą danych wspierającą język IDL",
+                "is_correct": false
+            },
+            {
+                "answer": "architekturą wykorzystywaną do budowania aplikacji o charakterze rozproszonym w środowiskach heterogenicznych",
+                "is_correct": true
+            },
+            {
+                "answer": "językiem programowania",
+                "is_correct": false
+            },
+            {
+                "answer": "platformą multimedialną wykorzystującą protokół IIOP",
+                "is_correct": false
+            }
+        ]
+    },
+    {
+        "question": "Które z poniższych pojęć są usługami CORBA?",
+        "answers": [
+            {
+                "answer": "Concurrency Service",
+                "is_correct": true
+            },
+            {
+                "answer": "JXTA",
+                "is_correct": false
+            },
+            {
+                "answer": "Portable Object Adapter",
+                "is_correct": false
+            },
+            {
+                "answer": "Time Service",
+                "is_correct": true
+            }
+        ]
+    },
+    {
+        "question": "Które pojęcia nie są związane z architekturą CORBA?",
+        "answers": [
+            {
+                "answer": "SOAP",
+                "is_correct": true
+            },
+            {
+                "answer": "IIOP",
+                "is_correct": false
+            },
+            {
+                "answer": "BOA",
+                "is_correct": false
+            },
+            {
+                "answer": "POA",
+                "is_correct": false
+            }
+        ]
+    },
+    {
+        "question": "Jeżeli moc pobierana przez układ jest najważniejszym kryterium branym pod uwagę przy projektowaniu to którą rodzinę układów wybierzesz:",
+        "answers": [
+            {
+                "answer": "CMOS",
+                "is_correct": true
+            },
+            {
+                "answer": "ECL",
+                "is_correct": false
+            },
+            {
+                "answer": "standard TTL",
+                "is_correct": false
+            },
+            {
+                "answer": "ALS TTL",
+                "is_correct": false
+            }
+        ]
+    },
+    {
+        "question": "Wyrażenie Boolowskie może być zrealizowane z:",
+        "answers": [
+            {
+                "answer": "kombinacji NAND i NOR",
+                "is_correct": true
+            },
+            {
+                "answer": "samych NAND'ów",
+                "is_correct": true
+            },
+            {
+                "answer": "samych NOR'ów",
+                "is_correct": true
+            }
+        ]
+    },
+    {
+        "question": "Rolą zegara doprowadzonego do przerzutnika bistabilnego jest:",
+        "answers": [
+            {
+                "answer": "dążenie do zmiany na wyjściu w zależności od stanu wejść przygotowujących (S-R, J-K, D)",
+                "is_correct": true
+            },
+            {
+                "answer": "wyzerowanie układu",
+                "is_correct": false
+            },
+            {
+                "answer": "ustawienie układu",
+                "is_correct": false
+            },
+            {
+                "answer": "zawsze wywołanie zmiany na wyjściu",
+                "is_correct": false
+            }
+        ]
+    },
+    {
+        "question": "Przerzutnik JK jest w stanie stałych zmian na wyjściu gdy:",
+        "answers": [
+            {
+                "answer": "J = 1, K = 1",
+                "is_correct": true
+            },
+            {
+                "answer": "J = 1, K = 0",
+                "is_correct": false
+            },
+            {
+                "answer": "J = 0, K = 1",
+                "is_correct": false
+            },
+            {
+                "answer": "J = 0, K = 0",
+                "is_correct": false
+            }
+        ]
+    },
+    {
+        "question": "Multiwibrator astabilny:",
+        "answers": [
+            {
+                "answer": "jest oscylatorem",
+                "is_correct": true
+            },
+            {
+                "answer": "wymaga okresowego impulsu wymuszającego",
+                "is_correct": false
+            },
+            {
+                "answer": "produkuje nieperiodyczne impulsy na wyjściu",
+                "is_correct": false
+            },
+            {
+                "answer": "nie ma stanu stabilnego",
+                "is_correct": true
+            }
+        ]
+    },
+    {
+        "question": "Który stan jest nieważny w liczniku BCD:",
+        "answers": [
+            {
+                "answer": "1100",
+                "is_correct": true
+            },
+            {
+                "answer": "0010",
+                "is_correct": false
+            },
+            {
+                "answer": "0101",
+                "is_correct": false
+            },
+            {
+                "answer": "1000",
+                "is_correct": false
+            }
+        ]
+    },
+    {
+        "question": "10 MHz zegar jest podłączony do kaskady liczników zawierającej - licznik modulo-5, modulo-8 i dwa liczniki modulo 10. Jaka jest częstotliwość wyjścia:",
+        "answers": [
+            {
+                "answer": "2,5 kHz",
+                "is_correct": true
+            },
+            {
+                "answer": "25 kHz",
+                "is_correct": false
+            },
+            {
+                "answer": "5 kHz",
+                "is_correct": false
+            },
+            {
+                "answer": "10 kHz",
+                "is_correct": false
+            }
+        ]
+    },
+    {
+        "question": "Licznik asynchroniczny różni się od synchronicznego:",
+        "answers": [
+            {
+                "answer": "liczbą stanów w jego sekwencji",
+                "is_correct": false
+            },
+            {
+                "answer": "typem użytych przerzutników",
+                "is_correct": false
+            },
+            {
+                "answer": "metodą zegarowania",
+                "is_correct": true
+            },
+            {
+                "answer": "liczbą podziału",
+                "is_correct": false
+            }
+        ]
+    },
+    {
+        "question": "Stopnie w rejestrze przesuwnym zawierają:",
+        "answers": [
+            {
+                "answer": "bajt pamięci",
+                "is_correct": false
+            },
+            {
+                "answer": "4 bity pamięci",
+                "is_correct": false
+            },
+            {
+                "answer": "przerzutniki",
+                "is_correct": true
+            },
+            {
+                "answer": "zatrzaski",
+                "is_correct": false
+            }
+        ]
+    },
+    {
+        "question": "Przy użyciu 1MHz zegara, osiem bitów równolegle może być wprowadzonych do rejestru przesuwnego w czasie:",
+        "answers": [
+            {
+                "answer": "1 us",
+                "is_correct": true
+            },
+            {
+                "answer": "w czasie propagacji 8 przerzutników",
+                "is_correct": false
+            },
+            {
+                "answer": "8 us",
+                "is_correct": false
+            },
+            {
+                "answer": "w czasie propagacji 1 przerzutnika",
+                "is_correct": true
+            }
+        ]
+    },
+    {
+        "question": "Grupa bitów 10110101 jest szeregowo przesuwana w prawo w ośmiobitowym rejestrze ze stanem początkowym 11100100. Po dwóch impulsach zegara stan wyjścia jest:",
+        "answers": [
+            {
+                "answer": "01011110",
+                "is_correct": false
+            },
+            {
+                "answer": "01111001",
+                "is_correct": true
+            },
+            {
+                "answer": "10110101",
+                "is_correct": false
+            },
+            {
+                "answer": "00101101",
+                "is_correct": false
+            }
+        ]
+    },
+    {
+        "question": "8 bitowy przetwornik DAC ma rozdzielczość:",
+        "answers": [
+            {
+                "answer": "1 %",
+                "is_correct": false
+            },
+            {
+                "answer": "0,392 %",
+                "is_correct": true
+            },
+            {
+                "answer": "3,92 %",
+                "is_correct": false
+            },
+            {
+                "answer": "0,1 %",
+                "is_correct": false
+            }
+        ]
+    },
+    {
+        "question": "W przetworniku DAC typu R-2R są:",
+        "answers": [
+            {
+                "answer": "rezystory o jednej wartości",
+                "is_correct": false
+            },
+            {
+                "answer": "2 wartości rezystorów",
+                "is_correct": true
+            },
+            {
+                "answer": "4 wartości rezystorów",
+                "is_correct": false
+            },
+            {
+                "answer": "liczba wartości rezystorów jest równa liczbie wejść",
+                "is_correct": false
+            },
+            {
+                "answer": "liczba rezystorów jest równa liczbie wejść",
+                "is_correct": false
+            },
+            {
+                "answer": "liczba rezystorów jest równa dwukrotności liczby wejść",
+                "is_correct": true
+            }
+        ]
+    },
+    {
+        "question": "Która zależność jest poprawna:",
+        "answers": [
+            {
+                "answer": "Na jeden cykl maszynowy składa się jeden lub kilka cykli rozkazowych a na jeden cykl rozkazowy składa się jeden lub kilka cykli zegarowych",
+                "is_correct": false
+            },
+            {
+                "answer": "Na jeden cykl zegarowy składa się jeden lub kilka cykli maszynowych a na jeden cykl maszynowy składa się jeden lub kilka cykli rozkazowych",
+                "is_correct": false
+            },
+            {
+                "answer": "Na jeden cykl rozkazowy składa się jeden lub kilka cykli maszynowych a na jeden cykl maszynowy składa się jeden lub kilka cykli zegarowych",
+                "is_correct": true
+            }
+        ]
+    },
+    {
+        "question": "Co wpływa na fakt szybszego dostępu do danych przy użyciu DMA zamiast trybu programowalnego?",
+        "answers": [
+            {
+                "answer": "szybszy zegar",
+                "is_correct": false
+            },
+            {
+                "answer": "czysto sprzętowa realizacja dostępu",
+                "is_correct": true
+            },
+            {
+                "answer": "krótsze ścieżki na płycie głównej",
+                "is_correct": false
+            },
+            {
+                "answer": "większy bufor",
+                "is_correct": false
+            }
+        ]
+    },
+    {
+        "question": "Który rodzaj pamięci wymaga odświeżania ?",
+        "answers": [
+            {
+                "answer": "FLASH",
+                "is_correct": false
+            },
+            {
+                "answer": "DRAM",
+                "is_correct": true
+            },
+            {
+                "answer": "ROM",
+                "is_correct": false
+            },
+            {
+                "answer": "EAPROM",
+                "is_correct": false
+            }
+        ]
+    },
+    {
+        "question": "Połączenie procesora z magistralą odbywa się poprzez bufor 3 stanowy aby:",
+        "answers": [
+            {
+                "answer": "uzyskać wysoką impedancję bufora w razie potrzeby",
+                "is_correct": true
+            },
+            {
+                "answer": "uzyskać stan rozwarcia aby odłączyć procesor",
+                "is_correct": true
+            },
+            {
+                "answer": "wykorzystać stałą wysoką impedancję bufora",
+                "is_correct": false
+            }
+        ]
+    },
+    {
+        "question": "Dla utrzymania logicznego stanu komórki pamięci dynamicznej niezbędne okazuje się",
+        "answers": [
+            {
+                "answer": "odświeżanie jej zawartości",
+                "is_correct": true
+            },
+            {
+                "answer": "dostarczanie stałego napięcia do komórki",
+                "is_correct": false
+            },
+            {
+                "answer": "nic nie trzeba robić",
+                "is_correct": false
+            }
+        ]
+    },
+    {
+        "question": "Układ sterujący procesora jest to:",
+        "answers": [
+            {
+                "answer": "układ generujący funkcje sterujące wykonywaniem programu",
+                "is_correct": true
+            },
+            {
+                "answer": "rejestry konfiguracyjne, których stan określa aktualny tryb pracy procesora",
+                "is_correct": false
+            },
+            {
+                "answer": "zestaw funkcji ułatwiających śledzenie przebiegu wykonywania programu",
+                "is_correct": false
+            }
+        ]
+    },
+    {
+        "question": "Procesor otrzymuje sygnał HOLD, oznacza to:",
+        "answers": [
+            {
+                "answer": "wymuszenie wykonania specjalnego programu",
+                "is_correct": false
+            },
+            {
+                "answer": "zerowanie licznika programu",
+                "is_correct": false
+            },
+            {
+                "answer": "chwilowe zawieszenie pracy w celu zwolnienia magistrali",
+                "is_correct": true
+            },
+            {
+                "answer": "przejście do podprogramu",
+                "is_correct": false
+            }
+        ]
+    },
+    {
+        "question": "Co to jest mikrooperacja?",
+        "answers": [
+            {
+                "answer": "elementarna operacja do wykonania w potoku",
+                "is_correct": false
+            },
+            {
+                "answer": "najprostsza operacja do wykonania w jednym takcie zegara",
+                "is_correct": true
+            },
+            {
+                "answer": "element składowy rozkazu",
+                "is_correct": true
+            }
+        ]
+    },
+    {
+        "question": "Po co w procesorach zastosowano pamięć typu ROM w jednostce sterującej",
+        "answers": [
+            {
+                "answer": "dla zorganizowania mikroprogramowanego dekodera",
+                "is_correct": true
+            },
+            {
+                "answer": "dla zachowania programu boot'ującego",
+                "is_correct": false
+            },
+            {
+                "answer": "dla zachowania ustawień procesora",
+                "is_correct": false
+            }
+        ]
+    },
+    {
+        "question": "Generalizacja",
+        "answers": [
+            {
+                "answer": "organizuje obiekty w hierarchię uogólniania/uszczegóławiania",
+                "is_correct": false
+            },
+            {
+                "answer": "organizuje klasy w hierarchię całości/części",
+                "is_correct": false
+            },
+            {
+                "answer": "znajduje swoje odzwierciedlenie w mechanizmie dziedziczenia interfejsów",
+                "is_correct": true
+            },
+            {
+                "answer": "znajduje swoje odzwierciedlenie w mechanizmie dziedziczenia implementacji",
+                "is_correct": false
+            },
+            {
+                "answer": "organizuje klasy w hierarchię uogólniania/uszczegóławiania",
+                "is_correct": true
+            }
+        ]
+    },
+    {
+        "question": "Kompozycja",
+        "answers": [
+            {
+                "answer": "jest to struktura agregacji, w której klasy części mogą być powiązane tylko z jedną klasą całości",
+                "is_correct": false
+            },
+            {
+                "answer": "ogranicza powiązanie klasy części do jednej klasy całości",
+                "is_correct": false
+            },
+            {
+                "answer": "ogranicza powiązanie obiektu części do jednego obiektu całości",
+                "is_correct": true
+            },
+            {
+                "answer": "jest silnym powiązaniem z czasem życia części ograniczonym do czasu życia całości",
+                "is_correct": true
+            },
+            {
+                "answer": "Całość jest odpowiedzialna za zarzadzanie tworzeniem i usuwaniem części",
+                "is_correct": true
+            },
+            {
+                "answer": "Ściśle związana z generalizacją",
+                "is_correct": false
+            },
+            {
+                "answer": "Ściśle związana z delegacją",
+                "is_correct": true
+            }
+        ]
+    },
+    {
+        "question": "Relacja zależności wskazuje, że",
+        "answers": [
+            {
+                "answer": "klasa dostarcza implementacji usług interfejsu",
+                "is_correct": false
+            },
+            {
+                "answer": "istnieje szczególne powiązanie między klasami",
+                "is_correct": false
+            },
+            {
+                "answer": "obiekt klasy może być argumentem wywołania usługi innej klasy",
+                "is_correct": true
+            },
+            {
+                "answer": "implementacja klasy może się zmienić, gdy zmieni się implementacja innej klasy",
+                "is_correct": true
+            }
+        ]
+    },
+    {
+        "question": "Relacja realizacji wskazuje, że",
+        "answers": [
+            {
+                "answer": "obiekt klasy może być argumentem wywołania usługi innej klasy",
+                "is_correct": false
+            },
+            {
+                "answer": "klasa dostarcza implementacji usług interfejsu",
+                "is_correct": true
+            },
+            {
+                "answer": "klasa realizuje usługi delegowane z innej klasy",
+                "is_correct": false
+            },
+            {
+                "answer": "klasa wykorzystuje usługi interfejsu",
+                "is_correct": false
+            }
+        ]
+    },
+    {
+        "question": "Wielokrotne użycie wspierane jest w modelu obiektowym przez:",
+        "answers": [
+            {
+                "answer": "kwalifikowane powiązania",
+                "is_correct": false
+            },
+            {
+                "answer": "kompozycje z delegacją roli",
+                "is_correct": true
+            },
+            {
+                "answer": "istnienie klas obiektów",
+                "is_correct": true
+            },
+            {
+                "answer": "dziedziczenie implementacji",
+                "is_correct": true
+            }
+        ]
+    },
+    {
+        "question": "Wybierz, które z poniższych stwierdzeń są prawdziwe:",
+        "answers": [
+            {
+                "answer": "Autorem klasyfikacji (hierarchii) języków formalnych jest Noam Chomsky",
+                "is_correct": true
+            },
+            {
+                "answer": "Zbiór wszystkich palindromów nad danym alfabetem jest językiem regularnym",
+                "is_correct": false
+            },
+            {
+                "answer": "Istnieją języki, które nie należą do hierarchii Chomsky'ego, więc nie są generowane przez żadną gramatykę ani akceptowane przez żaden automat",
+                "is_correct": true
+            },
+            {
+                "answer": "Językiem formalnym nazywamy dowolny podzbiór zbioru wszystkich możliwych słów zbudowanych z symboli należących do skończonego alfabetu",
+                "is_correct": true
+            },
+            {
+                "answer": "Język oznaczany jako { epsilon } jest językiem pustym",
+                "is_correct": false
+            },
+            {
+                "answer": "Najszerszą klasą języków w hierarchii Chomsky'ego jest klasa języków rekurencyjnie przeliczalnych generowanych przez gramatyki bez ograniczeń",
+                "is_correct": true
+            }
+        ]
+    },
+    {
+        "question": "Niech N będzie niedeterministycznym automatem skończonym posiadającym n stanów, oraz niech M będzie minimalnym deterministycznym automatem skończonym rozpoznającym ten sam język. Liczbę stanów automatu M oznaczamy przez m. Wtedy:",
+        "answers": [
+            {
+                "answer": "m <= n",
+                "is_correct": false
+            },
+            {
+                "answer": "m <= 2^n",
+                "is_correct": true
+            },
+            {
+                "answer": "n <= m",
+                "is_correct": false
+            },
+            {
+                "answer": "M posiada dokładnie jeden stan akceptujący",
+                "is_correct": false
+            },
+            {
+                "answer": "Każdy deterministyczny automat skończony rozpoznający ten sam język musi posiadać co najmniej 2^n stanów",
+                "is_correct": false
+            }
+        ]
+    },
+    {
+        "question": "Wybierz, które z poniższych stwierdzeń są prawdziwe:",
+        "answers": [
+            {
+                "answer": "Jeśli język L spełnia tezę lematu o pompowaniu dla języków regularnych, to język L jest regularny",
+                "is_correct": false
+            },
+            {
+                "answer": "Jeśli język L jest skończony, to L* musi być regularny",
+                "is_correct": true
+            },
+            {
+                "answer": "Każdy język, który nie jest regularny, jest nieskończony",
+                "is_correct": true
+            },
+            {
+                "answer": "Pomimo, że języki regularne w trywialny sposób są bezkontekstowe, to istnieją języki regularne nie spełniające lematu o pompowaniu dla języków bezkontekstowych",
+                "is_correct": false
+            }
+        ]
+    },
+    {
+        "question": "Eliminując niejednoznaczność gramatyki poprzez konwersję do innej gramatyki musimy zachować bez zmian:",
+        "answers": [
+            {
+                "answer": "drzewo wyprowadzenia oryginalnej gramatyki dla każdego jednoznacznego słowa wejściowego",
+                "is_correct": false
+            },
+            {
+                "answer": "wyprowadzenia oryginalnej gramatyki dla każdego słowa wejściowego",
+                "is_correct": false
+            },
+            {
+                "answer": "zbiór słów generowanych przez oryginalną gramatykę",
+                "is_correct": true
+            },
+            {
+                "answer": "drzewo wyprowadzenia oryginalnej gramatyki dla każdego słowa wejściowego",
+                "is_correct": false
+            },
+            {
+                "answer": "wyprowadzenia oryginalnej gramatyki dla każdego jednoznacznego słowa wejściowego",
+                "is_correct": false
+            }
+        ]
+    },
+    {
+        "question": "Która z następujących metod parsingu może przetworzyć najszerszą klasę gramatyk:",
+        "answers": [
+            {
+                "answer": "parser SLR",
+                "is_correct": false
+            },
+            {
+                "answer": "zstępujący parser rekurencyjny bez nawracania",
+                "is_correct": false
+            },
+            {
+                "answer": "kanoniczny parser LR",
+                "is_correct": false
+            },
+            {
+                "answer": "parser Earley'a",
+                "is_correct": true
+            },
+            {
+                "answer": "parser LL(1)",
+                "is_correct": false
+            },
+            {
+                "answer": "parser CYK",
+                "is_correct": true
+            }
+        ]
+    },
+    {
+        "question": "Wybierz stwierdzenia, które są prawdziwe:",
+        "answers": [
+            {
+                "answer": "Dla każdej gramatyki jednoznacznej można skonstruować parser LR(1)",
+                "is_correct": false
+            },
+            {
+                "answer": "Żadna gramatyka niejednoznaczna nie może być gramatyką LR(1)",
+                "is_correct": true
+            },
+            {
+                "answer": "Tworzenie parsera jest sensowną procedurą tylko dla jednoznacznej gramatyki bezkontekstowej (nie ma sensu konstruowanie parsera dla gramatyki niejednoznacznej)",
+                "is_correct": false
+            },
+            {
+                "answer": "Konstruując parser dla gramatyki niejednoznacznej i usuwając konflikty uzyskujemy bardziej efektywne rozwiązania, niż opierając parser na równoważnej gramatyce jednoznacznej",
+                "is_correct": true
+            }
+        ]
+    },
+    {
+        "question": "Sekcja krytyczna procesu jest to:",
+        "answers": [
+            {
+                "answer": "część procesu, w której wykorzystywany jest zasób dzielony",
+                "is_correct": true
+            },
+            {
+                "answer": "część procesu, w której wykonywana jest komunikacja z użytkownikiem",
+                "is_correct": false
+            },
+            {
+                "answer": "część procesu, w której wykonywana jest nieskończona pętla",
+                "is_correct": false
+            },
+            {
+                "answer": "część procesu, w której deklarowane są lokalne zmienne",
+                "is_correct": false
+            }
+        ]
+    },
+    {
+        "question": "Wzajemnym wykluczaniem nazywamy problem współzawodnictwa procesów o zasób, który:",
+        "answers": [
+            {
+                "answer": "musi zostać zainicjalizowany przez jeden z procesów",
+                "is_correct": false
+            },
+            {
+                "answer": "jest zmienną przechowywaną w rejestrach procesora",
+                "is_correct": false
+            },
+            {
+                "answer": "jednocześnie może być wykorzystywany tylko przez jeden z nich",
+                "is_correct": true
+            },
+            {
+                "answer": "może być wykorzystywany tylko przez z góry określony czas",
+                "is_correct": false
+            }
+        ]
+    },
+    {
+        "question": "Komunikację nazywamy asynchroniczną jeżeli:",
+        "answers": [
+            {
+                "answer": "nadawca żąda, by odbiorca był gotów do odebrania komunikatu",
+                "is_correct": false
+            },
+            {
+                "answer": "nadawca może wysłać wiadomość i kontynuować pracę bez wstrzymania",
+                "is_correct": true
+            },
+            {
+                "answer": "przy komunikacji mamy do czynienia z synchronizacją procesów",
+                "is_correct": false
+            },
+            {
+                "answer": "nadawca nie żąda, by odbiorca był gotów do odebrania komunikatu",
+                "is_correct": true
+            }
+        ]
+    },
+    {
+        "question": "Zjawisko blokady w programie współbieżnym jest:",
+        "answers": [
+            {
+                "answer": "zatrzymaniem pracy jednego ze współbieżnych procesów",
+                "is_correct": false
+            },
+            {
+                "answer": "stanem, w którym każdy proces oczekuje na działanie innego procesu",
+                "is_correct": true
+            },
+            {
+                "answer": "przejawem braku bezpieczeństwa programu współbieżnego",
+                "is_correct": true
+            },
+            {
+                "answer": "stanem, w którym proces czekający na dane zdarzenie nie zostaje wznowiony mimo, że występuje ono dowolną liczbę razy",
+                "is_correct": false
+            }
+        ]
+    },
+    {
+        "question": "Zjawisko zagłodzenia w programie współbieżnym jest:",
+        "answers": [
+            {
+                "answer": "stanem, w którym każdy proces oczekuje na działanie innego procesu",
+                "is_correct": false
+            },
+            {
+                "answer": "przejawem braku bezpieczeństwa programu współbieżnego",
+                "is_correct": false
+            },
+            {
+                "answer": "stanem, w którym proces czekający na dane zdarzenie nie zostaje wznowiony mimo, że występuje ono dowolną liczbę razy",
+                "is_correct": true
+            },
+            {
+                "answer": "nienaturalnym przerwaniem pracy jednego ze współbieżnych procesów",
+                "is_correct": false
+            }
+        ]
+    },
+    {
+        "question": "Komunikację nazywamy synchroniczną jeżeli:",
+        "answers": [
+            {
+                "answer": "nadawca żąda, by odbiorca był gotów do odebrania komunikatu",
+                "is_correct": true
+            },
+            {
+                "answer": "nadawca nie żąda, by odbiorca był gotów do odebrania komunikatu",
+                "is_correct": false
+            },
+            {
+                "answer": "przy komunikacji mamy do czynienia z synchronizacją procesów",
+                "is_correct": true
+            },
+            {
+                "answer": "nadawca może wysłać wiadomość i kontynuować pracę bez wstrzymania",
+                "is_correct": false
+            }
+        ]
+    },
+    {
+        "question": "W systemie operacyjnym UNIX:",
+        "answers": [
+            {
+                "answer": "Praca programu logującego (login) jest sterowana m. in. zawartością plików /etc/nologin lub /etc/motd",
+                "is_correct": true
+            },
+            {
+                "answer": "O możliwościach użytkownika w systemie decyduje przynależność do odpowiednich grup użytkowników",
+                "is_correct": true
+            },
+            {
+                "answer": "W zależności od konfiguracji systemu mogą być odnotowywane podłączenia do systemu poprzez zmianę kontekstu użytkownika (komenda su)",
+                "is_correct": true
+            },
+            {
+                "answer": "Grupy użytkowników wprowadzono, aby ułatwić zarządzanie użytkownikami oraz podnieść bezpieczeństwo systemu",
+                "is_correct": true
+            }
+        ]
+    },
+    {
+        "question": "W systemie operacyjnym UNIX:",
+        "answers": [
+            {
+                "answer": "O postaci hasła decyduje administrator systemu zapisując ograniczenia w różnych wersjach systemu w różnych plikach konfiguracyjnych",
+                "is_correct": true
+            },
+            {
+                "answer": "Wszystkie grupy użytkowników dają im jednakowe uprawnenia",
+                "is_correct": false
+            },
+            {
+                "answer": "Cała informacja dotycząca konfiguracji użytkownika w systemie jest zapisana jedynie w pliku /etc/passwd co zapewnia spójność informacji",
+                "is_correct": false
+            },
+            {
+                "answer": "Do systemu użytkownik może podłączać się jedynie z konsoli systemu oraz zdalnie poprzez sieć",
+                "is_correct": false
+            },
+            {
+                "answer": "Nazwa użytkownika w systemie UNIX musi być unikalna zaś numer identyfikacyjny może się powtarzać.",
+                "is_correct": true
+            },
+            {
+                "answer": "Technika shadow umożliwia podglądnięcie postaci zaszyfrowanej hasła każdego użytkownika w systemie przez dowolnego użytkownika",
+                "is_correct": false
+            },
+            {
+                "answer": "System PAM umożliwia m.in. odnotowywanie nieudanych prób podłączania się do systemu",
+                "is_correct": true
+            }
+        ]
+    },
+    {
+        "question": "Procesy",
+        "answers": [
+            {
+                "answer": "Proces jest wykonaniem programu i składa się ze zbiorowości bajtów, w których wyróżnia się instrukcje maszynowe (tzw. tekst), dane i stos",
+                "is_correct": true
+            },
+            {
+                "answer": "W kategoriach praktycznych proces w systemie UNIX jest jednostką utworzoną za pomocą funkcji systemowej fork (z wyjątkiem procesu o numerze 0)",
+                "is_correct": true
+            },
+            {
+                "answer": "Każdy uruchomiony w systemie UNIX proces otrzymuje od procesu potomnego dostęp do jego (procesu macierzystego) zmiennych środowiskowych",
+                "is_correct": false
+            },
+            {
+                "answer": "Liczba możliwych do uruchomienia w systemie UNIX procesów jest ograniczona jedynie rozmiarem pamięci o dostępie swobodnym danego systemu komputerowego",
+                "is_correct": false
+            },
+            {
+                "answer": "Wartość parametru NICE dla nowoutworzonego procesu jest wyliczania na podstawie średniego obciążenia systemu",
+                "is_correct": false
+            },
+            {
+                "answer": "Każdy uruchomiony w systemie UNIX proces otrzymuje od systemu trzy otwarte pliki o numerach 0, 1 i 2",
+                "is_correct": false
+            }
+        ]
+    },
+    {
+        "question": "Interpretery poleceń systemu UNIX",
+        "answers": [
+            {
+                "answer": "W niektórych interpreterach poleceń można uniemożliwić odłączanie się od systemu poprzez wykorzystanie sekwencji Ctrl-D dzięki ustawieniu wartości odpowiedniej zmiennej środowiskowej",
+                "is_correct": true
+            },
+            {
+                "answer": "Wszystkie polecenia shella zwracają wartość 0 (zero), kiedy wykonanie ich zakończy się niepowodzeniem lub wartość różną od 0 (zazwyczaj 1) w przypadku przeciwnym",
+                "is_correct": false
+            },
+            {
+                "answer": "Każdy interpreter wykorzystuje trzy podstawowe typy zmiennych: specjalne, środowiska oraz programowe",
+                "is_correct": true
+            },
+            {
+                "answer": "Błędne wykonanie komendy w linii komend można rozpoznać m.in. po zapisach do urządzenia /dev/null",
+                "is_correct": false
+            }
+        ]
+    },
+    {
+        "question": "Jakie byłyby konsekwencje znalezienia wielomianowego deterministycznego algorytmu dla problemu NP-zupełnego?",
+        "answers": [
+            {
+                "answer": "żadna z pozostałych odpowiedzi",
+                "is_correct": false
+            },
+            {
+                "answer": "Oznaczałoby to, że P =/= NP",
+                "is_correct": false
+            },
+            {
+                "answer": "Nie miałoby to żadnych konsekwencji dla teorii złożności obliczeniowej",
+                "is_correct": false
+            },
+            {
+                "answer": "Stanowiłoby to dowód, ze P = NP",
+                "is_correct": true
+            }
+        ]
+    },
+    {
+        "question": "Jakie problemy zaliczamy do klasy problemów NP-zupełnych?",
+        "answers": [
+            {
+                "answer": "z definicji należą jednocześnie do NP i co-NP",
+                "is_correct": false
+            },
+            {
+                "answer": "należą do klasy NP, ale nie należą do P",
+                "is_correct": false
+            },
+            {
+                "answer": "żadna z pozostałych odpowiedzi",
+                "is_correct": false
+            },
+            {
+                "answer": "wszystkie problemy z klasy NP redukują się do nich i same należą do klasy NP",
+                "is_correct": true
+            }
+        ]
+    },
+    {
+        "question": "Co można powiedzieć o podproblemach problemu PI, wiedząc, że PI nie należy do P?",
+        "answers": [
+            {
+                "answer": "żaden jego podproblem nie należy do P",
+                "is_correct": false
+            },
+            {
+                "answer": "każdy jego podproblem należy do klasy P",
+                "is_correct": false
+            },
+            {
+                "answer": "pojecie podproblemu nie jest zdefiniowane",
+                "is_correct": false
+            },
+            {
+                "answer": "istnieje taki jego podproblem, który należy do P",
+                "is_correct": true
+            }
+        ]
+    }
+]
