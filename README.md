@@ -8,6 +8,6 @@ python -m pip install -r requirements.prod --upgrade
 
 ### Run server
 ```
-cd src
+cd backend
 python server.py
 ```
