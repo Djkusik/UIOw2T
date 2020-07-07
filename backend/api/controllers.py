@@ -36,13 +36,13 @@ async def add_player_to_waiting_room(request):
 async def get_players(request):
     game_app = get_game_app(request)
     players = game_app.get_players()
-    return web.json_response(dict(players=players))
+    return web.json_response(dict(players=[p.id for p in players]))
 
 
 async def get_players_in_waiting_room(request):
     game_app = get_game_app(request)
     players_in_waiting_room = game_app.get_players_in_waiting_room()
-    return web.json_response(dict(players=players_in_waiting_room))
+    return web.json_response(dict(players=[p.id for p in players_in_waiting_room]))
 
 
 
