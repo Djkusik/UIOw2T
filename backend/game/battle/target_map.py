@@ -1,12 +1,11 @@
 from typing import List
 
-from termcolor import colored
-
-from game.unit import Unit
+from game.models.unit import Unit
 
 
 class TargetMap:
-    def __init__(self, battle_simulator: 'BattleSimulator', player1_units: List[Unit], player2_units: List[Unit]):
+    def __init__(self, battle_simulator: 'BattleSimulator',
+                 player1_units: List[Unit], player2_units: List[Unit]) -> None:
         self.battle_simulator = battle_simulator
         self.player1_units = player1_units
         self.player2_units = player2_units
@@ -19,15 +18,15 @@ class TargetMap:
         for unit2 in player2_units:
             self.fill_map_for(unit2, player1_units)
 
-    def fill_map_for(self, unit: Unit, enemies: List[Unit]):
+    def fill_map_for(self, unit: Unit, enemies: List[Unit]) -> None:
         if enemies:
             sorted_enemies = sorted(enemies, key=lambda enemy: unit.position.distance_from(enemy.position))
             self.map[unit] = sorted_enemies[0]
 
-    def get_target_for(self, unit: Unit):
+    def get_target_for(self, unit: Unit) -> None:
         return self.map[unit]
 
-    def on_death(self, unit: Unit):
+    def on_death(self, unit: Unit) -> None:
         if unit in self.player1_units:
             unit_allies = self.player1_units
             unit_enemies = self.player2_units
