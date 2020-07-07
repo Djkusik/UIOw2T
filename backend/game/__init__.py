@@ -8,8 +8,9 @@ from .player import Player
 
 
 class WaitingRoom:
-    def __init__(self) -> None:
+    def __init__(self, capacity: int = 2) -> None:
         self.players: Set[Player] = set()
+        self.capacity = capacity
 
     def draw_two_players_to_game(self) -> Tuple[Player, Player]:
         players = random.sample(self.players, 2)
@@ -19,8 +20,12 @@ class WaitingRoom:
         return players
 
     def join(self, player: Player):
-        self.players.add(player)
-        logging.info("Player '%s' joined waiting room" % player.nick)
+        if not self.is_full() and player not in self.players:
+            self.players.add(player)
+            logging.info(f"Player '{player.nick}' joined waiting room")
+
+    def is_full(self):
+        return len(self.players) == self.capacity
 
 
 class Game:
@@ -50,32 +55,37 @@ class GameApp:
         self.players: List[Player] = []
         self.waiting_room: WaitingRoom = WaitingRoom()
 
-    def add_player(self, nick: str) -> UUID:
+    def add_player(self, nick: str, id: str) -> Player:
         existing_player: Player = self.get_player_by_nick(nick)
         if existing_player:
-            return existing_player.id
-        new_player = Player(nick)
+            return existing_player
+
+        new_player = Player(nick, id)
         self.players.append(new_player)
-        self.join_waiting_room(str(new_player.id))  # TODO remove it - it should be called during creating socket
-        return new_player.id
+        self.waiting_room.join(new_player)
+        return new_player
+
+    def get_players(self) -> List[Player]:
+        return self.players
+
+    def get_players_in_waiting_room(self) -> Set[Player]:
+        return self.waiting_room.players
 
     def get_player_by_nick(self, nick: str) -> Player:
         return next((p for p in self.players if p.nick == nick), None)
 
     def get_player_by_id(self, id: str) -> Player:
-        return next((p for p in self.players if p.id == UUID(id)), None)
+        return next((p for p in self.players if p.id == id), None)
 
-    def join_waiting_room(self, player_id: str):
-        player = self.get_player_by_id(player_id)
-        self.waiting_room.join(player)
+    def is_waiting_room_full(self):
+        return self.waiting_room.is_full()
 
     async def start_games(self) -> None:
         while True:
-            if len(self.waiting_room.players) >= 2:
+            if self.is_waiting_room_full():
                 players = self.waiting_room.draw_two_players_to_game()
                 game = Game(players)
                 await game.play()
                 for p in players:
                     self.waiting_room.join(p)
             await asyncio.sleep(2)
-
