@@ -1,16 +1,16 @@
 import logging
 from aiohttp import web
 
-from game import WaitingRoom
+from game import GameApp
 from .routes import setup_routes
 from .config import config
 
 
-async def api_server(waiting_room: WaitingRoom) -> web.AppRunner:
+async def api_server(game_app: GameApp) -> web.AppRunner:
     app = web.Application()
     logging.basicConfig(level=logging.DEBUG)
     setup_routes(app)
-    await config(app, waiting_room)
+    await config(app, game_app)
 
     runner = web.AppRunner(app)
     await runner.setup()

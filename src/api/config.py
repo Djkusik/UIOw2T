@@ -1,15 +1,15 @@
 import aiohttp_cors
 from aiohttp import web
 
-from game import WaitingRoom
+from game import GameApp
 
 
-async def config(app: web.Application, waiting_room: WaitingRoom):
-    app["waiting_room"] = waiting_room
+async def config(app: web.Application, game_app: GameApp):
+    app["game_app"] = game_app
 
 
-def get_waiting_room(request) -> WaitingRoom:
-    return request.app["waiting_room"]
+def get_game_app(request) -> GameApp:
+    return request.app["game_app"]
 
 
 def get_cors(app: web.Application):

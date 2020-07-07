@@ -1,15 +1,15 @@
 import asyncio
 
 from api import api_server
-from game import WaitingRoom
+from game import GameApp
 
 
 def main() -> None:
-    waiting_room = WaitingRoom()
+    game_app = GameApp()
 
     loop = asyncio.get_event_loop()
-    loop.create_task(api_server(waiting_room))
-    loop.run_until_complete(waiting_room.start_games())
+    loop.create_task(api_server(game_app))
+    loop.run_until_complete(game_app.start_games())
     loop.close()
 
 
