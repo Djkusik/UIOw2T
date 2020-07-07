@@ -37,10 +37,10 @@ class BattleSimulator:
 
         while True:
             for unit in self.all_units:
-                unit.attack()
                 if self.is_done():
                     battle_logger.send_turn_logs()
                     return self.result()
+                unit.attack()
             battle_logger.send_turn_logs()
 
     def is_done(self) -> bool:
