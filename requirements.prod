@@ -1,5 +1,6 @@
 aiohttp==3.6.2
 aiohttp_cors==0.7.0
 aiofile==3.0.0
+python_socketio==4.6.0
 typing==3.7.4.1
 uuid==1.30

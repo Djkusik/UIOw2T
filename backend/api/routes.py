@@ -7,4 +7,6 @@ def setup_routes(app):
     app.router.add_get("/questions", get_questions)
     cors = get_cors(app)
     for route in app.router.routes():
+        if route.resource.canonical == "/socket.io/":
+            continue
         cors.add(route)
