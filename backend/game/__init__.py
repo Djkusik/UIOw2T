@@ -1,7 +1,7 @@
 import asyncio
 import logging
 import random
-from typing import List, Tuple
+from typing import List, Tuple, Set
 from uuid import UUID
 
 from .player import Player
@@ -9,17 +9,17 @@ from .player import Player
 
 class WaitingRoom:
     def __init__(self) -> None:
-        self.players: List[Player] = []
+        self.players: Set[Player] = set()
 
     def draw_two_players_to_game(self) -> Tuple[Player, Player]:
-        random.shuffle(self.players)
-        players = (self.players.pop(), self.players.pop())
+        players = random.sample(self.players, 2)
         for p in players:
+            self.players.discard(p)
             p.in_game = True
         return players
 
     def join(self, player: Player):
-        self.players.append(player)
+        self.players.add(player)
         logging.info("Player '%s' joined waiting room" % player.nick)
 
 
@@ -51,9 +51,9 @@ class GameApp:
         self.waiting_room: WaitingRoom = WaitingRoom()
 
     def add_player(self, nick: str) -> UUID:
-        exist_player: Player = self.get_player_by_nick(nick)
-        if exist_player:
-            return exist_player.id
+        existing_player: Player = self.get_player_by_nick(nick)
+        if existing_player:
+            return existing_player.id
         new_player = Player(nick)
         self.players.append(new_player)
         self.join_waiting_room(str(new_player.id))  # TODO remove it - it should be called during creating socket
