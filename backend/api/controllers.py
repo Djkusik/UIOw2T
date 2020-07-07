@@ -2,6 +2,7 @@ import logging
 import json
 import random
 from aiohttp import web
+from aiofile import AIOFile
 from uuid import UUID
 
 from .config import get_game_app
@@ -21,15 +22,15 @@ async def add_player(request):
 async def get_questions(request):
     default_number = 3
     questions_path = "api/data/questions.json"
-
-    data = await request.post()
-    num = data.get("num") if "num" in data else request.rel_url.query.get("num")
-    logging.info(f"Getting {num} questions")
+    # Get the requested number or use default
+    num = request.rel_url.query.get("num")
+    logging.info(f"Getting {num} questions (default is {default_number})")
     try:
         num = int(num)
     except:
         num = default_number
 
-    with open(questions_path, 'r') as f:
-        questions = json.load(f)
+    async with AIOFile(questions_path, 'r') as f:
+        s = await f.read()
+        questions = json.loads(s)
     return web.json_response(random.sample(questions, num))
