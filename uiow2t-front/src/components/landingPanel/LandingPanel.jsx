@@ -8,7 +8,7 @@ async function joinGame(nick, evt, history) {
   evt.preventDefault()
   const response = await axios.post(`<type in your host>/add_player`, { nick })
   if (response && response.statusCode === 200) history.push('<type in room address>')
-  else history.push('https://google.com')
+  else history.push('/')
 }
 
 function LandingPanel() {
