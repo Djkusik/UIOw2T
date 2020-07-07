@@ -36,11 +36,13 @@ class SocketController:
         players = self.game_app.get_players()
         response = dict(players=[p.nick for p in players])
         await self.sio.emit('players_reply', data=response, room=sid)
+        logging.info(f"Sent player info to peer with SID: {sid}")
 
     async def get_players_in_waiting_room(self, sid):
         players = self.game_app.get_players_in_waiting_room()
         response = dict(players_waiting=[p.nick for p in players])
         await self.sio.emit('players_waiting_reply', data=response, room=sid)
+        logging.info(f"Sent waiting players info to peer with SID: {sid}")
 
     async def get_questions(self, sid, data):
         default_number = 3
@@ -59,12 +61,14 @@ class SocketController:
             questions = json.loads(s)
         response = random.sample(questions, num)
         await self.sio.emit('questions_reply', data=response, room=sid)
+        logging.info(f"Sent {num} questions to peer with SID: {sid}")
 
     async def on_game_started(self):
         players = self.game_app.get_players()
         message = {'message': 'game started'}
         for player in players:
             await self.sio.emit('game_started', data=message, room=player.id)
+            logging.info(f"Sent start game info to peer with SID: {player.id}")
 
 
 
