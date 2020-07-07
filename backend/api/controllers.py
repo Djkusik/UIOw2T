@@ -3,7 +3,6 @@ import logging
 import random
 from socketio import AsyncServer
 from aiofile import AIOFile
-from aiohttp import web
 from game import GameApp
 
 
@@ -28,6 +27,10 @@ class SocketController:
         player = self.game_app.add_player(data['nick'], sid)
         await self.sio.emit("login_reply", data={"message": "login ok"}, room=sid)
         logging.info(f"Added player '{player.nick}' with id '{player.id}' to the game")
+
+        if self.game_app.is_waiting_room_full():
+            await self.on_game_started()
+            await self.game_app.start_games()
 
     async def get_players(self, sid):
         players = self.game_app.get_players()
@@ -56,6 +59,12 @@ class SocketController:
             questions = json.loads(s)
         response = random.sample(questions, num)
         await self.sio.emit('questions_reply', data=response, room=sid)
+
+    async def on_game_started(self):
+        players = self.game_app.get_players()
+        message = {'message': 'game started'}
+        for player in players:
+            await self.sio.emit('game_started', data=message, room=player.id)
 
 
 

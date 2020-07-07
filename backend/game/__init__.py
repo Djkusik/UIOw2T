@@ -8,8 +8,9 @@ from .player import Player
 
 
 class WaitingRoom:
-    def __init__(self) -> None:
+    def __init__(self, capacity: int = 2) -> None:
         self.players: Set[Player] = set()
+        self.capacity = capacity
 
     def draw_two_players_to_game(self) -> Tuple[Player, Player]:
         players = random.sample(self.players, 2)
@@ -19,9 +20,12 @@ class WaitingRoom:
         return players
 
     def join(self, player: Player):
-        if player not in self.players:
+        if not self.is_full() and player not in self.players:
             self.players.add(player)
-            logging.info("Player '%s' joined waiting room" % player.nick)
+            logging.info(f"Player '{player.nick}' joined waiting room")
+
+    def is_full(self):
+        return len(self.players) == self.capacity
 
 
 class Game:
@@ -73,9 +77,12 @@ class GameApp:
     def get_player_by_id(self, id: str) -> Player:
         return next((p for p in self.players if p.id == id), None)
 
+    def is_waiting_room_full(self):
+        return self.waiting_room.is_full()
+
     async def start_games(self) -> None:
         while True:
-            if len(self.waiting_room.players) >= 2:
+            if self.is_waiting_room_full():
                 players = self.waiting_room.draw_two_players_to_game()
                 game = Game(players)
                 await game.play()
