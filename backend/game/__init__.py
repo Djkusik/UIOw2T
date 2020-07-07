@@ -51,13 +51,15 @@ class GameApp:
         self.players: List[Player] = []
         self.waiting_room: WaitingRoom = WaitingRoom()
 
-    def add_player(self, nick: str) -> UUID:
+    def add_player(self, nick: str, id: str) -> Player:
         existing_player: Player = self.get_player_by_nick(nick)
         if existing_player:
-            return existing_player.id
-        new_player = Player(nick)
+            return existing_player
+
+        new_player = Player(nick, id)
         self.players.append(new_player)
-        return new_player.id
+        self.waiting_room.join(new_player)
+        return new_player
 
     def get_players(self) -> List[Player]:
         return self.players
@@ -65,25 +67,11 @@ class GameApp:
     def get_players_in_waiting_room(self) -> Set[Player]:
         return self.waiting_room.players
 
-    def add_player_to_waiting_room(self, id: str):
-        try:
-            player: Player = self.get_player_by_id(id)
-        except Exception:
-            return False
-
-        if player is None:
-            return False
-        self.waiting_room.join(player)
-        return True
-
     def get_player_by_nick(self, nick: str) -> Player:
         return next((p for p in self.players if p.nick == nick), None)
 
     def get_player_by_id(self, id: str) -> Player:
-        return next((p for p in self.players if p.id == UUID(id)), None)
-
-    def join_waiting_room(self, player_id: str):
-        player = self.get_player_by_id(player_id)
+        return next((p for p in self.players if p.id == id), None)
 
     async def start_games(self) -> None:
         while True:
