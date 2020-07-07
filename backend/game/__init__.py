@@ -19,8 +19,9 @@ class WaitingRoom:
         return players
 
     def join(self, player: Player):
-        self.players.add(player)
-        logging.info("Player '%s' joined waiting room" % player.nick)
+        if player not in self.players:
+            self.players.add(player)
+            logging.info("Player '%s' joined waiting room" % player.nick)
 
 
 class Game:
@@ -56,8 +57,24 @@ class GameApp:
             return existing_player.id
         new_player = Player(nick)
         self.players.append(new_player)
-        self.join_waiting_room(str(new_player.id))  # TODO remove it - it should be called during creating socket
         return new_player.id
+
+    def get_players(self) -> List[Player]:
+        return self.players
+
+    def get_players_in_waiting_room(self) -> Set[Player]:
+        return self.waiting_room.players
+
+    def add_player_to_waiting_room(self, id: str):
+        try:
+            player: Player = self.get_player_by_id(id)
+        except Exception:
+            return False
+
+        if player is None:
+            return False
+        self.waiting_room.join(player)
+        return True
 
     def get_player_by_nick(self, nick: str) -> Player:
         return next((p for p in self.players if p.nick == nick), None)
@@ -67,7 +84,6 @@ class GameApp:
 
     def join_waiting_room(self, player_id: str):
         player = self.get_player_by_id(player_id)
-        self.waiting_room.join(player)
 
     async def start_games(self) -> None:
         while True:
@@ -78,4 +94,3 @@ class GameApp:
                 for p in players:
                     self.waiting_room.join(p)
             await asyncio.sleep(2)
-
