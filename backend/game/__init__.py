@@ -54,8 +54,7 @@ class Game:
 
     def _end_game_for_players(self) -> None:
         for p in self.players:
-            p.in_game = False
-            p.quiz_score = Player.NO_SCORE
+            p.reset_after_game()
 
 
 class GameApp:

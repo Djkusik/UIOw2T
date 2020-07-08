@@ -20,6 +20,7 @@ if __name__ == '__main__':
     sio.on('login_reply', lambda data: print(data))
     sio.on('questions_reply', lambda data: print(data))
     sio.on('score_reply', lambda data: print(data))
+    sio.on('unit_reply', lambda data: print(data))
     sio.on('players_reply', lambda data: print(data))
     sio.on('players_waiting_reply', lambda data: print(data))
     sio.on('game_started', lambda data: print(data))

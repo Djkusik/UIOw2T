@@ -87,7 +87,8 @@ class Unit:
             self.battle_logger.set_hp_left(self.stats["hp"])
 
     def boost_stats(self, quiz_score):
-        # If e.g. player scored 3 points in the quiz, we choose 3 of unit's stats and add 1-3 to each of them
+        # If e.g. player scored 3 points in the quiz, we choose 3 of unit's stats (with repetition, so same stat can
+        # be boosted many times) and add 1-3 to each of them
         for stat in random.choices(list(self.stats.keys()), k=quiz_score):
             self.stats[stat] += random.randint(0, quiz_score)
 

@@ -94,7 +94,7 @@ class SocketController:
 
         player.units.append(unit)
         logging.info(f"Added unit {unit} for player {player}")
-        await self.sio.emit("score_reply", data={"message": "Score saved"}, room=sid)
+        await self.sio.emit("unit_reply", data={"message": f"Unit {unit} added"}, room=sid)
 
     async def on_game_started(self):
         players = self.game_app.get_players()
