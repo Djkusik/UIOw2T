@@ -11,7 +11,7 @@ class SocketController:
         self.sio: AsyncServer = sio
         self.game_app: GameApp = game_app
 
-    async def on_socket_connected(self, sid, environ,):
+    async def on_socket_connected(self, sid, environ):
         logging.info(f"Got new connection from peer with SID: {sid}")
         pass
 
@@ -63,12 +63,18 @@ class SocketController:
         await self.sio.emit('questions_reply', data=response, room=sid)
         logging.info(f"Sent {num} questions to peer with SID: {sid}")
 
+    async def save_quiz_score(self, sid, data):
+        if "score" not in data:
+            await self.sio.emit("error", data={"message": "No quiz score provided"}, room=sid)
+            return
+        player = self.game_app.get_player_by_id(sid)
+        player.quiz_score = data["score"]
+        logging.info(f"Saved quiz score {data['score']} for player {player}")
+        await self.sio.emit("score_reply", data={"message": "Score saved"}, room=sid)
+
     async def on_game_started(self):
         players = self.game_app.get_players()
         message = {'message': 'game started'}
         for player in players:
             await self.sio.emit('game_started', data=message, room=player.id)
             logging.info(f"Sent start game info to peer with SID: {player.id}")
-
-
-
