@@ -6,9 +6,9 @@ from game.models.unit import Unit
 from game.player import Player
 
 # unit(name, class, hp, atk, def, m_atk, m_def, speed, range)
-unit1 = Unit('Gariusz', 'warrior', 30, 5, 5, 0, 3, 3, 3)
-unit2 = Unit('Faliusz', 'archer', 15, 7, 2, 0, 1, 7, 8)
-unit3 = Unit('Bartusz', 'mage', 10, 0, 0, 10, 7, 5, 6)
+unit1 = Unit('Gariusz', 'Mage', 10, 0, 0, 10, 7, 5, 6)
+unit2 = Unit('Faliusz', 'Archer', 15, 7, 2, 0, 1, 7, 8)
+unit3 = Unit('Bartusz', 'Warrior', 30, 5, 5, 0, 3, 3, 3)
 units = [None, unit1, unit2, unit3]
 
 board_player1 = [   [0, 0, 0, 0, 0, 0, 0, 0],
