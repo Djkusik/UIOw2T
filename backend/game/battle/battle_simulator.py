@@ -1,7 +1,5 @@
 import random
 
-from typing import List
-
 from game.battle.target_map import TargetMap
 from game.battle.battle_logger import BattleLogger
 from game.models.unit import Unit
@@ -16,14 +14,17 @@ class BattleSimulator:
         self.player2_unit_count: int = 0
         self.all_units = None
 
-    def start_simulation(self, random_seed: int, player1_units: List[Unit], player2_units: List[Unit]) -> int:
+    def start_simulation(self, random_seed: int) -> int:
 
         random.seed(random_seed)
+        self.player1_unit_count = len(self.player1.units)
+        self.player2_unit_count = len(self.player2.units)
 
-        self.player1.units = player1_units.copy()
-        self.player2.units = player2_units.copy()
-        self.player1_unit_count = len(player1_units)
-        self.player2_unit_count = len(player2_units)
+        for unit in self.player2.units:
+            unit.set_position(unit.position.get_mirrored_position())
+
+        self.player1.boost_units_with_quiz_score()
+        self.player2.boost_units_with_quiz_score()
 
         target_map = TargetMap(self, self.player1.units, self.player2.units)
         battle_logger = BattleLogger()
@@ -35,9 +36,6 @@ class BattleSimulator:
         for unit in self.all_units:
             unit.set_target_map(target_map)
             unit.set_battle_logger(battle_logger)
-
-        self.player1.boost_units_with_quiz_score()
-        self.player2.boost_units_with_quiz_score()
 
         while True:
             for unit in self.all_units:

@@ -42,11 +42,7 @@ class Game:
         )
         # Game
         battle_simulator = BattleSimulator(*self.players)
-        unit1 = Unit('Gariusz', 'warrior', 30, 5, 5, 0, 3, 3, 3)
-        unit2 = Unit('Faliusz', 'archer', 15, 7, 2, 0, 1, 7, 8)
-        unit1.set_position(Position(1,2))
-        unit2.set_position(Position(1,2).get_mirrored_position())
-        result = battle_simulator.start_simulation(random_seed=17, player1_units=[unit1], player2_units=[unit2])
+        result = battle_simulator.start_simulation(random_seed=17)
         logging.info(f"Battle result: {result}")
         self._end_game_for_players()
         logging.info(
@@ -97,4 +93,4 @@ class GameApp:
                 await game.play()
                 for p in players:
                     self.waiting_room.join(p)
-            await asyncio.sleep(2)
+            await asyncio.sleep(60)

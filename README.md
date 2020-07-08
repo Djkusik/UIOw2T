@@ -1,5 +1,5 @@
 # UIOw2T
-Project for "Inżynieria Oprogramowania" laboratories. This is auto battler (like for example Teamfight Tactics) created using Python, running as the web application.
+Project for "Inżynieria Oprogramowania (Software Engineering)" laboratories. It is an auto battler (like for example Teamfight Tactics) created using Python, running as a web application.
 
 # Prerequisites
 

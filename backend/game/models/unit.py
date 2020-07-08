@@ -27,7 +27,7 @@ class Unit:
         self.battle_logger = None
 
     def __str__(self) -> str:
-        return self.name
+        return self.name + f", stats={self.stats}"
 
     # for resetting hp and temporal buffs/debuffs
     def reset_stats_to_base_values(self) -> None:
@@ -90,5 +90,4 @@ class Unit:
         # If e.g. player scored 3 points in the quiz, we choose 3 of unit's stats and add 1-3 to each of them
         for stat in random.choices(list(self.stats.keys()), k=quiz_score):
             self.stats[stat] += random.randint(0, quiz_score)
-
 

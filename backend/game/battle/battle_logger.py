@@ -38,5 +38,5 @@ class BattleLogger:
     def send_turn_logs(self) -> None:
         # Think how to implement returning logs
         packed_json = json.dumps(self.eventList)
-        logging.info(str(self.eventList))
+        logging.info("Battle logs: " + str(self.eventList))
         self.eventList = []
