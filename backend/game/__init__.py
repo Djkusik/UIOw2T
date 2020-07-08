@@ -2,7 +2,6 @@ import asyncio
 import logging
 import random
 from typing import List, Tuple, Set
-from uuid import UUID
 
 from .player import Player
 
@@ -48,6 +47,7 @@ class Game:
     def _end_game_for_players(self) -> None:
         for p in self.players:
             p.in_game = False
+            p.quiz_score = Player.NO_SCORE
 
 
 class GameApp:
