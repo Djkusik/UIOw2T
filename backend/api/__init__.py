@@ -10,6 +10,7 @@ async def api_server(game_app: GameApp) -> web.AppRunner:
     app = web.Application()
     sio = AsyncServer(cors_allowed_origins='*')
     sio.attach(app)
+    game_app.sio = sio
 
     logging.basicConfig(level=logging.DEBUG)
     setup_routes(app, sio, game_app)
