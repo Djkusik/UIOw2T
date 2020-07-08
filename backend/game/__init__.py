@@ -41,10 +41,11 @@ class Game:
         logging.info(
             "Start game of players: '%s' and '%s'" % self._get_nicks_of_players()
         )
-        # Game
+        # TODO should wait for player ready (quiz + units) message before doing that
         battle_simulator = BattleSimulator(*self.players)
         result = battle_simulator.start_simulation(random_seed=17)
         logging.info(f"Battle result: {result}")
+        # TODO send game results to players
         self._end_game_for_players()
         logging.info(
             "Finish game of players: '%s' and '%s'" % self._get_nicks_of_players()
@@ -61,6 +62,7 @@ class GameApp:
     def __init__(self) -> None:
         self.players: List[Player] = []
         self.waiting_room: WaitingRoom = WaitingRoom()
+        self.current_games: List[Game] = []
 
     def add_player(self, nick: str, id: str) -> Player:
         existing_player: Player = self.get_player_by_nick(nick)
@@ -78,6 +80,9 @@ class GameApp:
     def get_players_in_waiting_room(self) -> Set[Player]:
         return self.waiting_room.players
 
+    def get_player_game(self, nick: str):
+        return next((g for g in self.current_games if nick in [p.nick for p in g.players]), None)
+
     def get_player_by_nick(self, nick: str) -> Player:
         return next((p for p in self.players if p.nick == nick), None)
 
@@ -92,7 +97,9 @@ class GameApp:
             if self.is_waiting_room_full():
                 players = self.waiting_room.draw_two_players_to_game()
                 game = Game(players)
-                await game.play()  # TODO should probably wait for player ready (quiz + units) message before doing that
+                self.current_games.append(game)
+                await game.play()
                 for p in players:
                     self.waiting_room.join(p)
+                self.current_games.remove(game)
             await asyncio.sleep(60)
