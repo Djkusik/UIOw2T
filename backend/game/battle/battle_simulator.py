@@ -5,12 +5,13 @@ from typing import List
 from game.battle.target_map import TargetMap
 from game.battle.battle_logger import BattleLogger
 from game.models.unit import Unit
+from game.player import Player
 
 
 class BattleSimulator:
-    def __init__(self) -> None:
-        self.player1_units: List = None
-        self.player2_units: List = None
+    def __init__(self, player1: Player, player2: Player) -> None:
+        self.player1: Player = player1
+        self.player2: Player = player2
         self.player1_unit_count: int = 0
         self.player2_unit_count: int = 0
         self.all_units = None
@@ -19,21 +20,24 @@ class BattleSimulator:
 
         random.seed(random_seed)
 
-        self.player1_units = player1_units.copy()
-        self.player2_units = player2_units.copy()
-        self.player1_unit_count = len(self.player1_units)
-        self.player2_unit_count = len(self.player2_units)
+        self.player1.units = player1_units.copy()
+        self.player2.units = player2_units.copy()
+        self.player1_unit_count = len(player1_units)
+        self.player2_unit_count = len(player2_units)
 
-        target_map = TargetMap(self, self.player1_units, self.player2_units)
+        target_map = TargetMap(self, self.player1.units, self.player2.units)
         battle_logger = BattleLogger()
 
-        self.all_units = self.player1_units + self.player2_units
+        self.all_units = self.player1.units + self.player2.units
         random.shuffle(self.all_units)
-        self.all_units = sorted(self.all_units, key=lambda unit: unit.speed, reverse=True)
+        self.all_units = sorted(self.all_units, key=lambda unit: unit.stats["speed"], reverse=True)
 
         for unit in self.all_units:
             unit.set_target_map(target_map)
             unit.set_battle_logger(battle_logger)
+
+        self.player1.boost_units_with_quiz_score()
+        self.player2.boost_units_with_quiz_score()
 
         while True:
             for unit in self.all_units:
@@ -53,5 +57,5 @@ class BattleSimulator:
         index = self.all_units.index(unit)
         del self.all_units[index]
 
-        self.player1_unit_count = len(self.player1_units)
-        self.player2_unit_count = len(self.player2_units)
+        self.player1_unit_count = len(self.player1.units)
+        self.player2_unit_count = len(self.player2.units)
