@@ -63,6 +63,7 @@ class GameApp:
         self.players: List[Player] = []
         self.waiting_room: WaitingRoom = WaitingRoom()
         self.current_games: List[Game] = []
+        self.socket_controller = None
 
     def add_player(self, nick: str, id: str) -> Player:
         existing_player: Player = self.get_player_by_nick(nick)
@@ -96,10 +97,11 @@ class GameApp:
         while True:
             if self.is_waiting_room_full():
                 players = self.waiting_room.draw_two_players_to_game()
+                await self.socket_controller.on_game_started(players)
                 game = Game(players)
                 self.current_games.append(game)
                 await game.play()
                 for p in players:
                     self.waiting_room.join(p)
                 self.current_games.remove(game)
-            await asyncio.sleep(60)
+            await asyncio.sleep(5)

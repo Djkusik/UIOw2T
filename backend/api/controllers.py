@@ -38,10 +38,6 @@ class SocketController:
         await self.sio.emit("login_reply", data={"message": "login ok"}, room=sid)
         logging.info(f"Added player '{player.nick}' with id '{player.id}' to the game")
 
-        if self.game_app.is_waiting_room_full():
-            await self.on_game_started()  # TODO only works for the first game
-            await self.game_app.start_games()
-
     async def get_players(self, sid):
         players = self.game_app.get_players()
         response = dict(players=[p.nick for p in players])
@@ -96,8 +92,7 @@ class SocketController:
         logging.info(f"Added unit {unit} for player {player}")
         await self.sio.emit("unit_reply", data={"message": f"Unit {unit} added"}, room=sid)
 
-    async def on_game_started(self):
-        players = self.game_app.get_players()
+    async def on_game_started(self, players):
         message = {'message': 'game started'}
         for player in players:
             await self.sio.emit('game_started', data=message, room=player.id)
