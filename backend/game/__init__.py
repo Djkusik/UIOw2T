@@ -35,25 +35,29 @@ class Game:
     def __init__(self, sio: AsyncServer, players: Tuple[Player, Player]) -> None:
         self.sio: AsyncServer = sio
         self.players: Tuple[Player, Player] = players
+        self.is_finished = False
 
     def _get_nicks_of_players(self) -> Tuple[str, str]:
         return self.players[0].nick, self.players[1].nick
 
-    async def play(self) -> None:
+    async def wait_for_quiz_result(self):
+        await asyncio.sleep(10)
+
+    async def wait_for_units_spacing(self):
+        await asyncio.sleep(10)
+
+    async def battle(self) -> None:
         logging.info(
             "Start game of players: '%s' and '%s'" % self._get_nicks_of_players()
         )
-        # TODO should wait for player ready (quiz + units) message before doing that
         battle_simulator = BattleSimulator(*self.players)
         result = battle_simulator.start_simulation(random_seed=17)
         logging.info(f"Battle result: {result}")
-        # TODO send game results to players
         self._end_game_for_players()
+        self.is_finished = True
         logging.info(
             "Finish game of players: '%s' and '%s'" % self._get_nicks_of_players()
         )
-        # TODO Notify players (by SocketController ? how?) about the results so they can start the game again -
-        # now they have no units after first game
 
     def _end_game_for_players(self) -> None:
         for p in self.players:
@@ -64,6 +68,12 @@ class Game:
         for player in self.players:
             await self.sio.emit('game_started', data=message, room=player.id)
             logging.info(f"Sent start game info to peer with SID: {player.id}")
+
+    async def send_game_results(self):
+        message = {'message': []}
+        for player in self.players:
+            await self.sio.emit('game_results', data=message, room=player.id)
+            logging.info(f"Sent game results info to peer with SID: {player.id}")
 
 
 class GameApp:
@@ -89,8 +99,10 @@ class GameApp:
     def get_players_in_waiting_room(self) -> Set[Player]:
         return self.waiting_room.players
 
-    def get_player_game(self, nick: str):
-        return next((g for g in self.current_games if nick in [p.nick for p in g.players]), None)
+    def get_player_game(self, nick: str) -> Game:
+        games = [g for g in self.current_games if nick in [p.nick for p in g.players]]
+        if len(games) > 0:
+            return games[len(games) - 1]
 
     def get_player_by_nick(self, nick: str) -> Player:
         return next((p for p in self.players if p.nick == nick), None)
@@ -106,10 +118,10 @@ class GameApp:
             if self.is_waiting_room_full():
                 players = self.waiting_room.draw_two_players_to_game()
                 game = Game(self.sio, players)
-                await game.set_on_game_started()
                 self.current_games.append(game)
-                await game.play()
-                for p in players:
-                    self.waiting_room.join(p)
-                self.current_games.remove(game)
+                await game.set_on_game_started()
+                await game.wait_for_quiz_result()
+                await game.wait_for_units_spacing()
+                await game.battle()
+                await game.send_game_results()
             await asyncio.sleep(5)
