@@ -2,9 +2,11 @@ import asyncio
 import logging
 import random
 from typing import List, Tuple, Set
-from uuid import UUID
 
 from .player import Player
+from .battle.battle_simulator import BattleSimulator
+from .models.position import Position
+from .models.unit import Unit
 
 
 class WaitingRoom:
@@ -40,14 +42,19 @@ class Game:
             "Start game of players: '%s' and '%s'" % self._get_nicks_of_players()
         )
         # Game
+        battle_simulator = BattleSimulator(*self.players)
+        result = battle_simulator.start_simulation(random_seed=17)
+        logging.info(f"Battle result: {result}")
         self._end_game_for_players()
         logging.info(
             "Finish game of players: '%s' and '%s'" % self._get_nicks_of_players()
         )
+        # TODO Notify players (by SocketController ? how?) about the results so they can start the game again -
+        # now they have no units after first game
 
     def _end_game_for_players(self) -> None:
         for p in self.players:
-            p.in_game = False
+            p.reset_after_game()
 
 
 class GameApp:
@@ -85,7 +92,7 @@ class GameApp:
             if self.is_waiting_room_full():
                 players = self.waiting_room.draw_two_players_to_game()
                 game = Game(players)
-                await game.play()
+                await game.play()  # TODO should probably wait for player ready (quiz + units) message before doing that
                 for p in players:
                     self.waiting_room.join(p)
-            await asyncio.sleep(2)
+            await asyncio.sleep(60)

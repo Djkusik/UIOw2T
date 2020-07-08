@@ -3,6 +3,7 @@ import copy
 from game.battle.battle_simulator import BattleSimulator
 from game.models.position import Position
 from game.models.unit import Unit
+from game.player import Player
 
 # unit(name, class, hp, atk, def, m_atk, m_def, speed, range)
 unit1 = Unit('Gariusz', 'warrior', 30, 5, 5, 0, 3, 3, 3)
@@ -42,6 +43,11 @@ if __name__ == '__main__':
                 board_player2[i][j].set_position(Position(j, 7-i).get_mirrored_position())
                 player2_units.append(board_player2[i][j])
 
-    battle_simulator = BattleSimulator()
-    result = battle_simulator.start_simulation(0, player1_units, player2_units)
+    player1 = Player("player1", "id1")
+    player2 = Player("player2", "id2")
+    player1.quiz_score = 2
+    player1.units = player1_units
+    player2.units = player2_units
+    battle_simulator = BattleSimulator(player1, player2)
+    result = battle_simulator.start_simulation(0)
     print(result)

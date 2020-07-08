@@ -2,6 +2,7 @@ import json
 
 from typing import List, Dict
 from game.models.unit import Unit
+import logging
 
 
 class BattleLogger:
@@ -37,4 +38,5 @@ class BattleLogger:
     def send_turn_logs(self) -> None:
         # Think how to implement returning logs
         packed_json = json.dumps(self.eventList)
+        logging.info("Battle logs: " + str(self.eventList))
         self.eventList = []
