@@ -2,12 +2,13 @@ import asyncio
 import logging
 import random
 from typing import List, Tuple, Set
+
 from socketio import AsyncServer
 
-from .player import Player
 from .battle.battle_simulator import BattleSimulator
 from .models.position import Position
 from .models.unit import Unit
+from .player import Player
 
 
 class WaitingRoom:
@@ -26,6 +27,11 @@ class WaitingRoom:
         if not self.is_full() and player not in self.players:
             self.players.add(player)
             logging.info(f"Player '{player.nick}' joined waiting room")
+
+    def leave(self, player: Player):
+        if player in self.players:
+            self.players.discard(player)
+            logging.info(f"Player '{player.nick}' left waiting room")
 
     def is_full(self):
         return len(self.players) == self.capacity
@@ -63,17 +69,29 @@ class Game:
         for p in self.players:
             p.reset_after_game()
 
-    async def set_on_game_started(self):
-        message = {'message': 'game started'}
+    def _all_players_connected(self):
         for player in self.players:
-            await self.sio.emit('game_started', data=message, room=player.id)
-            logging.info(f"Sent start game info to peer with SID: {player.id}")
+            if not player.in_game:
+                return False
+        return True
+
+    async def set_on_game_started(self):
+        if self._all_players_connected():
+            message = {'message': 'game started'}
+            for player in self.players:
+                await self.sio.emit('game_started', data=message, room=player.id)
+                logging.info(f"Sent start game info to peer with SID: {player.id}")
+        else:
+            # end game if some player disconnected
+            await self.send_game_results()
 
     async def send_game_results(self):
         message = {'message': []}
         for player in self.players:
-            await self.sio.emit('game_results', data=message, room=player.id)
-            logging.info(f"Sent game results info to peer with SID: {player.id}")
+            if player.in_game:
+                await self.sio.emit('game_results', data=message, room=player.id)
+                logging.info(f"Sent game results info to peer with SID: {player.id}")
+
 
 
 class GameApp:
@@ -86,12 +104,18 @@ class GameApp:
     def add_player(self, nick: str, id: str) -> Player:
         existing_player: Player = self.get_player_by_nick(nick)
         if existing_player:
+            logging.info(f"Player '{existing_player.nick}' reconnected with id '{id}'")
+            existing_player.reconnect(id)
             return existing_player
 
         new_player = Player(nick, id)
         self.players.append(new_player)
         self.waiting_room.join(new_player)
         return new_player
+
+    def disconnect_player(self, player: Player):
+        player.disconnect()
+        self.waiting_room.leave(player)
 
     def get_players(self) -> List[Player]:
         return self.players

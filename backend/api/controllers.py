@@ -1,14 +1,16 @@
+# TODO Unit store instead of this shit
+import copy
 import json
 import logging
 import random
-from socketio import AsyncServer
-from aiofile import AIOFile
-from game import GameApp
-from game.models.unit import Unit
-from game.models.position import Position
 
-# TODO Unit store instead of this shit
-import copy
+from aiofile import AIOFile
+from game.models.position import Position
+from game.models.unit import Unit
+from socketio import AsyncServer
+
+from game import GameApp
+
 UNITS = {
     "warrior": Unit('Gariusz', 'warrior', 30, 5, 5, 0, 3, 3, 3),
     "archer": Unit('Faliusz', 'archer', 15, 7, 2, 0, 1, 7, 8),
@@ -27,14 +29,16 @@ class SocketController:
 
     async def on_socket_disconnected(self, sid):
         logging.info(f"Disconnected from peer with SID: {sid}")
-        # TODO: handle disconnected
-        pass
+        player = self.game_app.get_player_by_id(sid)
+        if player is not None:
+            self.game_app.disconnect_player(player)
 
     async def on_socket_login(self, sid, data):
         if 'nick' not in data:
             await self.sio.emit("error", data={"message": "no login specified"}, room=sid)
             return
-        player = self.game_app.add_player(data['nick'], sid)
+        nick = data['nick']
+        player = self.game_app.add_player(nick, sid)
         await self.sio.emit("login_reply", data={"message": "login ok"}, room=sid)
         logging.info(f"Added player '{player.nick}' with id '{player.id}' to the game")
 
@@ -100,4 +104,4 @@ def _unit_data_check(data) -> bool:
             data["class"] in UNITS
             and "x" in data["position"]
             and "y" in data["position"]
-            )
+    )
