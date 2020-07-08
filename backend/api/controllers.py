@@ -83,7 +83,7 @@ class SocketController:
         await self.sio.emit("score_reply", data={"message": "Score saved"}, room=sid)
 
     async def add_unit(self, sid, data):
-        if not ("class" in data and "position" in data and data["class"] in UNITS):
+        if not _unit_data_check(data):
             await self.sio.emit("error", data={"message": "Unit spec incorrect"}, room=sid)
             return
         player = self.game_app.get_player_by_id(sid)
@@ -103,3 +103,12 @@ class SocketController:
             await self.sio.emit('game_started', data=message, room=player.id)
             logging.info(f"Sent start game info to peer with SID: {player.id}")
 
+
+def _unit_data_check(data) -> bool:
+    return (
+            "class" in data and
+            "position" in data and
+            data["class"] in UNITS
+            and "x" in data["position"]
+            and "y" in data["position"]
+            )
