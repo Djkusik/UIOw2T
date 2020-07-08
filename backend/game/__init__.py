@@ -8,6 +8,7 @@ from .battle.battle_simulator import BattleSimulator
 from .models.position import Position
 from .models.unit import Unit
 
+
 class WaitingRoom:
     def __init__(self, capacity: int = 2) -> None:
         self.players: Set[Player] = set()
@@ -48,6 +49,8 @@ class Game:
         logging.info(
             "Finish game of players: '%s' and '%s'" % self._get_nicks_of_players()
         )
+        # TODO Notify players (by SocketController ? how?) about the results so they can start the game again -
+        # now they have no units after first game
 
     def _end_game_for_players(self) -> None:
         for p in self.players:
@@ -90,7 +93,7 @@ class GameApp:
             if self.is_waiting_room_full():
                 players = self.waiting_room.draw_two_players_to_game()
                 game = Game(players)
-                await game.play()
+                await game.play()  # TODO should probably wait for player ready (quiz + units) message before doing that
                 for p in players:
                     self.waiting_room.join(p)
             await asyncio.sleep(60)

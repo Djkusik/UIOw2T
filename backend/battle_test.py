@@ -45,7 +45,7 @@ if __name__ == '__main__':
 
     player1 = Player("player1", "id1")
     player2 = Player("player2", "id2")
-    player2.quiz_score = 2
+    player1.quiz_score = 2
     player1.units = player1_units
     player2.units = player2_units
     battle_simulator = BattleSimulator(player1, player2)

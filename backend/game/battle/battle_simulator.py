@@ -10,16 +10,10 @@ class BattleSimulator:
     def __init__(self, player1: Player, player2: Player) -> None:
         self.player1: Player = player1
         self.player2: Player = player2
-        self.player1_unit_count: int = 0
-        self.player2_unit_count: int = 0
         self.all_units = None
 
     def start_simulation(self, random_seed: int) -> int:
-
         random.seed(random_seed)
-        self.player1_unit_count = len(self.player1.units)
-        self.player2_unit_count = len(self.player2.units)
-
         for unit in self.player2.units:
             unit.set_position(unit.position.get_mirrored_position())
 
@@ -46,14 +40,11 @@ class BattleSimulator:
             battle_logger.send_turn_logs()
 
     def is_done(self) -> bool:
-        return self.player1_unit_count == 0 or self.player2_unit_count == 0
+        return len(self.player1.units) == 0 or len(self.player2.units) == 0
 
     def result(self) -> int:
-        return self.player1_unit_count - self.player2_unit_count
+        return len(self.player1.units) - len(self.player2.units)
 
     def on_death(self, unit: Unit) -> None:
         index = self.all_units.index(unit)
         del self.all_units[index]
-
-        self.player1_unit_count = len(self.player1.units)
-        self.player2_unit_count = len(self.player2.units)

@@ -15,6 +15,7 @@ UNITS = {
     "mage": Unit('Bartusz', 'mage', 10, 0, 0, 10, 7, 5, 6)
 }
 
+
 class SocketController:
     def __init__(self, sio: AsyncServer, game_app: GameApp):
         self.sio: AsyncServer = sio
