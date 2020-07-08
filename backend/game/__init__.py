@@ -4,7 +4,9 @@ import random
 from typing import List, Tuple, Set
 
 from .player import Player
-
+from .battle.battle_simulator import BattleSimulator
+from .models.position import Position
+from .models.unit import Unit
 
 class WaitingRoom:
     def __init__(self, capacity: int = 2) -> None:
@@ -39,6 +41,13 @@ class Game:
             "Start game of players: '%s' and '%s'" % self._get_nicks_of_players()
         )
         # Game
+        battle_simulator = BattleSimulator(*self.players)
+        unit1 = Unit('Gariusz', 'warrior', 30, 5, 5, 0, 3, 3, 3)
+        unit2 = Unit('Faliusz', 'archer', 15, 7, 2, 0, 1, 7, 8)
+        unit1.set_position(Position(1,2))
+        unit2.set_position(Position(1,2).get_mirrored_position())
+        result = battle_simulator.start_simulation(random_seed=17, player1_units=[unit1], player2_units=[unit2])
+        logging.info(f"Battle result: {result}")
         self._end_game_for_players()
         logging.info(
             "Finish game of players: '%s' and '%s'" % self._get_nicks_of_players()
