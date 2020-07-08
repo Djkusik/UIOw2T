@@ -4,7 +4,6 @@ from .controllers import SocketController
 
 def setup_routes(app, sio, game_app):
     socket_controller = SocketController(sio, game_app)
-    game_app.socket_controller = socket_controller
     sio.on("connect", socket_controller.on_socket_connected)
     sio.on("disconnect", socket_controller.on_socket_disconnected)
     sio.on("login", socket_controller.on_socket_login)

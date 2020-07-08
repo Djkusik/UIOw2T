@@ -92,12 +92,6 @@ class SocketController:
         logging.info(f"Added unit {unit} for player {player}")
         await self.sio.emit("unit_reply", data={"message": f"Unit {unit} added"}, room=sid)
 
-    async def on_game_started(self, players):
-        message = {'message': 'game started'}
-        for player in players:
-            await self.sio.emit('game_started', data=message, room=player.id)
-            logging.info(f"Sent start game info to peer with SID: {player.id}")
-
 
 def _unit_data_check(data) -> bool:
     return (

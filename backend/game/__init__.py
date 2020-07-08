@@ -2,6 +2,7 @@ import asyncio
 import logging
 import random
 from typing import List, Tuple, Set
+from socketio import AsyncServer
 
 from .player import Player
 from .battle.battle_simulator import BattleSimulator
@@ -31,7 +32,8 @@ class WaitingRoom:
 
 
 class Game:
-    def __init__(self, players: Tuple[Player, Player]) -> None:
+    def __init__(self, sio: AsyncServer, players: Tuple[Player, Player]) -> None:
+        self.sio: AsyncServer = sio
         self.players: Tuple[Player, Player] = players
 
     def _get_nicks_of_players(self) -> Tuple[str, str]:
@@ -57,13 +59,19 @@ class Game:
         for p in self.players:
             p.reset_after_game()
 
+    async def set_on_game_started(self):
+        message = {'message': 'game started'}
+        for player in self.players:
+            await self.sio.emit('game_started', data=message, room=player.id)
+            logging.info(f"Sent start game info to peer with SID: {player.id}")
+
 
 class GameApp:
     def __init__(self) -> None:
         self.players: List[Player] = []
         self.waiting_room: WaitingRoom = WaitingRoom()
         self.current_games: List[Game] = []
-        self.socket_controller = None
+        self.sio: AsyncServer = None
 
     def add_player(self, nick: str, id: str) -> Player:
         existing_player: Player = self.get_player_by_nick(nick)
@@ -97,8 +105,8 @@ class GameApp:
         while True:
             if self.is_waiting_room_full():
                 players = self.waiting_room.draw_two_players_to_game()
-                await self.socket_controller.on_game_started(players)
-                game = Game(players)
+                game = Game(self.sio, players)
+                await game.set_on_game_started()
                 self.current_games.append(game)
                 await game.play()
                 for p in players:
