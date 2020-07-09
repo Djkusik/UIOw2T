@@ -1,7 +1,7 @@
-from typing import Dict
+from typing import Dict, List
 
 from game.models.unit import Unit
-from game.shop.buy_unit_excpetions import UnitNotInOfferException, FullBenchException, NotEnoughCurrencyException
+from game.shop.buy_unit_exceptions import UnitNotInOfferException, FullBenchException, NotEnoughCurrencyException
 from game.shop.shop import Shop
 
 
@@ -13,8 +13,6 @@ class PlanningPhaseValidator:
 
         shop = Shop.get_instance()
         self.offer = shop.get_random_units(PlanningPhaseValidator.OFFER_SIZE, player.currency)
-
-        # send offer to display
 
     def buy_unit(self, unit_prototype: Dict):
         if unit_prototype not in self.offer:
@@ -33,3 +31,6 @@ class PlanningPhaseValidator:
         unit = Unit.make_from_prototype(unit_prototype)
 
         self.player.add_unit(unit, unit_prototype['price'])
+
+    def get_offer(self) -> List[Dict]:
+        return self.offer

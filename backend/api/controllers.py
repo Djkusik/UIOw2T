@@ -9,6 +9,7 @@ from game.models.unit import Unit
 from socketio import AsyncServer
 from .route_constants import *
 from game import GameApp
+from game.shop.shop import Shop
 
 # TODO Unit store instead of this shit
 UNITS = {
@@ -95,6 +96,15 @@ class SocketController:
         player.deployed_units.append(unit)
         logging.info(f"Added unit {unit} for player {player}")
         await self.sio.emit(UNIT_REPLY, data={"message": f"Unit {unit} added"}, room=sid)
+
+    async def get_shop_units(self, sid):
+        player = self.game_app.get_player_by_id(sid)
+        planning_phase_validator = player.on_planning_phase_start()
+        offer = planning_phase_validator.get_offer()
+        logging.info(f"Sent units from shop to peer with SID: {sid}")
+        logging.info(f"Sent units: {offer}")
+        await self.sio.emit(UNITS_FROM_SHOP_REPLY, data=offer, room=sid)
+
 
 
 def _unit_data_check(data) -> bool:
