@@ -1,4 +1,3 @@
-# TODO Unit store instead of this shit
 import copy
 import json
 import logging
@@ -8,9 +7,10 @@ from aiofile import AIOFile
 from game.models.position import Position
 from game.models.unit import Unit
 from socketio import AsyncServer
-
+from .route_constants import *
 from game import GameApp
 
+# TODO Unit store instead of this shit
 UNITS = {
     "warrior": Unit('Gariusz', 'warrior', 30, 5, 5, 0, 3, 3, 3),
     "archer": Unit('Faliusz', 'archer', 15, 7, 2, 0, 1, 7, 8),
@@ -35,23 +35,23 @@ class SocketController:
 
     async def on_socket_login(self, sid, data):
         if 'nick' not in data:
-            await self.sio.emit("error", data={"message": "no login specified"}, room=sid)
+            await self.sio.emit(ERROR, data={"message": "no login specified"}, room=sid)
             return
         nick = data['nick']
         player = self.game_app.add_player(nick, sid)
-        await self.sio.emit("login_reply", data={"message": "login ok"}, room=sid)
+        await self.sio.emit(LOGIN_REPLY, data={"message": "login ok"}, room=sid)
         logging.info(f"Added player '{player.nick}' with id '{player.id}' to the game")
 
     async def get_players(self, sid):
         players = self.game_app.get_players()
         response = dict(players=[p.nick for p in players])
-        await self.sio.emit('players_reply', data=response, room=sid)
+        await self.sio.emit(PLAYERS_REPLY, data=response, room=sid)
         logging.info(f"Sent player info to peer with SID: {sid}")
 
     async def get_players_in_waiting_room(self, sid):
         players = self.game_app.get_players_in_waiting_room()
         response = dict(players_waiting=[p.nick for p in players])
-        await self.sio.emit('players_waiting_reply', data=response, room=sid)
+        await self.sio.emit(PLAYERS_WAITING_REPLY, data=response, room=sid)
         logging.info(f"Sent waiting players info to peer with SID: {sid}")
 
     async def get_questions(self, sid, data):
@@ -70,21 +70,21 @@ class SocketController:
             s = await f.read()
             questions = json.loads(s)
         response = random.sample(questions, num)
-        await self.sio.emit('questions_reply', data=response, room=sid)
+        await self.sio.emit(QUESTIONS_REPLY, data=response, room=sid)
         logging.info(f"Sent {num} questions to peer with SID: {sid}")
 
     async def save_quiz_score(self, sid, data):
         if "score" not in data:
-            await self.sio.emit("error", data={"message": "No quiz score provided"}, room=sid)
+            await self.sio.emit(ERROR, data={"message": "No quiz score provided"}, room=sid)
             return
         player = self.game_app.get_player_by_id(sid)
         player.quiz_score = data["score"]
         logging.info(f"Saved quiz score {data['score']} for player {player}")
-        await self.sio.emit("score_reply", data={"message": "Score saved"}, room=sid)
+        await self.sio.emit(SCORE_REPLY, data={"message": "Score saved"}, room=sid)
 
     async def add_unit(self, sid, data):
         if not _unit_data_check(data):
-            await self.sio.emit("error", data={"message": "Unit spec incorrect"}, room=sid)
+            await self.sio.emit(ERROR, data={"message": "Unit spec incorrect"}, room=sid)
             return
         player = self.game_app.get_player_by_id(sid)
 
@@ -92,9 +92,9 @@ class SocketController:
         x, y = data["position"]["x"], data["position"]["y"]
         unit.set_position(Position(x, y))
 
-        player.units.append(unit)
+        player.deployed_units.append(unit)
         logging.info(f"Added unit {unit} for player {player}")
-        await self.sio.emit("unit_reply", data={"message": f"Unit {unit} added"}, room=sid)
+        await self.sio.emit(UNIT_REPLY, data={"message": f"Unit {unit} added"}, room=sid)
 
 
 def _unit_data_check(data) -> bool:

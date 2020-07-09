@@ -29,6 +29,7 @@ class Player:
     def reconnect(self, sid):
         self.connected = True
         self.id = sid
+
     def reset_after_game(self):
         self.deployed_units = []
         self.bench = [None] * Player.BENCH_SIZE
@@ -46,7 +47,7 @@ class Player:
                 unit.boost_stats(self.quiz_score)
 
     def __str__(self) -> str:
-        return f"Player(nick={self.nick}, id={self.id}, in_game={self.in_game}, quiz_score={self.quiz_score}, units={self.units})"
+        return f"Player(nick={self.nick}, id={self.id}, in_game={self.in_game}, quiz_score={self.quiz_score}, units={self.deployed_units})"
 
     def calculate_income(self) -> int:
         # add win/loss streak or interest?

@@ -9,6 +9,7 @@ from .battle.battle_simulator import BattleSimulator
 from .models.position import Position
 from .models.unit import Unit
 from .player import Player
+from api.route_constants import GAME_STARTED, GAME_RESULT
 
 
 class WaitingRoom:
@@ -39,7 +40,7 @@ class WaitingRoom:
 
 class Game:
     def __init__(self, sio: AsyncServer, players: Tuple[Player, Player]) -> None:
-        self.sio: AsyncServer = sio
+        self._sio: AsyncServer = sio
         self.players: Tuple[Player, Player] = players
         self.is_finished = False
 
@@ -47,25 +48,26 @@ class Game:
         return self.players[0].nick, self.players[1].nick
 
     async def wait_for_quiz_result(self):
-        await asyncio.sleep(10)
+        await asyncio.sleep(1)
 
     async def wait_for_units_spacing(self):
-        await asyncio.sleep(10)
+        await asyncio.sleep(1)
 
     async def battle(self) -> None:
         logging.info(
             "Start game of players: '%s' and '%s'" % self._get_nicks_of_players()
         )
         battle_simulator = BattleSimulator(*self.players)
-        result = battle_simulator.start_simulation(random_seed=17)
+        result, message, logs = battle_simulator.start_simulation(random_seed=17)
         logging.info(f"Battle result: {result}")
-        self._end_game_for_players()
+        await self._end_game_for_players(message, logs)
         self.is_finished = True
         logging.info(
-            "Finish game of players: '%s' and '%s'" % self._get_nicks_of_players()
+            "Finished game of players: '%s' and '%s'" % self._get_nicks_of_players()
         )
 
-    def _end_game_for_players(self) -> None:
+    async def _end_game_for_players(self, message: str, logs: str) -> None:
+        await self.send_game_results(message, logs)
         for p in self.players:
             p.reset_after_game()
 
@@ -79,27 +81,27 @@ class Game:
         if self._all_players_connected():
             message = {'message': 'game started'}
             for player in self.players:
-                await self.sio.emit('game_started', data=message, room=player.id)
+                await self._sio.emit(GAME_STARTED, data=message, room=player.id)
                 logging.info(f"Sent start game info to peer with SID: {player.id}")
         else:
             # end game if some player disconnected
-            await self.send_game_results()
+            await self.send_game_results("Player disconnected, walkover", logs="")
 
-    async def send_game_results(self):
-        message = {'message': []}
+    async def send_game_results(self, message: str, logs: str):
         for player in self.players:
             if player.in_game:
-                await self.sio.emit('game_results', data=message, room=player.id)
+                await self._sio.emit(GAME_RESULT, data={
+                    "message": {"msg": message, "logs": logs}
+                }, room=player.id)
                 logging.info(f"Sent game results info to peer with SID: {player.id}")
 
 
-
 class GameApp:
-    def __init__(self) -> None:
+    def __init__(self, sio: AsyncServer) -> None:
         self.players: List[Player] = []
         self.waiting_room: WaitingRoom = WaitingRoom()
         self.current_games: List[Game] = []
-        self.sio: AsyncServer = None
+        self.sio: AsyncServer = sio
 
     def add_player(self, nick: str, id: str) -> Player:
         existing_player: Player = self.get_player_by_nick(nick)
@@ -147,5 +149,4 @@ class GameApp:
                 await game.wait_for_quiz_result()
                 await game.wait_for_units_spacing()
                 await game.battle()
-                await game.send_game_results()
             await asyncio.sleep(5)
