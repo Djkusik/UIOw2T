@@ -1,9 +1,19 @@
+from __future__ import annotations
+from typing import Dict
 from game.models.position import Position
 import random
 
 class Unit:
 
     range_penalty_multiplier = 0.2
+
+    @staticmethod
+    def make_from_prototype(unit_prototype: Dict) -> Unit:
+        statistics = unit_prototype['statistics']
+
+        return Unit(unit_prototype['name'], unit_prototype['category'], statistics['base_hp'],
+                    statistics['base_phys_attack'], statistics['base_phys_defence'], statistics['base_mag_attack'],
+                    statistics['base_mag_defence'], statistics['base_speed'], statistics['base_reach'])
 
     def __init__(self, name: str, category: str, hp: int,
                  phys_attack: int, phys_defence: int, mag_attack: int,
@@ -25,6 +35,10 @@ class Unit:
         self.position = None
         self.target_map = None
         self.battle_logger = None
+
+    def __eq__(self, other: Unit):
+        return type(other) is Unit and self.name == other.name and self.category == other.category and \
+               self.base_stats == other.base_stats and self.position == other.position
 
     def __str__(self) -> str:
         return self.name + f", stats={self.stats}"
