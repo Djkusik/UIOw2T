@@ -6,7 +6,7 @@ from math import exp, floor
 
 class Shop:
 
-    path_to_units_file: str = './backend/game/data/units.json'
+    path_to_units_file: str = './game/data/units.json'
 
     def __init__(self):
         with open(self.path_to_units_file, 'r') as units_f:
