@@ -60,14 +60,14 @@ class Game:
         battle_simulator = BattleSimulator(*self.players)
         result, message, logs = battle_simulator.start_simulation(random_seed=17)
         logging.info(f"Battle result: {result}")
-        self._end_game_for_players(message, logs)
+        await self._end_game_for_players(message, logs)
         self.is_finished = True
         logging.info(
             "Finished game of players: '%s' and '%s'" % self._get_nicks_of_players()
         )
 
-    def _end_game_for_players(self, message: str, logs: str) -> None:
-        self.send_game_results(message, logs)
+    async def _end_game_for_players(self, message: str, logs: str) -> None:
+        await self.send_game_results(message, logs)
         for p in self.players:
             p.reset_after_game()
 
