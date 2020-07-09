@@ -14,6 +14,8 @@ def setup_routes(app, sio, game_app):
     sio.on(SCORE, socket_controller.save_quiz_score)
     sio.on(UNIT, socket_controller.add_unit)
     sio.on(UNITS_FROM_SHOP, socket_controller.get_shop_units)
+    sio.on(GET_UNITS, socket_controller.get_units)
+    sio.on(GET_GOLD, socket_controller.get_gold)
 
     cors = get_cors(app)
     for route in app.router.routes():

@@ -1,5 +1,8 @@
 from __future__ import annotations
 from typing import Dict
+
+import uuid
+
 from game.models.position import Position
 import random
 
@@ -18,6 +21,9 @@ class Unit:
     def __init__(self, name: str, category: str, hp: int,
                  phys_attack: int, phys_defence: int, mag_attack: int,
                  mag_defence: int, speed: int, reach: int) -> None:
+
+        self.id = uuid.uuid1()
+
         self.base_stats = {
             "hp": hp,
             "phys_attack": phys_attack,
@@ -35,6 +41,15 @@ class Unit:
         self.position = None
         self.target_map = None
         self.battle_logger = None
+
+    def toDict(self) -> Dict:
+        return {
+            'id': self.id,
+            'name': self.name,
+            'category': self.category,
+            'position': {'x': self.position.x, 'y': self.position.y},
+            'statistics:': self.stats
+        }
 
     # for resetting hp and temporal buffs/debuffs
     def reset_stats_to_base_values(self) -> None:
