@@ -35,9 +35,17 @@ class BattleSimulator:
             for unit in self.all_units:
                 if self.is_done():
                     battle_logger.send_turn_logs()
-                    return self.result()
+                    return self.result(), self.get_final_message()
                 unit.attack()
             battle_logger.send_turn_logs()
+
+    def get_final_message(self):
+        if self.result() == 0:
+            message = "Draw"
+        else:
+            winner = self.player1.nick if self.result() > 0 else self.player2.nick
+            message = f"Player {winner} won by {max(self.result(), -self.result())} units"
+        return message
 
     def is_done(self) -> bool:
         return len(self.player1.units) == 0 or len(self.player2.units) == 0

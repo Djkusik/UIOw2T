@@ -17,7 +17,7 @@ PLAYERS_WAITING_REPLY = "players_waiting_reply"
 QUESTIONS_REPLY = "questions_reply"
 UNIT_REPLY = "unit_reply"
 GAME_STARTED = "game_started"
-GAME_RESULTS = "game_result"
+GAME_RESULT = "game_result"
 
 
 def setup_routes(app, sio, game_app):
