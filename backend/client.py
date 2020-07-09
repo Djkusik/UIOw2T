@@ -1,10 +1,12 @@
-import socketio
 import sys
+
+import socketio
 
 if __name__ == '__main__':
     sio = socketio.Client()
     sio.connect('http://localhost:8080')
-    sio.emit('login', data={'nick': sys.argv[1]})
+    nick = 'Tomusz' if len(sys.argv) <= 1 else sys.argv[1]
+    sio.emit('login', data={'nick': nick})
     sio.emit('questions', data={'num': 5})
     sio.emit('score', data={'score': 3})
     sio.emit('unit', data={

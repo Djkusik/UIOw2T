@@ -1,5 +1,7 @@
-from game.models.unit import Unit
 from typing import List
+
+from game.models.unit import Unit
+
 
 class Player:
     NO_SCORE = -1
@@ -8,9 +10,16 @@ class Player:
         self.nick: str = nick
         self.id: str = id
         self.in_game: bool = False
+        self.connected = True
         self.quiz_score: int = Player.NO_SCORE
         self.units: List[Unit] = []
 
+    def disconnect(self):
+        self.connected = False
+
+    def reconnect(self, sid):
+        self.connected = True
+        self.id = sid
     def reset_after_game(self):
         self.units = []
         self.in_game = False
