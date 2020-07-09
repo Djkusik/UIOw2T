@@ -1,5 +1,6 @@
 from typing import List
 
+from game import Position
 from game.models.unit import Unit
 from game.shop.planning_phase_validator import PlanningPhaseValidator
 
@@ -86,4 +87,5 @@ class Player:
         self.currency -= price
 
         first_free_bench = self.bench.index(None)
+        unit.set_position(Position(first_free_bench, -1))
         self.bench[first_free_bench] = unit
