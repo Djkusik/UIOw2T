@@ -4,6 +4,7 @@ Project for "Inżynieria Oprogramowania (Software Engineering)" laboratories. It
 # Prerequisites
 
 1. Docker
+2. docker-compose
 
 # Usage
 
@@ -17,8 +18,8 @@ git clone https://github.com/Djkusik/UIOw2T.git
 Then to run app, just type:
 ``` sh
 cd UIOw2T
-docker build -t uiow2t .
-docker run -p 8080:8080 -d uiow2t
+docker-compose build
+docker-compose up
 ```
 
 ## Build from sources
