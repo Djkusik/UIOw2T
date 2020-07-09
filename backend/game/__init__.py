@@ -9,6 +9,7 @@ from .battle.battle_simulator import BattleSimulator
 from .models.position import Position
 from .models.unit import Unit
 from .player import Player
+from ..api.routes import *
 
 
 class WaitingRoom:
@@ -79,7 +80,7 @@ class Game:
         if self._all_players_connected():
             message = {'message': 'game started'}
             for player in self.players:
-                await self.sio.emit('game_started', data=message, room=player.id)
+                await self.sio.emit(GAME_STARTED, data=message, room=player.id)
                 logging.info(f"Sent start game info to peer with SID: {player.id}")
         else:
             # end game if some player disconnected
@@ -89,7 +90,7 @@ class Game:
         message = {'message': []}
         for player in self.players:
             if player.in_game:
-                await self.sio.emit('game_results', data=message, room=player.id)
+                await self.sio.emit(GAME_RESULTS, data=message, room=player.id)
                 logging.info(f"Sent game results info to peer with SID: {player.id}")
 
 
