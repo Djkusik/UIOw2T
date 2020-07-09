@@ -1,0 +1,12 @@
+version: '3.7'
+services:
+  backend:
+    build: ./backend
+    ports:
+      - "8080:8080"
+    command: python server.py
+  frontend:
+    build: ./uiow2t-front
+    ports:
+      - "3000:3000"
+    command: yarn start
