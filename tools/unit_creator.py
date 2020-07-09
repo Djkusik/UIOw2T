@@ -30,7 +30,9 @@ def print_content(content: List[Dict]) -> None:
             print(f"\t\t{stat.capitalize()}: {unit['statistics'][stat]}")
             if stat != 'base_hp':
                 stats_sum += unit['statistics'][stat]
-        print(f"Overall stats sum (without health): {stats_sum}")
+            else:
+                stats_sum += int(round(unit['statistics'][stat]/10))
+        print(f"Overall stats sum: {stats_sum}")
 
 
 def query_yes_no(question: str, default: str = "yes") -> bool:
@@ -85,7 +87,7 @@ def add_unit() -> Dict:
         print(f"Base physical attack: {base_phys_attack}\nBase physical defence: {base_phys_defence}")
         print(f"Base magical attack: {base_mag_attack}\nBase magical defence: {base_mag_defence}")
         print(f"Base speed: {base_speed}\nBase reach: {base_reach}\n")
-        print(f"Overall stats: {base_phys_attack + base_phys_defence + base_mag_attack + base_mag_defence + base_speed + base_reach}")
+        print(f"Overall stats: {int(round(base_hp/10)) + base_phys_attack + base_phys_defence + base_mag_attack + base_mag_defence + base_speed + base_reach}")
 
         if query_yes_no("Do You want to add this unit?"):
             break

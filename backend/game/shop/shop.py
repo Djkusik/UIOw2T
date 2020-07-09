@@ -6,7 +6,7 @@ from math import exp, floor
 
 class Shop:
 
-    path_to_units_file: str = './../data/units.json'
+    path_to_units_file: str = './backend/game/data/units.json'
 
     def __init__(self):
         with open(self.path_to_units_file, 'r') as units_f:
@@ -25,7 +25,7 @@ class Shop:
         stats_sum = 0
         for stat in unit['statistics']:
             stats_sum += unit['statistics'][stat]
-        stats_sum -= unit['statistics']['base_hp']
+        stats_sum -= unit['statistics']['base_hp'] + int(round(unit['statistics']['base_hp']/10))
         value = self.func(stats_sum)
         if value > 10:
             value = 13
@@ -44,18 +44,12 @@ class Shop:
             # Else random few random units and few affordable units
             units_to_return = []
             random_amount = int(floor(quantity * 2 / 3))
-            units_to_return += random.sample(self.units_list, random_amount)
+            units_to_return += random.choices(self.units_list, k=random_amount)
             units_to_return += self.get_affordable_units(currency, (quantity - random_amount))
             return units_to_return
 
     def get_affordable_units(self, currency: int, quantity: int) -> List:
-        affordable_units = []
-        while True:
-            affordable_unit = random.choice(self.units_list)
-            if affordable_unit['price'] <= currency:
-                affordable_units.append(affordable_unit)
-                if len(affordable_units) == quantity:
-                    return affordable_units
+        return random.choices([unit for unit in self.units_list if unit['price'] <= currency], k=quantity)
 
     def get_unit(self, name: str) -> Tuple['Unit', int]:
         for unit in self.units_list:
