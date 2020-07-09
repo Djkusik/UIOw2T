@@ -7,7 +7,7 @@ from math import exp, floor
 
 
 class Shop:
-    path_to_units_file: str = '../data/units.json'
+    path_to_units_file: str = './game/data/units.json'
 
     _instance = None
 
@@ -29,9 +29,9 @@ class Shop:
 
     def add_prices(self):
         for unit in self.units_list:
-            price = self.calculate_price(unit)
+            self.calculate_price(unit)
 
-    def calculate_price(self, unit: Dict) -> int:
+    def calculate_price(self, unit: Dict):
         stats_sum = 0
         for stat in unit['statistics']:
             stats_sum += unit['statistics'][stat]
