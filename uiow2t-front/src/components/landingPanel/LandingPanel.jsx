@@ -12,13 +12,13 @@ function LandingPanel() {
   const [submitted, setSubmitted] = useState(false);
   const history = useHistory();
 
-  useEffect(() => {
-    const socket = socketIOClient(ENDPOINT);
-    socket.on("login_reply", data => {
-      setResponse(data);
-      console.log("LOGIN RESPONSE", data)
-    });
-  }, []);
+  // useEffect(() => {
+  //   const socket = socketIOClient(ENDPOINT);
+  //   socket.on("login_reply", data => {
+  //     setResponse(data);
+  //     console.log("LOGIN RESPONSE", data)
+  //   });
+  // }, []);
 
   useEffect(() => {
     const socket = socketIOClient(ENDPOINT);
@@ -27,6 +27,7 @@ function LandingPanel() {
     }
     socket.on("login_reply", data => {
       setResponse(data);
+      console.log("LOGIN RESPONSE", data)
       if (String(data.message) === 'login ok') history.push('/room')
       else console.log('error')
     });
