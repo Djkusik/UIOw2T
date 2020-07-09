@@ -3,8 +3,8 @@ from typing import Dict
 from game.models.position import Position
 import random
 
-class Unit:
 
+class Unit:
     range_penalty_multiplier = 0.2
 
     @staticmethod
@@ -35,13 +35,6 @@ class Unit:
         self.position = None
         self.target_map = None
         self.battle_logger = None
-
-    def __eq__(self, other: Unit):
-        return type(other) is Unit and self.name == other.name and self.category == other.category and \
-               self.base_stats == other.base_stats and self.position == other.position
-
-    def __str__(self) -> str:
-        return self.name + f", stats={self.stats}"
 
     # for resetting hp and temporal buffs/debuffs
     def reset_stats_to_base_values(self) -> None:
@@ -106,3 +99,16 @@ class Unit:
         for stat in random.choices(list(self.stats.keys()), k=quiz_score):
             self.stats[stat] += random.randint(0, quiz_score)
 
+    def __hash__(self) -> int:
+        return hash(
+            (self.name, self.category, self.position,
+             tuple(sorted(self.base_stats.items(), key=lambda x: x[0]))
+             )
+        )
+
+    def __eq__(self, other: Unit):
+        return type(other) is Unit and self.name == other.name and self.category == other.category and \
+               self.base_stats == other.base_stats and self.position == other.position
+
+    def __str__(self) -> str:
+        return self.name + f", stats={self.stats}"

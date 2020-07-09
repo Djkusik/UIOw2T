@@ -48,10 +48,10 @@ class Game:
         return self.players[0].nick, self.players[1].nick
 
     async def wait_for_quiz_result(self):
-        await asyncio.sleep(10)
+        await asyncio.sleep(1)
 
     async def wait_for_units_spacing(self):
-        await asyncio.sleep(10)
+        await asyncio.sleep(1)
 
     async def battle(self) -> None:
         logging.info(
@@ -63,7 +63,7 @@ class Game:
         self._end_game_for_players(message, logs)
         self.is_finished = True
         logging.info(
-            "Finish game of players: '%s' and '%s'" % self._get_nicks_of_players()
+            "Finished game of players: '%s' and '%s'" % self._get_nicks_of_players()
         )
 
     def _end_game_for_players(self, message: str, logs: str) -> None:
@@ -97,11 +97,11 @@ class Game:
 
 
 class GameApp:
-    def __init__(self) -> None:
+    def __init__(self, sio: AsyncServer) -> None:
         self.players: List[Player] = []
         self.waiting_room: WaitingRoom = WaitingRoom()
         self.current_games: List[Game] = []
-        self.sio: AsyncServer = None
+        self.sio: AsyncServer = sio
 
     def add_player(self, nick: str, id: str) -> Player:
         existing_player: Player = self.get_player_by_nick(nick)

@@ -6,11 +6,9 @@ from game import GameApp
 from .routes import setup_routes
 
 
-async def api_server(game_app: GameApp) -> web.AppRunner:
+async def api_server(game_app: GameApp, sio: AsyncServer) -> web.AppRunner:
     app = web.Application()
-    sio = AsyncServer(cors_allowed_origins='*')
     sio.attach(app)
-    game_app._sio = sio
 
     logging.basicConfig(level=logging.DEBUG)
     setup_routes(app, sio, game_app)

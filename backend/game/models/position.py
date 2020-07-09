@@ -2,7 +2,6 @@ from __future__ import annotations
 
 
 class Position:
-
     board_height = 8
     board_width = 8
 
@@ -12,6 +11,9 @@ class Position:
 
     def __eq__(self, other: Position):
         return self.x == other.x and self.y == other.y
+
+    def __hash__(self):
+        return hash((self.x, self.y))
 
     # all units will be located on the bottom half of the board during planning phase.
     # during simulation, one player`s units need to be mirrored to upper half.
