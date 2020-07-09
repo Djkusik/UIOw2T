@@ -42,6 +42,19 @@ class SocketController:
         await self.sio.emit(LOGIN_REPLY, data={"message": "login ok"}, room=sid)
         logging.info(f"Added player '{player.nick}' with id '{player.id}' to the game")
 
+    async def get_units(self, sid):
+        player = self.game_app.get_player_by_id(sid)
+        units = player.deployed_units + [unit for unit in player.bench if unit is not None]
+        response = list(map(lambda unit: unit.toDict(), units))
+        await self.sio.emit(UNIT_REPLY, data=response)
+        logging.info(f"Sent board state info to peer with SID: {sid}")
+
+    async def get_gold(self, sid):
+        player = self.game_app.get_player_by_id(sid)
+        response = player.currency
+        await self.sio.emit(GOLD_REPLY, data=response)
+        logging.info(f"Sent gold info to peer with SID: {sid}")
+
     async def get_players(self, sid):
         players = self.game_app.get_players()
         response = dict(players=[p.nick for p in players])
