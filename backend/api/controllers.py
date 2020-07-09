@@ -7,7 +7,7 @@ from aiofile import AIOFile
 from game.models.position import Position
 from game.models.unit import Unit
 from socketio import AsyncServer
-from .routes import *
+from .route_constants import *
 from game import GameApp
 
 # TODO Unit store instead of this shit
@@ -92,7 +92,7 @@ class SocketController:
         x, y = data["position"]["x"], data["position"]["y"]
         unit.set_position(Position(x, y))
 
-        player.units.append(unit)
+        player.deployed_units.append(unit)
         logging.info(f"Added unit {unit} for player {player}")
         await self.sio.emit(UNIT_REPLY, data={"message": f"Unit {unit} added"}, room=sid)
 

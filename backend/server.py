@@ -6,7 +6,6 @@ from game import GameApp
 
 def main() -> None:
     game_app = GameApp()
-
     loop = asyncio.get_event_loop()
     loop.create_task(api_server(game_app))
     loop.run_until_complete(game_app.start_games())

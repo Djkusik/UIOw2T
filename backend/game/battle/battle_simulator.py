@@ -15,16 +15,16 @@ class BattleSimulator:
 
     def start_simulation(self, random_seed: int) -> Tuple[int, str, str]:
         random.seed(random_seed)
-        for unit in self.player2.units:
+        for unit in self.player2.deployed_units:
             unit.set_position(unit.position.get_mirrored_position())
 
         self.player1.boost_units_with_quiz_score()
         self.player2.boost_units_with_quiz_score()
 
-        target_map = TargetMap(self, self.player1.units, self.player2.units)
+        target_map = TargetMap(self, self.player1.deployed_units, self.player2.deployed_units)
         battle_logger = BattleLogger()
 
-        self.all_units = self.player1.units + self.player2.units
+        self.all_units = self.player1.deployed_units + self.player2.deployed_units
         random.shuffle(self.all_units)
         self.all_units = sorted(self.all_units, key=lambda unit: unit.stats["speed"], reverse=True)
 
@@ -47,10 +47,10 @@ class BattleSimulator:
         return message
 
     def is_done(self) -> bool:
-        return len(self.player1.units) == 0 or len(self.player2.units) == 0
+        return len(self.player1.deployed_units) == 0 or len(self.player2.deployed_units) == 0
 
     def result(self) -> int:
-        return len(self.player1.units) - len(self.player2.units)
+        return len(self.player1.deployed_units) - len(self.player2.deployed_units)
 
     def on_death(self, unit: Unit) -> None:
         index = self.all_units.index(unit)

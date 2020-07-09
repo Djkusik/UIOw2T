@@ -46,8 +46,8 @@ if __name__ == '__main__':
     player1 = Player("player1", "id1")
     player2 = Player("player2", "id2")
     player1.quiz_score = 2
-    player1.units = player1_units
-    player2.units = player2_units
+    player1.deployed_units = player1_units
+    player2.deployed_units = player2_units
     battle_simulator = BattleSimulator(player1, player2)
     result = battle_simulator.start_simulation(0)
     print(result)

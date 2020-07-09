@@ -1,7 +1,7 @@
 import sys
 
 import socketio
-from .api.routes import *
+from api.route_constants import *
 
 if __name__ == '__main__':
     sio = socketio.Client()
@@ -28,4 +28,5 @@ if __name__ == '__main__':
     sio.on(PLAYERS_WAITING_REPLY, lambda data: print(data))
     sio.on(GAME_STARTED, lambda data: print(data))
     sio.on(ERROR, lambda data: print(data))
+    sio.on(GAME_RESULT, lambda data: print(data))
     sio.wait()

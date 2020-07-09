@@ -9,7 +9,7 @@ from .battle.battle_simulator import BattleSimulator
 from .models.position import Position
 from .models.unit import Unit
 from .player import Player
-from ..api.routes import *
+from api.route_constants import GAME_STARTED, GAME_RESULT
 
 
 class WaitingRoom:

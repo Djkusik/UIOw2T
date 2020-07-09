@@ -1,23 +1,6 @@
 from .config import get_cors
 from .controllers import SocketController
-
-CONNECT = "connect"
-DISCONNECT = "disconnect"
-LOGIN = "login"
-PLAYERS = "players"
-PLAYERS_WAITING = "players_waiting"
-QUESTIONS = "questions"
-SCORE = "score"
-UNIT = "unit"
-ERROR = "error"
-SCORE_REPLY = "score_reply"
-LOGIN_REPLY = "login_reply"
-PLAYERS_REPLY = "players_reply"
-PLAYERS_WAITING_REPLY = "players_waiting_reply"
-QUESTIONS_REPLY = "questions_reply"
-UNIT_REPLY = "unit_reply"
-GAME_STARTED = "game_started"
-GAME_RESULT = "game_result"
+from .route_constants import *
 
 
 def setup_routes(app, sio, game_app):
