@@ -2,8 +2,8 @@ import json
 import os
 from typing import List, Dict, TextIO
 
-path_to_units_file = './../backend/game/data/units.json'
-classes = {
+path_to_units_file: str = './../backend/game/data/units.json'
+classes: Dict = {
     '1': 'Warrior',
     '2': 'Mage',
     '3': 'Archer'
@@ -25,8 +25,14 @@ def print_content(content: List[Dict]) -> None:
             if key != 'statistics':
                 print(f"\t{key.capitalize()}: {unit[key]}")
         print('\tStatistics:')
+        stats_sum = 0
         for stat in unit['statistics']:
             print(f"\t\t{stat.capitalize()}: {unit['statistics'][stat]}")
+            if stat != 'base_hp':
+                stats_sum += unit['statistics'][stat]
+            else:
+                stats_sum += int(round(unit['statistics'][stat]/10))
+        print(f"Overall stats sum: {stats_sum}")
 
 
 def query_yes_no(question: str, default: str = "yes") -> bool:
@@ -62,20 +68,29 @@ def adding_loop(content: List[Dict]) -> None:
 
 
 def add_unit() -> Dict:
-    name = input("Name: ")
-
     while True:
-        category = int(input("Category [1. Warrior 2. Mage 3. Archer]: "))
-        if category in range(1, 4):
-            break
+        name = input("Name: ")
+        while True:
+            category = int(input("Category [1. Warrior 2. Mage 3. Archer]: "))
+            if category in range(1, 4):
+                break
 
-    base_hp = int(input("Base hp: "))
-    base_phys_attack = int(input("Base physical attack: "))
-    base_phys_defence = int(input("Base physical defence: "))
-    base_mag_attack = int(input("Base magical attack: "))
-    base_mag_defence = int(input("Base magical defence: "))
-    base_speed = int(input("Base speed: "))
-    base_reach = int(input("Base reach: "))
+        base_hp = int(input("Base hp: "))
+        base_phys_attack = int(input("Base physical attack: "))
+        base_phys_defence = int(input("Base physical defence: "))
+        base_mag_attack = int(input("Base magical attack: "))
+        base_mag_defence = int(input("Base magical defence: "))
+        base_speed = int(input("Base speed: "))
+        base_reach = int(input("Base reach: "))
+
+        print(f"Name: {name}\nCategory: {classes[str(category)]}\nBase hp: {base_hp}")
+        print(f"Base physical attack: {base_phys_attack}\nBase physical defence: {base_phys_defence}")
+        print(f"Base magical attack: {base_mag_attack}\nBase magical defence: {base_mag_defence}")
+        print(f"Base speed: {base_speed}\nBase reach: {base_reach}\n")
+        print(f"Overall stats: {int(round(base_hp/10)) + base_phys_attack + base_phys_defence + base_mag_attack + base_mag_defence + base_speed + base_reach}")
+
+        if query_yes_no("Do You want to add this unit?"):
+            break
 
     return {
         "name": name,
