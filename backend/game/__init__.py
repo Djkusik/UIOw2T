@@ -58,16 +58,16 @@ class Game:
             "Start game of players: '%s' and '%s'" % self._get_nicks_of_players()
         )
         battle_simulator = BattleSimulator(*self.players)
-        result, message = battle_simulator.start_simulation(random_seed=17)
+        result, message, logs = battle_simulator.start_simulation(random_seed=17)
         logging.info(f"Battle result: {result}")
-        self._end_game_for_players(message)
+        self._end_game_for_players(message, logs)
         self.is_finished = True
         logging.info(
             "Finish game of players: '%s' and '%s'" % self._get_nicks_of_players()
         )
 
-    def _end_game_for_players(self, message: str) -> None:
-        self.send_game_results(message)
+    def _end_game_for_players(self, message: str, logs: str) -> None:
+        self.send_game_results(message, logs)
         for p in self.players:
             p.reset_after_game()
 
@@ -85,12 +85,14 @@ class Game:
                 logging.info(f"Sent start game info to peer with SID: {player.id}")
         else:
             # end game if some player disconnected
-            await self.send_game_results("Player disconnected, walkover")
+            await self.send_game_results("Player disconnected, walkover", logs="")
 
-    async def send_game_results(self, message: str):
+    async def send_game_results(self, message: str, logs: str):
         for player in self.players:
             if player.in_game:
-                await self._sio.emit(GAME_RESULT, data={"message": message}, room=player.id)
+                await self._sio.emit(GAME_RESULT, data={
+                    "message": {"msg": message, "logs": logs}
+                }, room=player.id)
                 logging.info(f"Sent game results info to peer with SID: {player.id}")
 
 
