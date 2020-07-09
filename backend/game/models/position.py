@@ -10,6 +10,9 @@ class Position:
         self.x = x
         self.y = y
 
+    def __eq__(self, other: Position):
+        return self.x == other.x and self.y == other.y
+
     # all units will be located on the bottom half of the board during planning phase.
     # during simulation, one player`s units need to be mirrored to upper half.
     def get_mirrored_position(self) -> Position:

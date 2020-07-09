@@ -1,12 +1,22 @@
+from __future__ import annotations
 import json
 import random
 
 from typing import List, Dict, TextIO, Tuple
 from math import exp, floor
 
-class Shop:
 
+class Shop:
     path_to_units_file: str = './game/data/units.json'
+
+    _instance = None
+
+    @staticmethod
+    def get_instance() -> Shop:
+        if Shop._instance is None:
+            Shop._instance = Shop()
+
+        return Shop._instance
 
     def __init__(self):
         with open(self.path_to_units_file, 'r') as units_f:
@@ -19,9 +29,9 @@ class Shop:
 
     def add_prices(self):
         for unit in self.units_list:
-            price = self.calculate_price(unit)
+            self.calculate_price(unit)
 
-    def calculate_price(self, unit: Dict) -> int:
+    def calculate_price(self, unit: Dict):
         stats_sum = 0
         for stat in unit['statistics']:
             stats_sum += unit['statistics'][stat]
@@ -39,7 +49,7 @@ class Shop:
     def get_random_units(self, quantity: int, currency: int) -> List[Dict]:
         # If player is too poor to afford anything, return total random
         if currency < 2:
-            return random.sample(self.units_list, quantity)
+            return random.choices(self.units_list, quantity)
         else:
             # Else random few random units and few affordable units
             units_to_return = []
@@ -51,7 +61,7 @@ class Shop:
     def get_affordable_units(self, currency: int, quantity: int) -> List:
         return random.choices([unit for unit in self.units_list if unit['price'] <= currency], k=quantity)
 
-    def get_unit(self, name: str) -> Tuple['Unit', int]:
+    def get_unit(self, name: str) -> Tuple[Dict, int]:
         for unit in self.units_list:
             if unit['name'] == name:
                 return unit, unit['price']
