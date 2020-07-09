@@ -87,5 +87,5 @@ class Player:
         self.currency -= price
 
         first_free_bench = self.bench.index(None)
-        unit.set_position(Position(-1, first_free_bench))
+        unit.set_position(Position(first_free_bench, -1))
         self.bench[first_free_bench] = unit
