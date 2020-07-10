@@ -1,5 +1,3 @@
-import json
-
 from typing import List, Dict
 from game.models.unit import Unit
 import logging
@@ -36,6 +34,5 @@ class BattleLogger:
         self.currentItem = self.emptyItem
 
     def get_round_logs(self) -> str:
-        packed_json = json.dumps(self.eventList)
-        logging.info("Battle logs: " + packed_json)
+        logging.info("Battle logs:\n" + str(self.eventList))
         return self.eventList
