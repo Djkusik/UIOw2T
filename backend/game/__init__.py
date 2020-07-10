@@ -9,7 +9,7 @@ from .battle.battle_simulator import BattleSimulator
 from .models.position import Position
 from .models.unit import Unit
 from .player import Player
-from api.route_constants import GAME_STARTED, GAME_RESULT
+from api.route_constants import GAME_STARTED, GAME_RESULT, SCORE, UNITS_READY, BATTLE_STARTED
 
 
 class WaitingRoom:
@@ -43,20 +43,38 @@ class Game:
         self._sio: AsyncServer = sio
         self.players: Tuple[Player, Player] = players
         self.is_finished = False
+        self.players_quiz_and_units_ready = {p.id: {"units": False, "quiz": False} for p in self.players}
+        self._sio.on(SCORE, self.quiz_results_ready)
+        self._sio.on(UNITS_READY, self.units_ready)
+
+    def quiz_results_ready(self, sid) -> None:
+        self.save_what_is_ready(sid, what_is_ready="quiz")
+
+    def units_ready(self, sid) -> None:
+        self.save_what_is_ready(sid, what_is_ready="units")
+
+    def save_what_is_ready(self, sid, what_is_ready: str) -> None:
+        if not (self.players[0].id == sid or self.players[1].id == sid):
+            return
+        player_id = self.players[0].id if self.players[0].id == sid else self.players[1].id
+        self.players_quiz_and_units_ready[player_id][what_is_ready] = True
+        self.start_game_if_ready()
+
+    def start_game_if_ready(self) -> None:
+        for dictionary in self.players_quiz_and_units_ready.values():
+            for is_ready in dictionary.values():
+                if not is_ready:
+                    return
+        self.battle()
 
     def _get_nicks_of_players(self) -> Tuple[str, str]:
         return self.players[0].nick, self.players[1].nick
-
-    async def wait_for_quiz_result(self):
-        await asyncio.sleep(1)
-
-    async def wait_for_units_spacing(self):
-        await asyncio.sleep(1)
 
     async def battle(self) -> None:
         logging.info(
             "Start game of players: '%s' and '%s'" % self._get_nicks_of_players()
         )
+        await self._sio.emit(BATTLE_STARTED, data={"message": f"Battle between {self.players[0].nick} and {self.players[1].nick} started!"})
         battle_simulator = BattleSimulator(*self.players)
         result, message, logs = battle_simulator.start_simulation(random_seed=17)
         logging.info(f"Battle result: {result}")
@@ -146,7 +164,5 @@ class GameApp:
                 game = Game(self.sio, players)
                 self.current_games.append(game)
                 await game.set_on_game_started()
-                await game.wait_for_quiz_result()
-                await game.wait_for_units_spacing()
-                await game.battle()
+
             await asyncio.sleep(5)

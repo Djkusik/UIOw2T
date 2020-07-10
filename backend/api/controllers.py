@@ -119,7 +119,6 @@ class SocketController:
         await self.sio.emit(UNITS_FROM_SHOP_REPLY, data=offer, room=sid)
 
 
-
 def _unit_data_check(data) -> bool:
     return (
             "class" in data and
