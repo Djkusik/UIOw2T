@@ -47,25 +47,25 @@ class Game:
         self._sio.on(SCORE, self.quiz_results_ready)
         self._sio.on(UNITS_READY, self.units_ready)
 
-    def quiz_results_ready(self, sid) -> None:
-        self.save_what_is_ready(sid, what_is_ready="quiz")
+    async def quiz_results_ready(self, sid, data) -> None:
+        await self.save_what_is_ready(sid, what_is_ready="quiz")
 
-    def units_ready(self, sid) -> None:
-        self.save_what_is_ready(sid, what_is_ready="units")
+    async def units_ready(self, sid) -> None:
+        await self.save_what_is_ready(sid, what_is_ready="units")
 
-    def save_what_is_ready(self, sid, what_is_ready: str) -> None:
+    async def save_what_is_ready(self, sid, what_is_ready: str) -> None:
         if not (self.players[0].id == sid or self.players[1].id == sid):
             return
         player_id = self.players[0].id if self.players[0].id == sid else self.players[1].id
         self.players_quiz_and_units_ready[player_id][what_is_ready] = True
-        self.start_game_if_ready()
+        await self.start_game_if_ready()
 
-    def start_game_if_ready(self) -> None:
+    async def start_game_if_ready(self) -> None:
         for dictionary in self.players_quiz_and_units_ready.values():
             for is_ready in dictionary.values():
                 if not is_ready:
                     return
-        self.battle()
+        await self.battle()
 
     def _get_nicks_of_players(self) -> Tuple[str, str]:
         return self.players[0].nick, self.players[1].nick
