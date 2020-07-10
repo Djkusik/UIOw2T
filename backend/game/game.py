@@ -2,11 +2,8 @@ import logging
 
 from typing import Tuple
 
-from socketio import AsyncServer
-
 from game.models import Player
 from game.battle import BattleSimulator
-from game.ranking.ranking_system import RankingSystem
 
 
 class Game:
