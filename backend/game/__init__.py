@@ -57,6 +57,7 @@ class Game:
         if not (self.players[0].id == sid or self.players[1].id == sid):
             return
         player_id = self.players[0].id if self.players[0].id == sid else self.players[1].id
+        logging.info(f"{player_id} has {what_is_ready} ready")
         self.players_quiz_and_units_ready[player_id][what_is_ready] = True
         await self.start_game_if_ready()
 
@@ -108,9 +109,7 @@ class Game:
     async def send_game_results(self, message: str, logs: str):
         for player in self.players:
             if player.in_game:
-                await self._sio.emit(GAME_RESULT, data={
-                    "message": {"msg": message, "logs": logs}
-                }, room=player.id)
+                await self._sio.emit(GAME_RESULT, data={"message": message, "logs": logs}, room=player.id)
                 logging.info(f"Sent game results info to peer with SID: {player.id}")
 
 

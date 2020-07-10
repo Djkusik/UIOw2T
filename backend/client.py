@@ -1,11 +1,11 @@
 import json
+import sys
 
 import socketio
 from api.route_constants import *
 
 
 def start_game(sid):
-    sio.emit(QUESTIONS)
     for i in range(2):
         category = ""
         while category not in ("archer", "mage", "warrior"):
@@ -25,16 +25,18 @@ def start_game(sid):
         })
 
     sio.emit(UNITS_READY)
+    print("Units ready.")
+    sio.emit(QUESTIONS, data={"num": 2})
 
 
-def answer_questions(sid, data):
+def answer_questions(data):
     score = 0
-    print("Answer these 3 questions to determine your power-ups")
+    print("Answer these 2 questions to determine your power-ups")
     correct = []
     for question in data:
         print(question["question"])
         for i, answer in enumerate(question["answers"]):
-            print(i + ")", answer["answer"])
+            print(f"{i})", answer["answer"])
             if answer["is_correct"]:
                 correct.append(i)
         answers = []
@@ -50,17 +52,18 @@ def answer_questions(sid, data):
             score += 1
         else:
             score += 2
-        print("Correct answers were:")
-        print([question["answers"][i]["answer"] for i in correct])
+        print("Correct answers were:", correct)
 
     print("YOUR SCORE:", score)
     sio.emit(SCORE, data={'score': score})
 
 
-def on_game_result(sid, data):
-    print("GAME RESULT:", data["msg"])
+def on_game_result(data):
+    print("GAME RESULT:", data["message"])
     with open("battle-logs.json", 'w') as f:
-        json.dump(data["logs"], fp=f, indent=4)
+        f.write(json.dumps(data["logs"], indent=4))
+    print("Battle logs saved to battle-logs.json")
+    sys.exit(0)
 
 
 if __name__ == '__main__':

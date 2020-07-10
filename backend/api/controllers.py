@@ -68,12 +68,12 @@ class SocketController:
         await self.sio.emit(PLAYERS_WAITING_REPLY, data=response, room=sid)
         logging.info(f"Sent waiting players info to peer with SID: {sid}")
 
-    async def get_questions(self, sid, data):
+    async def get_questions(self, sid, data=None):
         default_number = 3
         questions_path = "api/data/questions.json"
 
         # Get the requested number or use default
-        num = data['num'] if 'num' in data else default_number
+        num = data['num'] if (data and 'num' in data) else default_number
         logging.info(f"Getting {num} questions (default is {default_number})")
         try:
             num = int(num)
