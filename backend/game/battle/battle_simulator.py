@@ -43,7 +43,7 @@ class BattleSimulator:
             message = "Draw"
         else:
             winner = self.player1.nick if self.result() > 0 else self.player2.nick
-            message = f"Player {winner} won by {max(self.result(), -self.result())} units"
+            message = f"Player '{winner}' won by {max(self.result(), -self.result())} units"
         return message
 
     def is_done(self) -> bool:

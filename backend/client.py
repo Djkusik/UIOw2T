@@ -5,13 +5,18 @@ import socketio
 from api.route_constants import *
 
 
+def distinct_log(msg: str):
+    print("\n" + "-" * 60 + f"\n{msg}\n" + "-" * 60 + "\n")
+
+
 def start_game(sid):
+    distinct_log("GAME STARTING, PLACE YOUR UNITS")
     for i in range(2):
         category = ""
         while category not in ("archer", "mage", "warrior"):
-            category = input("Which unit do you want to place (archer/warrior/mage)?")
+            category = input("Which unit do you want to place (archer/warrior/mage)?\n")
         coords = {"x": -1, "y": -1}
-        while not (coords["x"] in range(0,8) and coords["y"] in range(0,4)):
+        while not (coords["x"] in range(0, 8) and coords["y"] in range(0, 4)):
             coords_input = input("Coordinates for the unit (eg. '3,2', x in 0-7, y in 0-3): ")
             try:
                 coords_int = [int(x) for x in coords_input.split(",")]
@@ -31,15 +36,15 @@ def start_game(sid):
 
 def answer_questions(data):
     score = 0
+    distinct_log("QUIZ TIME")
     print("Answer these 2 questions to determine your power-ups")
-    correct = []
     for question in data:
-        print(question["question"])
+        print("\n" + question["question"])
         for i, answer in enumerate(question["answers"]):
             print(f"{i})", answer["answer"])
             if answer["is_correct"]:
                 correct.append(i)
-        answers = []
+        answers, correct = [], []
         while not answers:
             try:
                 answers = input("Your answers (write as e.g. '2,4,6'): ")
@@ -54,14 +59,14 @@ def answer_questions(data):
             score += 2
         print("Correct answers were:", correct)
 
-    print("YOUR SCORE:", score)
+    print("\nYOUR SCORE:", score)
     sio.emit(SCORE, data={'score': score})
 
 
 def on_game_result(data):
-    print("GAME RESULT:", data["message"])
+    distinct_log("GAME RESULT: " + data["message"])
     with open("battle-logs.json", 'w') as f:
-        f.write(json.dumps(data["logs"], indent=4))
+        json.dump(data["logs"], fp=f, indent=4)
     print("Battle logs saved to battle-logs.json")
     sys.exit(0)
 

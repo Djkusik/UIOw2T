@@ -38,4 +38,4 @@ class BattleLogger:
     def get_round_logs(self) -> str:
         packed_json = json.dumps(self.eventList)
         logging.info("Battle logs: " + packed_json)
-        return packed_json
+        return self.eventList
