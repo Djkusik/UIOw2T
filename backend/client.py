@@ -39,12 +39,13 @@ def answer_questions(data):
     distinct_log("QUIZ TIME")
     print("Answer these 2 questions to determine your power-ups")
     for question in data:
+        correct = []
         print("\n" + question["question"])
         for i, answer in enumerate(question["answers"]):
             print(f"{i})", answer["answer"])
             if answer["is_correct"]:
                 correct.append(i)
-        answers, correct = [], []
+        answers = []
         while not answers:
             try:
                 answers = input("Your answers (write as e.g. '2,4,6'): ")

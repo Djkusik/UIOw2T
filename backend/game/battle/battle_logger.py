@@ -14,7 +14,7 @@ class BattleLogger:
 
     def __init__(self):
         self.eventList: List = []
-        self.currentItem: Dict = self.emptyItem
+        self.currentItem: Dict = self.emptyItem.copy()
 
     def set_attacker(self, unit: Unit) -> None:
         self.currentItem['attacker_unit'] = str(unit)
@@ -31,7 +31,7 @@ class BattleLogger:
 
     def add_to_event_list(self) -> None:
         self.eventList.append(self.currentItem)
-        self.currentItem = self.emptyItem
+        self.currentItem = self.emptyItem.copy()
 
     def get_round_logs(self) -> str:
         logging.info("Battle logs:\n" + str(self.eventList))
