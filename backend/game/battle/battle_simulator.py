@@ -3,7 +3,7 @@ import random
 from game.battle.target_map import TargetMap
 from game.battle.battle_logger import BattleLogger
 from game.models.unit import Unit
-from game.player import Player
+from game.models.player import Player
 from typing import Tuple
 
 
@@ -13,7 +13,7 @@ class BattleSimulator:
         self.player2: Player = player2
         self.all_units = None
 
-    def start_simulation(self, random_seed: int) -> Tuple[int, str, str]:
+    def start_simulation(self, random_seed: int) -> Tuple[int, str, str,Player]:
         random.seed(random_seed)
         for unit in self.player2.deployed_units:
             unit.set_position(unit.position.get_mirrored_position())
@@ -35,15 +35,15 @@ class BattleSimulator:
         while True:
             for unit in self.all_units:
                 if self.is_done():
-                    return self.result(), self.get_final_message(), battle_logger.get_round_logs()
+                    return self.result(), self.get_final_message(), battle_logger.get_round_logs(), self.winner()
                 unit.attack()
 
     def get_final_message(self):
         if self.result() == 0:
             message = "Draw"
         else:
-            winner = self.player1.nick if self.result() > 0 else self.player2.nick
-            message = f"Player '{winner}' won by {max(self.result(), -self.result())} units"
+            winner = self.winner()
+            message = f"Player '{winner.nick}' won by {max(self.result(), -self.result())} units"
         return message
 
     def is_done(self) -> bool:
@@ -51,6 +51,9 @@ class BattleSimulator:
 
     def result(self) -> int:
         return len(self.player1.deployed_units) - len(self.player2.deployed_units)
+
+    def winner(self):
+        return self.player1 if self.result() > 0 else self.player2
 
     def on_death(self, unit: Unit) -> None:
         index = self.all_units.index(unit)

@@ -3,7 +3,7 @@ import copy
 from game.battle.battle_simulator import BattleSimulator
 from game.models.position import Position
 from game.models.unit import Unit
-from game.player import Player
+from game.models.player import Player
 
 # unit(name, class, hp, atk, def, m_atk, m_def, speed, range)
 unit1 = Unit('Gariusz', 'Mage', 10, 0, 0, 10, 7, 5, 6)

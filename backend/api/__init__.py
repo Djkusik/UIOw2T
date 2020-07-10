@@ -2,11 +2,11 @@ import logging
 from aiohttp import web
 from socketio import AsyncServer
 
-from game import GameApp
+import game
 from .routes import setup_routes
 
 
-async def api_server(game_app: GameApp, sio: AsyncServer) -> web.AppRunner:
+async def api_server(game_app: game.GameApp, sio: AsyncServer) -> web.AppRunner:
     app = web.Application()
     sio.attach(app)
 

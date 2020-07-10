@@ -9,7 +9,6 @@ from game.models.unit import Unit
 from socketio import AsyncServer
 from .route_constants import *
 from game import GameApp
-from game.shop.shop import Shop
 
 # TODO Unit store instead of this shit
 UNITS = {
@@ -23,6 +22,24 @@ class SocketController:
     def __init__(self, sio: AsyncServer, game_app: GameApp):
         self.sio: AsyncServer = sio
         self.game_app: GameApp = game_app
+        game_app.on_battle_started = self._on_battle_started
+        game_app.on_game_started = self._on_game_started
+        game_app.on_game_result = self._on_game_result
+
+    async def _on_battle_started(self, players):
+        await self.sio.emit(BATTLE_STARTED, data={
+            "message": f"Battle between {players[0].nick} and {players[1].nick} started!"})
+
+    async def _on_game_started(self, player):
+        message = {'message': 'game started'}
+        await self.sio.emit(GAME_STARTED, data=message, room=player.id)
+        logging.info(f"Sent start game info to peer with SID: {player.id}")
+
+    async def _on_game_result(self, message, logs, player):
+        await self.sio.emit(GAME_RESULT, data={"message": message, "logs": logs}, room=player.id)
+
+    async def units_ready(self, sid) -> None:
+        await self.game_app.current_games[-1].save_what_is_ready(sid, what_is_ready="units")
 
     async def on_socket_connected(self, sid, environ):
         logging.info(f"Got new connection from peer with SID: {sid}")
@@ -95,6 +112,9 @@ class SocketController:
         player.quiz_score = data["score"]
         logging.info(f"Saved quiz score {data['score']} for player {player}")
         await self.sio.emit(SCORE_REPLY, data={"message": "Score saved"}, room=sid)
+        await self.game_app.current_games[-1].save_what_is_ready(sid, what_is_ready="quiz")
+
+
 
     async def add_unit(self, sid, data):
         if not _unit_data_check(data):

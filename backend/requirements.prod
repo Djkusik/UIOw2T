@@ -5,3 +5,4 @@ python_socketio==4.6.0
 requests==2.24.0
 typing==3.7.4.1
 uuid==1.30
+sqlite3==2.6.0
