@@ -3,7 +3,7 @@ import random
 
 from game.models.unit import Unit
 from game.player import Player
-from game.shop.buy_unit_excpetions import FullBenchException, NotEnoughCurrencyException, UnitNotInOfferException
+from game.shop.buy_unit_exceptions import FullBenchException, NotEnoughCurrencyException, UnitNotInOfferException
 
 
 class UnitPurchaseTests(unittest.TestCase):

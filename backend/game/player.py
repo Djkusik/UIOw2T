@@ -1,6 +1,6 @@
 from typing import List
 
-from game import Position
+from game.models.position import Position
 from game.models.unit import Unit
 from game.shop.planning_phase_validator import PlanningPhaseValidator
 
