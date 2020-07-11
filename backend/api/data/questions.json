@@ -1,6 +1,7 @@
 [
     {
         "question": "Najbardziej prymitywnym systemem liczbowym jest:",
+        "category": "WDI",
         "answers": [
             {
                 "answer": "dwójkowy system liczbowy",
@@ -18,6 +19,7 @@
     },
     {
         "question": "Wartość 5/16 ma postać w systemie binarnym:",
+        "category": "WDI",
         "answers": [
             {
                 "answer": "0.0101",
@@ -35,6 +37,7 @@
     },
     {
         "question": "Wartość 1/10 ma postać w systemie binarnym:",
+        "category": "WDI",
         "answers": [
             {
                 "answer": "0.1010    ",
@@ -56,6 +59,7 @@
     },
     {
         "question": "Ile informacji zawiera 8 znakowe słowo którego każdy znak jest jedną z liter a, b. Prawdopodobieństwo pojawienia się (na każdej pozycji) samogłoski jest dwukrotnie większe od prawdopodobieństwa pojawienia się spółgłoski.",
+        "category": "WDI",
         "answers": [
             {
                 "answer": "więcej niż 8 bitów",
@@ -73,6 +77,7 @@
     },
     {
         "question": "Algorytm to : ",
+        "category": "WDI",
         "answers": [
             {
                 "answer": "uporządkowany zbiór operacji",
@@ -90,6 +95,7 @@
     },
     {
         "question": "Język formalny jest:",
+        "category": "WDI",
         "answers": [
             {
                 "answer": "sposobem zapisu algorytmów opartym na blokach operacyjnych",
@@ -103,6 +109,7 @@
     },
     {
         "question": "Syntaktyka języka programowania opisuje",
+        "category": "WDI",
         "answers": [
             {
                 "answer": "Znaczenie instrukcji w języku",
@@ -120,6 +127,7 @@
     },
     {
         "question": "Semantyka języka programowania opisuje:",
+        "category": "WDI",
         "answers": [
             {
                 "answer": "Znaczenie instrukcji w języku",
@@ -137,6 +145,7 @@
     },
     {
         "question": "Nawiasy <> w notacji EBNF oznaczają:",
+        "category": "WDI",
         "answers": [
             {
                 "answer": "opcjonalne wystąpienie elementu",
@@ -158,6 +167,7 @@
     },
     {
         "question": "Semantyka denotacyjna to:",
+        "category": "WDI",
         "answers": [
             {
                 "answer": "opis w postaci funkcji przekształcającej dane wejściowe w dane wyjściowe",
@@ -175,6 +185,7 @@
     },
     {
         "question": "Kodem ASCII możemy zakodować :",
+        "category": "WDI",
         "answers": [
             {
                 "answer": "dowolny znak z zakresu 0-128",
@@ -196,6 +207,7 @@
     },
     {
         "question": "Kodowanie znaków metodą UTF-8 cechuje:",
+        "category": "WDI",
         "answers": [
             {
                 "answer": "pozwala zakodować dowolne znaki UNICODE",
@@ -221,6 +233,7 @@
     },
     {
         "question": "Od czego zależy dokładność liczb zmiennopozycyjnych w komputerze?",
+        "category": "WDI",
         "answers": [
             {
                 "answer": "Od długości cechy",
@@ -238,6 +251,7 @@
     },
     {
         "question": "Cechami kodu uzupełnień do dwóch są:",
+        "category": "WDI",
         "answers": [
             {
                 "answer": "Podwójna reprezentacja 0",
@@ -259,6 +273,7 @@
     },
     {
         "question": "Dana jest następująca reprezentacja liczb zmiennopozycyjnych: Mantysa zajmuje 20 bitów, wykładnik zajmuje 8 bitów. Wykładnik i mantysa zapisywane są w kodzie U2. Przecinek leży na lewo od mantysy. Z dokładnością do ilu cyfr dziesiętnych można pamiętać liczby w tej reprezentacji?",
+        "category": "WDI",
         "answers": [
             {
                 "answer": "około 10",
@@ -284,6 +299,7 @@
     },
     {
         "question": "Dana jest następująca reprezentacja liczb zmiennopozycyjnych: Mantysa zajmuje 22 bity w tym bit znaku, cecha zajmuje 10 bitów w tym bit znaku. Cecha i mantysa zapisywane są w kodzie U2. Przecinek leży na lewo od mantysy (mantysa jest ułamkiem [1/2...1)). Jaka jest największa możliwa liczba w tym systemie?",
+        "category": "WDI",
         "answers": [
             {
                 "answer": "10^10",
@@ -297,6 +313,7 @@
     },
     {
         "question": "Jaka jest minimalna liczba bitów aby reprezentować liczby zmiennopozycyjne z zakresu -106 ... 106 z dokładnością do 2 miejsc znaczących.",
+        "category": "WDI",
         "answers": [
             {
                 "answer": "8 bitów",
@@ -318,6 +335,7 @@
     },
     {
         "question": "Liczba 10010 reprezentowana w systemie U2 ma wartość:",
+        "category": "WDI",
         "answers": [
             {
                 "answer": "2",
@@ -339,6 +357,7 @@
     },
     {
         "question": "W standardzie IEEE 754 liczby zmiennopozycyjne podwójnej precyzji:",
+        "category": "WDI",
         "answers": [
             {
                 "answer": "mantysa zawiera 52 bity łącznie z bitem znaku",
@@ -360,6 +379,7 @@
     },
     {
         "question": "Bramki wykonują operacje na:",
+        "category": "WDI",
         "answers": [
             {
                 "answer": "słowach",
@@ -373,6 +393,7 @@
     },
     {
         "question": "Bramka NAND wykonuje:",
+        "category": "WDI",
         "answers": [
             {
                 "answer": "najpierw operacje iloczynu logicznego - potem negację",
@@ -390,6 +411,7 @@
     },
     {
         "question": "Zbiór przerzutników służących do przechowywania informacji cyfrowej to:",
+        "category": "WDI",
         "answers": [
             {
                 "answer": "procesor",
@@ -403,6 +425,7 @@
     },
     {
         "question": "Do czego służy stos systemowy?",
+        "category": "WDI",
         "answers": [
             {
                 "answer": "Dla przechowywania wszystkich zmiennych w programie",
@@ -420,6 +443,7 @@
     },
     {
         "question": "Liczby stałopozycyjne w komputerze są reprezentowane w kodzie uzupełnień do 2. Dla jakich wartości funkcja abs(x) będzie obliczona prawidłowo?",
+        "category": "WDI",
         "answers": [
             {
                 "answer": "Tylko dla liczb ujemnych",
@@ -441,6 +465,7 @@
     },
     {
         "question": "Zmienna typu wskaźnik zajmuje 4 bajty. Ile pamięci można zaadresować takim wskaźnikiem?",
+        "category": "WDI",
         "answers": [
             {
                 "answer": "64 kilobajty",
@@ -466,6 +491,7 @@
     },
     {
         "question": "W języku Pascal dany jest nagłówek procedury: test (var a : integer); Które z poniższych wywołań są poprawne? (Zmienna k jest typu integer)",
+        "category": "WDI",
         "answers": [
             {
                 "answer": "test (k);",
@@ -483,6 +509,7 @@
     },
     {
         "question": "W języku Pascal zmienna typu integer zajmuje 2 bajty, wskaźnik zajmuje 4 bajty. Ile pamięci zajmuje następująca zmienna x : array[1..100] of integer;",
+        "category": "WDI",
         "answers": [
             {
                 "answer": "4 bajty",
@@ -508,6 +535,7 @@
     },
     {
         "question": "Jaki paradygmat programowania jest realizowany w języku C",
+        "category": "WDI",
         "answers": [
             {
                 "answer": "Aplikatywny",
@@ -533,6 +561,7 @@
     },
     {
         "question": "Jeżeli w programie następuje odwołanie poza obszar tablicy",
+        "category": "WDI",
         "answers": [
             {
                 "answer": "zawsze sygnalizowany jest błąd wykonania",
@@ -546,6 +575,7 @@
     },
     {
         "question": "Których nawiasów trzeba użyć w Odwrotnej Notacji Polskiej do zmiany kolejności wykonywania działań?",
+        "category": "WDI",
         "answers": [
             {
                 "answer": "{ }",
@@ -567,6 +597,7 @@
     },
     {
         "question": "Translacja analizuje symbole:",
+        "category": "WDI",
         "answers": [
             {
                 "answer": "od lewej do prawej strony",
@@ -580,6 +611,7 @@
     },
     {
         "question": "Jaki wynik da następujące wyrażenie zapisane w ONP : 2 3 4 5 + * + :",
+        "category": "WDI",
         "answers": [
             {
                 "answer": "25",
@@ -593,6 +625,7 @@
     },
     {
         "question": "Co oznacza, że algorytm sortowania tablicy posiada złożoność O(n^2).",
+        "category": "WDI",
         "answers": [
             {
                 "answer": "wykonywana liczba porównań wynosi n^2",
@@ -614,6 +647,7 @@
     },
     {
         "question": "Jeżeli elementy w tablicy są posortowane możliwe jest wyszukiwanie:",
+        "category": "WDI",
         "answers": [
             {
                 "answer": "sekwencyjne",
@@ -635,6 +669,7 @@
     },
     {
         "question": "Przy rozmieszczaniu algorytmicznym kolizja może wystąpić gdy:",
+        "category": "WDI",
         "answers": [
             {
                 "answer": "klucze w dwóch rozmieszczanych rekordach są identyczne",
@@ -656,6 +691,7 @@
     },
     {
         "question": "Najszybsza metoda sortowania oparta o porównywanie kluczy posiada złożoność:",
+        "category": "WDI",
         "answers": [
             {
                 "answer": "liniową",
@@ -677,6 +713,7 @@
     },
     {
         "question": "Ekstensywna metoda sortowania:",
+        "category": "WDI",
         "answers": [
             {
                 "answer": "to taka, w której czas sortowania wzrasta wraz ze wzrostem tablicy",
@@ -698,6 +735,7 @@
     },
     {
         "question": "Stabilną metodą sortowania jest:",
+        "category": "WDI",
         "answers": [
             {
                 "answer": "bąbelkowe",
@@ -743,6 +781,7 @@
     },
     {
         "question": "Które metody sortowania mają złożoność O(NlogN)",
+        "category": "WDI",
         "answers": [
             {
                 "answer": "bąbelkowe",
@@ -788,6 +827,7 @@
     },
     {
         "question": "Które metody sortowania mają złożoność O(N)",
+        "category": "WDI",
         "answers": [
             {
                 "answer": "bąbelkowe",
@@ -833,6 +873,7 @@
     },
     {
         "question": "Które metody sortowania maja złożoność O(N^2)",
+        "category": "WDI",
         "answers": [
             {
                 "answer": "bąbelkowe",
@@ -878,6 +919,7 @@
     },
     {
         "question": "Drzewo BST jest drzewem AVL gdy:",
+        "category": "WDI",
         "answers": [
             {
                 "answer": "dla każdego wierzchołka rozmiary jego poddrzew różnią się co najwyżej o 1",
@@ -899,6 +941,7 @@
     },
     {
         "question": "Drzewo binarne pełne o N poziomach posiada:",
+        "category": "WDI",
         "answers": [
             {
                 "answer": "N węzłów",
@@ -920,6 +963,7 @@
     },
     {
         "question": "Jeżeli w drzewie binarnym nie występuje wskazanie na ojca to:",
+        "category": "WDI",
         "answers": [
             {
                 "answer": "przeglądanie drzewa jest niemożliwe",
@@ -933,6 +977,7 @@
     },
     {
         "question": "Złożoność wyszukiwania w drzewie AVL jest",
+        "category": "WDI",
         "answers": [
             {
                 "answer": "liniowa ze względu na liczbę poziomów",
@@ -954,6 +999,7 @@
     },
     {
         "question": "Drzewo rozpinające graf zawiera:",
+        "category": "WDI",
         "answers": [
             {
                 "answer": "niektóre wierzchołki grafu",
@@ -971,6 +1017,7 @@
     },
     {
         "question": "Ile cykli Hamiltona posiada graf pełny o N wierzchołkach?",
+        "category": "WDI",
         "answers": [
             {
                 "answer": "N",
@@ -1000,6 +1047,7 @@
     },
     {
         "question": "Dana jest następująca reprezentacja liczb zmiennopozycyjnych: Mantysa zajmuje 16 bitów, wykładnik zajmuje 8 bitów; Wykładnik i mantysa zapisywane są w kodzie U2; Przecinek leży na lewo od mantysy; Z dokładnością do ilu cyfr dziesiętnych można pamiętać liczby w tej reprezentacji?",
+        "category": "WDI",
         "answers": [
             {
                 "answer": "7-8",
@@ -1021,6 +1069,7 @@
     },
     {
         "question": "W języku Pascal zmienna typu integer zajmuje 2 bajty, wskaźnik zajmuje 4 bajty. Ile pamięci zajmuje następująca zmienna x : ^ array[1..100] of integer;",
+        "category": "WDI",
         "answers": [
             {
                 "answer": "404 bajty",
@@ -1046,6 +1095,7 @@
     },
     {
         "question": "Wielowątkowość i wielordzeniowość procesora",
+        "category": "AK",
         "answers": [
             {
                 "answer": "Są charakterystyczne tylko dla procesorów AMD",
@@ -1067,6 +1117,7 @@
     },
     {
         "question": "Model pamięci współdzielonej",
+        "category": "AK",
         "answers": [
             {
                 "answer": "Jest typowy dla maszyn SIMD",
@@ -1088,6 +1139,7 @@
     },
     {
         "question": "Do maszyn typu MIMD należą",
+        "category": "AK",
         "answers": [
             {
                 "answer": "ccNUMA",
@@ -1109,6 +1161,7 @@
     },
     {
         "question": "Magistrala systemowa",
+        "category": "AK",
         "answers": [
             {
                 "answer": "Jest rozwiązaniem najbardziej zaawansowanym technologicznie",
@@ -1130,6 +1183,7 @@
     },
     {
         "question": "Najwydajniejszym rozwiązaniem warstwy komunikacyjnej w maszynach o wielu procesorach jest",
+        "category": "AK",
         "answers": [
             {
                 "answer": "Myrinet",
@@ -1151,6 +1205,7 @@
     },
     {
         "question": "Model obliczeń równoległych z wymianą komunikatów",
+        "category": "AK",
         "answers": [
             {
                 "answer": "Stosowany jest najczęściej w maszynach o pamięci współdzielonej",
@@ -1172,6 +1227,7 @@
     },
     {
         "question": "Architektury klastrowe",
+        "category": "AK",
         "answers": [
             {
                 "answer": "Charakteryzują się wysoką dostępnością i istnieniem zasobów zastępczych",
@@ -1193,6 +1249,7 @@
     },
     {
         "question": "Instrukcja procesora 8086 wywołująca podprogram, to:",
+        "category": "Asem",
         "answers": [
             {
                 "answer": "PPROG",
@@ -1214,6 +1271,7 @@
     },
     {
         "question": "Instrukcja procesora 8086 realizująca pętle, to:",
+        "category": "Asem",
         "answers": [
             {
                 "answer": "PETLA",
@@ -1235,6 +1293,7 @@
     },
     {
         "question": "Instrukcja asemblera 8086 wpisująca zawartość akumulatora AL bezpośrednio do komórki pamięci o adresie logicznym 120 w segmencie wskazywanym przez DS to:",
+        "category": "Asem",
         "answers": [
             {
                 "answer": "mov ds:[120],al",
@@ -1256,6 +1315,7 @@
     },
     {
         "question": "Instrukcja asemblera 8086 pobierająca do rejestru AX słowo znajdujące się w pamięci o adresie logicznym 211 w segmencie ES to:",
+        "category": "Asem",
         "answers": [
             {
                 "answer": "mov es:[211],ax",
@@ -1277,6 +1337,7 @@
     },
     {
         "question": "Poprawna instrukcja asemblera 8086 wpisująca zawartość rejestru AH do komórki pamięci o adresie 0AH w segmencie wskazywanym przez ES to:",
+        "category": "Asem",
         "answers": [
             {
                 "answer": "mov byte ptr es:[0ah],ah",
@@ -1298,6 +1359,7 @@
     },
     {
         "question": "Instrukcja języka asemblera 8086: mov al, byte ptr es:[bx]",
+        "category": "Asem",
         "answers": [
             {
                 "answer": "do akumulatora wpisuje zawartość komórki pamięci",
@@ -1319,6 +1381,7 @@
     },
     {
         "question": "Instrukcja języka asemblera 8086: mov word ptr ds:[bx],ax",
+        "category": "Asem",
         "answers": [
             {
                 "answer": "Zmienia zawartość rejestru AH",
@@ -1340,6 +1403,7 @@
     },
     {
         "question": "Instrukcja asemblera 8086 zapisująca zawartość rejestru DX na stosie to:",
+        "category": "Asem",
         "answers": [
             {
                 "answer": "push dx",
@@ -1361,6 +1425,7 @@
     },
     {
         "question": "Instrukcja asemblera 8086 pobierająca do rejestru CX wartość z wierzchołka stosu.",
+        "category": "Asem",
         "answers": [
             {
                 "answer": "mov stos,cx",
@@ -1382,6 +1447,7 @@
     },
     {
         "question": "Które z poniższych rejestrów procesora 8086 są rejestrami indeksowymi?",
+        "category": "Asem",
         "answers": [
             {
                 "answer": "BP",
@@ -1403,6 +1469,7 @@
     },
     {
         "question": "Który z rejestrów roboczych procesora 8086 ulegnie zmianie po wykonaniu następującej instrukcji asemblera 8086: loop PETLA",
+        "category": "Asem",
         "answers": [
             {
                 "answer": "DX",
@@ -1424,6 +1491,7 @@
     },
     {
         "question": "Które rejestry procesora 8086 mogą ulec zmianie po wykonaniu następującej instrukcji asemblera: jmp short PROGRAM1",
+        "category": "Asem",
         "answers": [
             {
                 "answer": "IP, CS",
@@ -1445,6 +1513,7 @@
     },
     {
         "question": "Które rejestry procesora 8086 mogą ulec zmianie po wykonaniu następującej instrukcji asemblera: mul BX",
+        "category": "Asem",
         "answers": [
             {
                 "answer": "BX",
@@ -1466,6 +1535,7 @@
     },
     {
         "question": "Instrukcja procesora 8086, dodająca zawartość rejestru CX do akumulatora to:",
+        "category": "Asem",
         "answers": [
             {
                 "answer": "add ax,cx",
@@ -1487,6 +1557,7 @@
     },
     {
         "question": "Które z poniższych rejestrów procesora 8086 są rejestrami segmentowymi?",
+        "category": "Asem",
         "answers": [
             {
                 "answer": "CL",
@@ -1508,6 +1579,7 @@
     },
     {
         "question": "Która z poniższych instrukcji procesora 8086 może zmienić zawartość rejestru znaczników?",
+        "category": "Asem",
         "answers": [
             {
                 "answer": "popf",
@@ -1529,6 +1601,7 @@
     },
     {
         "question": "Która z poniższych instrukcji procesora 8086 jest niepoprawna?",
+        "category": "Asem",
         "answers": [
             {
                 "answer": "mov ax,bp",
@@ -1550,6 +1623,7 @@
     },
     {
         "question": "Która z poniższych instrukcji procesora 8086 jest niepoprawna?",
+        "category": "Asem",
         "answers": [
             {
                 "answer": "popl",
@@ -1571,6 +1645,7 @@
     },
     {
         "question": "Dyrektywa asemblera 8086, rezerwująca 100 bajtów pamięci to:",
+        "category": "Asem",
         "answers": [
             {
                 "answer": "db 100h dup(?)",
@@ -1592,6 +1667,7 @@
     },
     {
         "question": "Który z poniższych zapisów jest poprawną dyrektywą języka asemblera 8086, ustawiającą wskaźnik adresów na wartość 100h?",
+        "category": "Asem",
         "answers": [
             {
                 "answer": "address 100h",
@@ -1613,6 +1689,7 @@
     },
     {
         "question": "Które wyrażenie SQL zwraca wszystkie wiersze tabeli \"Osoby\" posortowane malejąco według atrybutu \"Imie\"?",
+        "category": "BD",
         "answers": [
             {
                 "answer": "SELECT * FROM Osoby SORT BY ' Imie ' DESC",
@@ -1634,6 +1711,7 @@
     },
     {
         "question": "Jak możesz zmienić wartość \"Kowalski\" na \"Nowak\" w atrybucie \"Nazwisko\" w tabeli \"Osoby\"?",
+        "category": "BD",
         "answers": [
             {
                 "answer": "MODIFY Osoby SET Nazwisko =' Nowak ' WHERE Nazwisko =' Kowalski'",
@@ -1655,6 +1733,7 @@
     },
     {
         "question": "Jak można przy pomocy SQL uzyskać informację o liczbie wierszy w tabeli \"Osoby\"?",
+        "category": "BD",
         "answers": [
             {
                 "answer": "SELECT COUNT(*) FROM Osoby",
@@ -1676,6 +1755,7 @@
     },
     {
         "question": "Jak można przy pomocy SQL wybrać wszystkie wiersze z tabeli \"Osoby\", w których wartość atrybutu \"Imie\" zaczyna się od \"a\"?",
+        "category": "BD",
         "answers": [
             {
                 "answer": "SELECT * FROM Osoby WHERE Imie LIKE '%a'",
@@ -1697,6 +1777,7 @@
     },
     {
         "question": "Którą z poniższych cech musi posiadać \"klucz właściwy\":",
+        "category": "BD",
         "answers": [
             {
                 "answer": "jego wartość jednoznacznie wyznacza wiersz w danej tabeli",
@@ -1718,6 +1799,7 @@
     },
     {
         "question": "Algebra relacji jest podstawą dla:",
+        "category": "BD",
         "answers": [
             {
                 "answer": "realizacji przez relacyjny SZBD operacji języka manipulacji danymi",
@@ -1739,6 +1821,7 @@
     },
     {
         "question": "Które z poniższych cech posiadają tzw. widoki (view) :",
+        "category": "BD",
         "answers": [
             {
                 "answer": "mogą realizować politykę ograniczania dostępu do danych",
@@ -1756,6 +1839,7 @@
     },
     {
         "question": "Z jakim problemem trzeba się uporać przy odwzorowaniu w schemacie relacyjnej bazy danych relacji typu n:m (wiele do wiele) :",
+        "category": "BD",
         "answers": [
             {
                 "answer": "zdefiniować podwójne indeksowanie plików odpowiadających każdej z tabel",
@@ -1777,6 +1861,7 @@
     },
     {
         "question": "Które z poniższych stwierdzeń są prawdziwe jeśli dotyczą systemów baz danych realizowanych w architekturze klient serwer:",
+        "category": "BD",
         "answers": [
             {
                 "answer": "mocno obciążają sieć w stosunku do systemów scentralizowanych",
@@ -1798,6 +1883,7 @@
     },
     {
         "question": "Systemy OLTP i OLAP różnią się przede wszystkim:",
+        "category": "BD",
         "answers": [
             {
                 "answer": "czasem reakcji na zapytanie",
@@ -1815,6 +1901,7 @@
     },
     {
         "question": "Rolą hurtowni danych jest:",
+        "category": "BD",
         "answers": [
             {
                 "answer": "przygotowanie danych do szybkiej analizy",
@@ -1836,6 +1923,7 @@
     },
     {
         "question": "Modele danych w postaci gwiazdy i płatka śniegu:",
+        "category": "BD",
         "answers": [
             {
                 "answer": "ich implementacja przyspiesza analizę danych",
@@ -1857,6 +1945,7 @@
     },
     {
         "question": "Które z podanych rodzajów wymagań nie są określane podczas przygotowywania definicji wymagań systemowych ?",
+        "category": "IO",
         "answers": [
             {
                 "answer": "abstrakcyjne wymagania funkcjonalne",
@@ -1878,6 +1967,7 @@
     },
     {
         "question": "Które z wymienionych czynności występują dla wszystkich procesów tworzenia oprogramowania",
+        "category": "IO",
         "answers": [
             {
                 "answer": "budowa i ulepszanie prototypów",
@@ -1899,6 +1989,7 @@
     },
     {
         "question": "Zapis wymagania powinien bezwzględnie zawierać:",
+        "category": "IO",
         "answers": [
             {
                 "answer": "informację o kolejności wprowadzenia danego wymagania w stosunku do innych wymagań",
@@ -1920,6 +2011,7 @@
     },
     {
         "question": "Zaznacz, które stwierdzenia odnoszące się do studium realizowalności (wykonalności) są prawdziwe:",
+        "category": "IO",
         "answers": [
             {
                 "answer": "Studium realizowalności musi udzielać odpowiedzi na pytania, \"czy system przyczyni się do realizacji ogólnych celów przedsiębiorstwa\" i \"czy może być zintegrowany z innymi, już będącymi w użyciu ?\"",
@@ -1941,6 +2033,7 @@
     },
     {
         "question": "Zaznacz, które z poniższych stwierdzeń są prawdziwe:",
+        "category": "IO",
         "answers": [
             {
                 "answer": "W każdym przyroście musi być realizowana funkcjonalność w obrębie jednego podsystemu w taki sposób, aby możliwa była integracja nowego przyrostu z wcześniej wytworzoną częścią systemu",
@@ -1962,6 +2055,7 @@
     },
     {
         "question": "Ewolucyjne tworzenie oprogramowania w wariancie projektowania eksploracyjnego (badawczego) ...",
+        "category": "IO",
         "answers": [
             {
                 "answer": "...jest realizacją przedsięwzięcia w kolejności od najsłabiej do najlepiej rozpoznanych części systemu;",
@@ -1983,6 +2077,7 @@
     },
     {
         "question": "Prototypowanie z porzuceniem jest wariantem ewolucyjnego tworzenia oprogramowania, w którym:",
+        "category": "IO",
         "answers": [
             {
                 "answer": "...ze względu na dwukrotną realizację systemu - jako prototypu i systemu finalnego - wydłużony jest znacznie czas realizacji i powiększony koszt przedsięwzięcia, przez co metoda ta jest stosowana głównie wtedy, gdy przez oddanie prototypu zamiast finalnej wersji systemu można oddalić groźbę katastrofalnego opóźnienia i całkowitego załamania projektu",
@@ -2004,6 +2099,7 @@
     },
     {
         "question": "Do modeli iteracyjnych tworzenia oprogramowania zaliczamy:",
+        "category": "IO",
         "answers": [
             {
                 "answer": "metodę przyrostową",
@@ -2025,6 +2121,7 @@
     },
     {
         "question": "Inspekcja (przegląd) wymagań jest...",
+        "category": "IO",
         "answers": [
             {
                 "answer": "...nazywana formalną bądź nieformalną, zależnie do tego czy zespół twórców systemu wyjaśnia znaczenie każdego wymagania czy tylko prowadzi luźną rozmowę z przedstawicielami klienta",
@@ -2046,6 +2143,7 @@
     },
     {
         "question": "Skrajny wariant ewolucyjnego tworzenia oprogramowania zwany “metodą studencką”, charakteryzujący się prawie całkowitym brakiem dokumentacji i selektywnym testowaniem (przy optymistycznych założeniach co do poprawności danych wejściowych)",
+        "category": "IO",
         "answers": [
             {
                 "answer": "nadaje się do realizacji oprogramowania \"jednorazowego użytku\"",
@@ -2067,6 +2165,7 @@
     },
     {
         "question": "Systemy odziedziczone...",
+        "category": "IO",
         "answers": [
             {
                 "answer": "...to systemy starsze niż kilka- kilkanaście lat, których działanie pozostaje krytycznym czynnikiem z punktu widzenia funkcjonowania instytucji, ale technologia nie odpowiada aktualnym potrzebom",
@@ -2088,6 +2187,7 @@
     },
     {
         "question": "Dana w C, C++, czy Javie umieszczana jest w spójnym obszarze pamięci operacyjnej.",
+        "category": "JITP",
         "answers": [
             {
                 "answer": "Tylko dane typów predefiniowanych",
@@ -2109,6 +2209,7 @@
     },
     {
         "question": "W językach imperatywnych (również obiektowych) przy wyborze reprezentacji dla danych rzeczywistych (zmiennoprzecinkowych) pojawiają się problemy:",
+        "category": "JITP",
         "answers": [
             {
                 "answer": "wystąpienia nadmiaru",
@@ -2126,6 +2227,7 @@
     },
     {
         "question": "Wskazania (pointers) w C, C++ używane są do reprezentowania (wskazywania):",
+        "category": "JITP",
         "answers": [
             {
                 "answer": "Obszarów pamięci operacyjnej",
@@ -2147,6 +2249,7 @@
     },
     {
         "question": "Dokładność reprezentacji zmiennoprzecinkowej jest określona przez:",
+        "category": "MONT",
         "answers": [
             {
                 "answer": "liczbę bitów mantysy",
@@ -2168,6 +2271,7 @@
     },
     {
         "question": "Wybierz poprawną odpowiedź:",
+        "category": "MONT",
         "answers": [
             {
                 "answer": "uwarunkowanie to cecha wynikająca tylko z dokładności operacji zmiennoprzecinkowych",
@@ -2189,6 +2293,7 @@
     },
     {
         "question": "Efekt Rungego w interpolacji wielomianowej to:",
+        "category": "MONT",
         "answers": [
             {
                 "answer": "wynik wyboru złej funkcji interpolującej",
@@ -2210,6 +2315,7 @@
     },
     {
         "question": "Funkcje sklejane stopnia m na przedziale [a,b]",
+        "category": "MONT",
         "answers": [
             {
                 "answer": "są używane tylko do interpolacji przedziałowej",
@@ -2231,6 +2337,7 @@
     },
     {
         "question": "Wybierz poprawną odpowiedź:",
+        "category": "MONT",
         "answers": [
             {
                 "answer": "interpolacja z węzłami będącymi zerami wielomianu Czebyszewa odpowiedniego stopnia eliminuje efekt Rungego",
@@ -2252,6 +2359,7 @@
     },
     {
         "question": "Kwadratury Gaussa stosowane są:",
+        "category": "MONT",
         "answers": [
             {
                 "answer": "ze względu na łatwiejszy wybór węzłów całkowania",
@@ -2273,6 +2381,7 @@
     },
     {
         "question": "Metoda Newtona-Raphsona rozwiązywania równań nieliniowych:",
+        "category": "MONT",
         "answers": [
             {
                 "answer": "wykorzystuje niejawnie przyspieszenie Aitkena",
@@ -2314,6 +2423,7 @@
     },
     {
         "question": "Metoda eliminacji Gaussa rozwiązywania układów równań liniowych:",
+        "category": "MONT",
         "answers": [
             {
                 "answer": "polega na doprowadzeniu macierzy do postaci diagonalnej",
@@ -2339,6 +2449,7 @@
     },
     {
         "question": "Metody dekompozycji LU:",
+        "category": "MONT",
         "answers": [
             {
                 "answer": "należą do rodziny metod iteracyjnych niestacjonarnych",
@@ -2360,6 +2471,7 @@
     },
     {
         "question": "Wybierz właściwe uporządkowanie metod iteracyjnego rozwiązywania układów równań liniowych wg narastającej ich jakości:",
+        "category": "MONT",
         "answers": [
             {
                 "answer": "Jacobiego, Czebyszewa, nadrelaksacji, Gaussa-Seidela",
@@ -2381,6 +2493,7 @@
     },
     {
         "question": "Metody blokowe rozwiązywania układów równań nieliniowych",
+        "category": "MONT",
         "answers": [
             {
                 "answer": "nie wymagają wyznaczania elementu wiodącego",
@@ -2402,6 +2515,7 @@
     },
     {
         "question": "Wybierz właściwe uporządkowanie metod całkowania Monte Carlo wg narastającej ich jakości:",
+        "category": "MONT",
         "answers": [
             {
                 "answer": "podstawowa, warstwowa, średniej ważonej, orzeł-reszka",
@@ -2423,6 +2537,7 @@
     },
     {
         "question": "Wybierz poprawne zdanie opisujące metody minimalizacji:",
+        "category": "MONT",
         "answers": [
             {
                 "answer": "metoda sprzężonych kierunków jest przykładem ogólnej metody poszukiwania minimum globalnego",
@@ -2444,6 +2559,7 @@
     },
     {
         "question": "Metoda symulowanego wyżarzania:",
+        "category": "MONT",
         "answers": [
             {
                 "answer": "to rodzina heurystycznych technik optymalizacji opartych na analogii z fizyką statystyczną układów losowych",
@@ -2461,6 +2577,7 @@
     },
     {
         "question": "Szybka transformata Fouriera",
+        "category": "MONT",
         "answers": [
             {
                 "answer": "jest możliwa tylko wtedy, gdy liczba punktów jest całkowitą potęgą 2",
@@ -2482,6 +2599,7 @@
     },
     {
         "question": "Podejście wariacyjne do rozwiązywania równań różniczkowych:",
+        "category": "MONT",
         "answers": [
             {
                 "answer": "nie nadaje się do obliczeń numerycznych",
@@ -2503,6 +2621,7 @@
     },
     {
         "question": "Wymagania stawiane schematom rozwiązywania numerycznego zagadnienia początkowego to:",
+        "category": "MONT",
         "answers": [
             {
                 "answer": "jawne uwzględnienie warunków brzegowych",
@@ -2524,6 +2643,7 @@
     },
     {
         "question": "Metoda Cranka-Nicolsona to",
+        "category": "MONT",
         "answers": [
             {
                 "answer": "technika poszukiwania minimum lokalnego z uwzglednieniem drugich pochodnych",
@@ -2545,6 +2665,7 @@
     },
     {
         "question": "Rola metod komputerowych w trójkącie \"teoria eksperyment symulacja\"to:",
+        "category": "MONT",
         "answers": [
             {
                 "answer": "opracowywanie nowych praw o charakterze podstawowym dla danej dziedziny",
@@ -2566,6 +2687,7 @@
     },
     {
         "question": "Jakie aspekty powinien uwzględniać pełny model systemu w podejściu strukturalnym do analizy i projektowania:",
+        "category": "PSI",
         "answers": [
             {
                 "answer": "aspekt funkcjonalny, aspekt danych i ich powiązań",
@@ -2587,6 +2709,7 @@
     },
     {
         "question": "Aspekt funkcjonalny systemu informatycznego modelowany jest w podejściu strukturalnym przy pomocy:",
+        "category": "PSI",
         "answers": [
             {
                 "answer": "Data Flow Diagrams",
@@ -2608,6 +2731,7 @@
     },
     {
         "question": "Które z wymienionych podziałów wymagań niefunkcjonalnych są wyczerpujące i rozłączne",
+        "category": "PSI",
         "answers": [
             {
                 "answer": "produktowe, organizacyjne, prawne",
@@ -2629,6 +2753,7 @@
     },
     {
         "question": "Wymienić elementy modelu środowiskowego w strukturalnym podejściu do analizy i projektowania systemów informatycznych:",
+        "category": "PSI",
         "answers": [
             {
                 "answer": "ERD, DFD, STD",
@@ -2650,6 +2775,7 @@
     },
     {
         "question": "Jaki zestaw diagramów jest używany - w metodyce strukturalnej analizy i projektowania systemów informatycznych - do pokazania wszystkich aspektów modelowanego systemu:",
+        "category": "PSI",
         "answers": [
             {
                 "answer": "DFD, ERD i STC",
@@ -2671,6 +2797,7 @@
     },
     {
         "question": "Które obiekty graficzne są używane do tworzenia diagramu kontekstowego w metodyce strukturalnej analizy i projektowania systemów informatycznych:",
+        "category": "PSI",
         "answers": [
             {
                 "answer": "Proces, przepływ danych (data flow), magazyn danych (data store)",
@@ -2692,6 +2819,7 @@
     },
     {
         "question": "Wybrać nazwy wszystkich obiektów graficznych używanych do konstruowania DFD (Data Flow Diagrams) - diagramów przepływu danych w metodyce strukturalnej:",
+        "category": "PSI",
         "answers": [
             {
                 "answer": "proces (process)",
@@ -2713,6 +2841,7 @@
     },
     {
         "question": "Wskazać ten element dokumentacji projektowej, który zawiera zapis w postaci pseudokodu (metodyka strukturalna analizy i projektowania systemów inf.):",
+        "category": "PSI",
         "answers": [
             {
                 "answer": "opis wymagań niefunkcjonalnych",
@@ -2734,6 +2863,7 @@
     },
     {
         "question": "Który element DFD w metodyce strukturalnej stanowi podstawę konstruowania ERD (Entity Relationship Diagram) - diagramu związków encji:",
+        "category": "PSI",
         "answers": [
             {
                 "answer": "przepływ danych (data flow)",
@@ -2755,6 +2885,7 @@
     },
     {
         "question": "Zaletami prowadzenia transmisji w trybie pełnego dupleksu w standardzie Ethernet są:",
+        "category": "SK",
         "answers": [
             {
                 "answer": "możliwość wykorzystania urządzeń hub",
@@ -2776,6 +2907,7 @@
     },
     {
         "question": "Model odniesienia OSI/ISO:",
+        "category": "SK",
         "answers": [
             {
                 "answer": "jest modelem czterowarstwowym",
@@ -2797,6 +2929,7 @@
     },
     {
         "question": "Osiągnięcie przepustowości 1Gb/s na kablu UTP kategorii 5e (tym samym, który jest używany w transmisji 100Mb/s) w standardzie Ethernet jest:",
+        "category": "SK",
         "answers": [
             {
                 "answer": "możliwe dzięki wykorzystaniu do transmisji wszystkich czterech par",
@@ -2818,6 +2951,7 @@
     },
     {
         "question": "Kodowanie sygnałów w transmisji w sieciach komputerowych:",
+        "category": "SK",
         "answers": [
             {
                 "answer": "wpływa na uzyskiwaną przepustowość",
@@ -2839,6 +2973,7 @@
     },
     {
         "question": "Istnienie ograniczenia maksymalnej odległości między komunikującymi się hostami wynika z:",
+        "category": "SK",
         "answers": [
             {
                 "answer": "w ramach jednego segmentu sieci: wymogów protokołu warstwy łącza danych",
@@ -2860,6 +2995,7 @@
     },
     {
         "question": "Które z wymienionych funkcji realizuje warstwa łącza danych modelu OSI/ISO?",
+        "category": "SK",
         "answers": [
             {
                 "answer": "dostarczenie adresacji fizycznej",
@@ -2881,6 +3017,7 @@
     },
     {
         "question": "Wirtualne sieci lokalne:     ",
+        "category": "SK",
         "answers": [
             {
                 "answer": "można definiować w oparciu o adresy fizyczne",
@@ -2902,6 +3039,7 @@
     },
     {
         "question": "Algorytm budowy drzewa rozpinającego (STA):",
+        "category": "SK",
         "answers": [
             {
                 "answer": "jest stosowany w przypadku mostków uczących się",
@@ -2923,6 +3061,7 @@
     },
     {
         "question": "Które warstwy modelu OSI/ISO są różne dla sieci WAN i LAN?",
+        "category": "SK",
         "answers": [
             {
                 "answer": "fizyczna i łącza danych",
@@ -2944,6 +3083,7 @@
     },
     {
         "question": "Opisz, do czego jest wykorzystywany protokół ARP:",
+        "category": "SK",
         "answers": [
             {
                 "answer": "uzyskania adresu IP",
@@ -2965,6 +3105,7 @@
     },
     {
         "question": "Jeżeli dwie stacje znajdujące się w innych sieciach IP połączone są ze sobą dokładnie jednym routerem i chce komunikować się ze sobą to:",
+        "category": "SK",
         "answers": [
             {
                 "answer": "obydwie stacje muszą posiadać jednakową maskę",
@@ -2986,6 +3127,7 @@
     },
     {
         "question": "Protokół IP w wersji 4 posiada następujące cechy",
+        "category": "SK",
         "answers": [
             {
                 "answer": "pozwala na fragmentację pakietów w węzłach pośrednich i u nadawcy",
@@ -3007,6 +3149,7 @@
     },
     {
         "question": "W jakich przypadkach jest stosowany protokół ICMP.",
+        "category": "SK",
         "answers": [
             {
                 "answer": "transmisji danych wysokopiorytetowych",
@@ -3028,6 +3171,7 @@
     },
     {
         "question": "Jaki mechanizm uniemożliwia nieskończone krążenie ramek IP w sieci w przypadku wystąpienia pętli.",
+        "category": "SK",
         "answers": [
             {
                 "answer": "mechanizm split-horizon",
@@ -3049,6 +3193,7 @@
     },
     {
         "question": "Parametr \"niezawodność łącza\" wchodzi w skład metryki protokołu routingu:",
+        "category": "SK",
         "answers": [
             {
                 "answer": "EIGRP",
@@ -3070,6 +3215,7 @@
     },
     {
         "question": "Protokół TCP:",
+        "category": "SK",
         "answers": [
             {
                 "answer": "może grupować dane otrzymane do wysłania w celu zoptymalizowania wykorzystania połączeń sieciowych",
@@ -3091,6 +3237,7 @@
     },
     {
         "question": "Protokół UDP:",
+        "category": "SK",
         "answers": [
             {
                 "answer": "wprowadza mechanizmy fragmentacji dla danych użytkownika przekraczających maksymalny rozmiar datagramu UDP",
@@ -3112,6 +3259,7 @@
     },
     {
         "question": "Zaznacz prawdziwe stwierdzenia na temat stronicowania",
+        "category": "SO",
         "answers": [
             {
                 "answer": "Stronicowanie rozwiązuje problem zewnętrznej fragmentacji pamięci",
@@ -3137,6 +3285,7 @@
     },
     {
         "question": "Zaznacz prawdziwe stwierdzenia na temat segmentacji:",
+        "category": "SO",
         "answers": [
             {
                 "answer": "Segmentacja ułatwia nadanie częściom procesu odpowiednich atrybutów ochrony: dopuszczalny odczyt, dopuszczalny zapis, dopuszczalne wykonanie",
@@ -3158,6 +3307,7 @@
     },
     {
         "question": "Zaznacz prawdziwe stwierdzenia na temat algorytmów wywłaszczania stron:",
+        "category": "SO",
         "answers": [
             {
                 "answer": "Zaletą algorytmu zastępowania stron FIFO jest to, że nie zachodzi w nim efekt zwany anomalią Beledy'ego",
@@ -3179,6 +3329,7 @@
     },
     {
         "question": "Zaznacz prawdziwe stwierdzenia na temat pamięci wirtualnej:",
+        "category": "SO",
         "answers": [
             {
                 "answer": "Stronicowanie na żądanie jest jednym ze sposobów realizacji pamięci wirtualnej",
@@ -3200,6 +3351,7 @@
     },
     {
         "question": "Zaznacz prawdziwe zdania na temat semaforów:",
+        "category": "SO",
         "answers": [
             {
                 "answer": "Zaletą aktywnego czekania w trybie użytkownika jest brak konieczności kosztownego przejścia do trybu uprzywilejowanego (systemowego)",
@@ -3221,6 +3373,7 @@
     },
     {
         "question": "Podstawę klasyfikacji aplikacji jako aplikacji rozproszonej stanowi wykonywanie się jej:",
+        "category": "SR",
         "answers": [
             {
                 "answer": "w dwu lub więcej komputerach",
@@ -3242,6 +3395,7 @@
     },
     {
         "question": "Brak możliwości w ustaleniu dokładnego globalnego czasu w systemach rozproszonych wynika z:",
+        "category": "SR",
         "answers": [
             {
                 "answer": "rozsynchronizowania zegarów komputerów w systemie",
@@ -3263,6 +3417,7 @@
     },
     {
         "question": "Podczas korzystania z interfejsu gniazd BSD programista musi borykać się z następującymi problemami:",
+        "category": "SR",
         "answers": [
             {
                 "answer": "brakiem zgodności typów danych pomiędzy różnymi platformami sprzętowymi i programowymi",
@@ -3284,6 +3439,7 @@
     },
     {
         "question": "Za pomocą interfejsu gniazd BSD możliwa jest komunikacja:",
+        "category": "SR",
         "answers": [
             {
                 "answer": "punkt-punkt z wykorzystaniem protokołów TCP i UDP",
@@ -3305,6 +3461,7 @@
     },
     {
         "question": "Procedura idempotentna:",
+        "category": "SR",
         "answers": [
             {
                 "answer": "jest ściśle związana z architekturą CORBA",
@@ -3326,6 +3483,7 @@
     },
     {
         "question": "Z technologią RPC związane są pojęcia:",
+        "category": "SR",
         "answers": [
             {
                 "answer": "DSI (Dynamic Skeleton Interface)",
@@ -3347,6 +3505,7 @@
     },
     {
         "question": "Aby przesłać obiekt Java z wykorzystaniem RMI, musi on:",
+        "category": "SR",
         "answers": [
             {
                 "answer": "być zarejestrowany w serwisie RMI Activation",
@@ -3368,6 +3527,7 @@
     },
     {
         "question": "Usługa rmiregistry pozwala na:",
+        "category": "SR",
         "answers": [
             {
                 "answer": "ponowne zarejestrowanie (re-bind) obiektu o tej samej nazwie",
@@ -3389,6 +3549,7 @@
     },
     {
         "question": "Które z poniższych twierdzeń są prawdziwe:",
+        "category": "SR",
         "answers": [
             {
                 "answer": "można napisać klienta w C++, który będzie się komunikował z obiektem CORBA którego serwant jest napisany w Javie",
@@ -3410,6 +3571,7 @@
     },
     {
         "question": "Protokół IIOP jest zdefiniowany dla protokołu transportowego:",
+        "category": "SR",
         "answers": [
             {
                 "answer": "IMAP",
@@ -3431,6 +3593,7 @@
     },
     {
         "question": "W CORBIE za pomocą stuba można wywoływać metody:",
+        "category": "SR",
         "answers": [
             {
                 "answer": "udostępniane poprzez skeleton",
@@ -3452,6 +3615,7 @@
     },
     {
         "question": "CORBA jest:",
+        "category": "SR",
         "answers": [
             {
                 "answer": "relacyjną bazą danych wspierającą język IDL",
@@ -3473,6 +3637,7 @@
     },
     {
         "question": "Które z poniższych pojęć są usługami CORBA?",
+        "category": "SR",
         "answers": [
             {
                 "answer": "Concurrency Service",
@@ -3494,6 +3659,7 @@
     },
     {
         "question": "Które pojęcia nie są związane z architekturą CORBA?",
+        "category": "SR",
         "answers": [
             {
                 "answer": "SOAP",
@@ -3515,6 +3681,7 @@
     },
     {
         "question": "Jeżeli moc pobierana przez układ jest najważniejszym kryterium branym pod uwagę przy projektowaniu to którą rodzinę układów wybierzesz:",
+        "category": "TC",
         "answers": [
             {
                 "answer": "CMOS",
@@ -3536,6 +3703,7 @@
     },
     {
         "question": "Wyrażenie Boolowskie może być zrealizowane z:",
+        "category": "TC",
         "answers": [
             {
                 "answer": "kombinacji NAND i NOR",
@@ -3553,6 +3721,7 @@
     },
     {
         "question": "Rolą zegara doprowadzonego do przerzutnika bistabilnego jest:",
+        "category": "TC",
         "answers": [
             {
                 "answer": "dążenie do zmiany na wyjściu w zależności od stanu wejść przygotowujących (S-R, J-K, D)",
@@ -3574,6 +3743,7 @@
     },
     {
         "question": "Przerzutnik JK jest w stanie stałych zmian na wyjściu gdy:",
+        "category": "TC",
         "answers": [
             {
                 "answer": "J = 1, K = 1",
@@ -3595,6 +3765,7 @@
     },
     {
         "question": "Multiwibrator astabilny:",
+        "category": "TC",
         "answers": [
             {
                 "answer": "jest oscylatorem",
@@ -3616,6 +3787,7 @@
     },
     {
         "question": "Który stan jest nieważny w liczniku BCD:",
+        "category": "TC",
         "answers": [
             {
                 "answer": "1100",
@@ -3637,6 +3809,7 @@
     },
     {
         "question": "10 MHz zegar jest podłączony do kaskady liczników zawierającej - licznik modulo-5, modulo-8 i dwa liczniki modulo 10. Jaka jest częstotliwość wyjścia:",
+        "category": "TC",
         "answers": [
             {
                 "answer": "2,5 kHz",
@@ -3658,6 +3831,7 @@
     },
     {
         "question": "Licznik asynchroniczny różni się od synchronicznego:",
+        "category": "TC",
         "answers": [
             {
                 "answer": "liczbą stanów w jego sekwencji",
@@ -3679,6 +3853,7 @@
     },
     {
         "question": "Stopnie w rejestrze przesuwnym zawierają:",
+        "category": "TC",
         "answers": [
             {
                 "answer": "bajt pamięci",
@@ -3700,6 +3875,7 @@
     },
     {
         "question": "Przy użyciu 1MHz zegara, osiem bitów równolegle może być wprowadzonych do rejestru przesuwnego w czasie:",
+        "category": "TC",
         "answers": [
             {
                 "answer": "1 us",
@@ -3721,6 +3897,7 @@
     },
     {
         "question": "Grupa bitów 10110101 jest szeregowo przesuwana w prawo w ośmiobitowym rejestrze ze stanem początkowym 11100100. Po dwóch impulsach zegara stan wyjścia jest:",
+        "category": "TC",
         "answers": [
             {
                 "answer": "01011110",
@@ -3742,6 +3919,7 @@
     },
     {
         "question": "8 bitowy przetwornik DAC ma rozdzielczość:",
+        "category": "TC",
         "answers": [
             {
                 "answer": "1 %",
@@ -3763,6 +3941,7 @@
     },
     {
         "question": "W przetworniku DAC typu R-2R są:",
+        "category": "TC",
         "answers": [
             {
                 "answer": "rezystory o jednej wartości",
@@ -3792,6 +3971,7 @@
     },
     {
         "question": "Która zależność jest poprawna:",
+        "category": "TM",
         "answers": [
             {
                 "answer": "Na jeden cykl maszynowy składa się jeden lub kilka cykli rozkazowych a na jeden cykl rozkazowy składa się jeden lub kilka cykli zegarowych",
@@ -3809,6 +3989,7 @@
     },
     {
         "question": "Co wpływa na fakt szybszego dostępu do danych przy użyciu DMA zamiast trybu programowalnego?",
+        "category": "TM",
         "answers": [
             {
                 "answer": "szybszy zegar",
@@ -3830,6 +4011,7 @@
     },
     {
         "question": "Który rodzaj pamięci wymaga odświeżania ?",
+        "category": "TM",
         "answers": [
             {
                 "answer": "FLASH",
@@ -3851,6 +4033,7 @@
     },
     {
         "question": "Połączenie procesora z magistralą odbywa się poprzez bufor 3 stanowy aby:",
+        "category": "TM",
         "answers": [
             {
                 "answer": "uzyskać wysoką impedancję bufora w razie potrzeby",
@@ -3868,6 +4051,7 @@
     },
     {
         "question": "Dla utrzymania logicznego stanu komórki pamięci dynamicznej niezbędne okazuje się",
+        "category": "TM",
         "answers": [
             {
                 "answer": "odświeżanie jej zawartości",
@@ -3885,6 +4069,7 @@
     },
     {
         "question": "Układ sterujący procesora jest to:",
+        "category": "TM",
         "answers": [
             {
                 "answer": "układ generujący funkcje sterujące wykonywaniem programu",
@@ -3902,6 +4087,7 @@
     },
     {
         "question": "Procesor otrzymuje sygnał HOLD, oznacza to:",
+        "category": "TM",
         "answers": [
             {
                 "answer": "wymuszenie wykonania specjalnego programu",
@@ -3923,6 +4109,7 @@
     },
     {
         "question": "Co to jest mikrooperacja?",
+        "category": "TM",
         "answers": [
             {
                 "answer": "elementarna operacja do wykonania w potoku",
@@ -3940,6 +4127,7 @@
     },
     {
         "question": "Po co w procesorach zastosowano pamięć typu ROM w jednostce sterującej",
+        "category": "TM",
         "answers": [
             {
                 "answer": "dla zorganizowania mikroprogramowanego dekodera",
@@ -3957,6 +4145,7 @@
     },
     {
         "question": "Generalizacja",
+        "category": "TO",
         "answers": [
             {
                 "answer": "organizuje obiekty w hierarchię uogólniania/uszczegóławiania",
@@ -3982,6 +4171,7 @@
     },
     {
         "question": "Kompozycja",
+        "category": "TO",
         "answers": [
             {
                 "answer": "jest to struktura agregacji, w której klasy części mogą być powiązane tylko z jedną klasą całości",
@@ -4015,6 +4205,7 @@
     },
     {
         "question": "Relacja zależności wskazuje, że",
+        "category": "TO",
         "answers": [
             {
                 "answer": "klasa dostarcza implementacji usług interfejsu",
@@ -4036,6 +4227,7 @@
     },
     {
         "question": "Relacja realizacji wskazuje, że",
+        "category": "TO",
         "answers": [
             {
                 "answer": "obiekt klasy może być argumentem wywołania usługi innej klasy",
@@ -4057,6 +4249,7 @@
     },
     {
         "question": "Wielokrotne użycie wspierane jest w modelu obiektowym przez:",
+        "category": "TO",
         "answers": [
             {
                 "answer": "kwalifikowane powiązania",
@@ -4078,6 +4271,7 @@
     },
     {
         "question": "Wybierz, które z poniższych stwierdzeń są prawdziwe:",
+        "category": "TA",
         "answers": [
             {
                 "answer": "Autorem klasyfikacji (hierarchii) języków formalnych jest Noam Chomsky",
@@ -4107,6 +4301,7 @@
     },
     {
         "question": "Niech N będzie niedeterministycznym automatem skończonym posiadającym n stanów, oraz niech M będzie minimalnym deterministycznym automatem skończonym rozpoznającym ten sam język. Liczbę stanów automatu M oznaczamy przez m. Wtedy:",
+        "category": "TA",
         "answers": [
             {
                 "answer": "m <= n",
@@ -4132,6 +4327,7 @@
     },
     {
         "question": "Wybierz, które z poniższych stwierdzeń są prawdziwe:",
+        "category": "TA",
         "answers": [
             {
                 "answer": "Jeśli język L spełnia tezę lematu o pompowaniu dla języków regularnych, to język L jest regularny",
@@ -4153,6 +4349,7 @@
     },
     {
         "question": "Eliminując niejednoznaczność gramatyki poprzez konwersję do innej gramatyki musimy zachować bez zmian:",
+        "category": "TK",
         "answers": [
             {
                 "answer": "drzewo wyprowadzenia oryginalnej gramatyki dla każdego jednoznacznego słowa wejściowego",
@@ -4178,6 +4375,7 @@
     },
     {
         "question": "Która z następujących metod parsingu może przetworzyć najszerszą klasę gramatyk:",
+        "category": "TK",
         "answers": [
             {
                 "answer": "parser SLR",
@@ -4207,6 +4405,7 @@
     },
     {
         "question": "Wybierz stwierdzenia, które są prawdziwe:",
+        "category": "TK",
         "answers": [
             {
                 "answer": "Dla każdej gramatyki jednoznacznej można skonstruować parser LR(1)",
@@ -4228,6 +4427,7 @@
     },
     {
         "question": "Sekcja krytyczna procesu jest to:",
+        "category": "TW",
         "answers": [
             {
                 "answer": "część procesu, w której wykorzystywany jest zasób dzielony",
@@ -4249,6 +4449,7 @@
     },
     {
         "question": "Wzajemnym wykluczaniem nazywamy problem współzawodnictwa procesów o zasób, który:",
+        "category": "TW",
         "answers": [
             {
                 "answer": "musi zostać zainicjalizowany przez jeden z procesów",
@@ -4270,6 +4471,7 @@
     },
     {
         "question": "Komunikację nazywamy asynchroniczną jeżeli:",
+        "category": "TW",
         "answers": [
             {
                 "answer": "nadawca żąda, by odbiorca był gotów do odebrania komunikatu",
@@ -4291,6 +4493,7 @@
     },
     {
         "question": "Zjawisko blokady w programie współbieżnym jest:",
+        "category": "TW",
         "answers": [
             {
                 "answer": "zatrzymaniem pracy jednego ze współbieżnych procesów",
@@ -4312,6 +4515,7 @@
     },
     {
         "question": "Zjawisko zagłodzenia w programie współbieżnym jest:",
+        "category": "TW",
         "answers": [
             {
                 "answer": "stanem, w którym każdy proces oczekuje na działanie innego procesu",
@@ -4333,6 +4537,7 @@
     },
     {
         "question": "Komunikację nazywamy synchroniczną jeżeli:",
+        "category": "TW",
         "answers": [
             {
                 "answer": "nadawca żąda, by odbiorca był gotów do odebrania komunikatu",
@@ -4354,6 +4559,7 @@
     },
     {
         "question": "W systemie operacyjnym UNIX:",
+        "category": "Unix",
         "answers": [
             {
                 "answer": "Praca programu logującego (login) jest sterowana m. in. zawartością plików /etc/nologin lub /etc/motd",
@@ -4375,6 +4581,7 @@
     },
     {
         "question": "W systemie operacyjnym UNIX:",
+        "category": "Unix",
         "answers": [
             {
                 "answer": "O postaci hasła decyduje administrator systemu zapisując ograniczenia w różnych wersjach systemu w różnych plikach konfiguracyjnych",
@@ -4408,6 +4615,7 @@
     },
     {
         "question": "Procesy",
+        "category": "Unix",
         "answers": [
             {
                 "answer": "Proces jest wykonaniem programu i składa się ze zbiorowości bajtów, w których wyróżnia się instrukcje maszynowe (tzw. tekst), dane i stos",
@@ -4437,6 +4645,7 @@
     },
     {
         "question": "Interpretery poleceń systemu UNIX",
+        "category": "Unix",
         "answers": [
             {
                 "answer": "W niektórych interpreterach poleceń można uniemożliwić odłączanie się od systemu poprzez wykorzystanie sekwencji Ctrl-D dzięki ustawieniu wartości odpowiedniej zmiennej środowiskowej",
@@ -4458,6 +4667,7 @@
     },
     {
         "question": "Jakie byłyby konsekwencje znalezienia wielomianowego deterministycznego algorytmu dla problemu NP-zupełnego?",
+        "category": "ZO",
         "answers": [
             {
                 "answer": "żadna z pozostałych odpowiedzi",
@@ -4479,6 +4689,7 @@
     },
     {
         "question": "Jakie problemy zaliczamy do klasy problemów NP-zupełnych?",
+        "category": "ZO",
         "answers": [
             {
                 "answer": "z definicji należą jednocześnie do NP i co-NP",
@@ -4500,6 +4711,7 @@
     },
     {
         "question": "Co można powiedzieć o podproblemach problemu PI, wiedząc, że PI nie należy do P?",
+        "category": "ZO",
         "answers": [
             {
                 "answer": "żaden jego podproblem nie należy do P",

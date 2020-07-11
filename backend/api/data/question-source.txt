@@ -1,0 +1,1288 @@
+1. WDI Najbardziej prymitywnym systemem liczbowym jest:
+A) dwójkowy system liczbowy
+>>B) jedynkowy system liczbowy
+C) szesnastkowy system liczbowy
+
+[#2]2. WDI Wartość 5/16 ma postać w systemie binarnym:
+>>A) 0.0101
+B) 0.1011
+C) 0.1010
+
+[#3]3. WDI Wartość 1/10 ma postać w systemie binarnym:
+A) 0.1010    
+>>B) 0.0(0011)
+C) 0.(1010)
+D) 0.0(1010)
+
+[#4]4. WDI Ile informacji zawiera 8 znakowe słowo którego każdy znak jest jedną z liter a, b. Prawdopodobieństwo pojawienia się (na każdej pozycji) samogłoski jest dwukrotnie większe od prawdopodobieństwa pojawienia się spółgłoski.
+A) więcej niż 8 bitów
+>>B) mniej niż 8 bitów (dokładnie 7.34637)
+C) dokładnie 8 bitów
+
+[#5]5. WDI Algorytm to : 
+>>A) uporządkowany zbiór operacji
+>>B) specyfikacja ciągu elementarnych operacji, które przekształcają dane wejściowe na wynik
+B) ---
+
+6. WDI Język formalny jest:
+A) sposobem zapisu algorytmów opartym na blokach operacyjnych
+>>B) sposobem zapisu algorytmów opartym na pseudokodzie
+
+7. WDI Syntaktyka języka programowania opisuje
+A) Znaczenie instrukcji w języku
+>>B) Formalnie poprawne programy
+C) Budowę instrukcji w języku
+
+8. WDI Semantyka języka programowania opisuje:
+>>A) Znaczenie instrukcji w języku
+B) Formalnie poprawne programy
+C) Budowę instrukcji w języku
+
+9. WDI Nawiasy <> w notacji EBNF oznaczają:
+A) opcjonalne wystąpienie elementu
+B) symbol terminalny
+>>C) symbol nieterminalny
+D) wielokrotne występowanie elementu
+
+10. WDI Semantyka denotacyjna to:
+>>A) opis w postaci funkcji przekształcającej dane wejściowe w dane wyjściowe
+B) opis budowy poprawnych semantycznie programów
+C) stan maszyny przed i po wykonaniu instrukcji
+
+[#11]11. WDI Kodem ASCII możemy zakodować :
+A) dowolny znak z zakresu 0-128
+B) dowolny znak z zakresu 0-255
+C) dowolny znak z zakresu 32-255
+>>D) dowolny znak z zakresu 0-127
+
+[#12]12. WDI Kodowanie znaków metodą UTF-8 cechuje:
+>>A) pozwala zakodować dowolne znaki UNICODE
+>>B) zmienna długość kodu
+>>C) pozwala zakodować dowolne znaki ASCII za pomocą 1 bajta
+D) pozwala zakodować dowolne znaki ASCII za pomocą 8 bajtów
+>>E) pozwala zakodować dowolne znaki UNICODE za pomocą nie więcej niż 6 bajtów
+
+13. WDI Od czego zależy dokładność liczb zmiennopozycyjnych w komputerze?
+A) Od długości cechy
+>>B) Od długości mantysy
+C) Od długości mantysy i cechy
+
+14. WDI Cechami kodu uzupełnień do dwóch są:
+A) Podwójna reprezentacja 0
+>>B) Pojedyncza reprezentacja 0
+C) Symetryczny zakres liczb
+>>D) Asymetryczny zakres liczb
+
+[#15]15. WDI Dana jest następująca reprezentacja liczb zmiennopozycyjnych: Mantysa zajmuje 20 bitów, wykładnik zajmuje 8 bitów. Wykładnik i mantysa zapisywane są w kodzie U2. Przecinek leży na lewo od mantysy. Z dokładnością do ilu cyfr dziesiętnych można pamiętać liczby w tej reprezentacji?
+A) około 10
+>>B) około 6
+C) około 3
+D) 14
+E) 8
+
+[#16]16. WDI Dana jest następująca reprezentacja liczb zmiennopozycyjnych: Mantysa zajmuje 22 bity w tym bit znaku, cecha zajmuje 10 bitów w tym bit znaku. Cecha i mantysa zapisywane są w kodzie U2. Przecinek leży na lewo od mantysy (mantysa jest ułamkiem [1/2...1)). Jaka jest największa możliwa liczba w tym systemie?
+A) 10^10
+>>B) (1 - 2^(-21)) * 2 ^ (2 ^ 9 - 1)
+
+[#17]17. WDI Jaka jest minimalna liczba bitów aby reprezentować liczby zmiennopozycyjne z zakresu -106 ... 106 z dokładnością do 2 miejsc znaczących.
+A) 8 bitów
+>>B) 12 bitów
+C) 4 bity
+D) 14 bitów
+
+[#18]18. WDI Liczba 10010 reprezentowana w systemie U2 ma wartość:
+A) 2
+>>B) -14
+C) 14
+D) 6
+
+[#19]19. WDI W standardzie IEEE 754 liczby zmiennopozycyjne podwójnej precyzji:
+A) mantysa zawiera 52 bity łącznie z bitem znaku
+>>B) mantysa zawiera 53 bity łącznie z bitem znaku
+>>C) wykładnik zawiera 11 bitów
+D) wykładnik zawiera 12 bitów
+
+[#20]20. WDI Bramki wykonują operacje na:
+A) słowach
+>>B) wartościach logicznych
+
+[#21]21. WDI Bramka NAND wykonuje:
+>>A) najpierw operacje iloczynu logicznego - potem negację
+B) najpierw operacje negacji - potem iloczynu logicznego
+C) operację różnicy symetrycznej
+
+[#22]22. WDI Zbiór przerzutników służących do przechowywania informacji cyfrowej to:
+A) procesor
+>>B) bardziej rejestr lub pamięć (zgadywane)
+
+[#23]23. WDI Do czego służy stos systemowy?
+A) Dla przechowywania wszystkich zmiennych w programie
+B) Dla przechowywania zmiennych alokowanych procedurą new(p)
+>>C) Dla przechowywania zmiennych lokalnych procedur i funkcji
+
+[#24]24. WDI Liczby stałopozycyjne w komputerze są reprezentowane w kodzie uzupełnień do 2. Dla jakich wartości funkcja abs(x) będzie obliczona prawidłowo?
+A) Tylko dla liczb ujemnych
+B) Tylko dla liczb nieujemnych
+C) Dla wszystkich liczb typu integer
+>>D) Wszystkich poza najmniejszą liczbą w reprezentacji
+
+[#25]25. WDI Zmienna typu wskaźnik zajmuje 4 bajty. Ile pamięci można zaadresować takim wskaźnikiem?
+A) 64 kilobajty
+>>B) 4 gigabajty
+C) 2 megabajty
+D) 6 gigabajtów
+E) 8 kilobajtów
+
+[#26]26. WDI W języku Pascal dany jest nagłówek procedury: test (var a : integer); Które z poniższych wywołań są poprawne? (Zmienna k jest typu integer)
+>>A) test (k);
+B) test (k+12);
+C) test (12);
+
+[#27]27. WDI W języku Pascal zmienna typu integer zajmuje 2 bajty, wskaźnik zajmuje 4 bajty. Ile pamięci zajmuje następująca zmienna x : array[1..100] of integer;
+A) 4 bajty
+>>B) 200 bajtów
+C) 204 bajty
+D) 400 bajtów
+E) 404 bajty
+
+[#28]28. WDI Jaki paradygmat programowania jest realizowany w języku C
+A) Aplikatywny
+>>B) Imperatywny
+C) Deklaratywny
+D) Żaden z wymienionych
+>>E) Strukturalny
+
+[#29]29. WDI Jeżeli w programie następuje odwołanie poza obszar tablicy
+A) zawsze sygnalizowany jest błąd wykonania
+>>B) nie jest sygnalizowany błąd jeżeli pamięc jest zaalokowana
+
+[#30]30. WDI Których nawiasów trzeba użyć w Odwrotnej Notacji Polskiej do zmiany kolejności wykonywania działań?
+A) { }
+>>B) o kolejności wykonywania działań nie decydują nawiasy
+C) ( ) 
+D) [ ] 
+
+31. WDI Translacja analizuje symbole:
+>>A) od lewej do prawej strony
+B) ---
+
+[#32]32. WDI Jaki wynik da następujące wyrażenie zapisane w ONP : 2 3 4 5 + * + :
+A) 25
+>>B) 29
+
+[#33]33. WDI Co oznacza, że algorytm sortowania tablicy posiada złożoność O(n^2).
+A) wykonywana liczba porównań wynosi n^2
+>>B) wykonywana liczba porównań jest rzędu n^2
+C) wykonywana liczba przestawień elementów tablicy w algorytmie wynosi n^2
+>>D) dwukrotne zwiększenie rozmiaru tablicy spowoduje czterokrotne zwiększenie czasu sortowania
+
+[#34]34. WDI Jeżeli elementy w tablicy są posortowane możliwe jest wyszukiwanie:
+>>A) sekwencyjne
+>>B) binarne
+>>C) interpolacyjne
+D) żadne z wymienionych
+
+[#35]35. WDI Przy rozmieszczaniu algorytmicznym kolizja może wystąpić gdy:
+>>A) klucze w dwóch rozmieszczanych rekordach są identyczne
+>>B) klucze w dwóch rozmieszczanych rekordach są różne
+>>C) znumeryzowane klucze dwóch rekordów są różne
+>>D) znumeryzowane klucze dwóch rekordów są identyczne
+
+[#36]36. WDI Najszybsza metoda sortowania oparta o porównywanie kluczy posiada złożoność:
+A) liniową
+>>B) liniowo-logarytmiczną
+C) stałą
+D) kwadratową
+
+[#37]37. WDI Ekstensywna metoda sortowania:
+A) to taka, w której czas sortowania wzrasta wraz ze wzrostem tablicy
+>>B) to taka, która wymaga dodatkowej pamięci porównywalnej z rozmiarem sortowanej struktury
+C) to taka, która wymaga dodatkowej pamięci porównywalnej z rozmiarem pojedynczego rekordu
+D) to każda szybka metoda sortowania
+
+38. WDI Stabilną metodą sortowania jest:
+>>A) bąbelkowe
+B) grzebieniowe
+>>C) kubełkowe
+>>D) pozycyjne
+E) przez kopcowanie
+>>F) przez scalanie
+>>G) przez wstawianie
+H) przez wybieranie
+>>I) przez zliczanie
+J) szybkie
+
+39. WDI Które metody sortowania mają złożoność O(NlogN)
+A) bąbelkowe
+>>B) grzebieniowe
+C) kubełkowe
+D) pozycyjne
+>>E) przez kopcowanie
+>>F) przez scalanie
+G) przez wstawianie
+H) przez wybieranie
+I) przez zliczanie
+>>J) szybkie
+
+40. WDI Które metody sortowania mają złożoność O(N)
+A) bąbelkowe
+B) grzebieniowe
+>>C) kubełkowe
+>>D) pozycyjne
+E) przez kopcowanie
+F) przez scalanie
+G) przez wstawianie
+H) przez wybieranie
+>>I) przez zliczanie
+J) szybkie
+
+41. WDI Które metody sortowania maja złożoność O(N^2)
+>>A) bąbelkowe
+B) grzebieniowe
+C) kubełkowe
+D) pozycyjne
+E) przez kopcowanie
+F) przez scalanie
+>>G) przez wstawianie
+>>H) przez wybieranie
+I) przez zliczanie
+J) szybkie
+
+[#42]42. WDI Drzewo BST jest drzewem AVL gdy:
+A) dla każdego wierzchołka rozmiary jego poddrzew różnią się co najwyżej o 1
+>>B) dla każdego wierzchołka wysokości jego poddrzew różnią się co najwyżej o 1
+C) dla każdego wierzchołka wysokości jego poddrzew różnią się dokładnie o 1
+D) dla każdego wierzchołka rozmiary jego poddrzew różnią się dokładnie o 1
+
+[#43]43. WDI Drzewo binarne pełne o N poziomach posiada:
+A) N węzłów
+B) 2*N węzłów
+C) 2^N węzłów
+>>D) (2^N)-1 węzłów
+
+44. WDI Jeżeli w drzewie binarnym nie występuje wskazanie na ojca to:
+A) przeglądanie drzewa jest niemożliwe
+>>B) ---
+
+[#45]45. WDI Złożoność wyszukiwania w drzewie AVL jest
+>>A) liniowa ze względu na liczbę poziomów
+B) kwadratowa ze względu na liczbą poziomów
+C) liniowa ze względu na liczbą węzłów
+>>D) logarytmiczna ze względu na liczbę węzłów
+
+[#46]46. WDI Drzewo rozpinające graf zawiera:
+A) niektóre wierzchołki grafu
+>>B) wszystkie wierzchołki grafu
+C) żadne z wymienionych
+
+[#47]47. WDI Ile cykli Hamiltona posiada graf pełny o N wierzchołkach?
+A) N
+B) 1
+C) 0
+D) N^2
+E) N!
+>>F) (N-1)!/2 (dopisane, na podstawie egzaminu 2014/2015)
+
+[#48]48. WDI Dana jest następująca reprezentacja liczb zmiennopozycyjnych: Mantysa zajmuje 16 bitów, wykładnik zajmuje 8 bitów; Wykładnik i mantysa zapisywane są w kodzie U2; Przecinek leży na lewo od mantysy; Z dokładnością do ilu cyfr dziesiętnych można pamiętać liczby w tej reprezentacji?
+A) 7-8
+B) 15-16
+>>C) 4-5
+D) 2-3
+
+[#49]49. WDI W języku Pascal zmienna typu integer zajmuje 2 bajty, wskaźnik zajmuje 4 bajty. Ile pamięci zajmuje następująca zmienna x : ^ array[1..100] of integer;
+A) 404 bajty
+B) 400 bajtów
+C) 204 bajty
+D) 200 bajtów
+>>E) 4 bajty
+
+50. AK Wielowątkowość i wielordzeniowość procesora
+A) Są charakterystyczne tylko dla procesorów AMD
+>>B) Zostały rozwinięte niezależnie przez producentów
+C) Są synonimami
+D) Zostały rozwinięte specjalnie dla technologii Centrino
+
+51. AK Model pamięci współdzielonej
+>>A) Jest typowy dla maszyn SIMD
+B) Występuje tylko w odniesieniu do klastrów komputerów
+>>C) Jest typowy dla maszyn SMP
+>>D) Może być wykorzystany w maszynach typu MIMD
+
+52. AK Do maszyn typu MIMD należą
+>>A) ccNUMA
+>>B) Maszyny wykorzystujące model obliczeniowy z wymianą komunikatów
+>>C) maszyny SMP
+D) Najczęściej rozwiązania wykorzystujące specjalizowane procesory
+
+53. AK Magistrala systemowa
+A) Jest rozwiązaniem najbardziej zaawansowanym technologicznie
+B) Charakteryzuje się wysoką przepustowością w porównaniu z innymi rozwiązaniami warstwy komunikacyjnej
+>>C) Umożliwia łatwą rozbudowę systemu
+>>D) Jest typowa dla maszyn SMP
+
+54. AK Najwydajniejszym rozwiązaniem warstwy komunikacyjnej w maszynach o wielu procesorach jest
+A) Myrinet
+>>B) Przełącznica krzyżowa
+C) Magistrala systemowa
+D) Sieć przełączająca (switching network)
+
+55. AK Model obliczeń równoległych z wymianą komunikatów
+A) Stosowany jest najczęściej w maszynach o pamięci współdzielonej
+>>B) W obliczeniach jest zazwyczaj bardziej efektywny od modelu pamięci współdzielonej
+>>C) Charakterystyczny dla architektur klastrowych
+D) Charakteryzuje się łatwością programowania
+
+56. AK Architektury klastrowe
+>>A) Charakteryzują się wysoką dostępnością i istnieniem zasobów zastępczych
+B) Współdzielą wyłącznie zasoby dyskowe
+>>C) Występuje w nich współdzielenie zasobów
+D) Są przeznaczone wyłącznie do obliczeń naukowo-technicznych
+
+57. Asem Instrukcja procesora 8086 wywołująca podprogram, to:
+A) PPROG
+>>B) CALL
+C) LOOP
+D) JMP
+
+58. Asem Instrukcja procesora 8086 realizująca pętle, to:
+A) PETLA
+>>B) LOOP
+C) DJNZ
+>>D) LOOPZ
+
+59. Asem Instrukcja asemblera 8086 wpisująca zawartość akumulatora AL bezpośrednio do komórki pamięci o adresie logicznym 120 w segmencie wskazywanym przez DS to:
+>>A) mov ds:[120],al
+>>B) mov byte ptr ds:[120],al
+C) mov byte ptr 120:[ds],al
+D) mov al, ds:[120]
+
+60. Asem Instrukcja asemblera 8086 pobierająca do rejestru AX słowo znajdujące się w pamięci o adresie logicznym 211 w segmencie ES to:
+A) mov es:[211],ax
+B) mov ax,byte ptr es:[211]
+>>C) mov ax,es:[211]
+D) mov es:[ax],211
+
+61. Asem Poprawna instrukcja asemblera 8086 wpisująca zawartość rejestru AH do komórki pamięci o adresie 0AH w segmencie wskazywanym przez ES to:
+>>A) mov byte ptr es:[0ah],ah
+B) mov word ptr es:[0ah],ah
+>>C) mov es:[0ah],ah
+D) mov es:[ah],0ah
+
+62. Asem Instrukcja języka asemblera 8086: mov al, byte ptr es:[bx]
+>>A) do akumulatora wpisuje zawartość komórki pamięci
+B) wpisuje zawartość rejestru AL do pamięci w segmencie wskazywanym przez ES
+C) zmienia zawartość komórki pamięci w segmencie wskazywanym przez ES
+>>D) może zmodyfikować zawartość rejestru AX
+
+63. Asem Instrukcja języka asemblera 8086: mov word ptr ds:[bx],ax
+A) Zmienia zawartość rejestru AH
+B) Zmienia zawartość rejestru BX
+>>C) Zmienia zawartość komórki pamięci
+D) Zmienia zawartość rejestru DS
+
+64. Asem Instrukcja asemblera 8086 zapisująca zawartość rejestru DX na stosie to:
+>>A) push dx
+B) mov dx,stos
+C) mov dx,ss:[sp+2]
+D) mov stos,dx
+
+65. Asem Instrukcja asemblera 8086 pobierająca do rejestru CX wartość z wierzchołka stosu.
+A) mov stos,cx
+>>B) pop cx
+>>C) mov cx,ss:[sp]
+D) mov cx,stos
+
+66. Asem Które z poniższych rejestrów procesora 8086 są rejestrami indeksowymi?
+A) BP
+>>B) DI
+>>C) SI
+D) IP
+
+67. Asem Który z rejestrów roboczych procesora 8086 ulegnie zmianie po wykonaniu następującej instrukcji asemblera 8086: loop PETLA
+A) DX
+B) BX
+>>C) CX
+D) AX
+
+68. Asem Które rejestry procesora 8086 mogą ulec zmianie po wykonaniu następującej instrukcji asemblera: jmp short PROGRAM1
+A) IP, CS
+>>B) IP
+C) SP, SS
+D) SP
+
+69. Asem Które rejestry procesora 8086 mogą ulec zmianie po wykonaniu następującej instrukcji asemblera: mul BX
+A) BX
+>>B) Rejestr Znaczników
+>>C) DX
+>>D) AX
+
+70. Asem Instrukcja procesora 8086, dodająca zawartość rejestru CX do akumulatora to:
+>>A) add ax,cx
+B) add ac,acc
+C) add cx,ax
+D) add acc,cx
+
+71. Asem Które z poniższych rejestrów procesora 8086 są rejestrami segmentowymi?
+A) CL
+>>B) CS
+>>C) SS
+D) CX
+
+[#72]72. Asem Która z poniższych instrukcji procesora 8086 może zmienić zawartość rejestru znaczników?
+>>A) popf
+B) mov ax,si
+>>C) add cx,dx
+D) pushf
+
+[#73]73. Asem Która z poniższych instrukcji procesora 8086 jest niepoprawna?
+A) mov ax,bp
+B) popf
+>>C) mov ds,0a000h
+>>D) mov cx,al
+
+[#74]74. Asem Która z poniższych instrukcji procesora 8086 jest niepoprawna?
+>>A) popl
+>>B) mov al, 0110h
+C) push si
+>>D) push dh
+
+75. Asem Dyrektywa asemblera 8086, rezerwująca 100 bajtów pamięci to:
+A) db 100h dup(?)
+>>B) db 100 dup('h')
+>>C) db 100 dup(0)
+>>D) db 100 dup(?)
+
+76. Asem Który z poniższych zapisów jest poprawną dyrektywą języka asemblera 8086, ustawiającą wskaźnik adresów na wartość 100h?
+A) address 100h
+>>B) org 100h
+C) set 100h
+D) push 100h
+
+77. BD Które wyrażenie SQL zwraca wszystkie wiersze tabeli "Osoby" posortowane malejąco według atrybutu "Imie"?
+A) SELECT * FROM Osoby SORT BY ' Imie ' DESC
+>>B) SELECT * FROM Osoby ORDER BY Imie DESC
+C) SELECT * FROM Osoby SORT 'Imie' DESC
+D) SELECT * FROM Osoby ORDER Imie DESC
+
+78. BD Jak możesz zmienić wartość "Kowalski" na "Nowak" w atrybucie "Nazwisko" w tabeli "Osoby"?
+A) MODIFY Osoby SET Nazwisko =' Nowak ' WHERE Nazwisko =' Kowalski'
+B) MODIFY Osoby SET Nazwisko =' Kowalski ' INTO Nazwisko =' Nowak'
+C) UPDATE Osoby SET Nazwisko ='Kowalski' INTO Nazwisko ='Nowak'
+>>D) UPDATE Osoby SET Nazwisko =' Nowak ' WHERE Nazwisko =' Kowalski'
+
+79. BD Jak można przy pomocy SQL uzyskać informację o liczbie wierszy w tabeli "Osoby"?
+>>A) SELECT COUNT(*) FROM Osoby
+B) SELECT COUNT() FROM Osoby
+C) SELECT COLUMNS() FROM Osoby
+D) SELECT COLUMNS(*) FROM Osoby
+
+80. BD Jak można przy pomocy SQL wybrać wszystkie wiersze z tabeli "Osoby", w których wartość atrybutu "Imie" zaczyna się od "a"?
+A) SELECT * FROM Osoby WHERE Imie LIKE '%a'
+B) SELECT * FROM Osoby WHERE Imie ='%a%'
+>>C) SELECT * FROM Osoby WHERE Imie LIKE 'a%'
+D) SELECT * FROM Osoby WHERE Imie ='a'
+
+[#81]81. BD Którą z poniższych cech musi posiadać "klucz właściwy":
+>>A) jego wartość jednoznacznie wyznacza wiersz w danej tabeli
+B) jest automatycznie generowany przez System Zarządzania Bazą Danych
+C) jego wartość składa się tylko z jednego atrybutu
+>>D) nie może być pomniejszony o żaden atrybut
+
+82. BD Algebra relacji jest podstawą dla:
+>>A) realizacji przez relacyjny SZBD operacji języka manipulacji danymi
+B) budowy diagramów ERD
+C) budowy diagramów DFD
+>>D) algorytmicznych języków relacyjnych baz danych
+
+83. BD Które z poniższych cech posiadają tzw. widoki (view) :
+>>A) mogą realizować politykę ograniczania dostępu do danych
+>>B) ułatwiają konstrukcję zapytań SQL do bazy danych
+C) zabezpieczają dane przed ich utratą w trakcie realizacji złożonych transakcji
+
+84. BD Z jakim problemem trzeba się uporać przy odwzorowaniu w schemacie relacyjnej bazy danych relacji typu n:m (wiele do wiele) :
+A) zdefiniować podwójne indeksowanie plików odpowiadających każdej z tabel
+>>B) trzeba zaprojektować dodatkową tabelę
+C) dobrać odpowiedni klucz obcy w drugiej z tabel
+D) trzeba użyć dodatkowo widok (view)
+
+85. BD Które z poniższych stwierdzeń są prawdziwe jeśli dotyczą systemów baz danych realizowanych w architekturze klient serwer:
+A) mocno obciążają sieć w stosunku do systemów scentralizowanych
+>>B) pozwalają klientom pracować w różnych systemach operacyjnych
+>>C) uniezależniają sposób realizacji aplikacji od serwera
+D) wymagają co najmniej dwóch komputerów
+
+86. BD Systemy OLTP i OLAP różnią się przede wszystkim:
+>>A) czasem reakcji na zapytanie
+>>B) stopniem szczegółowości przechowywanych danych
+>>C) zakresem realizowanych funkcji użytkowych
+
+87. BD Rolą hurtowni danych jest:
+>>A) przygotowanie danych do szybkiej analizy
+B) kontrola poprawności danych realizowana podczas wykonywania transakcji
+C) minimalizacja plików fizycznych przez ujednolicenie sposobu przechowywania danych
+>>D) przechowywanie danych w sposób scentralizowany
+
+88. BD Modele danych w postaci gwiazdy i płatka śniegu:
+>>A) ich implementacja przyspiesza analizę danych
+>>B) pozwalają oddać sens złożonej struktury danych
+C) zapewniają brak redundancji danych
+D) pomagają utrzymać spójność danych
+
+89. IO Które z podanych rodzajów wymagań nie są określane podczas przygotowywania definicji wymagań systemowych ?
+A) abstrakcyjne wymagania funkcjonalne
+B) cechy lub zachowania, których system nie powinien przejawiać
+>>C) szczegółowe wymagania funkcjonalne
+D) właściwości systemu
+
+90. IO Które z wymienionych czynności występują dla wszystkich procesów tworzenia oprogramowania
+A) budowa i ulepszanie prototypów
+>>B) walidacja oprogramowania
+>>C) specyfikowanie oprogramowania
+D) zarządzanie konfiguracjami
+
+91. IO Zapis wymagania powinien bezwzględnie zawierać:
+A) informację o kolejności wprowadzenia danego wymagania w stosunku do innych wymagań
+>>B) informację o uzależnieniu danego wymagania od innych wymagań lub powiązaniu z nimi
+>>C) informację o pochodzeniu danego wymagania i jego uzasadnienie
+>>D) informację o uzależnieniu projektu od wymagania tj. powiązaniu danego wymagania ze składnikami systemu, które je implementują
+
+92. IO Zaznacz, które stwierdzenia odnoszące się do studium realizowalności (wykonalności) są prawdziwe:
+>>A) Studium realizowalności musi udzielać odpowiedzi na pytania, "czy system przyczyni się do realizacji ogólnych celów przedsiębiorstwa" i "czy może być zintegrowany z innymi, już będącymi w użyciu ?"
+B) Studium realizowalności musi zawierać wskazanie technologii, jakie będą zastosowane podczas realizacji projektu
+C) Studium realizowalności ma na celu zaplanowanie końcowego budżetu przedsięwzięcia projektowego
+D) Po wykonaniu studium realizowalności zawsze następuje faza określania i analizowania wymagań
+
+93. IO Zaznacz, które z poniższych stwierdzeń są prawdziwe:
+A) W każdym przyroście musi być realizowana funkcjonalność w obrębie jednego podsystemu w taki sposób, aby możliwa była integracja nowego przyrostu z wcześniej wytworzoną częścią systemu
+B) Tworzenie przyrostowe systemu polega na podzieleniu procesu budowy systemu na pewną liczbę etapów, z których każdy prowadzi do realizacji kolejnej części funkcjonalności całego systemu wedle tego samego modelu procesu tworzenia oprogramowania
+>>C) Kolejność realizacji i integracji przyrostów zostaje ustalona na początku projektu, przy określaniu ważności poszczególnych usług, które system ma oferować
+>>D) W trakcie realizacji danego przyrostu wymagania w odniesieniu do przypisanej do niego funkcjonalności systemu są zamrożone, ale prowadzi się analizę wymagań dla pozostałych przyrostów
+
+94. IO Ewolucyjne tworzenie oprogramowania w wariancie projektowania eksploracyjnego (badawczego) ...
+A) ...jest realizacją przedsięwzięcia w kolejności od najsłabiej do najlepiej rozpoznanych części systemu;
+>>B) ...polega na systematycznym ulepszaniu utworzonej na początku wersji systemu, przez stopniowe dodawanie cech proponowanych przez klienta, aż do uzyskania zadowalającej go wersji systemu;
+>>C) ...charakteryzuje się opartym o systematyczną współpracę z klientem, przyrostowym wypracowywaniem specyfikacji produktu
+D) ...bywa nazywane metodą przyrostową;
+
+95. IO Prototypowanie z porzuceniem jest wariantem ewolucyjnego tworzenia oprogramowania, w którym:
+A) ...ze względu na dwukrotną realizację systemu - jako prototypu i systemu finalnego - wydłużony jest znacznie czas realizacji i powiększony koszt przedsięwzięcia, przez co metoda ta jest stosowana głównie wtedy, gdy przez oddanie prototypu zamiast finalnej wersji systemu można oddalić groźbę katastrofalnego opóźnienia i całkowitego załamania projektu
+>>B) ...tworzony jest fragment systemu zwany prototypem, odpowiadający ograniczonej części wymagań, celem eksperymentalnego rozeznania wymagań klienta i ustalenia lub walidacji ich specyfikacji oraz zbadania możliwości ich spełnienia;
+C) ...nie powstaje prawie żadna dokumentacja projektowa i stąd używana niekiedy nazwa "metoda studencka";
+>>D) ...nie przywiązuje się wagi do jakości oprogramowania wytworzonego prototypu ani nawet jego zdolności do funkcjonowania, o ile nie przeszkadza to w wykorzystaniu go do realizacji jego głównego celu;
+
+[#96]96. IO Do modeli iteracyjnych tworzenia oprogramowania zaliczamy:
+>>A) metodę przyrostową
+>>B) model spiralny tworzenia oprogramowania
+C) ewolucyjne tworzenie oprogramowania
+>>D) programowanie ekstremalne
+
+97. IO Inspekcja (przegląd) wymagań jest...
+>>A) ...nazywana formalną bądź nieformalną, zależnie do tego czy zespół twórców systemu wyjaśnia znaczenie każdego wymagania czy tylko prowadzi luźną rozmowę z przedstawicielami klienta
+>>B) ...metodą walidacji wymagań
+>>C) ...procesem "ręcznym" polegającym na grupowym czytaniu dokumentacji wymagań
+D) ...niepodobna do inspekcji programów (kodu)
+
+[#98]98. IO Skrajny wariant ewolucyjnego tworzenia oprogramowania zwany “metodą studencką”, charakteryzujący się prawie całkowitym brakiem dokumentacji i selektywnym testowaniem (przy optymistycznych założeniach co do poprawności danych wejściowych)
+>>A) nadaje się do realizacji oprogramowania "jednorazowego użytku"
+B) może być wykorzystywany do tworzenia bardzo rzadko używanych komponentów wielkich systemów
+>>C) może być używany do przygotowywania wersji demonstracyjnych i treningowych
+D) nie może być stosowany jako metoda tworzenia prototypów przeznaczonych do porzucenia
+
+99. IO Systemy odziedziczone...
+>>A) ...to systemy starsze niż kilka- kilkanaście lat, których działanie pozostaje krytycznym czynnikiem z punktu widzenia funkcjonowania instytucji, ale technologia nie odpowiada aktualnym potrzebom
+B) ...mają oprogramowanie i sprzęt niezmieniony od czasów ich zainstalowania, ale ich przeróbka i unowocześnienie nie jest możliwe z braku kompatybilnego sprzętu, odpowiednich kompilatorów języków oprogramowania, bibliotek i odpowiednich specjalistów
+C) ...można tylko całkowicie wycofać i/albo zastąpić nowymi systemami
+>>D) ...obejmują oprogramowanie, sprzęt na którym może ono działać, dane użytkowe przez nie udostępniane i gromadzone, procedury biznesowe, prowadzone z użyciem oprogramowania
+
+100. JITP Dana w C, C++, czy Javie umieszczana jest w spójnym obszarze pamięci operacyjnej.
+A) Tylko dane typów predefiniowanych
+B) Tylko dane skalarne
+C) Tylko dane złożone
+>>D) I dane skalarne, i dane złożone
+
+101. JITP W językach imperatywnych (również obiektowych) przy wyborze reprezentacji dla danych rzeczywistych (zmiennoprzecinkowych) pojawiają się problemy:
+>>A) wystąpienia nadmiaru
+>>B) wystąpienia niedomiaru
+>>C) dokładności
+
+102. JITP Wskazania (pointers) w C, C++ używane są do reprezentowania (wskazywania):
+>>A) Obszarów pamięci operacyjnej
+>>B) Zmiennych złożonych
+>>C) Zmiennych skalarnych
+>>D) Funkcji i metod
+
+103. MONT Dokładność reprezentacji zmiennoprzecinkowej jest określona przez:
+>>A) liczbę bitów mantysy
+B) liczbę bitów mantysy i wykładnika
+C) zakres wykładnika
+D) liczbę bitów mantysy i zakres wykładnika
+
+104. MONT Wybierz poprawną odpowiedź:
+A) uwarunkowanie to cecha wynikająca tylko z dokładności operacji zmiennoprzecinkowych
+B) wskaźniki uwarunkowania określają poprawność numeryczną
+C) uwarunkowanie i stabilność numeryczna są cechami zadania
+>>D) algorytmy numerycznie poprawne dają rozwiązanie będące nieco zaburzonym dokładnym rozwiązaniem zadania o nieco zaburzonych danych
+
+105. MONT Efekt Rungego w interpolacji wielomianowej to:
+A) wynik wyboru złej funkcji interpolującej
+B) wynik braku jednoznaczności rozwiązania zadania interpolacji
+C) konsekwencja arytmetyki zmiennoprzecinkowej
+>>D) wynik błędu metody
+
+106. MONT Funkcje sklejane stopnia m na przedziale [a,b]
+A) są używane tylko do interpolacji przedziałowej
+>>B) są ciągłe wraz z (m-1) pochodnymi na [a,b]
+C) nie są przydatne do interpolowania funkcji periodycznych
+D) są jednoznacznie określone przez podanie warunków brzegowych
+
+107. MONT Wybierz poprawną odpowiedź:
+>>A) interpolacja z węzłami będącymi zerami wielomianu Czebyszewa odpowiedniego stopnia eliminuje efekt Rungego
+B) przybliżenia Pade to technika aproksymacji średniokwadratowej
+C) funkcje sklejane nie mogą być wykorzystane do aproksymacji średniokwadratowej ze względu na postać minimalizowanej normy
+D) aproksymacja średniokwadratowa polega na minimalizacji normy Czebyszewa
+
+108. MONT Kwadratury Gaussa stosowane są:
+A) ze względu na łatwiejszy wybór węzłów całkowania
+B) dlatego, że kwadratury Newtona-Cotesa nie dają możliwości usuwania całkowalnych osobliwości
+C) ze względu na mniejszą złożoność obliczeniową niż kwadratur Newtona-Cotesa
+>>D) ponieważ umożliwają uzyskanie prawie dwa razy większego stopnia dokładności niż kwadratury Newtona-Cotesa dla tej samej liczby węzłów
+
+[#109]109. MONT Metoda Newtona-Raphsona rozwiązywania równań nieliniowych:
+A) wykorzystuje niejawnie przyspieszenie Aitkena
+>>B) jest przykładem metody iteracyjnej o stałym punkcie
+C) jest przykładem metody interpolacyjnej
+D) ma rząd zbieżności równy 1
+>>E) ma rząd zbieżności równy 2
+>>F) jest szybciej zbieżna niż metoda siecznych
+>>G) jest szybciej zbieżna niż metoda bisekcji
+H) nie może być uogólniona dla układów równań nieliniowych
+>>J) wymaga znajomości pochodnej funkcji
+
+110. MONT Metoda eliminacji Gaussa rozwiązywania układów równań liniowych:
+A) polega na doprowadzeniu macierzy do postaci diagonalnej
+>>B) wymaga wyszukiwania elementu wiodącego i polega na przekształceniu macierzy do postaci trójkątnej górnej
+>>C) ma złożoność O(n^3), gdzie n - liczba równań
+D) jest przykładem metody iteracyjnej niestacjonarnej
+E) ma złożoność O(n^2), gdzie n - liczba równań
+
+111. MONT Metody dekompozycji LU:
+A) należą do rodziny metod iteracyjnych niestacjonarnych
+B) nie wymagają wyszukiwania elementu wiodącego
+C) są przydatne tylko do rozwiązywania układów równań z macierzą symetryczną dodatnio określoną
+>>D) mają znacznie lepsze własności numeryczne niż metoda eliminacji Gaussa
+
+112. MONT Wybierz właściwe uporządkowanie metod iteracyjnego rozwiązywania układów równań liniowych wg narastającej ich jakości:
+A) Jacobiego, Czebyszewa, nadrelaksacji, Gaussa-Seidela
+B) SOR, Gaussa-Seidela, Czebyszewa, Jacobiego
+C) Jacobiego, nadrelaksacji, Czebyszewa, SR
+>>D) Jacobiego, SR, SOR, Czebyszewa
+
+113. MONT Metody blokowe rozwiązywania układów równań nieliniowych
+A) nie wymagają wyznaczania elementu wiodącego
+B) są jedynymi metodami dostępnymi na architekturach równoległych
+>>C) redukują złożoność obliczeniową metodą "dziel i rządź"
+D) zawsze automatycznie konwertują macierz do postaci trójkątnej dolnej, co upraszcza dalsze operacje
+
+114. MONT Wybierz właściwe uporządkowanie metod całkowania Monte Carlo wg narastającej ich jakości:
+A) podstawowa, warstwowa, średniej ważonej, orzeł-reszka
+B) podstawowa, orzeł-reszka, warstwowa, średniej ważonej
+C) podstawowa, średniej ważonej, orzeł-reszka, warstwowa
+>>D) orzeł-reszka, podstawowa, warstwowa, średniej ważonej
+
+115. MONT Wybierz poprawne zdanie opisujące metody minimalizacji:
+A) metoda sprzężonych kierunków jest przykładem ogólnej metody poszukiwania minimum globalnego
+>>B) wzór Davidona-Fletchera-Powella jest podstawą metody zmiennej metryki
+C) metoda największego spadku jest przykładem metody poszukiwania minimum globalnego
+D) metoda simpleksów należy do metod gradientowych
+
+116. MONT Metoda symulowanego wyżarzania:
+>>A) to rodzina heurystycznych technik optymalizacji opartych na analogii z fizyką statystyczną układów losowych
+B) to jedna z technik optymalizacji kombinatorycznej wykorzystująca metodę Newtona
+C) to specjalne sformułowanie problemu komiwojażera
+
+117. MONT Szybka transformata Fouriera
+A) jest możliwa tylko wtedy, gdy liczba punktów jest całkowitą potęgą 2
+B) ma złożoność obliczeniową O(n), gdzie n - liczba węzłów
+C) jest realizacją wzoru całkowego Fouriera na architekturach równoległych
+>>D) polega na zamianie pojedynczej transformaty Fouriera na sumę transformat Fouriera
+
+118. MONT Podejście wariacyjne do rozwiązywania równań różniczkowych:
+A) nie nadaje się do obliczeń numerycznych
+>>B) polega na tym, że szukamy funkcji minimalizującej odpowiedni funkcjonał
+C) polega na wprowadzeniu specjalnej siatki całkowania
+D) uzmiennieniu położeń części punktów siatki
+
+119. MONT Wymagania stawiane schematom rozwiązywania numerycznego zagadnienia początkowego to:
+A) jawne uwzględnienie warunków brzegowych
+B) wprowadzenie siatki przestrzennej zgodnej z siatką czasowa
+>>C) zgodność aproksymacji różnicowej, dokładność, stabilność, efektywność czasowa i pamięciowa
+D) algorytm powinien mieć względnie małe wskaźniki uwarunkowania
+
+120. MONT Metoda Cranka-Nicolsona to
+A) technika poszukiwania minimum lokalnego z uwzglednieniem drugich pochodnych
+>>B) numeryczny sposób rozwiązywania równań różniczkowych parabolicznych
+C) technika wyszukiwania miejsc zerowych wielomianów
+D) numeryczny sposób rozwiązywania równań różniczkowych eliptycznych
+
+121. MONT Rola metod komputerowych w trójkącie "teoria eksperyment symulacja"to:
+A) opracowywanie nowych praw o charakterze podstawowym dla danej dziedziny
+>>B) realizacja symulacji w oparciu o prawa podstawowe, sugerowanie nowych eksperymentów, sugerowanie teorii
+C) zastępowanie kosztownych eksperymentów i weryfikowanie teorii
+D) realizacja symulacji w oparciu o prawa podstawowe, sugerowanie nowych eksperymentow, sterowanie eksperymentami, sugerowanie teorii
+
+122. PSI Jakie aspekty powinien uwzględniać pełny model systemu w podejściu strukturalnym do analizy i projektowania:
+A) aspekt funkcjonalny, aspekt danych i ich powiązań
+B) aspekty: funkcjonalny i dynamiki systemu
+C) aspekt danych i ich powiązań, aspekt dynamiki systemu
+>>D) aspekt funkcjonalny, aspekt danych i ich powiązań, oraz dynamiki systemu
+
+123. PSI Aspekt funkcjonalny systemu informatycznego modelowany jest w podejściu strukturalnym przy pomocy:
+>>A) Data Flow Diagrams
+B) Entity Relationship Diagrams
+C) State Transition Diagrams
+D) Structure Charts
+
+124. PSI Które z wymienionych podziałów wymagań niefunkcjonalnych są wyczerpujące i rozłączne
+A) produktowe, organizacyjne, prawne
+B) produktowe, prawne, parametryczne
+C) produktowe, zewnętrzne, strategiczne
+>>D) produktowe, organizacyjne, zewnętrzne
+
+125. PSI Wymienić elementy modelu środowiskowego w strukturalnym podejściu do analizy i projektowania systemów informatycznych:
+A) ERD, DFD, STD
+B) diagram kontekstowy, słownik danych, specyfikacja funkcji
+C) opis celu systemu, wymagania funkcjonalne, wymagania niefunkcjonalne
+>>D) opis celu systemu, lista zdarzeń, diagram kontekstowy
+
+126. PSI Jaki zestaw diagramów jest używany - w metodyce strukturalnej analizy i projektowania systemów informatycznych - do pokazania wszystkich aspektów modelowanego systemu:
+A) DFD, ERD i STC
+B) DFD i ERD
+>>C) DFD, ERD i STD (lub ELH)
+D) DFD i STD
+
+127. PSI Które obiekty graficzne są używane do tworzenia diagramu kontekstowego w metodyce strukturalnej analizy i projektowania systemów informatycznych:
+A) Proces, przepływ danych (data flow), magazyn danych (data store)
+B) Proces, obiekt zewnętrzny (external entity), magazyn danych (data store)
+C) Przepływ danych (data flow), obiekt zewnętrzny (external entity), magazyn danych (data store)
+>>D) Proces, przepływ danych (data flow), obiekt zewnętrzny (external entity)
+
+128. PSI Wybrać nazwy wszystkich obiektów graficznych używanych do konstruowania DFD (Data Flow Diagrams) - diagramów przepływu danych w metodyce strukturalnej:
+>>A) proces (process)
+>>B) obiekt zewnętrzny (external entity)
+>>C) magazyn danych (data store)
+>>D) przepływ danych (data flow)
+
+129. PSI Wskazać ten element dokumentacji projektowej, który zawiera zapis w postaci pseudokodu (metodyka strukturalna analizy i projektowania systemów inf.):
+A) opis wymagań niefunkcjonalnych
+B) opis wymagań funkcjonalnych
+>>C) specyfikacja funkcji
+D) opis celu przedsięwzięcia projektowego
+
+130. PSI Który element DFD w metodyce strukturalnej stanowi podstawę konstruowania ERD (Entity Relationship Diagram) - diagramu związków encji:
+A) przepływ danych (data flow)
+B) diagram kontekstowy (context diagram)
+C) obiekt zewnętrzny (external entity)
+>>D) magazyn danych (data store)
+
+131. SK Zaletami prowadzenia transmisji w trybie pełnego dupleksu w standardzie Ethernet są:
+A) możliwość wykorzystania urządzeń hub
+>>B) całkowita likwidacja kolizji w segmencie sieci
+>>C) możliwość dwukrotnego zwiększenia sumarycznej przepustowości transmisji
+>>D) brak ograniczenia długości medium transmisyjnego w segmencie warstwy fizycznej wynikającego z wymogów protokołu CSMA/CD
+
+132. SK Model odniesienia OSI/ISO:
+A) jest modelem czterowarstwowym
+B) definiuje standardy w ramach każdej warstwy (np. protokół IP w warstwie sieciowej)
+>>C) określa zadania poszczególnych warstw
+>>D) pozwala na niezależny rozwój sprzętu i oprogramowania w ramach poszczególnych warstw
+
+133. SK Osiągnięcie przepustowości 1Gb/s na kablu UTP kategorii 5e (tym samym, który jest używany w transmisji 100Mb/s) w standardzie Ethernet jest:
+>>A) możliwe dzięki wykorzystaniu do transmisji wszystkich czterech par
+>>B) możliwe dzięki wykorzystaniu bardziej założonego kodowania
+C) nie jest możliwe - wymaga kabla o lepszych parametrach
+D) nie jest możliwe - taką przepustowość można osiągnąć tylko używając światłowodu
+
+134. SK Kodowanie sygnałów w transmisji w sieciach komputerowych:
+>>A) wpływa na uzyskiwaną przepustowość
+>>B) jest zależne od wykorzystywanego medium
+C) jest przedmiotem zainteresowania warstwy sieciowej modelu OSI/ISO
+>>D) może pozwalać na osiągnięcie samosynchronizacji nadajnika i odbiornika
+
+135. SK Istnienie ograniczenia maksymalnej odległości między komunikującymi się hostami wynika z:
+>>A) w ramach jednego segmentu sieci: wymogów protokołu warstwy łącza danych
+>>B) w ramach jednego segmentu sieci: parametrów medium fizycznego
+C) w ramach jednego segmentu sieci: wymogów protokołu warstwy sieciowej
+D) w ramach kilku segmentów sieci rozdzielonych przełącznicami: wymogów protokołu warstwy sieciowej
+
+[#136]136. SK Które z wymienionych funkcji realizuje warstwa łącza danych modelu OSI/ISO?
+>>A) dostarczenie adresacji fizycznej
+B) umożliwienie definiowania adresacji logicznej
+>>C) detekcja kolizji w medium transmisyjnym
+>>D) definicja strategii dostępu do łącza
+
+137. SK Wirtualne sieci lokalne:     
+>>A) można definiować w oparciu o adresy fizyczne
+>>B) mogą być rozpięte na wielu urządzeniach warstwy drugiej modelu OSI/ISO
+C) stanowią mechanizm alternatywny dla budowy drzewa rozpinającego
+D) stanowią podstawowy mechanizm zapobiegania przeciążeniom mostka
+
+138. SK Algorytm budowy drzewa rozpinającego (STA):
+>>A) jest stosowany w przypadku mostków uczących się
+>>B) służy zapobieżeniu występowania zapętleń transmisji ramek
+C) jest jednym ze sposobów elekcji głównego routera w sieci
+D) służy zrównoważeniu obciążenia pomiędzy łączami o takich samych przepustowościach
+
+139. SK Które warstwy modelu OSI/ISO są różne dla sieci WAN i LAN?
+>>A) fizyczna i łącza danych
+B) fizyczna i sieci
+C) łącza danych i sieci
+D) fizyczna, łącza danych i sieci
+
+140. SK Opisz, do czego jest wykorzystywany protokół ARP:
+A) uzyskania adresu IP
+B) uzyskania adresu MAC urządzenia spoza naszej sieci lokalnej
+>>C) określenie odwzorowania między adresami warstwy 3 i 2 modelu OSI/ISO
+D) wyznaczania ścieżki pakietu 
+
+141. SK Jeżeli dwie stacje znajdujące się w innych sieciach IP połączone są ze sobą dokładnie jednym routerem i chce komunikować się ze sobą to:
+A) obydwie stacje muszą posiadać jednakową maskę
+B) musi być uruchomiony mechanizm proxy-arp na routerze
+C) na ruterze konieczne jest dodanie pozycji routingu statycznego
+>>D) wymagane jest ustawienie na każdej stacji adresu IP
+
+142. SK Protokół IP w wersji 4 posiada następujące cechy
+>>A) pozwala na fragmentację pakietów w węzłach pośrednich i u nadawcy
+B) zawiera mechanizmy potwierdzania doręczenia pakietów
+>>C) umożliwia kontrolę nagłówka pakietu za pomocą sumy kontrolnej
+D) jest protokołem połączeniowym
+
+143. SK W jakich przypadkach jest stosowany protokół ICMP.
+A) transmisji danych wysokopiorytetowych
+>>B) uzyskiwania informacji o konfiguracji sieci
+>>C) sygnalizacji sytuacji awaryjnych
+D) wyszukiwania odbiorców ruchu multicastowego
+
+144. SK Jaki mechanizm uniemożliwia nieskończone krążenie ramek IP w sieci w przypadku wystąpienia pętli.
+A) mechanizm split-horizon
+B) mechanizm trigger-update
+>>C) pole TTL
+D) NAT
+
+145. SK Parametr "niezawodność łącza" wchodzi w skład metryki protokołu routingu:
+>>A) EIGRP
+B) RIPv2
+>>C) IGRP
+D) OSPF
+
+[#146]146. SK Protokół TCP:
+>>A) może grupować dane otrzymane do wysłania w celu zoptymalizowania wykorzystania połączeń sieciowych
+B) wymaga osobnego potwierdzenia każdego otrzymanego segmentu
+C) używa algorytmu Nagle'a w celu zapewnienia kontroli przepływu danych
+>>D) zezwala na wspólne potwierdzenie wielu przesłanych segmentów
+
+147. SK Protokół UDP:
+A) wprowadza mechanizmy fragmentacji dla danych użytkownika przekraczających maksymalny rozmiar datagramu UDP
+B) pozwala na grupowanie danych otrzymanych do wysłania w celu zoptymalizowania wykorzystania połączeń sieciowych
+>>C) stosuje porty jako adresy warstwy transportowej
+>>D) nie zabezpiecza przed duplikacją i zmianą kolejności datagramów
+
+148. SO Zaznacz prawdziwe stwierdzenia na temat stronicowania
+>>A) Stronicowanie rozwiązuje problem zewnętrznej fragmentacji pamięci
+>>B) Tablica stron jest stosowana do translacji adresu logicznego na adres fizyczny
+C) Podczas stronicowania przyjmuje się, że pamięć fizyczna jest podzielona na strony, a pamięć logiczna na ramki, i że rozmiary stron i ramek są jednakowe
+D) Stronicowanie rozwiązuje problem wewnętrznej fragmentacji pamięci
+>>E) Podczas stronicowania przyjmuje się, że pamięć fizyczna jest podzielona na ramki, a pamięć logiczna na strony, i że rozmiary stron i ramek są jednakowe
+
+149. SO Zaznacz prawdziwe stwierdzenia na temat segmentacji:
+>>A) Segmentacja ułatwia nadanie częściom procesu odpowiednich atrybutów ochrony: dopuszczalny odczyt, dopuszczalny zapis, dopuszczalne wykonanie
+B) Zastosowanie segmentacji wyklucza użycie stronicowania
+>>C) Mogą istnieć następujące przykładowe rodzaje segmentów: kodu, danych, stosu
+D) Elementy tablicy segmentów zawierają adresy/numery ramek, w których znajdują się segmenty oraz rozmiary poszczególnych segmentów
+
+150. SO Zaznacz prawdziwe stwierdzenia na temat algorytmów wywłaszczania stron:
+A) Zaletą algorytmu zastępowania stron FIFO jest to, że nie zachodzi w nim efekt zwany anomalią Beledy'ego
+>>B) W algorytmie zastępowania stron LRU zastępowana jest strona, która najdłużej nie była używana
+>>C) W algorytmie zastępowania stron zwanym algorytmem drugiej szansy algorytm wykorzystuje bit odniesienia, który określa, czy w pewnym przedziale czasu nastąpiło odwołanie do strony
+>>D) Zasadą działania algorytmu optymalnego zastępowania stron jest to, że zastąpiona zostaje strona, która najdłużej nie będzie używana
+
+151. SO Zaznacz prawdziwe stwierdzenia na temat pamięci wirtualnej:
+>>A) Stronicowanie na żądanie jest jednym ze sposobów realizacji pamięci wirtualnej
+B) Przydział ramek oparty na globalnym algorytmie zastępowania może ograniczyć szamotanie (w porównaniu do algorytmu lokalnego zastępowania), gdyż szamocący się proces nie doprowadza do szamotania innych procesów
+>>C) Procedura leniwej wymiany (ang. lazy swapper) polega na tym, że nie wykonuje się wymiany stron w pamięci, jeśli nie zachodzi taka potrzeba
+>>D) Pamięć wirtualna umożliwia wykonywanie procesów, które nie są w całości przechowywane w pamięci operacyjnej
+
+152. SO Zaznacz prawdziwe zdania na temat semaforów:
+>>A) Zaletą aktywnego czekania w trybie użytkownika jest brak konieczności kosztownego przejścia do trybu uprzywilejowanego (systemowego)
+>>B) Semafor może być użyty do synchronizacji dostępu do sekcji krytycznej
+>>C) Aktywne czekanie oznacza ciągłe testowanie wartości wyrażenia do momentu, gdy przyjmie ono wartość dla której czekanie może być zakończone
+D) Semafor nie nadaje się do zdeterminowania kolejności wykonywanych operacji w grupie współbieżnych procesów
+
+[#153]153. SR Podstawę klasyfikacji aplikacji jako aplikacji rozproszonej stanowi wykonywanie się jej:
+>>A) w dwu lub więcej komputerach
+B) wykonywanie się aplikacji współbieżnie
+C) w dwu lub więcej procesach
+>>D) w dwu lub więcej procesorach
+
+154. SR Brak możliwości w ustaleniu dokładnego globalnego czasu w systemach rozproszonych wynika z:
+A) rozsynchronizowania zegarów komputerów w systemie
+B) komunikacji sieciowej
+C) braku protokołu synchronizacji zegarów
+>>D) własności fizycznych systemu, takich jak rozdzielność miejsca i skończona szybkość propagacji sygnału
+
+[#155]155. SR Podczas korzystania z interfejsu gniazd BSD programista musi borykać się z następującymi problemami:
+>>A) brakiem zgodności typów danych pomiędzy różnymi platformami sprzętowymi i programowymi
+>>B) kolejnością ułożenia bajtów pamięci (LittleEndian, BigEndian)
+>>C) ręczną serializacją danych
+D) translacją adresu DNS na adres IP
+
+[#156]156. SR Za pomocą interfejsu gniazd BSD możliwa jest komunikacja:
+>>A) punkt-punkt z wykorzystaniem protokołów TCP i UDP
+>>B) rozgłoszeniowa z wykorzystaniem protokołów IP i UDP
+C) multicastowa z wykorzystaniem protokołów TCP i UDP
+D) punkt-punkt z wykorzystaniem protokołu HTTP
+
+157. SR Procedura idempotentna:
+A) jest ściśle związana z architekturą CORBA
+B) to taka, która zapisuje stan obiektu
+C) to np. procedura usunięcia pliku
+>>D) to taka, która wywołana wielokrotnie daje ten sam efekt
+
+158. SR Z technologią RPC związane są pojęcia:
+A) DSI (Dynamic Skeleton Interface)
+>>B) Port Mapper
+>>C) XDR (External Data Representation)
+D) BOA (Basic Object Adapter)
+
+159. SR Aby przesłać obiekt Java z wykorzystaniem RMI, musi on:
+A) być zarejestrowany w serwisie RMI Activation
+>>B) implementować określony interfejs w przypadku przesyłania przez referencję
+C) być zarejestrowany w serwisie nazw
+>>D) posiadać możliwość serializacji stanu w przypadku przesyłania przez wartość
+
+160. SR Usługa rmiregistry pozwala na:
+>>A) ponowne zarejestrowanie (re-bind) obiektu o tej samej nazwie
+B) jest jedynym sposobem na uzyskanie referencji do obiektu zdalnego serwera przez klienta
+C) rejestrowanie obiektów przy użyciu struktury hierarchicznej nazw
+>>D) rejestrowanie oraz wyszukiwanie serwerów opartych na technologi RMI
+
+161. SR Które z poniższych twierdzeń są prawdziwe:
+>>A) można napisać klienta w C++, który będzie się komunikował z obiektem CORBA którego serwant jest napisany w Javie
+B) IIOP jest kontenerem w którym wykonują się obiekty CORBA
+>>C) GIOP jest protokołem (specyfikacją protokołu)
+D) architektura CORBA jest zależna od języka w którym implementujemy programy wykorzystujące tą architekturę
+
+162. SR Protokół IIOP jest zdefiniowany dla protokołu transportowego:
+A) IMAP
+>>B) TCP
+C) SNMP
+D) UDP
+
+163. SR W CORBIE za pomocą stuba można wywoływać metody:
+>>A) udostępniane poprzez skeleton
+>>B) udostępniane przy pomocy DSI (Dynamic Skeleton Interface)
+C) udostępniane przy pomocy portmappera
+D) udostępniane przy pomocy DII (Dynamic Invocation Interface)
+
+164. SR CORBA jest:
+A) relacyjną bazą danych wspierającą język IDL
+>>B) architekturą wykorzystywaną do budowania aplikacji o charakterze rozproszonym w środowiskach heterogenicznych
+C) językiem programowania
+D) platformą multimedialną wykorzystującą protokół IIOP
+
+165. SR Które z poniższych pojęć są usługami CORBA?
+>>A) Concurrency Service
+B) JXTA
+C) Portable Object Adapter
+>>D) Time Service
+
+166. SR Które pojęcia nie są związane z architekturą CORBA?
+>>A) SOAP
+B) IIOP
+C) BOA
+D) POA
+
+167. TC Jeżeli moc pobierana przez układ jest najważniejszym kryterium branym pod uwagę przy projektowaniu to którą rodzinę układów wybierzesz:
+>>A) CMOS
+B) ECL
+C) standard TTL
+D) ALS TTL
+
+168. TC Wyrażenie Boolowskie może być zrealizowane z:
+>>A) kombinacji NAND i NOR
+>>B) samych NAND'ów
+>>C) samych NOR'ów
+
+169. TC Rolą zegara doprowadzonego do przerzutnika bistabilnego jest:
+>>A) dążenie do zmiany na wyjściu w zależności od stanu wejść przygotowujących (S-R, J-K, D)
+B) wyzerowanie układu
+C) ustawienie układu
+D) zawsze wywołanie zmiany na wyjściu
+
+170. TC Przerzutnik JK jest w stanie stałych zmian na wyjściu gdy:
+>>A) J = 1, K = 1
+B) J = 1, K = 0
+C) J = 0, K = 1
+D) J = 0, K = 0
+
+171. TC Multiwibrator astabilny:
+>>A) jest oscylatorem
+B) wymaga okresowego impulsu wymuszającego
+C) produkuje nieperiodyczne impulsy na wyjściu
+>>D) nie ma stanu stabilnego
+
+[#172]172. TC Który stan jest nieważny w liczniku BCD:
+>>A) 1100
+B) 0010
+C) 0101
+D) 1000
+
+[#173]173. TC 10 MHz zegar jest podłączony do kaskady liczników zawierającej - licznik modulo-5, modulo-8 i dwa liczniki modulo 10. Jaka jest częstotliwość wyjścia:
+>>A) 2,5 kHz
+B) 25 kHz
+C) 5 kHz
+D) 10 kHz
+
+174. TC Licznik asynchroniczny różni się od synchronicznego:
+A) liczbą stanów w jego sekwencji
+B) typem użytych przerzutników
+>>C) metodą zegarowania
+D) liczbą podziału
+
+175. TC Stopnie w rejestrze przesuwnym zawierają:
+A) bajt pamięci
+B) 4 bity pamięci
+>>C) przerzutniki
+D) zatrzaski
+
+[#176]176. TC Przy użyciu 1MHz zegara, osiem bitów równolegle może być wprowadzonych do rejestru przesuwnego w czasie:
+>>A) 1 us
+B) w czasie propagacji 8 przerzutników
+C) 8 us
+>>D) w czasie propagacji 1 przerzutnika
+
+177. TC Grupa bitów 10110101 jest szeregowo przesuwana w prawo w ośmiobitowym rejestrze ze stanem początkowym 11100100. Po dwóch impulsach zegara stan wyjścia jest:
+A) 01011110
+>>B) 01111001
+C) 10110101
+D) 00101101
+
+[#178]178. TC 8 bitowy przetwornik DAC ma rozdzielczość:
+A) 1 %
+>>B) 0,392 %
+C) 3,92 %
+D) 0,1 %
+
+[#179]179. TC W przetworniku DAC typu R-2R są:
+A) rezystory o jednej wartości
+>>B) 2 wartości rezystorów
+C) 4 wartości rezystorów
+D) liczba wartości rezystorów jest równa liczbie wejść
+E) liczba rezystorów jest równa liczbie wejść
+>>F) liczba rezystorów jest równa dwukrotności liczby wejść
+
+180. TM Która zależność jest poprawna:
+A) Na jeden cykl maszynowy składa się jeden lub kilka cykli rozkazowych a na jeden cykl rozkazowy składa się jeden lub kilka cykli zegarowych
+B) Na jeden cykl zegarowy składa się jeden lub kilka cykli maszynowych a na jeden cykl maszynowy składa się jeden lub kilka cykli rozkazowych
+>>C) Na jeden cykl rozkazowy składa się jeden lub kilka cykli maszynowych a na jeden cykl maszynowy składa się jeden lub kilka cykli zegarowych
+
+181. TM Co wpływa na fakt szybszego dostępu do danych przy użyciu DMA zamiast trybu programowalnego?
+A) szybszy zegar
+>>B) czysto sprzętowa realizacja dostępu
+C) krótsze ścieżki na płycie głównej
+D) większy bufor
+
+182. TM Który rodzaj pamięci wymaga odświeżania ?
+A) FLASH
+>>B) DRAM
+C) ROM
+D) EAPROM
+
+183. TM Połączenie procesora z magistralą odbywa się poprzez bufor 3 stanowy aby:
+>>A) uzyskać wysoką impedancję bufora w razie potrzeby
+>>B) uzyskać stan rozwarcia aby odłączyć procesor
+C) wykorzystać stałą wysoką impedancję bufora
+
+184. TM Dla utrzymania logicznego stanu komórki pamięci dynamicznej niezbędne okazuje się
+>>A) odświeżanie jej zawartości
+B) dostarczanie stałego napięcia do komórki
+C) nic nie trzeba robić
+
+185. TM Układ sterujący procesora jest to:
+>>A) układ generujący funkcje sterujące wykonywaniem programu
+B) rejestry konfiguracyjne, których stan określa aktualny tryb pracy procesora
+C) zestaw funkcji ułatwiających śledzenie przebiegu wykonywania programu
+
+186. TM Procesor otrzymuje sygnał HOLD, oznacza to:
+A) wymuszenie wykonania specjalnego programu
+B) zerowanie licznika programu
+>>C) chwilowe zawieszenie pracy w celu zwolnienia magistrali
+D) przejście do podprogramu
+
+187. TM Co to jest mikrooperacja?
+A) elementarna operacja do wykonania w potoku
+>>B) najprostsza operacja do wykonania w jednym takcie zegara
+>>C) element składowy rozkazu
+
+188. TM Po co w procesorach zastosowano pamięć typu ROM w jednostce sterującej
+>>A) dla zorganizowania mikroprogramowanego dekodera
+B) dla zachowania programu boot'ującego
+C) dla zachowania ustawień procesora
+
+[#189]189. TO Generalizacja
+A) organizuje obiekty w hierarchię uogólniania/uszczegóławiania
+B) organizuje klasy w hierarchię całości/części
+>>C) znajduje swoje odzwierciedlenie w mechanizmie dziedziczenia interfejsów
+D) znajduje swoje odzwierciedlenie w mechanizmie dziedziczenia implementacji
+>>E) organizuje klasy w hierarchię uogólniania/uszczegóławiania
+
+[#190]190. TO Kompozycja
+A) jest to struktura agregacji, w której klasy części mogą być powiązane tylko z jedną klasą całości
+B) ogranicza powiązanie klasy części do jednej klasy całości
+>>C) ogranicza powiązanie obiektu części do jednego obiektu całości
+>>D) jest silnym powiązaniem z czasem życia części ograniczonym do czasu życia całości
+>>E) Całość jest odpowiedzialna za zarzadzanie tworzeniem i usuwaniem części
+F) Ściśle związana z generalizacją
+>>G) Ściśle związana z delegacją
+
+191. TO Relacja zależności wskazuje, że
+A) klasa dostarcza implementacji usług interfejsu
+B) istnieje szczególne powiązanie między klasami
+>>C) obiekt klasy może być argumentem wywołania usługi innej klasy
+>>D) implementacja klasy może się zmienić, gdy zmieni się implementacja innej klasy
+
+192. TO Relacja realizacji wskazuje, że
+A) obiekt klasy może być argumentem wywołania usługi innej klasy
+>>B) klasa dostarcza implementacji usług interfejsu
+C) klasa realizuje usługi delegowane z innej klasy
+D) klasa wykorzystuje usługi interfejsu
+
+193. TO Wielokrotne użycie wspierane jest w modelu obiektowym przez:
+A) kwalifikowane powiązania
+>>B) kompozycje z delegacją roli
+>>C) istnienie klas obiektów
+>>D) dziedziczenie implementacji
+
+194. TA Wybierz, które z poniższych stwierdzeń są prawdziwe:
+>>A) Autorem klasyfikacji (hierarchii) języków formalnych jest Noam Chomsky
+B) Zbiór wszystkich palindromów nad danym alfabetem jest językiem regularnym
+>>C) Istnieją języki, które nie należą do hierarchii Chomsky'ego, więc nie są generowane przez żadną gramatykę ani akceptowane przez żaden automat
+>>D) Językiem formalnym nazywamy dowolny podzbiór zbioru wszystkich możliwych słów zbudowanych z symboli należących do skończonego alfabetu
+E) Język oznaczany jako { epsilon } jest językiem pustym
+>>F) Najszerszą klasą języków w hierarchii Chomsky'ego jest klasa języków rekurencyjnie przeliczalnych generowanych przez gramatyki bez ograniczeń
+
+195. TA Niech N będzie niedeterministycznym automatem skończonym posiadającym n stanów, oraz niech M będzie minimalnym deterministycznym automatem skończonym rozpoznającym ten sam język. Liczbę stanów automatu M oznaczamy przez m. Wtedy:
+A) m <= n
+>>B) m <= 2^n
+C) n <= m
+D) M posiada dokładnie jeden stan akceptujący
+E) Każdy deterministyczny automat skończony rozpoznający ten sam język musi posiadać co najmniej 2^n stanów
+
+196. TA Wybierz, które z poniższych stwierdzeń są prawdziwe:
+A) Jeśli język L spełnia tezę lematu o pompowaniu dla języków regularnych, to język L jest regularny
+>>B) Jeśli język L jest skończony, to L* musi być regularny
+>>C) Każdy język, który nie jest regularny, jest nieskończony
+D) Pomimo, że języki regularne w trywialny sposób są bezkontekstowe, to istnieją języki regularne nie spełniające lematu o pompowaniu dla języków bezkontekstowych
+
+197. TK Eliminując niejednoznaczność gramatyki poprzez konwersję do innej gramatyki musimy zachować bez zmian:
+A) drzewo wyprowadzenia oryginalnej gramatyki dla każdego jednoznacznego słowa wejściowego
+B) wyprowadzenia oryginalnej gramatyki dla każdego słowa wejściowego
+>>C) zbiór słów generowanych przez oryginalną gramatykę
+D) drzewo wyprowadzenia oryginalnej gramatyki dla każdego słowa wejściowego
+E) wyprowadzenia oryginalnej gramatyki dla każdego jednoznacznego słowa wejściowego
+
+198. TK Która z następujących metod parsingu może przetworzyć najszerszą klasę gramatyk:
+A) parser SLR
+B) zstępujący parser rekurencyjny bez nawracania
+C) kanoniczny parser LR
+>>D) parser Earley'a
+E) parser LL(1)
+>>F) parser CYK
+
+199. TK Wybierz stwierdzenia, które są prawdziwe:
+A) Dla każdej gramatyki jednoznacznej można skonstruować parser LR(1)
+>>B) Żadna gramatyka niejednoznaczna nie może być gramatyką LR(1)
+C) Tworzenie parsera jest sensowną procedurą tylko dla jednoznacznej gramatyki bezkontekstowej (nie ma sensu konstruowanie parsera dla gramatyki niejednoznacznej)
+>>D) Konstruując parser dla gramatyki niejednoznacznej i usuwając konflikty uzyskujemy bardziej efektywne rozwiązania, niż opierając parser na równoważnej gramatyce jednoznacznej
+
+200. TW Sekcja krytyczna procesu jest to:
+>>A) część procesu, w której wykorzystywany jest zasób dzielony
+B) część procesu, w której wykonywana jest komunikacja z użytkownikiem
+C) część procesu, w której wykonywana jest nieskończona pętla
+D) część procesu, w której deklarowane są lokalne zmienne
+
+201. TW Wzajemnym wykluczaniem nazywamy problem współzawodnictwa procesów o zasób, który:
+A) musi zostać zainicjalizowany przez jeden z procesów
+B) jest zmienną przechowywaną w rejestrach procesora
+>>C) jednocześnie może być wykorzystywany tylko przez jeden z nich
+D) może być wykorzystywany tylko przez z góry określony czas
+
+202. TW Komunikację nazywamy asynchroniczną jeżeli:
+A) nadawca żąda, by odbiorca był gotów do odebrania komunikatu
+>>B) nadawca może wysłać wiadomość i kontynuować pracę bez wstrzymania
+C) przy komunikacji mamy do czynienia z synchronizacją procesów
+>>D) nadawca nie żąda, by odbiorca był gotów do odebrania komunikatu
+
+203. TW Zjawisko blokady w programie współbieżnym jest:
+A) zatrzymaniem pracy jednego ze współbieżnych procesów
+>>B) stanem, w którym każdy proces oczekuje na działanie innego procesu
+>>C) przejawem braku bezpieczeństwa programu współbieżnego
+D) stanem, w którym proces czekający na dane zdarzenie nie zostaje wznowiony mimo, że występuje ono dowolną liczbę razy
+
+204. TW Zjawisko zagłodzenia w programie współbieżnym jest:
+A) stanem, w którym każdy proces oczekuje na działanie innego procesu
+B) przejawem braku bezpieczeństwa programu współbieżnego
+>>C) stanem, w którym proces czekający na dane zdarzenie nie zostaje wznowiony mimo, że występuje ono dowolną liczbę razy
+D) nienaturalnym przerwaniem pracy jednego ze współbieżnych procesów
+
+205. TW Komunikację nazywamy synchroniczną jeżeli:
+>>A) nadawca żąda, by odbiorca był gotów do odebrania komunikatu
+B) nadawca nie żąda, by odbiorca był gotów do odebrania komunikatu
+>>C) przy komunikacji mamy do czynienia z synchronizacją procesów
+D) nadawca może wysłać wiadomość i kontynuować pracę bez wstrzymania
+
+206. Unix W systemie operacyjnym UNIX:
+>>A) Praca programu logującego (login) jest sterowana m. in. zawartością plików /etc/nologin lub /etc/motd
+>>B) O możliwościach użytkownika w systemie decyduje przynależność do odpowiednich grup użytkowników
+>>C) W zależności od konfiguracji systemu mogą być odnotowywane podłączenia do systemu poprzez zmianę kontekstu użytkownika (komenda su)
+>>D) Grupy użytkowników wprowadzono, aby ułatwić zarządzanie użytkownikami oraz podnieść bezpieczeństwo systemu
+
+207. Unix W systemie operacyjnym UNIX:
+>>A) O postaci hasła decyduje administrator systemu zapisując ograniczenia w różnych wersjach systemu w różnych plikach konfiguracyjnych
+B) Wszystkie grupy użytkowników dają im jednakowe uprawnenia
+C) Cała informacja dotycząca konfiguracji użytkownika w systemie jest zapisana jedynie w pliku /etc/passwd co zapewnia spójność informacji
+D) Do systemu użytkownik może podłączać się jedynie z konsoli systemu oraz zdalnie poprzez sieć
+>>E) Nazwa użytkownika w systemie UNIX musi być unikalna zaś numer identyfikacyjny może się powtarzać.
+F) Technika shadow umożliwia podglądnięcie postaci zaszyfrowanej hasła każdego użytkownika w systemie przez dowolnego użytkownika
+>>G) System PAM umożliwia m.in. odnotowywanie nieudanych prób podłączania się do systemu
+
+208. Unix Procesy
+>>A) Proces jest wykonaniem programu i składa się ze zbiorowości bajtów, w których wyróżnia się instrukcje maszynowe (tzw. tekst), dane i stos
+>>B) W kategoriach praktycznych proces w systemie UNIX jest jednostką utworzoną za pomocą funkcji systemowej fork (z wyjątkiem procesu o numerze 0)
+C) Każdy uruchomiony w systemie UNIX proces otrzymuje od procesu potomnego dostęp do jego (procesu macierzystego) zmiennych środowiskowych
+D) Liczba możliwych do uruchomienia w systemie UNIX procesów jest ograniczona jedynie rozmiarem pamięci o dostępie swobodnym danego systemu komputerowego
+E) Wartość parametru NICE dla nowoutworzonego procesu jest wyliczania na podstawie średniego obciążenia systemu
+F) Każdy uruchomiony w systemie UNIX proces otrzymuje od systemu trzy otwarte pliki o numerach 0, 1 i 2
+
+209. Unix Interpretery poleceń systemu UNIX
+>>A) W niektórych interpreterach poleceń można uniemożliwić odłączanie się od systemu poprzez wykorzystanie sekwencji Ctrl-D dzięki ustawieniu wartości odpowiedniej zmiennej środowiskowej
+B) Wszystkie polecenia shella zwracają wartość 0 (zero), kiedy wykonanie ich zakończy się niepowodzeniem lub wartość różną od 0 (zazwyczaj 1) w przypadku przeciwnym
+>>C) Każdy interpreter wykorzystuje trzy podstawowe typy zmiennych: specjalne, środowiska oraz programowe
+D) Błędne wykonanie komendy w linii komend można rozpoznać m.in. po zapisach do urządzenia /dev/null
+
+210. ZO Jakie byłyby konsekwencje znalezienia wielomianowego deterministycznego algorytmu dla problemu NP-zupełnego?
+A) żadna z pozostałych odpowiedzi
+B) Oznaczałoby to, że P =/= NP
+C) Nie miałoby to żadnych konsekwencji dla teorii złożności obliczeniowej
+>>D) Stanowiłoby to dowód, ze P = NP
+
+211. ZO Jakie problemy zaliczamy do klasy problemów NP-zupełnych?
+A) z definicji należą jednocześnie do NP i co-NP
+B) należą do klasy NP, ale nie należą do P
+C) żadna z pozostałych odpowiedzi
+>>D) wszystkie problemy z klasy NP redukują się do nich i same należą do klasy NP
+
+212. ZO Co można powiedzieć o podproblemach problemu PI, wiedząc, że PI nie należy do P?
+A) żaden jego podproblem nie należy do P
+B) każdy jego podproblem należy do klasy P
+C) pojecie podproblemu nie jest zdefiniowane
+>>D) istnieje taki jego podproblem, który należy do P
