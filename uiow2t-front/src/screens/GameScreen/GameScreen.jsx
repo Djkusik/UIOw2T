@@ -1,15 +1,24 @@
 import React, { useEffect, useState } from 'react'
 import styled from 'styled-components'
 import AwaitModal from './../../components/awaitModal/AwaitModal';
+import UnitStorePanel from './../../components/unitsPanel/UnitStorePanel';
+import UnitBenchPanel from './../../components/unitsPanel/UnitBenchPanel';
+import Board from './../../components/board/Board';
 import socketIOClient from "socket.io-client";
 
 const ENDPOINT = "http://localhost:8080";
 
 
 const Background = styled.div`
-  height: 100vh;
-  width: 100vw;
-  background-color: red;
+  position:absolute;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content:center;
+  top:0px;
+  right:0px;
+  bottom:0px;
+  left:0px;
+  background-color: #91F546;
 `
 
 export default function GameScreen() {
@@ -17,7 +26,6 @@ export default function GameScreen() {
     function handlePlayersWaiting(data) {
         setPlayersList(data.players_waiting)
         console.log(playersList)
-
     }
     useEffect(() => {
         const socket = socketIOClient(ENDPOINT);
@@ -38,7 +46,14 @@ export default function GameScreen() {
     return (
         <Background>
             <AwaitModal playersWaiting={playersList.length} />
-        </Background>
+            <div style={{ alignSelf: 'center', paddingBottom: '10%', justifyContent: 'center', position: "absolute" }}>
+                <Board positionOccupied={[0, 0]} />
+            </div>
+            <div style={{ alignSelf: 'flex-end', justifyContent: 'center' }}>
+                <UnitBenchPanel />
+                <UnitStorePanel />
+            </div>
+        </Background >
 
     )
 }

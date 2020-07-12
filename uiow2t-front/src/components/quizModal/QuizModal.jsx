@@ -3,20 +3,20 @@ import styled from 'styled-components'
 import Loader from 'react-loader-spinner'
 import { Col } from 'reactstrap'
 
-const BackgroundShade = styled.div`
+const Container = styled.div`
   height: 100vh;
   width: 100vw;
-  background-color: rgba(0,0,0,0.5);
+  background-color: rgb(255,255,255);
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
   align-items: center;
 `
 
-export default class AwaitModal extends React.Component {
+export default class QuizModal extends React.Component {
 
     render() {
-        return this.props.playersWaiting !== 1 && (
+        return this.props.playersWaiting !== 2 && (
             <BackgroundShade>
                 <Col xs="6" sm="4" />
                 <Col xs="6" sm="4">
