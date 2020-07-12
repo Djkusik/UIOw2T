@@ -9,7 +9,7 @@ RUN pip install -r requirements.prod --upgrade
 
 COPY api api
 COPY game game
-COPY battle_test.py client.py server.py ./
+COPY __init__.py server.py ./
 
 RUN chown -R server:server ./
 
