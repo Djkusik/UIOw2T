@@ -42,11 +42,11 @@
         "name": "John Paul",
         "category": "Mage",
         "statistics": {
-            "base_hp": 5,
-            "base_phys_attack": 0,
-            "base_phys_defence": 3,
-            "base_mag_attack": 17,
-            "base_mag_defence": 4,
+            "base_hp": 20,
+            "base_phys_attack": 1,
+            "base_phys_defence": 5,
+            "base_mag_attack": 18,
+            "base_mag_defence": 5,
             "base_speed": 5,
             "base_reach": 8
         }
@@ -91,19 +91,6 @@
         }
     },
     {
-        "name": "Pikachu",
-        "category": "Mage",
-        "statistics": {
-            "base_hp": 25,
-            "base_phys_attack": 5,
-            "base_phys_defence": 0,
-            "base_mag_attack": 19,
-            "base_mag_defence": 10,
-            "base_speed": 5,
-            "base_reach": 8
-        }
-    },
-    {
         "name": "Idus",
         "category": "Archer",
         "statistics": {
@@ -114,6 +101,292 @@
             "base_mag_defence": 0,
             "base_speed": 13,
             "base_reach": 9
+        }
+    },
+    {
+        "name": "Majus",
+        "category": "Warrior",
+        "statistics": {
+            "base_hp": 30,
+            "base_phys_attack": 6,
+            "base_phys_defence": 14,
+            "base_mag_attack": 1,
+            "base_mag_defence": 10,
+            "base_speed": 7,
+            "base_reach": 4
+        }
+    },
+    {
+        "name": "Kutusz",
+        "category": "Mage",
+        "statistics": {
+            "base_hp": 15,
+            "base_phys_attack": 5,
+            "base_phys_defence": 2,
+            "base_mag_attack": 8,
+            "base_mag_defence": 2,
+            "base_speed": 8,
+            "base_reach": 9
+        }
+    },
+    {
+        "name": "Fridrich",
+        "category": "Archer",
+        "statistics": {
+            "base_hp": 25,
+            "base_phys_attack": 7,
+            "base_phys_defence": 4,
+            "base_mag_attack": 3,
+            "base_mag_defence": 4,
+            "base_speed": 8,
+            "base_reach": 8
+        }
+    },
+    {
+        "name": "Irmin of the Herb",
+        "category": "Mage",
+        "statistics": {
+            "base_hp": 15,
+            "base_phys_attack": 0,
+            "base_phys_defence": 2,
+            "base_mag_attack": 7,
+            "base_mag_defence": 10,
+            "base_speed": 6,
+            "base_reach": 7
+        }
+    },
+    {
+        "name": "Kurdusz",
+        "category": "Warrior",
+        "statistics": {
+            "base_hp": 25,
+            "base_phys_attack": 3,
+            "base_phys_defence": 5,
+            "base_mag_attack": 0,
+            "base_mag_defence": 2,
+            "base_speed": 9,
+            "base_reach": 7
+        }
+    },
+    {
+        "name": "Polack",
+        "category": "Warrior",
+        "statistics": {
+            "base_hp": 30,
+            "base_phys_attack": 9,
+            "base_phys_defence": 2,
+            "base_mag_attack": 3,
+            "base_mag_defence": 2,
+            "base_speed": 7,
+            "base_reach": 4
+        }
+    },
+    {
+        "name": "Kozlusz",
+        "category": "Mage",
+        "statistics": {
+            "base_hp": 15,
+            "base_phys_attack": 0,
+            "base_phys_defence": 0,
+            "base_mag_attack": 20,
+            "base_mag_defence": 0,
+            "base_speed": 2,
+            "base_reach": 6
+        }
+    },
+    {
+        "name": "Zielarz",
+        "category": "Mage",
+        "statistics": {
+            "base_hp": 23,
+            "base_phys_attack": 0,
+            "base_phys_defence": 3,
+            "base_mag_attack": 8,
+            "base_mag_defence": 5,
+            "base_speed": 6,
+            "base_reach": 8
+        }
+    },
+    {
+        "name": "Pytlusz",
+        "category": "Archer",
+        "statistics": {
+            "base_hp": 30,
+            "base_phys_attack": 7,
+            "base_phys_defence": 9,
+            "base_mag_attack": 1,
+            "base_mag_defence": 1,
+            "base_speed": 2,
+            "base_reach": 8
+        }
+    },
+    {
+        "name": "Kokolasz",
+        "category": "Archer",
+        "statistics": {
+            "base_hp": 9,
+            "base_phys_attack": 8,
+            "base_phys_defence": 3,
+            "base_mag_attack": 4,
+            "base_mag_defence": 2,
+            "base_speed": 4,
+            "base_reach": 7
+        }
+    },
+    {
+        "name": "Szafir",
+        "category": "Mage",
+        "statistics": {
+            "base_hp": 8,
+            "base_phys_attack": 0,
+            "base_phys_defence": 1,
+            "base_mag_attack": 5,
+            "base_mag_defence": 3,
+            "base_speed": 6,
+            "base_reach": 7
+        }
+    },
+    {
+        "name": "Wozniusz",
+        "category": "Archer",
+        "statistics": {
+            "base_hp": 15,
+            "base_phys_attack": 4,
+            "base_phys_defence": 1,
+            "base_mag_attack": 0,
+            "base_mag_defence": 0,
+            "base_speed": 7,
+            "base_reach": 8
+        }
+    },
+    {
+        "name": "Smokarz",
+        "category": "Warrior",
+        "statistics": {
+            "base_hp": 2,
+            "base_phys_attack": 6,
+            "base_phys_defence": 0,
+            "base_mag_attack": 3,
+            "base_mag_defence": 4,
+            "base_speed": 5,
+            "base_reach": 5
+        }
+    },
+    {
+        "name": "Orcheliusz",
+        "category": "Archer",
+        "statistics": {
+            "base_hp": 10,
+            "base_phys_attack": 5,
+            "base_phys_defence": 1,
+            "base_mag_attack": 3,
+            "base_mag_defence": 3,
+            "base_speed": 5,
+            "base_reach": 7
+        }
+    },
+    {
+        "name": "Klusarz",
+        "category": "Warrior",
+        "statistics": {
+            "base_hp": 14,
+            "base_phys_attack": 6,
+            "base_phys_defence": 3,
+            "base_mag_attack": 0,
+            "base_mag_defence": 3,
+            "base_speed": 3,
+            "base_reach": 5
+        }
+    },
+    {
+        "name": "Boriusz",
+        "category": "Mage",
+        "statistics": {
+            "base_hp": 10,
+            "base_phys_attack": 0,
+            "base_phys_defence": 0,
+            "base_mag_attack": 9,
+            "base_mag_defence": 3,
+            "base_speed": 4,
+            "base_reach": 8
+        }
+    },
+    {
+        "name": "Sudasz",
+        "category": "Mage",
+        "statistics": {
+            "base_hp": 5,
+            "base_phys_attack": 0,
+            "base_phys_defence": 0,
+            "base_mag_attack": 7,
+            "base_mag_defence": 4,
+            "base_speed": 3,
+            "base_reach": 7
+        }
+    },
+    {
+        "name": "Metaliusz",
+        "category": "Warrior",
+        "statistics": {
+            "base_hp": 30,
+            "base_phys_attack": 2,
+            "base_phys_defence": 6,
+            "base_mag_attack": 0,
+            "base_mag_defence": 3,
+            "base_speed": 3,
+            "base_reach": 5
+        }
+    },
+    {
+        "name": "Fabrusz",
+        "category": "Archer",
+        "statistics": {
+            "base_hp": 8,
+            "base_phys_attack": 8,
+            "base_phys_defence": 0,
+            "base_mag_attack": 0,
+            "base_mag_defence": 0,
+            "base_speed": 6,
+            "base_reach": 8
+        }
+    },
+    {
+        "name": "Majerarz",
+        "category": "Archer",
+        "statistics": {
+            "base_hp": 15,
+            "base_phys_attack": 4,
+            "base_phys_defence": 4,
+            "base_mag_attack": 1,
+            "base_mag_defence": 0,
+            "base_speed": 6,
+            "base_reach": 6
+        }
+    },
+    {
+        "name": "Adamanteusz",
+        "category": "Warrior",
+        "statistics": {
+            "base_hp": 20,
+            "base_phys_attack": 5,
+            "base_phys_defence": 5,
+            "base_mag_attack": 0,
+            "base_mag_defence": 5,
+            "base_speed": 3,
+            "base_reach": 5
+        }
+    },
+    {
+        "name": "Hungeriusz",
+        "category": "Archer",
+        "statistics": {
+            "base_hp": 5,
+            "base_phys_attack": 0,
+            "base_phys_defence": 0,
+            "base_mag_attack": 11,
+            "base_mag_defence": 0,
+            "base_speed": 5,
+            "base_reach": 7
         }
     }
 ]
