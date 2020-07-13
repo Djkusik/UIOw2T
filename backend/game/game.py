@@ -10,12 +10,13 @@ from game.ranking.ranking_system import RankingSystem
 
 
 class Game:
-    def __init__(self, players: Tuple[Player, Player], on_game_started, on_battle_started,on_game_result) -> None:
+    def __init__(self, players: Tuple[Player, Player], on_game_started, on_battle_started,on_game_message,on_game_result) -> None:
         self.players: Tuple[Player, Player] = players
         self.is_finished = False
         self.players_quiz_and_units_ready = {p.id: {"units": False, "quiz": False} for p in self.players}
         self.on_game_started = on_game_started
         self.on_battle_started = on_battle_started
+        self.on_game_message= on_game_message
         self.on_game_result= on_game_result
 
 
@@ -43,16 +44,17 @@ class Game:
         )
         await self.on_battle_started(self.players)
         battle_simulator = BattleSimulator(*self.players)
-        result, message, logs,winner = battle_simulator.start_simulation(random_seed=17)
+        result, message, logs,players_sorted = battle_simulator.start_simulation(random_seed=17)
         logging.info(f"Battle result: {result}")
-        await self._end_game_for_players(message, logs)
+        await self._end_game_for_players(message, logs,players_sorted)
         self.is_finished = True
         logging.info(
             "Finished game of players: '%s' and '%s'" % self._get_nicks_of_players()
         )
 
-    async def _end_game_for_players(self, message: str, logs: str) -> None:
+    async def _end_game_for_players(self, message: str, logs: str,players_sorted) -> None:
         await self.send_game_results(message, logs)
+        self.on_game_result(players_sorted)
         for p in self.players:
             p.reset_after_game()
 
@@ -75,4 +77,4 @@ class Game:
     async def send_game_results(self, message: str, logs: str):
         for player in self.players:
             if player.in_game:
-                await self.on_game_result(message,logs,player)
+                await self.on_game_message(message, logs, player)
