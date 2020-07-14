@@ -24,24 +24,26 @@ const mapStateToProps = function(state) {
   };
 };
 
-function buyUnit(dispatch, currentGold, unit, visible, setVisibile) {
-  if (visible && currentGold > unit.price) {
+function buyUnit(dispatch, newGoldState, unit, visible, setVisibile) {
+  if (visible) {
     dispatch({ type: "SET_OWNED_UNITS", unit });
-    const newGoldState = currentGold - unit.price;
     dispatch({ type: "SET_CURRENT_GOLD", newGoldState });
     setVisibile(false);
   }
 }
 
-function UnitTile({ unit, dispatch }) {
+function UnitTile({ unit, dispatch, update, currentGold }) {
   const [visible, setVisibile] = useState(true);
-  const currentGold = useSelector(state => state.goldReducer.currentGold);
 
   return (
     <TileBackground
       onClick={e => {
         e.preventDefault;
-        buyUnit(dispatch, currentGold, unit, visible, setVisibile);
+        const newGoldState = currentGold - unit.price;
+        if (newGoldState >= 0) {
+          buyUnit(dispatch, newGoldState, unit, visible, setVisibile);
+          update(newGoldState);
+        }
       }}
     >
       <TileText>{visible && unit.name}</TileText>

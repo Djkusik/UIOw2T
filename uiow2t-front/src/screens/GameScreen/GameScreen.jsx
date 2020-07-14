@@ -47,7 +47,7 @@ export default function GameScreen() {
           position: "absolute"
         }}
       >
-        <Board positionOccupied={[0, 0]} />
+        <Board />
       </div>
       <div style={{ alignSelf: "flex-end", justifyContent: "center" }}>
         <UnitBenchPanel />

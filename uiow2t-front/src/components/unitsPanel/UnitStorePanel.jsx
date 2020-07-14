@@ -13,7 +13,7 @@ const mapStateToProps = function(state) {
 
 const PanelBackground = styled.div`
   background-color: black;
-  width: 1180px;
+  width: 1280px;
   height: 140px;
   border-top-left-radius: 20px;
   border-top-right-radius: 20px;
@@ -22,6 +22,20 @@ const PanelBackground = styled.div`
   align-items: center;
   display: flex;
   z-index: 10;
+`;
+
+const SidePanel = styled.div`
+  background-color: black;
+  width: 100px;
+  height: 140px;
+  border-top-left-radius: 20px;
+  justify-items: center;
+  justify-content: center;
+  align-items: center;
+  display: inline-block;
+  z-index: 10;
+  margin-left: 7.5px;
+  margin-right: 7.5px;
 `;
 
 function buyUnit(dispatch, currentGold, unit) {
@@ -53,11 +67,32 @@ function UnitStorePanel({ dispatch }) {
     });
   }, []);
 
+  const updateMoney = value => {
+    setCurrentGoldState(value);
+  };
   return (
     <>
-      <p>{currentGoldState}</p>
       <PanelBackground>
-        {currentUnits && currentUnits.map(unit => <UnitTile unit={unit} />)}
+        <SidePanel>
+          <div
+            style={{
+              fontSize: "20px",
+              color: "white",
+              padding: "10px 0 0 10px"
+            }}
+          >
+            {currentGoldState}
+          </div>
+        </SidePanel>
+
+        {currentUnits &&
+          currentUnits.map(unit => (
+            <UnitTile
+              update={updateMoney}
+              unit={unit}
+              currentGold={currentGoldState}
+            />
+          ))}
       </PanelBackground>
     </>
   );

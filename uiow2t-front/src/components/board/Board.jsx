@@ -29,23 +29,7 @@ function renderSquare(i, currentPosition) {
   } else return <Field key={i} index={i}></Field>;
 }
 
-export default function Board({ positionOccupied }) {
-  // const [currentUnits, setCurrentUnits] = useState([])
-  // useEffect(() => {
-  //     const socket = socketIOClient(ENDPOINT);
-  //     socket.emit('players_waiting')
-  //     console.log('EMIT')uNIT
-  //     socket.on('players_waiting_reply', data => {
-  //         handlePlayersWaiting(data)
-  //     })
-  // }, []);
-
-  // useEffect(() => {
-  //     if (playersList.length) {
-  //         console.log('update')
-  //         console.log(playersList)
-  //     }
-  // }, [playersList]);
+export default function Board() {
   const currentPosition = useSelector(
     state => state.positionReducer.currentPosition
   );
@@ -54,9 +38,5 @@ export default function Board({ positionOccupied }) {
   for (let i = 0; i < 60; i++) {
     fields.push(renderSquare(i, currentPosition));
   }
-  return (
-    // <div style={{ display: 'flex', justifyContent: 'center' }}>
-    <BoardBackground>{fields}</BoardBackground>
-    // </div >
-  );
+  return <BoardBackground>{fields}</BoardBackground>;
 }
