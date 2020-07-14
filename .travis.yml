@@ -1,0 +1,14 @@
+language: python
+
+python:
+  - "3.8"
+
+install:
+  - cd backend
+  - pip install -r requirements.prod
+
+before_script:
+  - cd backend
+
+script:
+  - python -m unittest tests/test_main.py
