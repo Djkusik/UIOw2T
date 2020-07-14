@@ -1,7 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
 import Loader from 'react-loader-spinner'
-import { Col } from 'reactstrap'
+import { Row, Col } from 'reactstrap'
 
 const BackgroundShade = styled.div`
   height: 100vh;
@@ -16,7 +16,7 @@ const BackgroundShade = styled.div`
 export default class AwaitModal extends React.Component {
 
     render() {
-        return this.props.playersWaiting !== 1 && (
+        return this.props.playersWaiting !== 2 && (
             <BackgroundShade>
                 <Col xs="6" sm="4" />
                 <Col xs="6" sm="4">
@@ -26,7 +26,7 @@ export default class AwaitModal extends React.Component {
                             color="#FFFFFF"
                             height={50}
                             width={50}
-                            style={{ alignSelf: 'center' }}
+                            style={{ alignSelf: 'centerS' }}
                         />
                     </div>
 
