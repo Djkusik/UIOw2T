@@ -3,15 +3,15 @@ from game.shop.shop import Shop
 
 
 class ShopTest(unittest.TestCase):
+
+    def setUp(self):
+        self.shop = Shop.get_instance()
+
     def test_singleton(self):
-        shop = Shop.get_instance()
-        self.assertIsInstance(shop, Shop)
+        self.assertIsInstance(self.shop, Shop)
 
     def test_prices(self):
-        shop = Shop.get_instance()
-        units = shop.units_list
-
-        test_passed = True
+        units = self.shop.units_list
 
         for unit in units:
             stats_sum = 0
@@ -20,54 +20,30 @@ class ShopTest(unittest.TestCase):
             stats_sum -= unit['statistics']['base_hp'] + int(round(unit['statistics']['base_hp'] / 10))
 
             if 20 <= stats_sum <= 25:
-                if not 2 <= unit['price'] <= 3:
-                    test_passed = False
+                self.assertIn(unit['price'], range(2, 4))
             if 26 <= stats_sum <= 32:
-                if not 4 <= unit['price'] <= 6:
-                    test_passed = False
+                self.assertIn(unit['price'], range(4, 7))
             if 33 <= stats_sum <= 37:
-                if not 7 <= unit['price'] <= 10:
-                    test_passed = False
+                self.assertIn(unit['price'], range(7, 11))
             if stats_sum > 37:
-                if not unit['price'] == 13:
-                    test_passed = False
-
-        self.assertTrue(test_passed)
+                self.assertEqual(unit['price'], 13)
 
     def test_random_units_amount(self):
-        shop = Shop.get_instance()
-        test_passed = True
-
         for i in range(1, 15):
-            random_units_amount = len(shop.get_random_units(i, 5))
-            if random_units_amount != i:
-                test_passed = False
-
-        self.assertTrue(test_passed)
+            random_units_amount = len(self.shop.get_random_units(i, 5))
+            self.assertTrue(random_units_amount, i)
 
     def test_random_units_currency_relation(self):
-        shop = Shop.get_instance()
-        test_passed = True
-
         for i in range(2, 15):
-            random_units = shop.get_random_units(6, i)
+            random_units = self.shop.get_random_units(6, i)
             affordable_units = 0
             for unit in random_units:
                 if unit['price'] <= i:
                     affordable_units += 1
-            if affordable_units < 2:
-                test_passed = False
-
-        self.assertTrue(test_passed)
+            self.assertGreaterEqual(affordable_units, 2)
 
     def test_affordable_units(self):
-        shop = Shop.get_instance()
-        test_passed = True
-
         for i in range(2, 15):
-            random_units = shop.get_affordable_units(i, 2)
+            random_units = self.shop.get_affordable_units(i, 2)
             for unit in random_units:
-                if unit['price'] > i:
-                    test_passed = False
-
-        self.assertTrue(test_passed)
+                self.assertLessEqual(unit['price'], i)
