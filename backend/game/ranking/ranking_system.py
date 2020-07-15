@@ -15,6 +15,7 @@ class RankingSystem:
         # map player to tuple [Player, current elo, probability of winning]
         K = 50
         DEFAULT_POINTS=1000
+
         player_points = ((p, self._player_repository.read(p.nick, DEFAULT_POINTS), 1 / len(all_players))
                          for p in all_players)
         points_added = list()
@@ -30,7 +31,7 @@ class RankingSystem:
         for (p, elo, probability) in player_points:
             self._player_repository.create_or_update(p.nick, elo + points_added[i])
             i = i + 1
-        return player_points
+        return list(player_points)
 
     def _probability_of_winning_elo(self, rating1, rating2):
         return 1.0 * 1.0 / (1 + 1.0 * math.pow(10, 1.0 * (rating1 - rating2) / 400))

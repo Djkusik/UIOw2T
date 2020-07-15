@@ -2,8 +2,9 @@ import logging
 from collections import Set
 import random
 from typing import Tuple
-
 from .models import Player
+
+
 class WaitingRoom:
     def __init__(self, capacity: int = 2) -> None:
         self.players: Set[Player] = set()

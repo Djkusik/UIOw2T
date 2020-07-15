@@ -1,6 +1,5 @@
 import unittest
-
-from tests import ShopTest
+from tests import *
 
 
 if __name__ == '__main__':
