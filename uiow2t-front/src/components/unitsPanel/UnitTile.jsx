@@ -38,7 +38,8 @@ function UnitTile({ unit, dispatch, update, currentGold }) {
   return (
     <TileBackground
       onClick={e => {
-        e.preventDefault;
+        //e.preventDefault;
+        e.preventDefault();
         const newGoldState = currentGold - unit.price;
         if (newGoldState >= 0) {
           buyUnit(dispatch, newGoldState, unit, visible, setVisibile);

@@ -4,7 +4,7 @@ import {
   SET_OWNED_UNITS,
   SET_CURRENT_GOLD
 } from "../actions/actions";
-import { combineReducers } from "../../../../../Library/Caches/typescript/3.6/node_modules/redux";
+import { combineReducers } from "redux";
 
 const initialPosition = {
   currentPosition: []
