@@ -1,12 +1,14 @@
 import React from "react";
 import styled from "styled-components";
-import { connect } from "react-redux";
+import { connect, useSelector } from "react-redux";
 import { TileTypes } from "../dragTypes/TileTypes";
 import { useDrop } from "react-dnd";
+import store from "../../store/store";
 
 const mapStateToProps = function(state) {
   return {
-    currentPosition: state.currentPosition
+    currentPosition: state.currentPosition,
+    unitsPositions: state.unitsPositions
   };
 };
 
@@ -38,18 +40,29 @@ const FrameBottomRight = styled.div`
   margin-bottom: 0px;
 `;
 
-function Field({ index, children, dispatch }) {
+function Field({ index, children, dispatch, setCurrentPositions }) {
   const [{ isOver }, drop] = useDrop({
     accept: TileTypes.BENCH_TILE,
-    drop: monitor => {
-      setCurrentPosition([x, y]);
+    drop: (props, monitor) => {
+      setCurrentPosition([x, y], monitor.getItem().unit);
+      console.log(store.getState());
+      return monitor.getItem();
     },
     collect: monitor => ({
       isOver: !!monitor.isOver()
     })
   });
-  const setCurrentPosition = newPosition =>
-    dispatch({ type: "SET_CURRENT_POSITION", newPosition });
+
+  const unitsPositions = useSelector(
+    state => state.unitsPositionsReducer.unitsPositions
+  );
+
+  const setCurrentPosition = (newPosition, unit) => {
+    const result = unitsPositions;
+    if (!result[index]) result[index] = { position: newPosition, unit: unit };
+    setCurrentPositions(result);
+    dispatch({ type: "UPDATE_UNITS_POSITIONS", unitsPositions: result });
+  };
 
   const isRight = (index - 9) % 10 === 0;
   const isBottom = index >= 50;
