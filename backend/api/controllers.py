@@ -4,6 +4,8 @@ import logging
 import random
 
 from aiofile import AIOFile
+
+from db import PlayerRankingRepository
 from game.models.position import Position
 from game.models.unit import Unit
 from socketio import AsyncServer
@@ -19,12 +21,13 @@ UNITS = {
 
 
 class SocketController:
-    def __init__(self, sio: AsyncServer, game_app: GameApp):
+    def __init__(self, sio: AsyncServer, game_app: GameApp,player_ranking_repository:PlayerRankingRepository):
         self.sio: AsyncServer = sio
         self.game_app: GameApp = game_app
+        self.player_ranking_repository = player_ranking_repository
         game_app.on_battle_started = self._on_battle_started
         game_app.on_game_started = self._on_game_started
-        game_app.on_game_result = self._on_game_result
+        game_app.on_game_message = self._on_game_message
 
     async def _on_battle_started(self, players):
         await self.sio.emit(BATTLE_STARTED, data={
@@ -35,11 +38,17 @@ class SocketController:
         await self.sio.emit(GAME_STARTED, data=message, room=player.id)
         logging.info(f"Sent start game info to peer with SID: {player.id}")
 
-    async def _on_game_result(self, message, logs, player):
+    async def _on_game_message(self, message, logs, player):
         await self.sio.emit(GAME_RESULT, data={"message": message, "logs": logs}, room=player.id)
 
     async def units_ready(self, sid) -> None:
         await self.game_app.current_games[-1].save_what_is_ready(sid, what_is_ready="units")
+
+    async def ranking(self, sid) -> None:
+        ranking = self.player_ranking_repository.read_all()
+        response = list(map(lambda player_rank: {"nick": player_rank[0], "rank":player_rank[1]}, ranking))
+        await self.sio.emit(RANKING_REPLY, data=response)
+        logging.info(f"Sent ranking to peer with SID: {sid}")
 
     async def on_socket_connected(self, sid, environ):
         logging.info(f"Got new connection from peer with SID: {sid}")

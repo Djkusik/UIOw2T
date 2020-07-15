@@ -4,7 +4,7 @@ from game.battle.target_map import TargetMap
 from game.battle.battle_logger import BattleLogger
 from game.models.unit import Unit
 from game.models.player import Player
-from typing import Tuple
+from typing import Tuple, List
 
 
 class BattleSimulator:
@@ -13,7 +13,7 @@ class BattleSimulator:
         self.player2: Player = player2
         self.all_units = None
 
-    def start_simulation(self, random_seed: int) -> Tuple[int, str, str,Player]:
+    def start_simulation(self, random_seed: int) -> Tuple[int, str, str, List[Player]]:
         random.seed(random_seed)
         for unit in self.player2.deployed_units:
             unit.set_position(unit.position.get_mirrored_position())
@@ -35,7 +35,7 @@ class BattleSimulator:
         while True:
             for unit in self.all_units:
                 if self.is_done():
-                    return self.result(), self.get_final_message(), battle_logger.get_round_logs(), self.winner()
+                    return self.result(), self.get_final_message(), battle_logger.get_round_logs(), self._get_players_with_winner_first()
                 unit.attack()
 
     def get_final_message(self):
@@ -51,6 +51,13 @@ class BattleSimulator:
 
     def result(self) -> int:
         return len(self.player1.deployed_units) - len(self.player2.deployed_units)
+
+    def _get_players_with_winner_first(self):
+        winner = self.winner()
+        if winner == self.player1:
+            return [winner, self.player2]
+        else:
+            return [winner, self.player1]
 
     def winner(self):
         return self.player1 if self.result() > 0 else self.player2

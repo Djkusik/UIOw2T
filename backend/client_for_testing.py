@@ -26,6 +26,7 @@ if __name__ == '__main__':
     sio.emit(LOGIN, data={'nick': nick})
     sio.emit(PLAYERS)
     sio.emit(PLAYERS_WAITING)
+    sio.emit(RANKING)
 
     sio.on(GAME_STARTED, start_game)
 
@@ -37,6 +38,7 @@ if __name__ == '__main__':
     sio.on(PLAYERS_REPLY, lambda data: print(data))
     sio.on(PLAYERS_WAITING_REPLY, lambda data: print(data))
     sio.on(ERROR, lambda data: print(data))
+    sio.on(RANKING_REPLY, lambda data: print(data))
     sio.on(GAME_RESULT, lambda data: print(data))
     sio.on(UNITS_FROM_SHOP_REPLY, lambda data: print(data))
     sio.wait()

@@ -3,8 +3,8 @@ from .controllers import SocketController
 from .route_constants import *
 
 
-def setup_routes(app, sio, game_app):
-    socket_controller = SocketController(sio, game_app)
+def setup_routes(app, sio, game_app,player_ranking_repository):
+    socket_controller = SocketController(sio, game_app,player_ranking_repository)
     sio.on(CONNECT, socket_controller.on_socket_connected)
     sio.on(DISCONNECT, socket_controller.on_socket_disconnected)
     sio.on(LOGIN, socket_controller.on_socket_login)
@@ -17,6 +17,7 @@ def setup_routes(app, sio, game_app):
     sio.on(GET_UNITS, socket_controller.get_units)
     sio.on(GET_GOLD, socket_controller.get_gold)
     sio.on(UNITS_READY, socket_controller.units_ready)
+    sio.on(RANKING, socket_controller.ranking)
 
     cors = get_cors(app)
     for route in app.router.routes():

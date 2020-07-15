@@ -3,9 +3,9 @@ import logging
 import random
 from typing import List, Tuple, Set
 
-
 from game.models import Player
 from game.game import Game
+from game.ranking.ranking_system import RankingSystem
 from game.waiting_room import WaitingRoom
 
 
@@ -16,7 +16,8 @@ class GameApp:
         self.current_games: List[Game] = []
         self.on_game_started = None
         self.on_battle_started = None
-        self.on_game_result= None
+        self.on_game_message = None
+        self.on_game_result = None
 
     def add_player(self, nick: str, id: str) -> Player:
         existing_player: Player = self.get_player_by_nick(nick)
@@ -54,12 +55,12 @@ class GameApp:
     def is_waiting_room_full(self):
         return self.waiting_room.is_full()
 
-
     async def start_games(self) -> None:
         while True:
             if self.is_waiting_room_full():
                 players = self.waiting_room.draw_two_players_to_game()
-                game = Game(players,self.on_game_started,self.on_battle_started,self.on_game_result)
+                game = Game(players, self.on_game_started, self.on_battle_started,
+                            self.on_game_message, self.on_game_result)
                 self.current_games.append(game)
                 await game.set_on_game_started()
 
