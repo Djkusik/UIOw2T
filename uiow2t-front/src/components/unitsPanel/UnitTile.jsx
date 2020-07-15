@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import styled from "styled-components";
 import { connect } from "react-redux";
-import { useSelector } from "react-redux";
 
 const TileBackground = styled.div`
   background-color: white;
