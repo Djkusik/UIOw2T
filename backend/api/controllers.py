@@ -1,4 +1,3 @@
-import copy
 import json
 import logging
 import random
@@ -11,13 +10,6 @@ from game.models.unit import Unit
 from socketio import AsyncServer
 from .route_constants import *
 from game import GameApp
-
-# TODO Unit store instead of this shit
-UNITS = {
-    "warrior": Unit('Gariusz', 'warrior', 30, 5, 5, 0, 3, 3, 3),
-    "archer": Unit('Faliusz', 'archer', 15, 7, 2, 0, 1, 7, 8),
-    "mage": Unit('Bartusz', 'mage', 10, 0, 0, 10, 7, 5, 6)
-}
 
 
 class SocketController:
@@ -72,7 +64,7 @@ class SocketController:
     async def get_units(self, sid):
         player = self.game_app.get_player_by_id(sid)
         units = player.deployed_units + [unit for unit in player.bench if unit is not None]
-        response = list(map(lambda unit: unit.toDict(), units))
+        response = list(map(lambda unit: unit.to_dict(), units))
         await self.sio.emit(GET_UNITS_REPLY, data=response)
         logging.info(f"Sent board state info to peer with SID: {sid}")
 
@@ -147,21 +139,21 @@ class SocketController:
         await self.sio.emit(SCORE_REPLY, data={"message": "Score saved"}, room=sid)
         await self.game_app.current_games[-1].save_what_is_ready(sid, what_is_ready="quiz")
 
-
-
-    async def add_unit(self, sid, data):
-        if not _unit_data_check(data):
-            await self.sio.emit(ERROR, data={"message": "Unit spec incorrect"}, room=sid)
+    async def add_units(self, sid, data):
+        if len(data) == 0:
+            await self.sio.emit(ERROR, data={"message": "Empty units list"}, room=sid)
             return
         player = self.game_app.get_player_by_id(sid)
 
-        unit = copy.deepcopy(UNITS[data["class"]])
-        x, y = data["position"]["x"], data["position"]["y"]
-        unit.set_position(Position(x, y))
+        for unit_data in data:
+            unit = Unit.make_from_prototype(unit_data['unit'])
+            x, y = unit_data['position'][0], unit_data['position'][1]
+            unit.set_position(Position(x, y))
+            player.deployed_units.append(unit)
+            player.currency -= unit_data['unit']['price']
+            logging.info(f"Added unit {unit} for player {player}")
 
-        player.deployed_units.append(unit)
-        logging.info(f"Added unit {unit} for player {player}")
-        await self.sio.emit(UNIT_REPLY, data={"message": f"Unit {unit} added"}, room=sid)
+        await self.sio.emit(ADD_UNITS_REPLY, data={"message": f"Units added for player {player.nick}"}, room=sid)
 
     async def get_shop_units(self, sid):
         player = self.game_app.get_player_by_id(sid)
@@ -170,13 +162,3 @@ class SocketController:
         logging.info(f"Sent units from shop to peer with SID: {sid}")
         logging.info(f"Sent units: {offer}")
         await self.sio.emit(UNITS_FROM_SHOP_REPLY, data=offer, room=sid)
-
-
-def _unit_data_check(data) -> bool:
-    return (
-            "class" in data and
-            "position" in data and
-            data["class"] in UNITS
-            and "x" in data["position"]
-            and "y" in data["position"]
-    )
