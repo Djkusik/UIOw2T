@@ -16,12 +16,21 @@ export function setSocket(newSocket) {
   };
 }
 
+export const SET_OWNED_UNIT = "SET_OWNED_UNIT";
+
+export function setOwnedUnit(newUnit) {
+  return {
+    type: SET_OWNED_UNIT,
+    unit: newUnit
+  };
+}
+
 export const SET_OWNED_UNITS = "SET_OWNED_UNITS";
 
-export function setOwnedUnits(newUnit) {
+export function setOwnedUnits(units) {
   return {
     type: SET_OWNED_UNITS,
-    unit: newUnit
+    units: units
   };
 }
 

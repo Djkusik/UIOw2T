@@ -26,7 +26,7 @@ const mapStateToProps = function(state) {
 
 function buyUnit(dispatch, newGoldState, unit, visible, setVisibile) {
   if (visible) {
-    dispatch({ type: "SET_OWNED_UNITS", unit });
+    dispatch({ type: "SET_OWNED_UNIT", unit });
     dispatch({ type: "SET_CURRENT_GOLD", newGoldState });
     setVisibile(false);
   }

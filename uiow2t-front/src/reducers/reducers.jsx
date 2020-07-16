@@ -1,6 +1,7 @@
 import {
   SET_CURRENT_POSITION,
   SET_SOCKET,
+  SET_OWNED_UNIT,
   SET_OWNED_UNITS,
   SET_CURRENT_GOLD,
   UPDATE_UNITS_POSITIONS
@@ -53,9 +54,13 @@ export function socketReducer(state = initialSocket, action) {
 
 export function ownedUnitsReducer(state = initialOwnedUnits, action) {
   switch (action.type) {
-    case SET_OWNED_UNITS:
+    case SET_OWNED_UNIT:
       return {
         ownedUnits: [...state.ownedUnits, action.unit]
+      };
+    case SET_OWNED_UNITS:
+      return {
+        ownedUnits: action.units
       };
     default:
       return state;

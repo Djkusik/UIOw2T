@@ -40,7 +40,7 @@ const SidePanel = styled.div`
 
 function buyUnit(dispatch, currentGold, unit) {
   if (currentGold > unit.price) {
-    dispatch({ type: "SET_OWNED_UNITS", unit });
+    dispatch({ type: "SET_OWNED_UNIT", unit });
     const newGoldState = currentGold - unit.price;
     dispatch({ type: "SET_CURRENT_GOLD", newGoldState });
     setVisibile(false);

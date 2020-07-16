@@ -18,11 +18,10 @@ const BoardBackground = styled.div`
 function renderSquare(i, unit, setCurrentPositions) {
   const x = i % 10;
   const y = Math.floor(i / 6);
-  if (unit) {
-    const piece = <CharacterIndicator />;
+  if (unit && unit.unit) {
     return (
       <Field key={i} index={i} setCurrentPositions={setCurrentPositions}>
-        {unit.name}
+        <div>{unit.unit.name}</div>
       </Field>
     );
   } else
@@ -40,6 +39,13 @@ export default function Board() {
   //   state => state.positionReducer.currentPosition
   // );
   const [currentPositions, setCurrentPositions] = useState([]);
+  // useEffect(() => {
+  //   sio.on(GAME_STARTED, start_game)
+  //   console.log("EMIT");
+  //   socket.on("players_waiting_reply", data => {
+  //     handlePlayersWaiting(data);
+  //   });
+  // }, []);
   const fields = [];
   for (let i = 0; i < 60; i++) {
     const unit = currentPositions[i];
