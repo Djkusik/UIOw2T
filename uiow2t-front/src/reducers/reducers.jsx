@@ -2,9 +2,10 @@ import {
   SET_CURRENT_POSITION,
   SET_SOCKET,
   SET_OWNED_UNITS,
-  SET_CURRENT_GOLD
+  SET_CURRENT_GOLD,
+  UPDATE_UNITS_POSITIONS
 } from "../actions/actions";
-import { combineReducers } from "../../../../../Library/Caches/typescript/3.6/node_modules/redux";
+import { combineReducers } from "redux";
 
 const initialPosition = {
   currentPosition: []
@@ -21,6 +22,11 @@ const initialOwnedUnits = {
 const initialOwnedGold = {
   currentGold: 0
 };
+
+const initialUnitsPositions = {
+  unitsPositions: []
+};
+
 export function positionReducer(state = initialPosition, action) {
   switch (action.type) {
     case SET_CURRENT_POSITION:
@@ -49,7 +55,6 @@ export function ownedUnitsReducer(state = initialOwnedUnits, action) {
   switch (action.type) {
     case SET_OWNED_UNITS:
       return {
-        ...state,
         ownedUnits: [...state.ownedUnits, action.unit]
       };
     default:
@@ -69,11 +74,24 @@ export function goldReducer(state = initialOwnedGold, action) {
   }
 }
 
+export function unitsPositionsReducer(state = initialUnitsPositions, action) {
+  switch (action.type) {
+    case UPDATE_UNITS_POSITIONS: {
+      return {
+        unitsPositions: action.unitsPositions
+      };
+    }
+    default:
+      return state;
+  }
+}
+
 const combinedReducer = combineReducers({
   positionReducer: positionReducer,
   socketReducer: socketReducer,
   ownedUnitsReducer: ownedUnitsReducer,
-  goldReducer: goldReducer
+  goldReducer: goldReducer,
+  unitsPositionsReducer: unitsPositionsReducer
 });
 
 export default combinedReducer;

@@ -15,28 +15,35 @@ const BoardBackground = styled.div`
   bottom: 50px;
   flex-wrap: wrap;
 `;
-function renderSquare(i, currentPosition) {
+function renderSquare(i, unit, setCurrentPositions) {
   const x = i % 10;
   const y = Math.floor(i / 6);
-  if (currentPosition) {
-    const isKnightHere = currentPosition[0] === x && currentPosition[1] === y;
-    const piece = isKnightHere ? <CharacterIndicator /> : null;
+  if (unit) {
+    const piece = <CharacterIndicator />;
     return (
-      <Field key={i} index={i}>
-        {piece}
+      <Field key={i} index={i} setCurrentPositions={setCurrentPositions}>
+        {unit.name}
       </Field>
     );
-  } else return <Field key={i} index={i}></Field>;
+  } else
+    return (
+      <Field
+        key={i}
+        index={i}
+        setCurrentPositions={setCurrentPositions}
+      ></Field>
+    );
 }
 
 export default function Board() {
-  const currentPosition = useSelector(
-    state => state.positionReducer.currentPosition
-  );
-
+  // const currentPosition = useSelector(
+  //   state => state.positionReducer.currentPosition
+  // );
+  const [currentPositions, setCurrentPositions] = useState([]);
   const fields = [];
   for (let i = 0; i < 60; i++) {
-    fields.push(renderSquare(i, currentPosition));
+    const unit = currentPositions[i];
+    fields.push(renderSquare(i, unit, setCurrentPositions));
   }
   return <BoardBackground>{fields}</BoardBackground>;
 }
