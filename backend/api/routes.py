@@ -9,7 +9,7 @@ def setup_routes(app, sio, game_app,player_ranking_repository):
     sio.on(DISCONNECT, socket_controller.on_socket_disconnected)
     sio.on(LOGIN, socket_controller.on_socket_login)
     sio.on(PLAYERS, socket_controller.get_players)
-    sio.on(PLAYERS_WAITING, socket_controller.Kget_players_in_waiting_room)
+    sio.on(PLAYERS_WAITING, socket_controller.get_players_in_waiting_room)
     sio.on(QUESTION, socket_controller.get_question)
     sio.on(SCORE, socket_controller.save_question_score)
     sio.on(UNIT, socket_controller.add_unit)
