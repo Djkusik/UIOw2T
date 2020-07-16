@@ -6,8 +6,6 @@ branches:
 
 env:
   - DOCKER_COMPOSE_VERSION=1.25.5
-  - DOCKER_ENGINE_VERSION=19.03.8~ce~3-0~ubuntu
-
 
 python:
   - "3.8"
@@ -23,8 +21,7 @@ before_install:
   - curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -
   - sudo add-apt-repository "deb [arch=amd64] https://download.docker.com/linux/ubuntu $(lsb_release -cs) stable"
   - sudo apt update
-  - sudo apt-cache madison docker-ce
-  - sudo apt-get install docker-ce=${DOCKER_ENGINE_VERSION}
+  - sudo apt-get install docker-ce docker-ce-cli containerd.io
   - sudo rm /usr/local/bin/docker-compose
   - sudo curl -L "https://github.com/docker/compose/releases/download/${DOCKER_COMPOSE_VERSION}/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
   - sudo chmod +x /usr/local/bin/docker-compose
