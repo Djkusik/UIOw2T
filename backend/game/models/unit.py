@@ -1,9 +1,7 @@
 from __future__ import annotations
 from typing import Dict
-
-import uuid
-
 from game.models.position import Position
+
 import random
 
 from game.models.unit_booster import UnitBooster
@@ -16,15 +14,15 @@ class Unit:
     def make_from_prototype(unit_prototype: Dict) -> Unit:
         statistics = unit_prototype['statistics']
 
-        return Unit(unit_prototype['name'], unit_prototype['category'], statistics['base_hp'],
+        return Unit(unit_prototype['id'], unit_prototype['name'], unit_prototype['category'], statistics['base_hp'],
                     statistics['base_phys_attack'], statistics['base_phys_defence'], statistics['base_mag_attack'],
                     statistics['base_mag_defence'], statistics['base_speed'], statistics['base_reach'])
 
-    def __init__(self, name: str, category: str, hp: int,
+    def __init__(self, id: int, name: str, category: str, hp: int,
                  phys_attack: int, phys_defence: int, mag_attack: int,
                  mag_defence: int, speed: int, reach: int) -> None:
 
-        self.id = uuid.uuid1()
+        self.id = id
 
         self.base_stats = {
             "hp": hp,
@@ -44,7 +42,7 @@ class Unit:
         self.target_map = None
         self.battle_logger = None
 
-    def toDict(self) -> Dict:
+    def to_dict(self) -> Dict:
         return {
             'id': self.id,
             'name': self.name,
