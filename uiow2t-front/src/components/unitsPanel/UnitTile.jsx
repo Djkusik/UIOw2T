@@ -24,24 +24,24 @@ const mapStateToProps = function(state) {
   };
 };
 
-function buyUnit(dispatch, newGoldState, unit, visible, setVisibile) {
+function buyUnit(dispatch, newGoldState, unit, visible, setVisible) {
   if (visible) {
     dispatch({ type: "SET_OWNED_UNIT", unit });
     dispatch({ type: "SET_CURRENT_GOLD", newGoldState });
-    setVisibile(false);
+    setVisible(false);
   }
 }
 
 function UnitTile({ unit, dispatch, update, currentGold }) {
-  const [visible, setVisibile] = useState(true);
+  const [visible, setVisible] = useState(true);
 
   return (
     <TileBackground
       onClick={e => {
-        e.preventDefault;
+        e.preventDefault();
         const newGoldState = currentGold - unit.price;
         if (newGoldState >= 0) {
-          buyUnit(dispatch, newGoldState, unit, visible, setVisibile);
+          buyUnit(dispatch, newGoldState, unit, visible, setVisible);
           update(newGoldState);
         }
       }}

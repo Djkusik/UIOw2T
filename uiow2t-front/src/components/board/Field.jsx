@@ -44,13 +44,14 @@ function Field({ index, children, dispatch, setCurrentPositions }) {
   const [{ isOver }, drop] = useDrop({
     accept: TileTypes.BENCH_TILE,
     drop: (props, monitor) => {
+      console.log("DROPPED ", monitor.getItem().unit);
       setCurrentPosition([x, y], monitor.getItem().unit);
       console.log("OWNED ", ownedUnits);
       let results = ownedUnits;
       for (let i = 0; i < results.length; i++) {
         if (results[i].id === monitor.getItem().unit.id) {
           results.splice(i, 1);
-          console.log("OWNED ", results)
+          console.log("OWNED ", results);
           dispatch({ type: "SET_OWNED_UNITS", units: results });
         }
       }
