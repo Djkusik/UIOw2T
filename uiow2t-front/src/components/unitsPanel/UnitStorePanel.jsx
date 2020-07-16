@@ -47,7 +47,6 @@ function buyUnit(dispatch, currentGold, unit) {
   }
 }
 
-
 function UnitStorePanel({ dispatch }) {
   const [currentUnits, setCurrentUnits] = useState([]);
   const [currentGoldState, setCurrentGoldState] = useState(0);
