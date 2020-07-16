@@ -37,7 +37,7 @@ const SidePanel = styled.div`
   margin-left: 7.5px;
   margin-right: 7.5px;
 `;
-/*
+
 function buyUnit(dispatch, currentGold, unit) {
   if (currentGold > unit.price) {
     dispatch({ type: "SET_OWNED_UNITS", unit });
@@ -46,7 +46,7 @@ function buyUnit(dispatch, currentGold, unit) {
     setVisibile(false);
   }
 }
- */
+
 
 function UnitStorePanel({ dispatch }) {
   const [currentUnits, setCurrentUnits] = useState([]);
