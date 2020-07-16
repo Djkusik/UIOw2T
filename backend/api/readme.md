@@ -25,4 +25,4 @@ Example response:
 ]
 ```
 
-Questions come from the src/api/data/questions.json file. No categories or difficulty levels, varying number of possible and correct answers (at least one)
+Questions come from the src/api/data/questions.json file. No difficulty levels, categorized, varying number of possible and correct answers (at least one).

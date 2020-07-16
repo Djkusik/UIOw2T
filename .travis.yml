@@ -35,3 +35,8 @@ script:
   - python -m unittest tests/test_main.py
   - cd ..
   - docker-compose build
+  - docker-compose up -d
+
+after_script:
+  - docker ps
+  - docker-compose down -v
