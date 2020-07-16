@@ -1,4 +1,4 @@
-from typing import List
+from typing import List, Dict
 
 from game.models.position import Position
 from game.models.unit import Unit
@@ -6,7 +6,6 @@ from game.shop.planning_phase_validator import PlanningPhaseValidator
 
 
 class Player:
-    NO_SCORE = -1
     BASE_INCOME = 5
     BASE_PLAYER_HP = 20
     BENCH_SIZE = 8
@@ -18,7 +17,7 @@ class Player:
         self.id: str = id
         self.in_game: bool = False
         self.connected = True
-        self.quiz_score: int = Player.NO_SCORE
+        self.quiz_scores: Dict = {"Warrior": 0, "Mage": 0, "Archer": 0}
         self.deployed_units: List[Unit] = []
         self.bench: List[Unit] = [None] * Player.BENCH_SIZE
         self.hp: int = Player.BASE_PLAYER_HP
@@ -35,20 +34,19 @@ class Player:
         self.deployed_units = []
         self.bench = [None] * Player.BENCH_SIZE
         self.in_game = False
-        self.quiz_score = Player.NO_SCORE
+        self.quiz_scores = {"Warrior": 0, "Mage": 0, "Archer": 0}
         self.currency = 0
         self.hp = Player.BASE_PLAYER_HP
 
+    def save_question_result(self, unit_class: str, result: int):
+        self.quiz_scores[unit_class] += result
+
     def boost_units_with_quiz_score(self):
         for unit in self.deployed_units:
-            unit.boost_stats(self.quiz_score)
-
-        for unit in self.bench:
-            if unit is not None:
-                unit.boost_stats(self.quiz_score)
+            unit.boost_stats(self.quiz_scores[unit.category])
 
     def __str__(self) -> str:
-        return f"Player(nick={self.nick}, id={self.id}, in_game={self.in_game}, quiz_score={self.quiz_score}, units={self.deployed_units})"
+        return f"Player(nick={self.nick}, id={self.id}, in_game={self.in_game}, units={self.deployed_units})"
 
     def calculate_income(self) -> int:
         # add win/loss streak or interest?

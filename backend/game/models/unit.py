@@ -6,6 +6,8 @@ import uuid
 from game.models.position import Position
 import random
 
+from game.models.unit_booster import UnitBooster
+
 
 class Unit:
     range_penalty_multiplier = 0.2
@@ -108,11 +110,9 @@ class Unit:
         else:
             self.battle_logger.set_hp_left(self.stats["hp"])
 
-    def boost_stats(self, quiz_score):
-        # If e.g. player scored 3 points in the quiz, we choose 3 of unit's stats (with repetition, so same stat can
-        # be boosted many times) and add 1-3 to each of them
-        for stat in random.choices(list(self.stats.keys()), k=quiz_score):
-            self.stats[stat] += random.randint(0, quiz_score)
+    def boost_stats(self, class_quiz_score):
+        UnitBooster.boost_unit(self, class_quiz_score)
+
 
     def __hash__(self) -> int:
         return hash(

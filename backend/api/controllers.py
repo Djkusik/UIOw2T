@@ -94,32 +94,56 @@ class SocketController:
         await self.sio.emit(PLAYERS_WAITING_REPLY, data=response, room=sid)
         logging.info(f"Sent waiting players info to peer with SID: {sid}")
 
-    async def get_questions(self, sid, data=None):
-        default_number = 3
+    async def get_question(self, sid, data):
         questions_path = "api/data/questions.json"
+        classes = ['Warrior', 'Mage', 'Archer']
+        question_class_association = [
+            ['BD', 'JITP', 'UNIX', 'WDI'],
+            ['Asem', 'MONT', 'PSI', 'SO', 'TA', 'TC', 'TK', 'TM', 'TO', 'TW'],
+            ['AK', 'IO', 'SK', 'SR', 'ZO']
+        ]
 
-        # Get the requested number or use default
-        num = data['num'] if (data and 'num' in data) else default_number
-        logging.info(f"Getting {num} questions (default is {default_number})")
         try:
-            num = int(num)
-        except:
-            num = default_number
+            unit_class = data['unit_class']
+            class_id = classes.index(unit_class)
+        except KeyError:
+            await self.sio.emit(ERROR, data={"message": "no unit class provided"}, room=sid)
+            return
+        except ValueError:
+            await self.sio.emit(ERROR, data={"message": "unknown unit class"}, room=sid)
+            return
+
+        logging.info(f"Getting question for {unit_class} (year {class_id})")
 
         async with AIOFile(questions_path, 'r') as f:
             s = await f.read()
-            questions = json.loads(s)
-        response = random.sample(questions, num)
-        await self.sio.emit(QUESTIONS_REPLY, data=response, room=sid)
-        logging.info(f"Sent {num} questions to peer with SID: {sid}")
 
-    async def save_quiz_score(self, sid, data):
-        if "score" not in data:
-            await self.sio.emit(ERROR, data={"message": "No quiz score provided"}, room=sid)
+        all_questions = json.loads(s)
+        questions_for_class = \
+            [question for question in all_questions if question['category'] in question_class_association[class_id]]
+
+        response = random.choice(questions_for_class)
+        await self.sio.emit(QUESTIONS_REPLY, data=response, room=sid)
+        logging.info(f"Sent question to peer with SID: {sid}")
+
+    async def save_question_score(self, sid, data):
+        classes = ['Warrior', 'Mage', 'Archer']
+        try:
+            unit_class = data['unit_class']
+            score = data['score']  # +-1
+            class_id = classes.index(unit_class)
+        except KeyError:
+            await self.sio.emit(ERROR,
+                    data={"message": "missing question score parameters ('unit_class' and 'score' needed"}, room=sid)
             return
+        except ValueError:
+            await self.sio.emit(ERROR, data={"message": "unknown unit class"}, room=sid)
+            return
+
         player = self.game_app.get_player_by_id(sid)
-        player.quiz_score = data["score"]
-        logging.info(f"Saved quiz score {data['score']} for player {player}")
+        player.save_question_result(unit_class, score)
+        logging.info(f"Saved question score {score} for class {unit_class} for player {player}")
+
         await self.sio.emit(SCORE_REPLY, data={"message": "Score saved"}, room=sid)
         await self.game_app.current_games[-1].save_what_is_ready(sid, what_is_ready="quiz")
 
