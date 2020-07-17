@@ -41,18 +41,25 @@ const FrameBottomRight = styled.div`
 `;
 
 function Field({ index, children, dispatch, setCurrentPositions }) {
+  const unitsPositions = useSelector(
+    state => state.unitsPositionsReducer.unitsPositions
+  );
+  const ownedUnits = useSelector(state => state.ownedUnitsReducer.ownedUnits);
+
   const [{ isOver }, drop] = useDrop({
     accept: TileTypes.BENCH_TILE,
     drop: (props, monitor) => {
       console.log("DROPPED ", monitor.getItem().unit);
       setCurrentPosition([x, y], monitor.getItem().unit);
-      console.log("OWNED ", ownedUnits);
+      console.log("OWNED[0] ", ownedUnits[0]);
       let results = ownedUnits;
       for (let i = 0; i < results.length; i++) {
         if (results[i].id === monitor.getItem().unit.id) {
           results.splice(i, 1);
-          console.log("OWNED ", results);
+          console.log("RESULTS ", results);
           dispatch({ type: "SET_OWNED_UNITS", units: results });
+          console.log("STORE ", store.getState());
+          return monitor.getItem();
         }
       }
       return monitor.getItem();
@@ -61,12 +68,6 @@ function Field({ index, children, dispatch, setCurrentPositions }) {
       isOver: !!monitor.isOver()
     })
   });
-
-  const unitsPositions = useSelector(
-    state => state.unitsPositionsReducer.unitsPositions
-  );
-
-  const ownedUnits = useSelector(state => state.ownedUnitsReducer.ownedUnits);
 
   const removeUnit = () => {
     const result = unitsPositions;
