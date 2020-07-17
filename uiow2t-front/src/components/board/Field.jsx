@@ -1,9 +1,8 @@
 import React from "react";
 import styled from "styled-components";
-import { connect, useSelector } from "react-redux";
-import { TileTypes } from "../dragTypes/TileTypes";
-import { useDrop } from "react-dnd";
-import store from "../../store/store";
+import {connect, useSelector} from "react-redux";
+import {TileTypes} from "../dragTypes/TileTypes";
+import {useDrop} from "react-dnd";
 
 const mapStateToProps = function(state) {
   return {
@@ -47,14 +46,16 @@ function Field({ index, children, dispatch, setCurrentPositions }) {
       console.log("DROPPED ", monitor.getItem().unit);
       setCurrentPosition([x, y], monitor.getItem().unit);
       console.log("OWNED ", ownedUnits);
-      let results = ownedUnits;
-      for (let i = 0; i < results.length; i++) {
-        if (results[i].id === monitor.getItem().unit.id) {
-          results.splice(i, 1);
-          console.log("OWNED ", results);
-          dispatch({ type: "SET_OWNED_UNITS", units: results });
-        }
-      }
+      setCurrentPositions(ownedUnits)
+      // for (let i = 0; i < results.length; i++) {
+      //   if (results[i].id === monitor.getItem().unit.id) {
+          // results.splice(i, 1);
+          // console.log("OWNED ", results);
+      // ownedUnits.push(monitor.getItem().unit)
+      // TODO how to trigger UnitBenchPanel rerender without this BS??
+      dispatch({ type: "SET_OWNED_UNIT", units: monitor.getItem().unit });
+        // }
+      // }
       return monitor.getItem();
     },
     collect: monitor => ({
@@ -76,14 +77,15 @@ function Field({ index, children, dispatch, setCurrentPositions }) {
       result[index].unit &&
       result[index].unit.id === unitsPositions[index].unit.id
     ) {
-      dispatch({ type: "SET_OWNED_UNIT", unit: result[index].unit });
-      result[index] = {};
+      // dispatch({ type: "SET_OWNED_UNIT", unit: result[index].unit });
+      // result[index] = {};
       dispatch({ type: "UPDATE_UNITS_POSITIONS", unitsPositions: result });
       setCurrentPositions(result);
     }
   };
 
   const setCurrentPosition = (newPosition, unit) => {
+    unit.position = newPosition
     const result = unitsPositions;
     if (!result[index]) result[index] = { position: newPosition, unit: unit };
     setCurrentPositions(result);

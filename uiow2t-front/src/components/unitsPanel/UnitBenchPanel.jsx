@@ -24,7 +24,7 @@ const PanelBackground = styled.div`
 function parseOwnedUnits(ownedUnits) {
   let result = [];
   for (let i = 0; i < 6; i++) {
-    if (ownedUnits && ownedUnits[i])
+    if (ownedUnits && ownedUnits[i] && !ownedUnits[i].position)
       result.push(<UnitBenchTile unit={ownedUnits[i]} />);
     else result.push(<UnitBenchTile />);
   }
