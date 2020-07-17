@@ -43,7 +43,7 @@ function buyUnit(dispatch, currentGold, unit) {
     dispatch({ type: "SET_OWNED_UNITS", unit });
     const newGoldState = currentGold - unit.price;
     dispatch({ type: "SET_CURRENT_GOLD", newGoldState });
-    setVisibile(false);
+    // setVisibile(false);
   }
 }
 
